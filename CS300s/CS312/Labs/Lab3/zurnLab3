@@ -1,0 +1,617 @@
+------Router 1 (show interface------
+FastEthernet0/0 is up, line protocol is up                                     
+  Hardware is AmdFE, address is 0007.8518.8260 (bia 0007.8518.8260)            
+  Internet address is 10.2.16.1/24                                             
+  MTU 1500 bytes, BW 10000 Kbit, DLY 1000 usec,                                
+     reliability 255/255, txload 1/255, rxload 1/255                           
+  Encapsulation ARPA, loopback not set                                         
+  Keepalive set (10 sec)                                                       
+  Half-duplex, 10Mb/s, 100BaseTX/FX                                            
+  ARP type: ARPA, ARP Timeout 04:00:00                                         
+  Last input never, output 00:00:08, output hang never                         
+  Last clearing of "show interface" counters never                             
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0        
+  Queueing strategy: fifo                                                      
+  Output queue: 0/40 (size/max)                                                
+  5 minute input rate 0 bits/sec, 0 packets/sec                                
+  5 minute output rate 0 bits/sec, 0 packets/sec                               
+     0 packets input, 0 bytes                                                  
+     Received 0 broadcasts, 0 runts, 0 giants, 0 throttles                     
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored                      
+     0 watchdog                                                                
+     0 input packets with dribble condition detected                           
+     112 packets output, 12102 bytes, 0 underruns                              
+     0 output errors, 0 collisions, 1 interface resets                         
+     0 babbles, 0 late collision, 0 deferred                                   
+     0 lost carrier, 0 no carrier                                              
+     0 output buffer failures, 0 output buffers swapped out                    
+Serial0/0 is administratively down, line protocol is down                      
+  Hardware is PowerQUICC Serial                                                
+  MTU 1500 bytes, BW 1544 Kbit, DLY 20000 usec,                                
+     reliability 255/255, txload 1/255, rxload 1/255                           
+  Encapsulation HDLC, loopback not set                                         
+  Keepalive set (10 sec)                                                       
+  Last input never, output never, output hang never                            
+  Last clearing of "show interface" counters never                             
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0        
+  Queueing strategy: weighted fair                                             
+  Output queue: 0/1000/64/0 (size/max total/threshold/drops)                   
+     Conversations  0/0/256 (active/max active/max total)                      
+     Reserved Conversations 0/0 (allocated/max allocated)                      
+     Available Bandwidth 1158 kilobits/sec                                     
+  5 minute input rate 0 bits/sec, 0 packets/sec                                
+  5 minute output rate 0 bits/sec, 0 packets/sec                               
+     0 packets input, 0 bytes, 0 no buffer                                     
+     Received 0 broadcasts, 0 runts, 0 giants, 0 throttles                     
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort             
+     0 packets output, 0 bytes, 0 underruns                                    
+     0 output errors, 0 collisions, 0 interface resets                         
+     0 output buffer failures, 0 output buffers swapped out                    
+     0 carrier transitions                                                     
+     DCD=down  DSR=down  DTR=down  RTS=down  CTS=down                          
+                                                                               
+FastEthernet0/1 is up, line protocol is up                                     
+  Hardware is AmdFE, address is 0007.8518.8261 (bia 0007.8518.8261)            
+  Internet address is 10.2.139.6/24                                            
+  MTU 1500 bytes, BW 10000 Kbit, DLY 1000 usec,                                
+     reliability 255/255, txload 1/255, rxload 1/255                           
+  Encapsulation ARPA, loopback not set                                         
+  Keepalive set (10 sec)                                                       
+  Half-duplex, 10Mb/s, 100BaseTX/FX                                            
+  ARP type: ARPA, ARP Timeout 04:00:00                                         
+  Last input 00:00:04, output 00:00:04, output hang never                      
+  Last clearing of "show interface" counters never                             
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0        
+  Queueing strategy: fifo                                                      
+  Output queue: 0/40 (size/max)                                                
+  5 minute input rate 0 bits/sec, 0 packets/sec                                
+  5 minute output rate 0 bits/sec, 0 packets/sec                               
+     5 packets input, 376 bytes                                                
+     Received 1 broadcasts, 0 runts, 0 giants, 0 throttles                     
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored                      
+     0 watchdog                                                                
+     0 input packets with dribble condition detected                           
+     20 packets output, 2463 bytes, 0 underruns                                
+     0 output errors, 0 collisions, 1 interface resets                         
+     0 babbles, 0 late collision, 0 deferred                                   
+     0 lost carrier, 0 no carrier                                              
+     0 output buffer failures, 0 output buffers swapped out  
+
+------(show running-config)------
+Router1#show running-config                                                    
+Building configuration...                                                      
+                                                                               
+Current configuration : 612 bytes                                              
+!                                                                              
+version 12.2                                                                   
+service timestamps debug uptime                                                
+service timestamps log uptime                                                  
+no service password-encryption                                                 
+!                                                                              
+hostname Router1                                                               
+!                                                                              
+enable secret 5 $1$zkX4$FLviLvtl2RKLW8nBoGkYH/                                 
+enable password netlab                                                         
+!                                                                              
+ip subnet-zero                                                                 
+!                                                                              
+!                                                                              
+!                                                                              
+!                                                                              
+!                                                                              
+!                                                                              
+interface FastEthernet0/0                                                      
+ ip address 10.2.16.1 255.255.255.0                                            
+ no ip mroute-cache                                                            
+ speed auto                                                                    
+ half-duplex                                                                   
+!                                                                              
+interface Serial0/0                                                            
+ no ip address                                                                 
+ no ip mroute-cache                                                            
+ shutdown                                                                      
+!                                                                              
+interface FastEthernet0/1                                                      
+ ip address 10.2.139.6 255.255.255.0                                           
+ no ip mroute-cache                                                            
+ duplex auto                                                                   
+ speed auto                                                                    
+!                                                                              
+ip classless                                                                   
+ip http server                                                                 
+!                                                                              
+!                                                                              
+line con 0                                                                     
+line aux 0                                                                     
+line vty 0 4                                                                   
+ password netlab                                                               
+ login                                                                         
+!                                                                              
+end 
+
+------Router 2(show interfaces)------
+FastEthernet0/0 is up, line protocol is up                                     
+  Hardware is AmdFE, address is 0004.dd87.2920 (bia 0004.dd87.2920)            
+  Internet address is 10.2.16.2/24                                             
+  MTU 1500 bytes, BW 10000 Kbit, DLY 1000 usec,                                
+     reliability 255/255, txload 1/255, rxload 1/255                           
+  Encapsulation ARPA, loopback not set                                         
+  Keepalive set (10 sec)                                                       
+  Half-duplex, 10Mb/s, 100BaseTX/FX                                            
+  ARP type: ARPA, ARP Timeout 04:00:00                                         
+  Last input never, output 00:00:00, output hang never                         
+  Last clearing of "show interface" counters never                             
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0        
+  Queueing strategy: fifo                                                      
+  Output queue: 0/40 (size/max)                                                
+  5 minute input rate 0 bits/sec, 0 packets/sec                                
+  5 minute output rate 0 bits/sec, 0 packets/sec                               
+     0 packets input, 0 bytes                                                  
+     Received 0 broadcasts, 0 runts, 0 giants, 0 throttles                     
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored                      
+     0 watchdog                                                                
+     0 input packets with dribble condition detected                           
+     125 packets output, 7500 bytes, 0 underruns                               
+     0 output errors, 0 collisions, 1 interface resets                         
+     0 babbles, 0 late collision, 0 deferred                                   
+     0 lost carrier, 0 no carrier                                              
+     0 output buffer failures, 0 output buffers swapped out                    
+FastEthernet0/1 is up, line protocol is up                                     
+  Hardware is AmdFE, address is 0004.dd87.2921 (bia 0004.dd87.2921)            
+  Internet address is 10.2.101.6/24                                            
+  MTU 1500 bytes, BW 10000 Kbit, DLY 1000 usec,                                
+     reliability 255/255, txload 1/255, rxload 1/255                           
+  Encapsulation ARPA, loopback not set                                         
+  Keepalive set (10 sec)                                                       
+  Half-duplex, 10Mb/s, 100BaseTX/FX                                            
+  ARP type: ARPA, ARP Timeout 04:00:00                                         
+  Last input 00:00:00, output 00:00:00, output hang never                      
+  Last clearing of "show interface" counters never                             
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0        
+  Queueing strategy: fifo                                                      
+  Output queue: 0/40 (size/max)                                                
+  5 minute input rate 0 bits/sec, 0 packets/sec                                
+  5 minute output rate 0 bits/sec, 0 packets/sec                               
+     9 packets input, 692 bytes                                                
+     Received 1 broadcasts, 0 runts, 0 giants, 0 throttles                     
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored                      
+     0 watchdog                                                                
+     0 input packets with dribble condition detected                           
+     11 packets output, 680 bytes, 0 underruns                                 
+     0 output errors, 0 collisions, 1 interface resets                         
+     0 babbles, 0 late collision, 0 deferred                                   
+     0 lost carrier, 0 no carrier                                              
+     0 output buffer failures, 0 output buffers swapped out
+
+------(show running-config)------
+router2#show running-config                                                    
+Building configuration...                                                      
+                                                                               
+Current configuration : 593 bytes                                              
+!                                                                              
+version 12.2                                                                   
+service timestamps debug uptime                                                
+service timestamps log uptime                                                  
+no service password-encryption                                                 
+!                                                                              
+hostname router2                                                               
+!                                                                              
+enable secret 5 $1$SB1V$ESbvkYbzQaVnKxPSPlfIw0                                 
+enable password netlab                                                         
+!                                                                              
+ip subnet-zero                                                                 
+!                                                                              
+!                                                                              
+!                                                                              
+!                                                                              
+!                                                                              
+!                                                                              
+interface FastEthernet0/0                                                      
+ ip address 10.2.16.2 255.255.255.0                                            
+ no ip mroute-cache                                                            
+ speed auto                                                                    
+ half-duplex                                                                   
+ no cdp enable                                                                 
+!                                                                              
+interface FastEthernet0/1                                                      
+ ip address 10.2.101.6 255.255.255.0                                           
+ no ip mroute-cache                                                            
+ speed auto                                                                    
+ half-duplex                                                                   
+ no cdp enable                                                                 
+!                                                                              
+ip classless                                                                   
+ip http server                                                                 
+!                                                                              
+!                                                                              
+line con 0                                                                     
+ exec-timeout 0 0                                                              
+line aux 0                                                                     
+line vty 0 4                                                                   
+ password netlab                                                               
+ login                                                                         
+!                                                                              
+end 
+
+------Router 3(show interfaces)------
+FastEthernet0/0 is up, line protocol is up                                     
+  Hardware is AmdFE, address is 0004.dd02.1ea0 (bia 0004.dd02.1ea0)            
+  Internet address is 10.2.16.3/24                                             
+  MTU 1500 bytes, BW 10000 Kbit, DLY 1000 usec,                                
+     reliability 255/255, txload 1/255, rxload 1/255                           
+  Encapsulation ARPA, loopback not set                                         
+  Keepalive set (10 sec)                                                       
+  Half-duplex, 10Mb/s, 100BaseTX/FX                                            
+  ARP type: ARPA, ARP Timeout 04:00:00                                         
+  Last input never, output 00:00:01, output hang never                         
+  Last clearing of "show interface" counters never                             
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0        
+  Queueing strategy: fifo                                                      
+  Output queue: 0/40 (size/max)                                                
+  5 minute input rate 0 bits/sec, 0 packets/sec                                
+  5 minute output rate 0 bits/sec, 0 packets/sec                               
+     0 packets input, 0 bytes                                                  
+     Received 0 broadcasts, 0 runts, 0 giants, 0 throttles                     
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored                      
+     0 watchdog                                                                
+     0 input packets with dribble condition detected                           
+     13 packets output, 1388 bytes, 0 underruns                                
+     0 output errors, 0 collisions, 1 interface resets                         
+     0 babbles, 0 late collision, 0 deferred                                   
+     0 lost carrier, 0 no carrier                                              
+     0 output buffer failures, 0 output buffers swapped out                    
+FastEthernet0/1 is up, line protocol is up                                     
+  Hardware is AmdFE, address is 0004.dd02.1ea1 (bia 0004.dd02.1ea1)            
+  Internet address is 10.2.67.6/24                                             
+  MTU 1500 bytes, BW 10000 Kbit, DLY 1000 usec,                                
+     reliability 255/255, txload 1/255, rxload 1/255                           
+  Encapsulation ARPA, loopback not set                                         
+  Keepalive set (10 sec)                                                       
+  Half-duplex, 10Mb/s, 100BaseTX/FX                                            
+  ARP type: ARPA, ARP Timeout 04:00:00                                         
+  Last input 00:03:12, output 00:00:01, output hang never                      
+  Last clearing of "show interface" counters never                             
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0        
+  Queueing strategy: fifo                                                      
+  Output queue: 0/40 (size/max)                                                
+  5 minute input rate 0 bits/sec, 0 packets/sec                                
+  5 minute output rate 0 bits/sec, 0 packets/sec                               
+     30 packets input, 1800 bytes                                              
+     Received 30 broadcasts, 0 runts, 0 giants, 0 throttles                    
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored                      
+     0 watchdog                                                                
+     0 input packets with dribble condition detected                           
+     10 packets output, 906 bytes, 0 underruns                                 
+     0 output errors, 0 collisions, 1 interface resets                         
+     0 babbles, 0 late collision, 0 deferred                                   
+     0 lost carrier, 0 no carrier                                              
+     0 output buffer failures, 0 output buffers swapped out       
+
+------(show running-config)------
+Building configuration...                                                      
+                                                                               
+Current configuration : 492 bytes                                              
+!                                                                              
+version 12.3                                                                   
+service timestamps debug datetime msec                                         
+service timestamps log datetime msec                                           
+no service password-encryption                                                 
+!                                                                              
+hostname Router                                                                
+!                                                                              
+boot-start-marker                                                              
+boot-end-marker                                                                
+!                                                                              
+!                                                                              
+no aaa new-model                                                               
+ip subnet-zero                                                                 
+ip cef                                                                         
+!                                                                              
+!                                                                              
+!                                                                              
+!                                                                              
+!                                                                              
+!                                                                              
+!                                                                              
+interface FastEthernet0/0                                                      
+ ip address 10.2.16.3 255.255.255.0                                            
+ duplex auto                                                                   
+ speed auto                                                                    
+!                                                                              
+interface FastEthernet0/1                                                      
+ ip address 10.2.67.6 255.255.255.0                                            
+ duplex auto                                                                   
+ speed auto                                                                    
+!                                                                              
+no ip http server                                                              
+ip classless                                                                   
+!                                                                              
+!                                                                              
+!                                                                              
+line con 0                                                                     
+line aux 0                                                                     
+line vty 0 4                                                                   
+!                                                                              
+!                                                                              
+end  
+
+
+Testing Connectivity:
+PC1 -> PC2
+PING 10.2.139.2 (10.2.139.2) 56(84) bytes of data.
+64 bytes from 10.2.139.2: icmp_req=1 ttl=64 time=1.03 ms
+64 bytes from 10.2.139.2: icmp_req=2 ttl=64 time=0.533 ms
+64 bytes from 10.2.139.2: icmp_req=3 ttl=64 time=0.440 ms
+^C
+--- 10.2.139.2 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2001ms
+rtt min/avg/max/mdev = 0.440/0.669/1.034/0.260 ms
+	
+PC1 -> PC3
+PING 10.2.101.1 (10.2.101.1) 56(84) bytes of data.
+From 10.2.139.6 icmp_seq=1 Destination Host Unreachable
+From 10.2.139.6 icmp_seq=2 Destination Host Unreachable
+From 10.2.139.6 icmp_seq=3 Destination Host Unreachable
+^C
+--- 10.2.101.1 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2002ms
+
+PC1 -> PC4
+PING 10.2.67.1 (10.2.67.1) 56(84) bytes of data.
+From 10.2.139.6 icmp_seq=1 Destination Host Unreachable
+From 10.2.139.6 icmp_seq=2 Destination Host Unreachable
+From 10.2.139.6 icmp_seq=3 Destination Host Unreachable
+^C
+--- 10.2.67.1 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2002ms
+
+PC1 -> Router1(0/1)
+PING 10.2.139.6 (10.2.139.6) 56(84) bytes of data.
+64 bytes from 10.2.139.6: icmp_req=1 ttl=255 time=1.21 ms
+64 bytes from 10.2.139.6: icmp_req=2 ttl=255 time=1.24 ms
+64 bytes from 10.2.139.6: icmp_req=3 ttl=255 time=1.27 ms
+^C
+--- 10.2.139.6 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 1.211/1.242/1.276/0.048 ms
+
+PC1 -> Router1(0/0)
+PING 10.2.16.1 (10.2.16.1) 56(84) bytes of data.
+From 10.2.139.6 icmp_seq=1 Destination Host Unreachable
+From 10.2.139.6 icmp_seq=2 Destination Host Unreachable
+From 10.2.139.6 icmp_seq=3 Destination Host Unreachable
+From 10.2.139.6 icmp_seq=4 Destination Host Unreachable
+^C
+--- 10.2.16.1 ping statistics ---
+4 packets transmitted, 0 received, +4 errors, 100% packet loss, time 3003ms
+PC1 -> Router2(0/1)
+PING 10.2.16.2 (10.2.16.2) 56(84) bytes of data.
+From 10.2.139.6 icmp_seq=1 Destination Host Unreachable
+From 10.2.139.6 icmp_seq=2 Destination Host Unreachable
+From 10.2.139.6 icmp_seq=3 Destination Host Unreachable
+^C
+--- 10.2.16.2 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2002ms
+
+PC1 -> Router2(0/0)
+PING 10.2.101.6 (10.2.101.6) 56(84) bytes of data.
+From 10.2.139.6 icmp_seq=1 Destination Host Unreachable
+From 10.2.139.6 icmp_seq=2 Destination Host Unreachable
+From 10.2.139.6 icmp_seq=3 Destination Host Unreachable
+^C
+--- 10.2.101.6 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2002ms
+
+Router1 -> PC1
+Yes
+Router1 -> PC2
+Yes
+Router1 -> PC3
+No
+Router1 -> PC4
+No
+Router1 -> Router2(0/0)
+Yes
+Router1 -> Router1(0/1)
+No
+
+
+BEFORE SETTING UP
+Router 1 Routing Tables----------------------
+    Router1>show ip route                                                          
+Codes: C - connected, S - static, I - IGRP, R - RIP, M - mobile, B - BGP       
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area          
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2          
+       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP           
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2   
+       ia - IS-IS inter area, * - candidate default, U - per-user static route 
+       o - ODR, P - periodic downloaded static route                           
+                                                                               
+Gateway of last resort is not set                                              
+                                                                               
+     10.0.0.0/24 is subnetted, 4 subnets                                       
+C       10.2.16.0 is directly connected, FastEthernet0/0       
+C       10.2.139.0 is directly connected, FastEthernet0/1                                            
+
+Router 2 Routing Tables----------------------
+      router2#show ip r                                                              
+00:45:12: %SYS-5-CONFIG_I: Configured from console by consoleoute              
+Codes: C - connected, S - static, I - IGRP, R - RIP, M - mobile, B - BGP       
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area          
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2          
+       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP           
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2   
+       ia - IS-IS inter area, * - candidate default, U - per-user static route 
+       o - ODR, P - periodic downloaded static route                           
+                                                                               
+Gateway of last resort is not set                                              
+                                                                               
+     10.0.0.0/24 is subnetted, 4 subnets                                       
+C       10.2.16.0 is directly connected, FastEthernet0/0                                   
+C       10.2.101.0 is directly connected, FastEthernet0/1                      
+
+Router 3 Routing Table---------------
+Router#show ip route                                                           
+Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP                 
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area          
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2          
+       E1 - OSPF external type 1, E2 - OSPF external type 2                    
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2   
+       ia - IS-IS inter area, * - candidate default, U - per-user static route 
+       o - ODR, P - periodic downloaded static route                           
+                                                                               
+Gateway of last resort is not set                                              
+                                                                               
+     10.0.0.0/24 is subnetted, 4 subnets                                       
+C       10.2.16.0 is directly connected, FastEthernet0/0                       
+C       10.2.67.0 is directly connected, FastEthernet0/1                       
+
+
+AFTER SETTING UP
+Router 1 Routing Tables----------------------
+    Router1>show ip route                                                          
+Codes: C - connected, S - static, I - IGRP, R - RIP, M - mobile, B - BGP       
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area          
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2          
+       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP           
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2   
+       ia - IS-IS inter area, * - candidate default, U - per-user static route 
+       o - ODR, P - periodic downloaded static route                           
+                                                                               
+Gateway of last resort is not set                                              
+                                                                               
+     10.0.0.0/24 is subnetted, 4 subnets                                       
+C       10.2.16.0 is directly connected, FastEthernet0/0                       
+S       10.2.67.0 [1/0] via 10.2.16.3                                          
+S       10.2.101.0 [1/0] via 10.2.16.2                                         
+C       10.2.139.0 is directly connected, FastEthernet0/1                                            
+
+Router 2 Routing Tables----------------------
+      router2#show ip r                                                              
+00:45:12: %SYS-5-CONFIG_I: Configured from console by consoleoute              
+Codes: C - connected, S - static, I - IGRP, R - RIP, M - mobile, B - BGP       
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area          
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2          
+       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP           
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2   
+       ia - IS-IS inter area, * - candidate default, U - per-user static route 
+       o - ODR, P - periodic downloaded static route                           
+                                                                               
+Gateway of last resort is not set                                              
+                                                                               
+     10.0.0.0/24 is subnetted, 4 subnets                                       
+C       10.2.16.0 is directly connected, FastEthernet0/0                       
+S       10.2.67.0 [1/0] via 10.2.16.3                                          
+C       10.2.101.0 is directly connected, FastEthernet0/1                      
+S       10.2.139.0 [1/0] via 10.2.16.1 
+
+Router 3 Routing Table---------------
+Router#show ip route                                                           
+Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP                 
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area          
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2          
+       E1 - OSPF external type 1, E2 - OSPF external type 2                    
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2   
+       ia - IS-IS inter area, * - candidate default, U - per-user static route 
+       o - ODR, P - periodic downloaded static route                           
+                                                                               
+Gateway of last resort is not set                                              
+                                                                               
+     10.0.0.0/24 is subnetted, 4 subnets                                       
+C       10.2.16.0 is directly connected, FastEthernet0/0                       
+C       10.2.67.0 is directly connected, FastEthernet0/1                       
+S       10.2.101.0 [1/0] via 10.2.16.2                                         
+S       10.2.139.0 [1/0] via 10.2.16.1 
+
+
+Testing Connectivity 2--------------
+PC1 -> PC2
+[root@PC1 ~]# ping -c 2 10.2.139.2
+PING 10.2.139.2 (10.2.139.2) 56(84) bytes of data.
+64 bytes from 10.2.139.2: icmp_req=1 ttl=64 time=1.00 ms
+64 bytes from 10.2.139.2: icmp_req=2 ttl=64 time=0.480 ms
+
+--- 10.2.139.2 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 0.480/0.742/1.005/0.263 ms
+
+PC1 -> PC3
+[root@PC1 ~]# ping -c 2 10.2.101.1
+PING 10.2.101.1 (10.2.101.1) 56(84) bytes of data.
+64 bytes from 10.2.101.1: icmp_req=1 ttl=62 time=6.52 ms
+64 bytes from 10.2.101.1: icmp_req=2 ttl=62 time=1.57 ms
+
+--- 10.2.101.1 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 1.579/4.053/6.527/2.474 ms
+
+PC1 -> PC4
+PING 10.2.67.1 (10.2.67.1) 56(84) bytes of data.
+64 bytes from 10.2.67.1: icmp_req=1 ttl=62 time=3.58 ms
+64 bytes from 10.2.67.1: icmp_req=2 ttl=62 time=1.53 ms
+
+--- 10.2.67.1 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 1.537/2.560/3.583/1.023 ms
+
+PC1 -> Router 1(0/0)
+[root@PC1 ~]# ping -c 2 10.2.16.1
+PING 10.2.16.1 (10.2.16.1) 56(84) bytes of data.
+64 bytes from 10.2.16.1: icmp_req=1 ttl=255 time=1.31 ms
+64 bytes from 10.2.16.1: icmp_req=2 ttl=255 time=1.25 ms
+
+--- 10.2.16.1 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 1.257/1.284/1.311/0.027 ms
+
+PC1 -> Router 1(0/1)
+[root@PC1 ~]# ping -c 2 10.2.139.6
+PING 10.2.139.6 (10.2.139.6) 56(84) bytes of data.
+64 bytes from 10.2.139.6: icmp_req=1 ttl=255 time=2.30 ms
+64 bytes from 10.2.139.6: icmp_req=2 ttl=255 time=1.28 ms
+
+--- 10.2.139.6 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 1.285/1.794/2.303/0.509 ms
+
+PC1 -> Router 2(0/0)
+[root@PC1 ~]# ping -c 2 10.2.16.2
+PING 10.2.16.2 (10.2.16.2) 56(84) bytes of data.
+64 bytes from 10.2.16.2: icmp_req=1 ttl=254 time=3.44 ms
+64 bytes from 10.2.16.2: icmp_req=2 ttl=254 time=1.69 ms
+
+--- 10.2.16.2 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 1.693/2.571/3.449/0.878 ms
+
+PC1 -> Router 2(0/1)
+[root@PC1 ~]# ping -c 2 10.2.101.6
+PING 10.2.101.6 (10.2.101.6) 56(84) bytes of data.
+64 bytes from 10.2.101.6: icmp_req=1 ttl=254 time=1.81 ms
+64 bytes from 10.2.101.6: icmp_req=2 ttl=254 time=1.73 ms
+
+--- 10.2.101.6 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 1.732/1.771/1.811/0.057 ms
+
+PC1 -> Router 3(0/0)
+[root@PC1 ~]# ping -c 2 10.2.16.3
+PING 10.2.16.3 (10.2.16.3) 56(84) bytes of data.
+64 bytes from 10.2.16.3: icmp_req=1 ttl=254 time=1.77 ms
+64 bytes from 10.2.16.3: icmp_req=2 ttl=254 time=1.80 ms
+
+--- 10.2.16.3 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1000ms
+rtt min/avg/max/mdev = 1.776/1.791/1.806/0.015 ms
+
+PC1 -> Router 3(0/1)
+[root@PC1 ~]# ping -c 2 10.2.67.6
+PING 10.2.67.6 (10.2.67.6) 56(84) bytes of data.
+64 bytes from 10.2.67.6: icmp_req=1 ttl=254 time=2.03 ms
+64 bytes from 10.2.67.6: icmp_req=2 ttl=254 time=1.85 ms
+
+--- 10.2.67.6 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 1.855/1.942/2.030/0.097 ms
+
+

@@ -1,0 +1,809 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.15)  26 NOV 2013 15:23
+entering extended mode
+**TechAnalysisPaper.tex
+
+(C:\Users\AndyZurn\Dropbox\SJU\CompSci\CS300s\CS373\Paper\TechAnalysis\TechAnal
+ysisPaper.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size11.clo"
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(C:\Users\AndyZurn\AppData\Roaming\MiKTeX\2.9\tex\latex\cite\cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 373.
+Package: cite 2010/09/10  v 5.3
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(C:\Users\AndyZurn\AppData\Roaming\MiKTeX\2.9\tex\latex\sttools\stfloats.sty
+Package: stfloats 2012/05/29 v1.1 Improve float mechanism and baselineskip sett
+ings
+\@dblbotnum=\count88
+\c@dblbotnumber=\count89
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks15
+\thm@bodyfont=\toks16
+\thm@headfont=\toks17
+\thm@notefont=\toks18
+\thm@headpunct=\toks19
+\thm@preskip=\skip43
+\thm@postskip=\skip44
+\thm@headsep=\skip45
+\dth@everypar=\toks20
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2008/07/08 v3.8m The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\english.ldf"
+Language: english 2005/03/30 v3.3o English support from the babel system
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2008/07/08 v3.8m Babel common definitions
+\babel@savecnt=\count90
+\U@D=\dimen105
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+(C:\Users\AndyZurn\AppData\Roaming\MiKTeX\2.9\tex\latex\preprint\authblk.sty
+Package: authblk 2001/02/27 1.3 (PWD)
+\affilsep=\skip46
+\@affilsep=\skip47
+\c@Maxaffil=\count91
+\c@authors=\count92
+\c@affil=\count93
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\multicol.sty"
+Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
+\c@tracingmulticols=\count94
+
+
+Package multicol Warning: May not work with the twocolumn option on input line 
+135.
+
+\mult@box=\box26
+\multicol@leftmargin=\dimen106
+\c@unbalance=\count95
+\c@collectmore=\count96
+\doublecol@number=\count97
+\multicoltolerance=\count98
+\multicolpretolerance=\count99
+\full@width=\dimen107
+\page@free=\dimen108
+\premulticols=\dimen109
+\postmulticols=\dimen110
+\multicolsep=\skip48
+\multicolbaselineskip=\skip49
+\partial@page=\box27
+\last@line=\box28
+\mult@rightbox=\box29
+\mult@grightbox=\box30
+\mult@gfirstbox=\box31
+\mult@firstbox=\box32
+\@tempa=\box33
+\@tempa=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\c@columnbadness=\count100
+\c@finalcolumnbadness=\count101
+\last@try=\dimen111
+\multicolovershoot=\dimen112
+\multicolundershoot=\dimen113
+\mult@nat@firstbox=\box50
+\colbreak@box=\box51
+\multicol@sort@counter=\count102
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen114
+\extrarowheight=\dimen115
+\NC@list=\toks21
+\extratabsurround=\skip50
+\backup@length=\skip51
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks22
+\inpenc@posthook=\toks23
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\enumerate.sty"
+Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
+\@enLab=\toks24
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
+\bigstrutjot=\dimen116
+)
+(C:\Users\AndyZurn\Dropbox\SJU\CompSci\CS300s\CS373\Paper\TechAnalysis\TechAnal
+ysisPaper.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+
+(C:\Users\AndyZurn\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count103
+\scratchdimen=\dimen117
+\scratchbox=\box52
+\nofMPsegments=\count104
+\nofMParguments=\count105
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count106
+\MPscratchDim=\dimen118
+\MPnumerator=\count107
+\makeMPintoPDFobject=\count108
+\everyMPtoPDFconversion=\toks26
+)
+Underfull \hbox (badness 2351) in paragraph at lines 24--26
+\T1/cmr/m/n/10.95 frame-works, such as Java for An-droid, or
+ []
+
+
+Underfull \hbox (badness 1286) in paragraph at lines 24--26
+\T1/cmr/m/n/10.95 mo-bile de-vel-op-ment to-day, and mainly how
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--26
+
+ []
+
+
+Underfull \hbox (badness 1755) in paragraph at lines 29--30
+\T1/cmr/m/n/10.95 be-come an im-por-tant area of re-search and
+ []
+
+
+Underfull \hbox (badness 1248) in paragraph at lines 29--30
+\T1/cmr/m/n/10.95 past few years, we've seen the tech-nolo-gies
+ []
+
+
+Underfull \hbox (badness 2384) in paragraph at lines 29--30
+\T1/cmr/m/n/10.95 forc-ing de-vel-op-ers to adapt ap-pli-ca-tions to
+ []
+
+
+Underfull \hbox (badness 1331) in paragraph at lines 29--30
+\T1/cmr/m/n/10.95 lever-age web tech-nolo-gies, such as HTML5,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1
+
+{C:/Users/AndyZurn/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
+
+ []
+
+<objectiveChelloWorld.png, id=10, 427.5975pt x 311.1625pt>
+File: objectiveChelloWorld.png Graphic file (type png)
+
+<use objectiveChelloWorld.png>
+Package pdftex.def Info: objectiveChelloWorld.png used on input line 43.
+(pdftex.def)             Requested size: 213.79822pt x 155.58087pt.
+
+<java-hello-world.png, id=11, 423.08063pt x 355.3275pt>
+File: java-hello-world.png Graphic file (type png)
+
+<use java-hello-world.png>
+Package pdftex.def Info: java-hello-world.png used on input line 48.
+(pdftex.def)             Requested size: 211.5398pt x 177.6633pt.
+ [2 <C:/Users/AndyZurn/Dropbox/SJU/CompSci/CS300s/CS373/Paper/TechAnalysis/obje
+ctiveChelloWorld.png (PNG copy)> <C:/Users/AndyZurn/Dropbox/SJU/CompSci/CS300s/
+CS373/Paper/TechAnalysis/java-hello-world.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
+
+ []
+
+
+Underfull \hbox (badness 1275) in paragraph at lines 78--79
+\T1/cmr/m/n/10.95 (DSL). Goaer states that a DSL ef-fec-tively
+ []
+
+
+Underfull \hbox (badness 1038) in paragraph at lines 78--79
+\T1/cmr/m/n/10.95 "cap-tures suf-fi-ciently com-mon and high-level
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
+
+ []
+
+
+Underfull \hbox (badness 2564) in paragraph at lines 86--87
+[]\T1/cmr/m/n/10.95 Figure 3 presents a com-par-i-son of all
+ []
+
+
+Underfull \hbox (badness 1874) in paragraph at lines 86--87
+\T1/cmr/m/n/10.95 and how well they com-pare against na-tive
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
+
+ []
+
+<cross-platform-chart.png, id=19, 493.845pt x 274.77657pt>
+File: cross-platform-chart.png Graphic file (type png)
+
+<use cross-platform-chart.png>
+Package pdftex.def Info: cross-platform-chart.png used on input line 89.
+(pdftex.def)             Requested size: 468.99937pt x 227.62843pt.
+ [4] [5 <C:/Users/AndyZurn/Dropbox/SJU/CompSci/CS300s/CS373/Paper/TechAnalysis/
+cross-platform-chart.png>]
+Underfull \hbox (badness 1248) in paragraph at lines 102--103
+\T1/cmr/m/n/10.95 JavaScript), the more there is to in-ter-pret,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
+
+ []
+
+<huy-app-performance.png, id=28, 558.58687pt x 247.67531pt>
+File: huy-app-performance.png Graphic file (type png)
+
+<use huy-app-performance.png>
+Package pdftex.def Info: huy-app-performance.png used on input line 107.
+(pdftex.def)             Requested size: 223.43079pt x 99.06836pt.
+
+Underfull \vbox (badness 3148) has occurred while \output is active []
+
+
+Underfull \hbox (badness 3590) in paragraph at lines 114--115
+\T1/cmr/m/it/10.95 Platform-Specific to Web-Base Mul-ti-plat-form
+ []
+
+
+Underfull \hbox (badness 2277) in paragraph at lines 114--115
+\T1/cmr/m/n/10.95 of plat-forms, tar-get-ing their fi-nal prod-ucts
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
+
+ []
+
+<hybrid-native-compare-table.png, id=29, 583.42969pt x 197.98969pt>
+File: hybrid-native-compare-table.png Graphic file (type png)
+
+<use hybrid-native-compare-table.png>
+Package pdftex.def Info: hybrid-native-compare-table.png used on input line 117
+.
+(pdftex.def)             Requested size: 469.0145pt x 128.03922pt.
+
+Underfull \hbox (badness 1742) in paragraph at lines 121--122
+\T1/cmr/m/n/10.95 de-vel-op-ing and cod-ing a hy-brid ap-pli-ca-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
+
+ []
+
+[6 <C:/Users/AndyZurn/Dropbox/SJU/CompSci/CS300s/CS373/Paper/TechAnalysis/huy-a
+pp-performance.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+
+ []
+
+[7 <C:/Users/AndyZurn/Dropbox/SJU/CompSci/CS300s/CS373/Paper/TechAnalysis/hybri
+d-native-compare-table.png>]
+<appcelerator-flow-chart.png, id=39, 211.54031pt x 239.39438pt>
+File: appcelerator-flow-chart.png Graphic file (type png)
+
+<use appcelerator-flow-chart.png>
+Package pdftex.def Info: appcelerator-flow-chart.png used on input line 138.
+(pdftex.def)             Requested size: 211.53978pt x 239.39378pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8 <C:/Users/AndyZurn/Dropbox/SJU/CompSci/CS300s/CS373/Paper/TechAnalysis/appc
+elerator-flow-chart.png>]
+Underfull \hbox (badness 1248) in paragraph at lines 148--149
+\T1/cmr/m/n/10.95 to im-ple-ment than it's An-droid coun-ter-part
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--151
+
+ []
+
+
+Underfull \hbox (badness 1895) in paragraph at lines 153--154
+[]\T1/cmr/m/n/10.95 The de-vel-op-ment of these two ap-pli-ca-
+ []
+
+
+Underfull \hbox (badness 1924) in paragraph at lines 153--154
+\T1/cmr/m/n/10.95 dif-fer-ent, not only in the tech-nolo-gies and
+ []
+
+
+Underfull \hbox (badness 1642) in paragraph at lines 153--154
+\T1/cmr/m/n/10.95 life-cy-cle be-tween all the View ob-jects that
+ []
+
+
+Underfull \hbox (badness 1205) in paragraph at lines 153--154
+\T1/cmr/m/n/10.95 in there sim-i-lar ex-per-i-ment of de-vel-op-ing a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
+
+ []
+
+[9] <android-chapter-implementation.png, id=47, 359.84438pt x 571.38469pt>
+File: android-chapter-implementation.png Graphic file (type png)
+
+<use android-chapter-implementation.png>
+Package pdftex.def Info: android-chapter-implementation.png used on input line 
+158.
+(pdftex.def)             Requested size: 125.9474pt x 199.98763pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<appcelerator-chapter-implementation.png, id=48, 309.40594pt x 423.08063pt>
+File: appcelerator-chapter-implementation.png Graphic file (type png)
+
+<use appcelerator-chapter-implementation.png>
+Package pdftex.def Info: appcelerator-chapter-implementation.png used on input 
+line 163.
+(pdftex.def)             Requested size: 123.76018pt x 169.22925pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<android-chapter-list-code.png, id=49, 429.85594pt x 173.89969pt>
+File: android-chapter-list-code.png Graphic file (type png)
+
+<use android-chapter-list-code.png>
+Package pdftex.def Info: android-chapter-list-code.png used on input line 170.
+(pdftex.def)             Requested size: 266.50792pt x 107.81668pt.
+
+Overfull \hbox (37.00792pt too wide) in paragraph at lines 170--171
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<android-chapter-fragment-code.png, id=50, 450.9347pt x 395.22656pt>
+File: android-chapter-fragment-code.png Graphic file (type png)
+
+<use android-chapter-fragment-code.png>
+Package pdftex.def Info: android-chapter-fragment-code.png used on input line 1
+75.
+(pdftex.def)             Requested size: 225.4668pt x 197.6128pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<appcelerator-chapter-code.png, id=51, 443.40656pt x 443.40656pt>
+File: appcelerator-chapter-code.png Graphic file (type png)
+
+<use appcelerator-chapter-code.png>
+Package pdftex.def Info: appcelerator-chapter-code.png used on input line 180.
+(pdftex.def)             Requested size: 274.90923pt x 274.90923pt.
+
+Overfull \hbox (45.40923pt too wide) in paragraph at lines 180--181
+[][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 1436) has occurred while \output is active []
+
+ [10 <C:/Users/AndyZurn/Dropbox/SJU/CompSci/CS300s/CS373/Paper/TechAnalysis/and
+roid-chapter-implementation.png> <C:/Users/AndyZurn/Dropbox/SJU/CompSci/CS300s/
+CS373/Paper/TechAnalysis/appcelerator-chapter-implementation.png>]
+Underfull \vbox (badness 2384) has occurred while \output is active []
+
+ [11 <C:/Users/AndyZurn/Dropbox/SJU/CompSci/CS300s/CS373/Paper/TechAnalysis/and
+roid-chapter-list-code.png> <C:/Users/AndyZurn/Dropbox/SJU/CompSci/CS300s/CS373
+/Paper/TechAnalysis/android-chapter-fragment-code.png> <C:/Users/AndyZurn/Dropb
+ox/SJU/CompSci/CS300s/CS373/Paper/TechAnalysis/appcelerator-chapter-code.png>]
+(C:\Users\AndyZurn\Dropbox\SJU\CompSci\CS300s\CS373\Paper\TechAnalysis\TechAnal
+ysisPaper.bbl
+Underfull \hbox (badness 2573) in paragraph at lines 8--13
+[]\T1/cmr/m/n/10.95 Luis Cor-ral, Al-berto Sil-litti, Gi-an-carlo
+ []
+
+
+Underfull \hbox (badness 3525) in paragraph at lines 8--13
+\T1/cmr/m/n/10.95 Succi, Alessan-dro Garibbo, and Paolo
+ []
+
+
+Underfull \hbox (badness 1436) in paragraph at lines 44--49
+\T1/cmr/m/n/10.95 San-tini, Ste-fan T. Ruehl, and Stephan
+ []
+
+) [12]
+(C:\Users\AndyZurn\Dropbox\SJU\CompSci\CS300s\CS373\Paper\TechAnalysis\TechAnal
+ysisPaper.aux) ) 
+Here is how much of TeX's memory you used:
+ 2360 strings out of 493921
+ 30873 string characters out of 3144866
+ 88631 words of memory out of 3000000
+ 5623 multiletter control sequences out of 15000+200000
+ 9249 words of font info for 22 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 27i,6n,22p,1590b,223s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\AndyZurn\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
+nappen\ec\dpi600\ecbx1200.pk> <C:\Users\AndyZurn\AppData\Local\MiKTeX\2.9\fonts
+\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk> <C:\Users\AndyZurn\AppData\Local\MiK
+TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\AndyZurn\AppD
+ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\
+AndyZurn\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.p
+k> <C:\Users\AndyZurn\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
+00\ecrm1728.pk>
+Output written on TechAnalysisPaper.pdf (12 pages, 489289 bytes).
+PDF statistics:
+ 344 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+

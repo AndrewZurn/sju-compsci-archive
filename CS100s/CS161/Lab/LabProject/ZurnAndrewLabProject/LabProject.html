@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Lab Project</title></head><body>
+  
+<div class="Section1">
+
+<h1 style="margin: 0in 32.25pt 0.0001pt 0.25in;"><u><span style="">Project:
+Creating a Typing Game</span></u></h1><br>
+<br>
+
+
+<p class="MsoNormal" style="margin: 0in 32.25pt 0.0001pt 0.5in;"><span style="">Your final lab project will be to create a game that can be used
+to improve a user's typing skills. The basic idea of the game is as follows.
+Random words "float"&nbsp; HORIZONTALLY across the screen. The user types the words into
+a </span><span style="font-family: &quot;Courier New&quot;;">JTextField</span><span style=""> and presses enter. <o:p></o:p></span></p>
+
+<ul style="margin-left: 40px;">
+  <li><span style="font-family: Symbol;"><span style=""><span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;"></span></span></span><span style="">If
+the typist types the word correctly, points are awarded to the typist. <o:p></o:p></span></li>
+  <li><span style="font-family: Symbol;"><span style=""><span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;"></span></span></span><span style=""><span style="font-family: &quot;Times New Roman&quot;;">I</span>f
+the word typed does not match, or if the word floats off the screen prior to
+the typist typing the word, the typist receives a strike. <o:p></o:p></span></li>
+</ul>
+
+
+
+
+
+
+<p class="MsoNormal" style="margin: 0in 32.25pt 0.0001pt 0.5in;"><span style="">Once the typist receives three strikes, the game is
+over.&nbsp;We wish to have multiple degrees of difficulty for the game based on
+word length and the speed at which words appear and disappear off of the
+screen.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin: 0in 32.25pt 0.0001pt 0.25in;"><span style=""><o:p>&nbsp;</o:p></span></p>
+
+<h2 style="margin: 0in 32.25pt 0.0001pt 0.25in;"><span style="">**************************************************************************************************<o:p></o:p></span></h2>
+
+<h2 style="margin: 0in 32.25pt 0.0001pt 0.25in;"><u><span style="">Part
+I Creating a random word generator</span></u><span style=""> <span style="background: yellow none repeat scroll 0% 50%; color: red; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">(In lab)</span></span></h2><br>
+<br>
+
+
+<p class="MsoNormal" style="margin: 0in 32.25pt 0.0001pt 0.5in;"><span style="">In order to float words across a screen, we need to have a
+source of words of varying length. One way to do this is to take a large
+document and then use the words in that file as a
+source of words. The </span><span style="font-family: &quot;Courier New&quot;;">vbush.txt</span><span style="">
+text file is available in your lab directory. <b>(P.S.&nbsp; The text file
+provided is an article written by Vannebar Bush in 1945.&nbsp; In the article,
+he describes many of the concepts behind the World Wide Web when there were few
+computers in the world!)</b>.&nbsp; From the command line we can use the </span><span style="font-family: &quot;Courier New&quot;;">wc</span><span style="font-family: Courier;"> </span><span style="">command on file </span><span style="font-family: &quot;Courier New&quot;;">vbush.txt</span><span style=""> to find out how many words
+are in the file (i.e. </span><span style="font-family: &quot;Courier New&quot;;">wc vbush.txt</span><span style="">).&nbsp; The </span><span style="font-family: &quot;Courier New&quot;;">wc</span><span style="font-family: Courier;"> </span><span style="">command prints the<i> line</i>,
+<i>word</i>, and <i>byte</i> counts for the specified file. Report the number
+of words in the file to your TA or lab instructor.<br>
+<br>
+This file contains plenty of words, but is not quite ready for use.&nbsp;Since
+our game is intended to send individual words on the screen one at a time we
+will want to remove all punctuations such as commas (,) , periods (.) , colons
+(:), semicolons (;), apostrophes(&#8216;), dashes(-), and exclamation (!) and
+question marks (?) as well other characters (such as /, @, (, ) and ~) that
+show up in the file. In addition, we wish to sort the words based on word size.
+<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin: 0in 32.25pt 0.0001pt 0.5in;"><span style=""><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin: 0in 32.25pt 0.0001pt 0.5in;"><span style="">Step one in your game development is to create a </span><span style="font-family: &quot;Courier New&quot;;">WordSorter</span><span style="font-family: Courier;"> </span><span style="">java class.&nbsp; This class should have a </span><span style="font-family: &quot;Courier New&quot;;">public
+static void main(String [] args)</span><span style=""> method in order to run it from the command line with an
+input filename as an argument (for which you&#8217;ll provide </span><span style="font-family: &quot;Courier New&quot;;">vbush.txt</span><span style="">).&nbsp; It should generate three new
+files that will contain small (3-5 letters), medium (6-8 letters) and large
+(&gt;8 letters)<span style="color: red;"> <b style=""><span style="background: yellow none repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">(ignore words of length 2 or
+less)</span></b></span><span style="">&nbsp; </span>words where the
+words in the input file have been cleaned (i.e. filtered to remove the
+punctuation and other characters). You will be reading words from the input
+file one at a time, cleaning them, and writing them to one of the three files.
+Class </span><code><span style=""><big><big>String</big></big>&nbsp;</span></code><span style="">has method </span><big><code><span style="">replaceAll</span></code><code><span style="">(String&nbsp;match, String&nbsp;replacement)</span></code></big> that
+can be used for cleaning purposes; e.g., to remove &#8220;<span style="font-family: &quot;Courier New&quot;;">@</span>&#8221; from a <span style="font-family: &quot;Courier New&quot;;">String
+x</span>, you can write <span style="font-family: &quot;Courier New&quot;;">x =
+x.replaceAll(&#8220;@&#8221;, &#8220;&#8221;)</span>. This replaces all matches of <span style="font-family: &quot;Courier New&quot;;">&#8220;@&#8221;</span>with the empty string which
+effectively removes the matches. You can also include multiple characters
+between square brackets to remove all of them simultaneously; e.g., to remove <span style="font-family: &quot;Courier New&quot;;">/</span>, <span style="font-family: &quot;Courier New&quot;;">@</span>,
+<span style="font-family: &quot;Courier New&quot;;">%</span> and <span style="font-family: &quot;Courier New&quot;;">$</span> all at once, you can use <span style="font-family: &quot;Courier New&quot;;">x
+= x.replaceAll(&#8220;[/@%$]&#8221;, &#8220;&#8221;)</span>).<span style=""><br>
+<br>
+Next, create a </span><span style="font-family: &quot;Courier New&quot;;">RandomWord</span><span style="">
+class that takes a filename as a parameter in its constructor and has a </span><span style="font-family: &quot;Courier New&quot;;">next()</span><i><span style=""> </span></i><span style="">method that will return a word
+from the specified file at random. Do this by reading the words in the
+specified file into an </span><span style="font-family: &quot;Courier New&quot;;">ArrayList&lt;String&gt;</span><span style="font-family: Courier;"> </span><span style="">and then generating a random
+location number using </span><span style="font-family: &quot;Courier New&quot;;">RandomIntGenerator</span><span style=""> class to find the next word to return. </span><span style="color: black;">Class </span><span style="font-family: &quot;Courier New&quot;;">BannerMover</span><span style="font-family: Courier; color: black;"> </span><span style="color: black;">uses
+a</span><span style="font-family: Courier; color: black;"> </span><span style="font-family: &quot;Courier New&quot;;">RandomIntGenerator</span><span style="font-family: Courier; color: black;"> </span><span style="color: black;">to
+randomly access random words from the </span><span style="font-family: &quot;Courier New&quot;;">ArrayList&lt;String</span><span style="font-family: Courier; color: black;">&gt; </span><span style="color: black;">defined
+in its constructor; you might want to follow the steps outline there. </span><span style=""><br>
+<br>
+Write a short demo program that uses the </span><span style="font-family: &quot;Courier New&quot;;">RandomWord</span><span style=""> class and show your Lab
+Instructor or TA that you have successfully completed this part of the program.<o:p></o:p></span></p>
+
+<br>
+
+
+<h2 style="margin: 0in 32.25pt 0.0001pt 0.25in;"><span style="">**************************************************************************************************<o:p></o:p></span></h2>
+
+<h2 style="margin: 0in 32.25pt 0.0001pt 0.25in;"><u><span style="">Part
+II Creating an Appropriate GUI<o:p></o:p></span></u></h2>
+
+<p class="MsoNormal" style="margin: 0in 32.25pt 0.0001pt 0.5in;"><span style="">The second step is to design the GUI that you intend to use.
+Remember that you need to have a way for the user to select the difficulty
+level, a canvas for the words to float across the screen, a place for the user to
+type, a place to show the score and the number of strikes (or number of strikes
+left). Also include a Start and an Exit button. You should first sketch your
+design on paper and show it to your Lab Instructor or TA and then develop the
+code that provides all the GUI components needed. The functionality behind the
+GUI components can be developed later.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin: 0in 32.25pt 0.0001pt 0.25in;"><span style=""><o:p>&nbsp;</o:p></span></p>
+
+<h2 style="margin: 0in 32.25pt 0.0001pt 0.25in;"><span style="">**************************************************************************************************<o:p></o:p></span></h2>
+
+<h2 style="margin: 0in 32.25pt 0.0001pt 0.25in;"><u><span style="">Part
+III Sending Words Across the Screen<o:p></o:p></span></u></h2>
+
+<p class="MsoNormal" style="margin: 0in 32.25pt 0.0001pt 0.5in;"><span style="color: black;">Some of
+the work for this part is done in that you have access to&nbsp;
+the </span><span style="font-family: &quot;Courier New&quot;;">Banner</span><span style="color: black;"> and </span><span style="font-family: &quot;Courier New&quot;;">BannerMover</span><span style="color: black;"> classes.&nbsp; You can use
+them and modify them as you like. Remember that you need to send multiple words
+across the screen (travel horizontally from left to right) without user action.
+</span><b style=""><span style="background: yellow none repeat scroll 0% 50%; color: red; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">The banner containing the word should
+be removed from canvas after the user types in his/her word and hits enter.</span><span style="color: black;"> </span></b><span style="color: black;">You may want to look
+carefully at the </span><span style="font-family: &quot;Courier New&quot;;">RainCloud.java</span><span style="font-family: Courier; color: black;"> </span><span style="color: black;">class from Chapter 9 where we
+designed a new </span><span style="font-family: &quot;Courier New&quot;;">ActiveObject</span><span style="font-family: &quot;Courier New&quot;; color: black;"> </span><span style="color: black;">class to create </span><span style="font-family: &quot;Courier New&quot;;">ActiveObject</span><span style="">s</span><span style="font-family: &quot;Courier New&quot;; color: black;"> </span><span style="color: black;">of
+type </span><span style="font-family: &quot;Courier New&quot;;">FallingDroplet</span><span style="">s</span><span style="color: black;"> with appropriate pausing
+in between. A variation of this might help you send words across the screen.
+For now, send the words across the screen one at a time. This makes it easier
+to determine if a word typed matches the word on the screen.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin: 0in 32.25pt 0.0001pt 0.5in;"><span style="color: black;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin: 0in 32.25pt 0.0001pt 0.25in;"><span style="color: black;">Currently,
+class </span><span style="font-family: &quot;Courier New&quot;;">BannerMover</span><span style="color: black;"> uses a</span><span style="font-family: Courier; color: black;"> </span><span style="font-family: &quot;Courier New&quot;;">RandomIntGenerator</span><span style="font-family: Courier; color: black;"> </span><span style="color: black;">to
+randomly access random words from the </span><span style="font-family: &quot;Courier New&quot;;">ArrayList&lt;String</span><span style="font-family: Courier; color: black;">&gt; </span><span style="color: black;">defined
+in its constructor. You need to change class </span><span style="font-family: &quot;Courier New&quot;;">BannerMover</span><span style="color: black;"> so that its constructor will take a word string and a
+speed. Have your created </span><span style="font-family: &quot;Courier New&quot;;">ActiveObject</span><span style="color: black;"> class pass </span><span style="">to </span><span style="font-family: &quot;Courier New&quot;;">BannerMover</span><span style="color: black;"> speeds and
+random words </span><span style="">based on
+the level of difficulty selected by the user (for easy level, use slow speed
+and the small words file; for medium level, use medium speed and the medium
+words file; and for hard level, use fast speed and the long words file).</span><span style="color: black;">&nbsp; </span><span style="color: black;">You can use the RandomWord class created in Part I</span>&nbsp; to generate the words.<span style=""><o:p><br>
+</o:p></span></p>
+
+<h2 style="margin: 0in 32.25pt 0.0001pt 0.25in;"><span style="">**************************************************************************************************<o:p></o:p></span></h2>
+
+<h2 style="margin: 0in 32.25pt 0.0001pt 0.25in;"><u><span style="">Part
+IV&nbsp;Putting It Together<o:p></o:p></span></u></h2>
+
+<p class="MsoNormal" style="margin: 0in 32.25pt 0.0001pt 0.5in;"><span style="">You now need to tie everything together where actions are
+tied to the GUI. You will also need to determine whether or not the word typed
+by the user matches the word on a banner. Whenever this occurs, the word banner
+should be removed from the screen and a new word banner should be generated. If
+a word is mistyped or if a word floats off the screen and disappears, you
+should mark it against the user; otherwise, the user gets credit for typing the
+word correctly. Again, looking at the code in Ch 9 will give you some ideas on
+how you can remove an object before it reaches the right edge of the screen. <b style=""><span style="background: yellow none repeat scroll 0% 50%; color: red; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">The game should end when the user gets three strikes.</span></b><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin: 0in 32.25pt 0.0001pt 0.25in;"><span style=""><o:p>&nbsp;</o:p></span></p>
+
+<h2 style="margin: 0in 32.25pt 0.0001pt 0.25in;"><span style="">**************************************************************************************************<o:p></o:p></span></h2>
+
+<h2 style="margin: 0in 32.25pt 0.0001pt 0.25in;"><u><span style="">Part
+V&nbsp;Document code using JavaDoc<o:p></o:p></span></u></h2>
+
+<h2 style="margin: 0in 32.25pt 0.0001pt 0.25in; text-indent: 0.25in;"><span style="font-size: 12pt; font-weight: normal;">You
+should carefully document your program with appropriate comments
+throughout.&nbsp; When you have finished the program, you should create
+the JavaDocs for your program.&nbsp; We will cover the creation of
+JavaDocs in class prior to the duedate.<br style="">
+</span><span style=""><o:p>&nbsp;</o:p></span></h2>
+
+<h2 style="margin: 0in 32.25pt 0.0001pt 0.25in;"><span style="">**************************************************************************************************<o:p></o:p></span></h2>
+
+
+
+<p style="margin: 0in 32.25pt 0.0001pt 0in; text-indent: 0.25in;"><b><u><span style="font-size: 18pt;">Submitting Your Project <span style="background: yellow none repeat scroll 0% 50%; color: red; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">(DUE: Friday
+12/10/2010 by 5:00 PM &#8211; absolutely no late&nbsp; <span style=""></span></span></span><br>
+<span style="background: yellow none repeat scroll 0% 50%; font-size: 18pt; color: red; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">projects accepted)</span></u></b><b><u><span style="font-size: 18pt; color: red;"><br style="">
+<br style="">
+</span></u><span style="background: yellow none repeat scroll 0% 50%; color: red; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"><o:p></o:p></span></b></p>When you have the lab working correctly, create a new folder inside
+your LabProject folder and give it a name similar in format to
+MillerJohnLabProject only using your name. Copy <span style="text-decoration: underline;">everything</span> from
+your LabProject folder and put it in the newly created folder (but
+keep the old copies in their place as back up). Put a copy of your
+newly renamed folder into the&nbsp; /usr/people/handins/CS161/ProjectHandin&nbsp; folder
+before the due date.&nbsp; You can use the cp command or copy and paste to
+hand in your work. <br>
+<br>
+<h2 style="margin: 0in 32.25pt 0.0001pt 0.25in;"><span style="">**************************************************************************************************<o:p></o:p></span></h2>
+
+<p style="margin: 0in 32.25pt 0.0001pt 0.25in;"><o:p><br>
+</o:p></p>
+
+<p style="margin: 0in 32.25pt 0.0001pt 0.25in; text-align: center;" align="center"><b><span style="font-size: 36pt;">!!!Good luck!!!</span></b></p>
+
+</div>
+
+
+</body></html>

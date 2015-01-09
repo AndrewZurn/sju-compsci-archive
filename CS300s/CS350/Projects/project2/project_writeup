@@ -1,0 +1,12 @@
+Andrew Zurn
+CS350 - Holey
+Project 2 - Text Tumble
+12/2/12
+
+I was able to successfully implement the Text Tumble game for two players.  The game is split up into three parts, zurnProj2Serv, which acts as the server, zurnProj2Client1, which is the first player over the game, and zurnProj2Client2, which acts as the second player of the game.
+
+The server sets up all the FIFOs into the current computers /tmp directory.  The server uses a server fifo to read in info from the clients, and two client fifos to send info to each player of the game.  It also does the processing of the times, and will end the game when one player inputs a bad string, send the scores back to each of the clients, whereupon it will display results in each clients terminal.
+
+The clients connect to the server fifo to write to, and connect to their own read fifo, which reads data from the server.  They are also responsible for doing the checking of the text to make sure the input matches the other player's output, and will end the game if needed.  At the end of the game, they also do the computing of each of the other's clients times against their own, and prints out the correct result (Win or Lose).
+
+There is also one other small little shell script that I wrote that copies all of these files into the current computers /tmp directory, so anyone wanting to play can use the ssh program to connect and play the game.  They would need to have the server running first, then play the game.  This also helps when the /tmp directory is refreshed to easily move the games back into /tmp to be accessed. (It pulls from already modified files to allow all users from group and other to access them).

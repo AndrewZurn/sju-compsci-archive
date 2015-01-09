@@ -1,0 +1,249 @@
+\documentclass[11pt,twocolumn]{article}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage[english]{babel}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{authblk}
+\usepackage{natbib}
+\usepackage{parskip}
+\usepackage{enumerate}
+\usepackage{multirow}
+ 
+ 
+ 
+\title{The use of Propensity Scores in Observational Studies}
+\author[1]{Shannon Lane\thanks{selane@csbsju.edu}}
+\author[2]{Marjorie Rosenberg\thanks{mrosenberg@bus.wisc.edu}}
+\affil[1]{College of St. Benedict}
+\affil[2]{University of Wisconsin-Madison}
+ 
+\begin {document}
+ 
+\maketitle
+\begin{abstract}
+\noindent Propensity scores have been widely used in efforts to balance the distribution of the covariates in observational studies. This paper uses \citep{finkelstein2008lifetime} \citep{R}the stratification propensity score method and compares it to a regression method. These methods use data from the 2009 Medical Expenditure Panel Study (MEPS) in attempt to balance the covariates and determine differences among the methods.
+\end{abstract}
+ 
+ 
+\maketitle
+\section{Introduction}
+\setlength{\parindent}{.75cm}
+To understand the use of propensity scores in observational studies, the 2009 Medical Expenditure Panel Study (MEPS) (Cite). MEPS is a nationwide survey composed of families and individuals, information from their medical providers and employers. The data are on specific health care services used by Americans and how frequently they are used, the cost and the source of payment. Different covariates are used from the data, in order to help identify the question addressed.\\
+\indent Take for example an employer wants to decrease the overall health care expenditures within the employee pool at their company. The employer believes by implementing a weight loss program targeted at overweight employees, the employees would lose weight resulting in the reduction of weight related healthcare costs. The variable Body Mass Index (BMI) is a measurement of obesity. The treatment group in this scenario is individuals with high BMI, and the control group is individuals with healthy BMI. The groups differ in age, sex, education, and other information that could be associated with higher or lower BMI. So how can the employer determine if the program is effective of not?\\
+\indent To determine the success of interventions in health care studies, randomized clinical trials have been the gold standard for years \citep{cook2008introduction}. To produce reliable results in clinical trials, groups such as a control and treatment are balanced through the randomization of the subjects based on pre-determined covariates. A randomized clinical trial takes a great deal of time, money, and personnel. In hope to reduce these observational studies have become increasingly more researched and understood.\\
+\indent The BMI example is an example of an observational study. Observational studies are similar to clinical trials but the researcher lacks control over randomizing and balancing the groups \citep{guo2009propensity}. This leads to potential biases and varying results. In efforts to reduce bias and balance the groups propensity scores are used. Propensity scores are a conditional probability that balances the distribution of the covariates and results in a single scalar \citep{rosenbaum1983central}. This allows for comparisons between the control and treated groups to be concluded.\\
+\indent The propensity score is defined by the conditional probability of treatment given baseline covariates
+\begin{equation}
+e(X)=pr(Z=1|X),
+\end{equation}
+where e(X) is the predicted propensity score. If there are subjects with the same propensity score, then the distribution of the baseline covariates must be the same between the treatment and control subjects \citep{austin2011introduction}.\\
+\indent Propensity scores have been the leading technique in observational studies to reduce bias and increase precisions (D'Ago). One type of bias discussed in Cook and DeMets’ (2008) is selection bias, the subject selects to partake in a study. Propensity scores have the ability to balance the distribution, which reduces selection bias by making groups equal based on baseline covariates.\\
+\indent There are four main propensity score techniques: matching, stratification, inverse weighted treatment probability and covariate regression adjustment. In this paper, the stratification method will be used and analyzed; this method will be further described in the method section.\\
+\indent The purpose of this paper is to be able to compare the stratification propensity score method to a basic regression model using a propensity score as a covariate. In the next section, Method and Data, making the data set, stratification and the regression model will be described and the raw data will be described. The data will be analyzed in the Results section, followed by the Conclusion.
+ 
+ 
+ 
+\section{Methods}
+This research was conducted with the use of R, an open-source statistical computing software (cite). The major benefit of open-source is that since it is license free, and the community of users contribute to make it better. \\
+\indent In this paper we specifically compared the natural log of expenditures of obese and non-obese subjects in ten strata, to a regression model of the natural log of expenditures on obese subjects and propensity scores.\\
+\indent Obesity was determined by subjects BMI. In the MEPS data, BMI was calculated based on,
+\begin{equation}
+BMI = \frac{Weight in Pounds} {(Height in Inches)^2 } * 703 ~(cite).
+\end{equation}
+ 
+ 
+\noindent The BMI categories are:
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Classification&BMI(kg/m$^2$)\\ \hline
+Underweight & Less Than 18.5\\ \hline
+Normal Weight& 18.5 – 24.9 \\ \hline
+Overweight& 25.0 – 29.9 \\\hline
+Obesity & Greater Than or Equal to 30.0\\
+\hline
+\end{tabular}
+\end{center}
+ 
+\noindent For the treatment group, subjects are obese, thus are over 30.0 kg/m$^2$. The control groups is not obese subjects, and are under 29.9 kg/m$^2$.\\
+\indent For each calendar year, there are two panels in the study. For 2009 there was Panel 13 and Panel 14. For our research, we only examined Panel 13.
+ 
+\subsection{Making the Data Set}
+Using the 2009 MEPS data set that contained 36,855 subjects and 1,881 covariates, we decided to reduce the data set and make a new data frame that could aid in the comparison between obese and non-obese subjects.\\
+\indent The new data frame only consisted of individuals in Panel 13 and from the ages 18 to 65. It also contained BMI and Total Expenditure, since BMI is the treatment and Total Expenditure is the expected outcome. Within the new data frame, covariates that were believed to help influence if a subject was obese or not, were also selected. Refer to Appendix A to see all the covariates and their categorization.\\
+\indent All the covariates were recorded into categorical variables and made factors. The natural log of Total Expenditure and Total Family Income were taken. For BMI to be a binary variable, the missing data was removed. This left BMI only to contain obese and non-obese subjects.\\
+\indent For the duration of this paper, MEPS data frame will refer to the data frame created above.
+ 
+\subsection{Stratification Model}
+The stratification model divides subjects into strata, subgroups. In this research we used ten. The subjects are placed into each strata depending on their estimated propensity score \citep{austin2011introduction}. Within each stratum, both treated and control subjects are represented \citep{becker2002estimation}. In terms of our research, obese is the treatment and non-obese is the control. The average outcomes, expenditure, of each groups is then computed.\\
+\indent Using the MEPS data frame, the propensity score was calculated. This was done by running a logistic regression of BMI regressed on the covariates. These propensity scores were sortaed from largest to smallest into ten strata.\\
+\indent Each stratum was then analyzed between the two groups, obese and non-obese. The average difference of expenditures calculated by stratum and then the averages over the strata.
+ 
+\subsection{Regression Model}
+The OLS regression model is estimated assuming the natural log of expenditures as the dependent variable and using the propensity score as the covariate. \\
+\indent Using a normal regression model, we regressed the natural log of the Total Expenditures on an indivator variable for the treatment group obese, and the propensity scores.\\
+\begin{center}
+The results from these two models are shown in the Results Section.
+\end{center}
+ 
+\subsection{Data}
+Data is coming!
+\section{Results}
+Results will come!
+\section{Conclusion}
+Followed by a final conclusion!
+\section{Acknowledgements}
+ 
+\newpage
+ 
+\section{Appendix A} \label{appA}
+ 
+\begin{center}
+\begin{tabular}{|p{4cm}|c|p{7.7cm}|}
+\hline
+\multicolumn{3}{|c|}{Variable Documentation} \\
+\hline
+Variable & Code Name & Categorization \\ \hline
+\multirow{2}{*}{BMI} & \multirow{2}{*}{BMIM} & Unhealthy = BMI > 29.9 \\
+&& Heathy = BMI<29.9 \\ \hline
+\multirow{16}{*}{Geographic} & \multirow{16}{*}{REGION} & NORTHEAST = Connecticut, Maine, Massachusetts, New Hampshire, New Jersey,New York, Pennsylvania, Rhode Island, and Vermont \\
+&& MIDWEST = Indiana, Illinois, Iowa, Kansas, Michigan, Minnesota, Missouri, Nebraska, North Dakota, Ohio, South Dakota, and Wisconsin \\
+&&SOUTH = Alabama, Arkansas, Delaware, District of Columbia, Florida, Georgia, Kentucky, Louisiana, Maryland, Mississippi, North Carolina, Oklahoma, South Carolina, Tennessee, Texas, Virginia,
+and West Virginia\\
+&& WEST = Alaska, Arizona, California, Colorado, Hawaii, Idaho, Montana,
+Nevada, New Mexico, Oregon, Utah, Washington, and Wyoming \\\hline
+\multirow{2}{*}{Metropolitan } & \multirow{3}{*}{MSA} & YES \\
+&& NO\\
+Statistical Area&&MISSING \\ \hline
+AGE & AGE & NUMERICAL VALUE\\ \hline
+\multirow{2}{*}{Sex} & \multirow{2}{*}{SEX} & MALE \\
+&& FEMALE\\ \hline
+\multirow{3}{*}{Race} & \multirow{3}{*}{RACE} & WHITE \\
+&& BLACK\\
+&&OTHER \\ \hline
+\multirow{2}{*}{Hispanic} & \multirow{2}{*}{HISPAN} & YES \\
+&& NO\\ \hline
+\multirow{2}{*}{Family's Total Income} & \multirow{2}{*}{FamilyIncome} & \multirow{2}{*}{NATURAL LOG OF NUMERICAL VALUE }\\
+&& \\ \hline
+\multirow{3}{*}{Wears a Seatbelt} & \multirow{3}{*}{SEAT} & YES \\
+&& NO\\
+&&MISSING\\\hline
+\end{tabular}
+\end{center}
+\newpage
+\begin{center}
+\begin{tabular}{|p{4cm}|c|p{7.7cm}|}
+\hline
+Family Income & \multirow{3}{*}{POVERTY} & LOW \\
+as Percent of && MIDDLE\\
+Poverty Line&&HIGH\\ \hline
+\multirow{3}{*}{STUDENT} & \multirow{3}{*}{STUDENT} & YES \\
+&& NO\\
+&&MISSING\\\hline
+\multirow{3}{*}{Employment} & \multirow{3}{*}{EMPLOY} & YES \\
+&& NO\\
+&&MISSING\\\hline
+& \multirow{4}{*}{BloodPressure} & 1-2YRS \\
+Last Blood&& 3-4YRS\\
+Pressure Check&& $>$5YRS\\
+&&MISSING\\ \hline
+\multirow{4}{*}{Last Check Up} & \multirow{4}{*}{CHECKUP} & 1-2YRS \\
+&& 3-4YRS\\
+&& $>$5YRS\\
+&&MISSING\\ \hline
+\multirow{4}{*}{Last Cholesterol Check} & \multirow{4}{*}{CHOLESTEROL} & 1-2YRS \\
+&& 3-4YRS\\
+&& $>$5YRS\\
+&&MISSING\\ \hline
+Doctor Advised & \multirow{3}{*}{NOFAT} & YES \\
+to eat few high fat&& NO\\
+or high cholesterol foods&&MISSING\\\hline
+& \multirow{3}{*}{EXRCIS} & YES \\
+Doctor Advised && NO\\
+to Exercise More&&MISSING\\\hline
+\multirow{4}{*}{Marital Status} & \multirow{4}{*}{MARRY} & YES \\
+&& NOT TOGETHER\\
+&& NEVER\\
+&& MISSING\\ \hline
+\multirow{3}{*}{Spouse} & \multirow{3}{*}{SPOUSE} & YES \\
+&& NO\\
+&&MISSING\\\hline
+\multirow{6}{*}{Years of Education} & \multirow{6}{*}{EDUC} & NO = 0YRS \\
+&& HIGH = 1st-12th Grade\\
+&& 1-2YRS COL = 1-2YRS of College\\
+&&3-4YRS COL = 3-4YRS of College\\
+&&$+$5YRS COL = Over 5YRS of College\\
+&&MISSING\\ \hline
+Total Health& \multirow{2}{*}{TotalExp} &\multirow{2}{*}{NATURAL LOG OF NUMERICAL VALUE }\\
+Care Expenditure &&\\\hline
+\end{tabular}
+\end{center}
+ 
+\newpage
+\section{}
+\begin{tabular}{>{\bfseries}p{4.5cm}<{\centering}p{7.4cm}}
+Clinical Trial: &evaluation of an intervention in humans using statistical methods \citep{cook2008introduction}.\\
+Observational Study: &a type of research where data elements are collected from subjects in a treatment group and compared to a control group.\\
+Propensity Score:& is a conditional probability that balances the distribution of covariates and produces a single scalar summary.\\
+Non-randomization: &individuals are not randomly assigned to treatment groups.\\
+Covariate:& a independent variable in an observational study.\\
+Baseline: &the starting value of the individual or group and later the data will be compared to.\\
+Bias: &influences the data to one side, does not allow for neutral conclusions to be made \citep{guo2009propensity}. \\
+Stratification: &subjects in both groups are ranked according to their propensity score and separated into subgroups based on intervals. Typically at least 5 equal sized subgroups
+\end{tabular}
+\newpage
+\section{}
+\begin{tabular}{>{\bfseries}p{4.5cm}<{\centering}p{7.4cm}}
+Clinical Trial: &evaluation of an intervention in humans using statistical methods.(1)\\
+Observational Study: &a type of research where data elements are collected from subjects in a treatment group and compared to a control group.\\
+Retrospective: &individuals or cases whose event has already occurred.\\
+Cross-Sectional: &individuals or cases whose event is occurring at a single point in time.\\
+Prospective: &individuals or cases whose event is being followed forward in time.\\
+Propensity Score:& is a conditional probability that balances the distribution of covariates and produces a single scalar summary.\\
+Confounding: &an outside variable that can cause a correlation between the independent and dependent variables.\\
+Non-randomization: &individuals are not randomly assigned to treatment groups.\\
+Covariate:& a independent variable in an observational study.\\
+Baseline: &the starting value of the individual or group and later the data will be compared to.\\
+Bias: &influences the data to one side, does not allow for neutral conclusions to be made. (PS Book)\\
+Overt Bias:& bias seen in the data at hand.\\
+Hidden Bias: &bias not seen in the data at hand but requires information which was neither observed nor recorded.\\
+Selection Bias: &bias occurred through being nonrandomized studies.\\
+Counterfactual: &an outcome which did not occur.\\
+Average Treatment Effect (ATE):& measures the average causal differences in outcomes.\\
+Average effect of Treatment on the Treated (ATT): &measures the average causal differences in treated.\\
+Dichotomous: &two separate events, mutually exclusive.
+\end{tabular}
+ 
+ 
+\newpage
+\begin{tabular}{>{\bfseries}p{4.5cm}<{\centering}p{7.4cm}}
+\multicolumn{2}{>{\bfseries}c}{Propensity Scores in R}\\
+Without Replacement: &once a subject from the untreated group is matched with a subject from the treated group, the untreated subject can no longer be matched with any other subjects from the treated group.\\
+With Replacement:& once a subject from the untreated group is matched with a subject from the treated group, the untreated subject can be rematched with any other subjects from the treated group.\\
+\multicolumn{2}{c}{Can use MatchIt "exact" or Matching "Match"} \\
+Optimal:& matches are made to minimize the total propensity score distance between treated and untreated subjects.\\
+\multicolumn{2}{c}{Can use MatchIt "optimal"}\\
+Nearest Neighbor: &a treated subject is selected at random and is matched to the untreated subject with the closest propensity score, if there are equally closeness, an untreated subject will be chosen at random among the group.\\
+\multicolumn{2}{c}{Can use MatchIt "nearest"} \\
+Full Matching: &matches one treated subject to at least one untreated subject or via versa.\\
+\multicolumn{2}{c}{Can use MatchIt "full"}\\
+Mahalahobis Metric Matching: &a treated subject is selected at random and Mahalahobis distance is calculated, the untreated subject with the smallest distance is selected and removed from data set.\\
+\multicolumn{2}{c}{Can use MatchIt "nearest" distance$=$malhabobis m.order$=$smallest} \\
+Stratification: &subjects in both groups are ranked according to their propensity score and separated into subgroups based on intervals. Typically $5 $equal sized subgroups.\\
+\multicolumn{2}{c}{Can use MatchIt "subclass"} \\
+Inverse Probability of Treatment Weighting (IPTW): &each subject is weighted by its inverse probability of being in a certain group.\\
+\multicolumn{2}{c}{Can use ipw package}
+ 
+\end{tabular}
+ 
+ 
+ 
+ 
+\newpage
+\bibliographystyle{chicago}
+\bibliography{Articles}
+\end {document}

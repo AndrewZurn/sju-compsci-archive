@@ -1,0 +1,779 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns="http://www.w3.org/TR/REC-html40"><head>
+
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+  
+  <meta name="ProgId" content="Word.Document">
+
+  
+  <meta name="Generator" content="Microsoft Word 12">
+
+  
+  <meta name="Originator" content="Microsoft Word 12">
+
+  
+  <link rel="File-List" href="CS161Lab11_files/filelist.xml"><title>Lab 10: Interfaces</title><!--[if gte mso 9]><xml>
+
+ <o:DocumentProperties>
+
+  <o:Author>Imad Rahal</o:Author>
+
+  <o:LastAuthor>Imad Rahal</o:LastAuthor>
+
+  <o:Revision>33</o:Revision>
+
+  <o:TotalTime>101</o:TotalTime>
+
+  <o:Created>2008-10-13T20:23:00Z</o:Created>
+
+  <o:LastSaved>2008-10-13T22:06:00Z</o:LastSaved>
+
+  <o:Pages>1</o:Pages>
+
+  <o:Words>494</o:Words>
+
+  <o:Characters>2440</o:Characters>
+
+  <o:Company>CSB/SJU</o:Company>
+
+  <o:Lines>20</o:Lines>
+
+  <o:Paragraphs>5</o:Paragraphs>
+
+  <o:CharactersWithSpaces>2929</o:CharactersWithSpaces>
+
+  <o:Version>12.00</o:Version>
+
+ </o:DocumentProperties>
+
+</xml><![endif]-->
+  
+
+  
+
+  
+  <link rel="themeData" href="CS161Lab11_files/themedata.thmx">
+
+  
+  <link rel="colorSchemeMapping" href="CS161Lab11_files/colorschememapping.xml"><!--[if gte mso 9]><xml>
+
+ <w:WordDocument>
+
+  <w:Zoom>90</w:Zoom>
+
+  <w:SpellingState>Clean</w:SpellingState>
+
+  <w:GrammarState>Clean</w:GrammarState>
+
+  <w:TrackMoves/>
+
+  <w:TrackFormatting/>
+
+  <w:ValidateAgainstSchemas/>
+
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+
+  <w:DoNotPromoteQF/>
+
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+
+  <w:Compatibility>
+
+   <w:BreakWrappedTables/>
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=windows-1252">
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 12">
+<meta name="Originator" content="Microsoft Word 12">
+<link rel="File-List" href="CS161Lab11_files/filelist.xml">
+<title>Lab 10: Interfaces</title>
+<!--[if gte mso 9]><xml>
+<o:DocumentProperties>
+<o:Author>Imad Rahal</o:Author>
+<o:LastAuthor>Imad Rahal</o:LastAuthor>
+<o:Revision>33</o:Revision>
+<o:TotalTime>101</o:TotalTime>
+<o:Created>2008-10-13T20:23:00Z</o:Created>
+<o:LastSaved>2008-10-13T22:06:00Z</o:LastSaved>
+<o:Pages>1</o:Pages>
+<o:Words>494</o:Words>
+<o:Characters>2440</o:Characters>
+<o:Company>CSB/SJU</o:Company>
+<o:Lines>20</o:Lines>
+<o:Paragraphs>5</o:Paragraphs>
+<o:CharactersWithSpaces>2929</o:CharactersWithSpaces>
+<o:Version>12.00</o:Version>
+</o:DocumentProperties>
+</xml><![endif]-->
+
+
+  
+  <link rel="themeData" href="CS161Lab11_files/themedata.thmx">
+
+  
+  <link rel="colorSchemeMapping" href="CS161Lab11_files/colorschememapping.xml"><!--[if gte mso 9]><xml>
+<w:WordDocument>
+<w:Zoom>90</w:Zoom>
+<w:SpellingState>Clean</w:SpellingState>
+<w:GrammarState>Clean</w:GrammarState>
+<w:TrackMoves/>
+<w:TrackFormatting/>
+<w:ValidateAgainstSchemas/>
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:DoNotPromoteQF/>
+<w:LidThemeOther>EN-US</w:LidThemeOther>
+<w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+<w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+<w:Compatibility>
+<w:BreakWrappedTables/>
+<w:SnapToGridInCell/>
+<w:WrapTextWithPunct/>
+<w:UseAsianBreakRules/>
+<w:DontGrowAutofit/>
+<w:SplitPgBreakAndParaMark/>
+<w:DontVertAlignCellWithSp/>
+<w:DontBreakConstrainedForcedTables/>
+<w:DontVertAlignInTxbx/>
+<w:Word11KerningPairs/>
+<w:CachedColBalance/>
+</w:Compatibility>
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+<m:mathPr>
+<m:mathFont m:val="Cambria Math"/>
+<m:brkBin m:val="before"/>
+<m:brkBinSub m:val="&#45;-"/>
+<m:smallFrac m:val="off"/>
+<m:dispDef/>
+<m:lMargin m:val="0"/>
+<m:rMargin m:val="0"/>
+<m:defJc m:val="centerGroup"/>
+<m:wrapIndent m:val="1440"/>
+<m:intLim m:val="subSup"/>
+<m:naryLim m:val="undOvr"/>
+</m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+LatentStyleCount="267">
+<w:LsdException Locked="false" Priority="0" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+<w:LsdException Locked="false" Priority="9" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+<w:LsdException Locked="false" Priority="9" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="heading 2"/>
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+<w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+<w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+<w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+<w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+<w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+<w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+<w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+<w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+<w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+<w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+<w:LsdException Locked="false" Priority="10" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+<w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+<w:LsdException Locked="false" Priority="11" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+<w:LsdException Locked="false" Priority="22" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+<w:LsdException Locked="false" Priority="20" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+<w:LsdException Locked="false" Priority="59" SemiHidden="false"
+UnhideWhenUsed="false" Name="Table Grid"/>
+<w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+<w:LsdException Locked="false" Priority="1" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading"/>
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List"/>
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid"/>
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1"/>
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2"/>
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1"/>
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2"/>
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1"/>
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2"/>
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3"/>
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List"/>
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading"/>
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List"/>
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid"/>
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 1"/>
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+<w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+<w:LsdException Locked="false" Priority="34" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+<w:LsdException Locked="false" Priority="29" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+<w:LsdException Locked="false" Priority="30" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 2"/>
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 3"/>
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 4"/>
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 5"/>
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 6"/>
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+<w:LsdException Locked="false" Priority="19" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+<w:LsdException Locked="false" Priority="21" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+<w:LsdException Locked="false" Priority="31" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+<w:LsdException Locked="false" Priority="32" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+<w:LsdException Locked="false" Priority="33" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+<w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+<w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+</w:LatentStyles>
+</xml><![endif]-->
+
+
+  
+  <style>
+<!--
+/* Font Definitions */
+@font-face
+{font-family:"Cambria Math";
+panose-1:2 4 5 3 5 4 6 3 2 4;
+mso-font-charset:0;
+mso-generic-font-family:roman;
+mso-font-pitch:variable;
+mso-font-signature:-1610611985 1107304683 0 0 159 0;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+{mso-style-unhide:no;
+mso-style-qformat:yes;
+mso-style-parent:"";
+margin:0in;
+margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:12.0pt;
+font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";
+mso-fareast-theme-font:minor-fareast;}
+h1
+{mso-style-priority:9;
+mso-style-unhide:no;
+mso-style-qformat:yes;
+mso-style-link:"Heading 1 Char";
+mso-margin-top-alt:auto;
+margin-right:0in;
+mso-margin-bottom-alt:auto;
+margin-left:0in;
+mso-pagination:widow-orphan;
+mso-outline-level:1;
+font-size:24.0pt;
+font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";
+mso-fareast-theme-font:minor-fareast;
+font-weight:bold;}
+h2
+{mso-style-priority:9;
+mso-style-unhide:no;
+mso-style-qformat:yes;
+mso-style-link:"Heading 2 Char";
+mso-margin-top-alt:auto;
+margin-right:0in;
+mso-margin-bottom-alt:auto;
+margin-left:0in;
+mso-pagination:widow-orphan;
+mso-outline-level:2;
+font-size:18.0pt;
+font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";
+mso-fareast-theme-font:minor-fareast;
+font-weight:bold;}
+p
+{mso-style-noshow:yes;
+mso-style-priority:99;
+mso-margin-top-alt:auto;
+margin-right:0in;
+mso-margin-bottom-alt:auto;
+margin-left:0in;
+mso-pagination:widow-orphan;
+font-size:12.0pt;
+font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";
+mso-fareast-theme-font:minor-fareast;}
+span.Heading1Char
+{mso-style-name:"Heading 1 Char";
+mso-style-priority:9;
+mso-style-unhide:no;
+mso-style-locked:yes;
+mso-style-link:"Heading 1";
+mso-ansi-font-size:14.0pt;
+mso-bidi-font-size:14.0pt;
+font-family:"Cambria","serif";
+mso-ascii-font-family:Cambria;
+mso-ascii-theme-font:major-latin;
+mso-fareast-font-family:"Times New Roman";
+mso-fareast-theme-font:major-fareast;
+mso-hansi-font-family:Cambria;
+mso-hansi-theme-font:major-latin;
+mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:major-bidi;
+color:#365F91;
+mso-themecolor:accent1;
+mso-themeshade:191;
+font-weight:bold;}
+span.Heading2Char
+{mso-style-name:"Heading 2 Char";
+mso-style-noshow:yes;
+mso-style-priority:9;
+mso-style-unhide:no;
+mso-style-locked:yes;
+mso-style-link:"Heading 2";
+mso-ansi-font-size:13.0pt;
+mso-bidi-font-size:13.0pt;
+font-family:"Cambria","serif";
+mso-ascii-font-family:Cambria;
+mso-ascii-theme-font:major-latin;
+mso-fareast-font-family:"Times New Roman";
+mso-fareast-theme-font:major-fareast;
+mso-hansi-font-family:Cambria;
+mso-hansi-theme-font:major-latin;
+mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:major-bidi;
+color:#4F81BD;
+mso-themecolor:accent1;
+font-weight:bold;}
+span.SpellE
+{mso-style-name:"";
+mso-spl-e:yes;}
+span.GramE
+{mso-style-name:"";
+mso-gram-e:yes;}
+.MsoChpDefault
+{mso-style-type:export-only;
+mso-default-props:yes;
+font-size:10.0pt;
+mso-ansi-font-size:10.0pt;
+mso-bidi-font-size:10.0pt;}
+@page Section1
+{size:8.5in 11.0in;
+margin:1.0in 1.0in 1.0in 1.0in;
+mso-header-margin:.5in;
+mso-footer-margin:.5in;
+mso-paper-source:0;}
+div.Section1
+{page:Section1;}
+/* List Definitions */
+@list l0
+{mso-list-id:107242956;
+mso-list-template-ids:616960284;}
+@list l0:level2
+{mso-level-number-format:bullet;
+mso-level-text:o;
+mso-level-tab-stop:1.0in;
+mso-level-number-position:left;
+text-indent:-.25in;
+mso-ansi-font-size:10.0pt;
+font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";}
+@list l1
+{mso-list-id:1700274652;
+mso-list-template-ids:896805074;}
+@list l1:level2
+{mso-level-number-format:bullet;
+mso-level-text:o;
+mso-level-tab-stop:1.0in;
+mso-level-number-position:left;
+text-indent:-.25in;
+mso-ansi-font-size:10.0pt;
+font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";}
+ol
+{margin-bottom:0in;}
+ul
+{margin-bottom:0in;}
+-->
+  </style><!--[if gte mso 10]>
+<style>
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:"Table Normal";
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-priority:99;
+mso-style-qformat:yes;
+mso-style-parent:"";
+mso-padding-alt:0in 5.4pt 0in 5.4pt;
+mso-para-margin:0in;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:"Times New Roman","serif";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext="edit">
+<o:idmap v:ext="edit" data="1"/>
+</o:shapelayout></xml><![endif]--></head><body style="background-color: rgb(255, 255, 204);" lang="EN-US">
+<div class="Section1">
+<h1><span>Lab 10: Using
+Interfaces (<span style="background: yellow none repeat scroll 0% 50%; color: red; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">Work
+in pairs</span>)<o:p></o:p></span></h1>
+<p><span style="font-size: 14pt;">You are given the java file for the </span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">FunnyFace</span></b></span><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;"> </span><span style="font-size: 14pt;">class that implements </span><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">Movable</span></b><span style="font-size: 14pt;">. It presumes a fixed size face that has no
+color
+instance variable (all </span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">FunnyFace</span></b></span><span style="font-size: 14pt;"> objects are black framed shapes).&nbsp;Your
+lab will
+consist of three parts: <o:p></o:p></span></p>
+<p><span style="font-size: 14pt;">Design a Java interface, </span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">Reshapable</span></b></span><span style="font-size: 14pt;">, which supports two methods (call them </span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">setWidth</span></b></span><span style="font-size: 14pt;"> and </span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">setHeight</span></b></span><span style="font-size: 14pt;">) that allow a user program to change the
+width or height
+of the receiver object.<o:p></o:p></span></p>
+<p style="margin-left: 0.5in; text-indent: -0.25in;"><span style="font-size: 14pt;"><span style="">1.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="font-size: 14pt;">Modify
+the definition of the FunnyFace class so that it implements the
+Reshapable interface in addition to the Movable interface.&nbsp;&nbsp; </span><span style="font-size: 14pt;">As
+you <span class="SpellE">embark</span> on implementing those methods, <span style="background: yellow none repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">keep
+in mind that as you change the width or height of the face, the eye
+offset, eye
+radius, mouth width and mouth height need to change accordingly while
+maintaining approximately the same relative positions on the face.
+Those
+relative positions are defined in the constructor <span style="background: yellow none repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">of
+class</span></span></span><b style=""><span style="background: yellow none repeat scroll 0% 50%; font-size: 14pt; font-family: &quot;Courier New&quot;; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+<span class="SpellE">FunnyFace</span></span></b><span style="background: yellow none repeat scroll 0% 50%; font-size: 14pt; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">.</span><span style="font-size: 14pt;"> <br>
+</span></p>
+<p style="margin-left: 0.5in; text-indent: -0.25in;"><span style="font-size: 14pt;">On paper: <br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; First
+define what methods needs to be added to FunnyFace&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Define
+what additional instance variables are needed&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Define
+what things that are currently constants need to be variables
+instead&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Decide
+what current methods if any need to change or have their parameter list
+changed&nbsp; <br>
+<br>
+</span><span style="font-size: 14pt;"><br>
+2.&nbsp; Implement the changes you have defined in the FunnyFace.java
+file. </span></p>
+<p style="margin-left: 0.5in; text-indent: -0.25in;"><span style=""><span style="">3.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">
+&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 14pt;">Create
+a </span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">TestFace</span></b></span><span style="font-size: 14pt;"> class which extends </span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">FrameWindowController</span></b></span><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;"> </span></b><span style="font-size: 14pt;">that</span></p>
+<p style="margin-left: 1in; text-indent: -0.25in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">o<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="font-size: 14pt;">Will
+declare an
+instance variable of type </span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">Reshapable</span></b></span></p>
+<p style="margin-left: 1in; text-indent: -0.25in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">o<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="font-size: 14pt;">In
+the </span><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">begin</span></b><span style="font-size: 14pt;"> method: will initialize
+the instance variable of type </span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">Reshapable</span></b></span><span style="font-size: 14pt;"> to a new instance of class </span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">FunnyFace</span></b></span><span style="font-size: 14pt;"> </span></p>
+<p style="margin-left: 1in; text-indent: -0.25in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">o<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="font-size: 14pt;">In </span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">onMouseClick</span></b></span><span style="font-size: 14pt;">: will ask the user to enter a desired face
+width and
+height (using class </span><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">PopUpInput.java</span></b><span style="font-size: 14pt;">) and will then call the two methods (</span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">setWidth</span></b></span><span style="font-size: 14pt;"> and </span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">setHeight</span></b></span><span style="font-size: 14pt;">) on instance variable of type </span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">Reshapable</span></b></span><span style="font-size: 14pt;"> to modify the shape of the </span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">FunnyFace</span></b></span><span style="font-size: 14pt;">. <br>
+</span></p>
+<p class="western" style="margin-bottom: 0.0001pt; text-align: justify;"><span style="font-family: &quot;Times&quot;,&quot;serif&quot;;">When you have tested your
+program and are confident that it works correctly, show your program to
+your
+lab instructor or TA.&nbsp;</span> For
+this lab, I would like you to also turn in your work
+electronically.&nbsp;When you have the lab
+working
+correctly, create a new folder inside your Lab10 folder and give
+it a name similar in format to <big><span style="font-weight: bold;">MillerJohn_and_SchnepfJim_Lab10</span></big>
+only using your
+name and your partners name. Copy all Java files from your
+Lab10 folder and put them in the
+newly created folder (but
+keep the old copies in their place as back up).<span style="color: red;"></span>&nbsp;
+If you are not finished during lab time, <span style="color: black;">finish
+the assignment
+prior to coming
+to the next lab and put a copy of your newly renamed folder into
+the&nbsp;
+<big><span style="font-weight: bold;">/usr/people/handins/161LabHandin</span></big>&nbsp;
+folder before the start of the next lab
+period.&nbsp; You can use the cp command or copy and paste to hand in
+your work. .</span> <b><span style="background: yellow none repeat scroll 0% 50%; color: red; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">Also,
+be kind enough and email a copy of
+your joint work to your teammate.</span></b></p>
+<p style="margin-left: 1in; text-indent: -0.25in;">&nbsp; </p>
+<b style=""><span style="font-size: 18pt; font-family: &quot;Times&quot;,&quot;serif&quot;;">Programming
+Project</span></b><span style="font-size: 18pt; font-family: &quot;Times&quot;,&quot;serif&quot;;"> (</span><b style=""><span style="font-size: 18pt; font-family: &quot;Times&quot;,&quot;serif&quot;; color: red;">INDIVIDUAL
+WORK. Due at the beginning of next lab</span></b><span style="font-size: 18pt; font-family: &quot;Times&quot;,&quot;serif&quot;;">):<u1:p></u1:p>
+</span><b><span style="background: yellow none repeat scroll 0% 50%; font-size: 18pt; color: red; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">This
+project will take
+some time so don't wait until the last minute to start.</span></b><b><span style="font-size: 18pt; font-family: &quot;Times&quot;,&quot;serif&quot;; color: windowtext;"><o:p></o:p></span></b>
+<br>
+
+<p style="margin: 3.75pt 0in;">This&nbsp; project part of the lab will
+be due at the <b>beginning </b>of
+our lab one cycle from today. <big><span style="font-weight: bold;">You
+are to do your project independently,
+not in pairs.</span></big><span style="font-family: &quot;Times&quot;,&quot;serif&quot;;">
+Complete this project by the beginning of the next lab and
+show it
+to your instructor or TA.&nbsp; </span>When you have completed the
+project, also place a copy of your project folder, named similar to <big><span style="font-weight: bold;">MillerJohnLab10Project</span></big>&nbsp;
+into&nbsp; the&nbsp;&nbsp; <big><span style="font-weight: bold;">/usr/people/handins/161ProjectHandin</span></big>&nbsp;&nbsp;
+folder before the start of the next lab.</p>
+<p style="margin-left: 0.5in; text-indent: -0.25in;"><span style="font-size: 14pt;"><span style="">1.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="font-size: 14pt;">Make
+changes to the </span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">StraightFace</span></b></span><span style="font-size: 14pt;">
+class so that it also implements </span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">Reshapable</span></b></span><span style="font-size: 14pt;"> in addition to </span><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">Movable</span></b><span style="font-size: 14pt;">. <o:p></o:p></span></p>
+<p style="margin-left: 0.5in; text-indent: -0.25in;"><span style="font-size: 14pt;"><span style="">2.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="font-size: 14pt;">Create
+a class </span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">FaceShapes</span></b></span><span style="font-size: 14pt;"> that
+extends the </span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">FrameWindowController</span></b></span><span style="font-size: 14pt;"> class and uses the </span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">PopUpInput</span></b></span><span style="font-size: 14pt;">
+class to get the user’s input for width or height and then reshapes an
+instance
+of a </span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">Funnyface</span></b></span><span style="font-size: 14pt;"> or </span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">StraightFace</span></b></span><span style="font-size: 14pt;"> according to the user input.&nbsp; It is
+important
+that this class use variables of type </span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">Reshapable</span></b></span><span style="font-size: 14pt;"> so
+that the program could easily include </span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">StraightFace</span></b></span><span style="font-size: 14pt;"> or
+other objects that implement </span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">ReShapable</span></b></span><span style="font-size: 14pt;"> as well. <o:p></o:p></span></p>
+<p style="margin-left: 0.5in; text-indent: -0.25in;"><span style="font-size: 14pt;"><span style="">3.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="font-size: 14pt;">To
+implement the </span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">FaceShapes</span></b></span><span style="font-size: 14pt;">
+class, you will need to include a rudimentary user interface in order
+to get
+the users input. I would suggest that you do something along the
+following
+lines: <o:p></o:p></span></p>
+<p style="margin-left: 1in; text-indent: -0.25in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">o<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="font-size: 14pt;">Display
+an
+initial instance of both a </span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">StraightFace</span></b></span><span style="font-size: 14pt;"> as well as a </span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">FunnyFace</span></b></span><span style="font-size: 14pt;">. <o:p></o:p></span></p>
+<p style="margin-left: 1in; text-indent: -0.25in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">o<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="font-size: 14pt;">Display
+two small
+colored ovals with labels to represent the two faces (this is our
+version of a
+button). <o:p></o:p></span></p>
+<p style="margin-left: 1in; text-indent: -0.25in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">o<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="font-size: 14pt;">When
+a user
+clicks on the oval for the </span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">FunnyFace</span></b></span><span style="font-size: 14pt;"> (or the </span><span class="SpellE"><b style=""><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;">StraightFace</span></b></span><span style="font-size: 14pt;">),
+hide these shapes and display two small labeled ovals to represent the
+two
+choices for changing the face (width or height). <o:p></o:p></span></p>
+<p style="margin-left: 1in; text-indent: -0.25in;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><span style="">o<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="font-size: 14pt;">When
+the user
+clicks on one of the two small labeled ovals, a popup window will
+appear (use
+class<span class="GramE">&nbsp; <span class="SpellE"><b style=""><span style="font-family: &quot;Courier New&quot;;">PopUpInput</span></b></span></span>)</span><span style="font-size: 14pt; font-family: &quot;Courier New&quot;;"> </span><span style="font-size: 14pt;">to get the user input for the new width or
+height.
+When the face changes, the two buttons disappear and the original two
+buttons reappear
+to allow the user to make further changes. <o:p></o:p></span></p>
+</div>
+
+<w:snaptogridincell> <w:wraptextwithpunct> <w:useasianbreakrules> <w:dontgrowautofit>
+<w:splitpgbreakandparamark> <w:dontvertaligncellwithsp> <w:dontbreakconstrainedforcedtables><w:dontvertalignintxbx>
+<w:word11kerningpairs> <w:cachedcolbalance> </w:cachedcolbalance>
+<w:browserlevel></w:browserlevel></w:word11kerningpairs></w:dontvertalignintxbx></w:dontbreakconstrainedforcedtables></w:dontvertaligncellwithsp></w:splitpgbreakandparamark></w:dontgrowautofit></w:useasianbreakrules></w:wraptextwithpunct></w:snaptogridincell>
+<div class="Section1">
+<p style="margin-left: 1in; text-indent: -0.25in;"><span style="font-size: 14pt;"><br>
+<o:p></o:p></span></p>
+</div>
+
+</body></html>

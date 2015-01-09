@@ -1,0 +1,142 @@
+% This file was created with JabRef 2.9.2.
+% Encoding: Cp1252
+
+@MISC{Appcelerator,
+  author = {Appcelerator.com},
+  title = {Appcelerator Titanium},
+  owner = {Andrew},
+  timestamp = {2013.11.17},
+  url = {www.appcelerator.com}
+}
+
+@ARTICLE{Corral2011,
+  author = {Luis Corral and Alberto Sillitti and Giancarlo Succi and Alessandro
+	Garibbo and Paolo Ramella},
+  title = {Evolution of Mobile Software Development from Platform-Specific to
+	Web-Based Multiplatform Paradigm},
+  journal = {Onward!},
+  year = {2011},
+  volume = {Oct 2011},
+  pages = {na},
+  owner = {Andrew},
+  timestamp = {2013.10.27}
+}
+
+@MISC{Developer.Apple.com,
+  author = {Developer.Apple.com},
+  title = {Programming With Objective-C},
+  owner = {Andrew},
+  timestamp = {2013.11.17},
+  url = {https://developer.apple.com/library/ios/documentation/cocoa/conceptual/ProgrammingWithObjectiveC/Art/programflow1.png}
+}
+
+@ARTICLE{Goaer2013,
+  author = {Olivier Le Goaer and Sacha Waltham},
+  title = {Yet Another DSL for Cross-Platforms Mobile Development},
+  journal = {GlobalDSL},
+  year = {2013},
+  volume = {2013},
+  pages = {na},
+  owner = {Andrew},
+  timestamp = {2013.11.18}
+}
+
+@ARTICLE{Heitkoetter2013,
+  author = {Henning Heitkoetter and Tim A. Majchrzak and Herbert Kuchen},
+  title = {Cross-platform Model-Driven Development of Mobile Applications with
+	MD2},
+  journal = {Symposium of Applied Computing},
+  year = {2013},
+  volume = {March},
+  pages = {na},
+  owner = {Andrew},
+  timestamp = {2013.10.28}
+}
+
+@ARTICLE{Hird2011,
+  author = {Jake Hird},
+  title = {The fight gets technical: mobile apps vs. mobile sites},
+  journal = {Econsultancy},
+  year = {2011},
+  volume = {July},
+  pages = {na},
+  owner = {Andrew},
+  timestamp = {2013.11.17}
+}
+
+@ARTICLE{Huy2012,
+  author = {Ngu Phuc Huy and Do vanThanh},
+  title = {Evaluation of mobile app paradigms},
+  journal = {MoMM},
+  year = {2012},
+  volume = {Dec 2012},
+  pages = {3-5},
+  owner = {Admin},
+  timestamp = {2013.11.19}
+}
+
+@ARTICLE{Kolokolov2013,
+  author = {Viktor Kolokolov and Paul Baumann and Silvia Santini and Stefan T.
+	Ruehl and Stephan A. W. Verclas},
+  title = {Flexible Development of Variable Software Features for Mobile Business
+	Applications},
+  journal = {Software Product Line Conference},
+  year = {2013},
+  volume = {na},
+  pages = {na},
+  owner = {Andrew},
+  timestamp = {2013.10.27}
+}
+
+@ARTICLE{Leroux2011,
+  author = {Brian Leroux and Andre Charland},
+  title = {Mobile Application Development: Web vs. Native},
+  journal = {Communications of the ACM},
+  year = {2011},
+  volume = {54 No. 5},
+  pages = {49-53},
+  owner = {Andrew},
+  timestamp = {2013.10.27}
+}
+
+@MISC{Made-Easy.com,
+  author = {Java-Made-Easy.com},
+  title = {Java Hello World},
+  owner = {Andrew},
+  timestamp = {2013.11.17},
+  url = {http://www.java-made-easy.com/images/hello-world.jpg}
+}
+
+@ARTICLE{Mims2013,
+  author = {Christopher Mims},
+  title = {Why Mobile Apps Will Soon be Dead},
+  journal = {MIT Technology Review},
+  year = {2013},
+  volume = {1},
+  pages = {na},
+  owner = {Andrew},
+  timestamp = {2013.10.27}
+}
+
+@ELECTRONIC{Poulsen2012,
+  author = {Tim Poulsen},
+  year = {2012},
+  title = {Building Native Mobile Apps With Titanium},
+  organization = {Appcelerator, In.c},
+  note = {Lead Trainer \& Curriculum Developer},
+  owner = {Admin},
+  timestamp = {2013.11.19}
+}
+
+@ARTICLE{Xanthopoulos2013,
+  author = {Spyros Xanthopoulos and Stelios Xinogalos},
+  title = {A Comparative Analysis of Cross-platform Development Approaches for
+	Mobile Applications},
+  journal = {Balkan Conference in Informatics '13},
+  year = {2013},
+  volume = {Sept},
+  pages = {na},
+  owner = {Andrew},
+  timestamp = {2013.10.27}
+}
+

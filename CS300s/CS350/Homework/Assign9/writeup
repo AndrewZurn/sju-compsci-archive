@@ -1,0 +1,6 @@
+/*
+* Author: Andrew Zurn
+* Description: Write-up for Assign 9
+*/
+
+The assignment called for two programs, of which needed to take command line arguments, and used shared memory to process an array of randomly generated ints of size n, based on more command line input.  The first program takes the name of the shared memory segment, and another line that will be used to generate a list of generated ints, dependent how the argument given.  The second program does the same (I had to tweak the program, as I was unsure as to how I would get the number of elements in the shared memory to the second program).  That second program waits on the semaphore in program one to post, then does a quick sort on the shared memory, ordering the integers from least to greatest, and then unlinks and goes back posts, and exits.  The first program waits, and after the second program posts, it will write out those number to STDOUT, where upon the program also unlinks from its shared memory, and exits with success. 

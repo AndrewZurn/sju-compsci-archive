@@ -1,0 +1,14 @@
+Lab 23:
+In this lab you will use the same weighted graph as Lab 22 only this time you should produce (on paper or with a program) an Adjacency list representation of the graph and you should produce a program that will read in the edges from a file and create an adjacency matrix for the graph and print out the matrix. You may use any representation you like for the adjacency matrix. (I happen to prefer using a  TreeMap<Integer,TreeMap<Integer,Integer>> which implements an adjacency list which I can then use to print out both the adjacency list and the adjacency matrix.) You are free to use any language or format you like. Feel free to use anything you like for representing infinity as well.
+
+The class FileChooser can be imported with an import fileChooser.*; statement. It includes the method openScanner which can be used in the form:
+	Scanner sc=FileChooser.openScanner()
+to prepare to read a text file.
+
+Your input file will probably simply be a list of the form
+	7 5 3
+	2 4 6
+	...
+where the first number is the first vertex, the second is the second vertex, and the third is the weight. You will need to prepare the data file yourself from the graph.
+
+

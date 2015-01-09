@@ -1,0 +1,71 @@
+\begin{thebibliography}{10}
+
+\bibitem{Appcelerator}
+Appcelerator.com.
+\newblock Appcelerator titanium.
+
+\bibitem{Corral2011}
+Luis Corral, Alberto Sillitti, Giancarlo Succi, Alessandro Garibbo, and Paolo
+  Ramella.
+\newblock Evolution of mobile software development from platform-specific to
+  web-based multiplatform paradigm.
+\newblock {\em Onward!}, Oct 2011:na, 2011.
+
+\bibitem{Developer.Apple.com}
+Developer.Apple.com.
+\newblock Programming with objective-c.
+
+\bibitem{Goaer2013}
+Olivier~Le Goaer and Sacha Waltham.
+\newblock Yet another dsl for cross-platforms mobile development.
+\newblock {\em GlobalDSL}, 2013:na, 2013.
+
+\bibitem{Heitkoetter2013}
+Henning Heitkoetter, Tim~A. Majchrzak, and Herbert Kuchen.
+\newblock Cross-platform model-driven development of mobile applications with
+  md2.
+\newblock {\em Symposium of Applied Computing}, March:na, 2013.
+
+\bibitem{Hird2011}
+Jake Hird.
+\newblock The fight gets technical: mobile apps vs. mobile sites.
+\newblock {\em Econsultancy}, July:na, 2011.
+
+\bibitem{Huy2012}
+Ngu~Phuc Huy and Do~vanThanh.
+\newblock Evaluation of mobile app paradigms.
+\newblock {\em MoMM}, Dec 2012:3--5, 2012.
+
+\bibitem{Made-Easy.com}
+Java-Made-Easy.com.
+\newblock Java hello world.
+
+\bibitem{Kolokolov2013}
+Viktor Kolokolov, Paul Baumann, Silvia Santini, Stefan~T. Ruehl, and Stephan
+  A.~W. Verclas.
+\newblock Flexible development of variable software features for mobile
+  business applications.
+\newblock {\em Software Product Line Conference}, na:na, 2013.
+
+\bibitem{Leroux2011}
+Brian Leroux and Andre Charland.
+\newblock Mobile application development: Web vs. native.
+\newblock {\em Communications of the ACM}, 54 No. 5:49--53, 2011.
+
+\bibitem{Mims2013}
+Christopher Mims.
+\newblock Why mobile apps will soon be dead.
+\newblock {\em MIT Technology Review}, 1:na, 2013.
+
+\bibitem{Poulsen2012}
+Tim Poulsen.
+\newblock Building native mobile apps with titanium, 2012.
+\newblock Lead Trainer \& Curriculum Developer.
+
+\bibitem{Xanthopoulos2013}
+Spyros Xanthopoulos and Stelios Xinogalos.
+\newblock A comparative analysis of cross-platform development approaches for
+  mobile applications.
+\newblock {\em Balkan Conference in Informatics '13}, Sept:na, 2013.
+
+\end{thebibliography}

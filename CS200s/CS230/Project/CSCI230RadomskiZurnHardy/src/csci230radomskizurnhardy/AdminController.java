@@ -1,0 +1,389 @@
+package csci230radomskizurnhardy;
+
+import java.util.ArrayList;
+import java.util.TreeMap;
+
+/**
+ * Class AdminController will be used to serve the basic functions of the
+ * administrator for the "Choose My College" software package being constructed
+ * in CS230 of the Spring of 2012. The intended purpose of this class is to
+ * allow for the modifying of information important to the User and University
+ * class also included in the csci230radomskizurnhardy package.
+ *
+ * @author Andrew Zurn, Wiley Radomski, Preston Hardy
+ * @version 1.0
+ * @since March 12, 2012
+ */
+public class AdminController {
+
+    /**
+     * Will be used to add a new university to the CMC system.
+     *
+     * @param school Name of the school.
+     * @param state Name of the state where the school is located.
+     * @param location Name of the location of the school.
+     * @param control Private or public university.
+     * @param numberOfStudents Number of students attending the school.
+     * @param percentFemales Percentage of those student who are female.
+     * @param SATVerbal The average SAT Verbal score of the school.
+     * @param SATMath The average SAT Math school of the school.
+     * @param expenses The cost to attend the school.
+     * @param percentFinancialAid The percentage receiving financial aid at the
+     * school.
+     * @param numberOfApplicants The number of applicants to the school.
+     * @param percentAdmitted The percentage of those applicants that are
+     * admitted.
+     * @param percentEnrolled The percentage of those admitted who enroll.
+     * @param academicsScale Scale 1-10 gauging academic life.
+     * @param socialScale Scale 1-10 gauging social life.
+     * @param qualityOfLifeScale Scale 1-10 gauging qualify of life.
+     */
+    public static void addUniversity(String school, String state, String location, String control,
+            int numberOfStudents, double percentFemales, double SATVerbal, double SATMath,
+            double expenses, double percentFinancialAid, int numberOfApplicants,
+            double percentAdmitted, double percentEnrolled, int academicsScale,
+            int socialScale, int qualityOfLifeScale) {
+
+        DatabaseController.addUniversity(school, state, location, control,
+                numberOfStudents, percentFemales, SATVerbal, SATMath,
+                expenses, percentFinancialAid, numberOfApplicants,
+                percentAdmitted, percentEnrolled, academicsScale,
+                socialScale, qualityOfLifeScale);
+    }
+
+    /**
+     * Will add an emphasis to a school.
+     *
+     * @param school Name of the school.
+     * @param emphasis Emphasis to be added.
+     */
+    public static void addUniversityEmphasis(String school, String emphasis) {
+        DatabaseController.addUniversityEmphasis(school, emphasis);
+    }
+
+    /**
+     * Will add a user to the CMC system.
+     *
+     * @param firstName First name of user.
+     * @param lastName Last name of user.
+     * @param username User name of user.
+     * @param password Password of user.
+     * @param type The type of user that the user is.
+     */
+    public static void addUser(String firstName, String lastName, String username,
+            String password, char type) {
+        DatabaseController.addUser(firstName, lastName, username, password, type);
+    }
+
+    /**
+     * Will deactivate the user within the CMC system.
+     *
+     * @param Id ID number for which to be deactivated.
+     */
+    public static void deactivateUser(int Id) {
+        DatabaseController.deactivateUser(Id);
+    }
+
+    /**
+     * Will deactivate a user within the CMC system.
+     *
+     * @param username User name in which to be deactivated.
+     */
+    public static void deactivateUser(String username) {
+        DatabaseController.deactivateUser(username);
+    }
+
+    /**
+     * Will edit a university within the CMC system.
+     *
+     * @param school Name of the school.
+     * @param state Name of the state where the school is located.
+     * @param location Name of the location of the school.
+     * @param control Private or public university.
+     * @param numberOfStudents Number of students attending the school.
+     * @param percentFemales Percentage of those student who are female.
+     * @param SATVerbal The average SAT Verbal score of the school.
+     * @param SATMath The average SAT Math school of the school.
+     * @param expenses The cost to attend the school.
+     * @param percentFinancialAid The percentage receiving financial aid at the
+     * school.
+     * @param numberOfApplicants The number of applicants to the school.
+     * @param percentAdmitted The percentage of those applicants that are
+     * admitted.
+     * @param percentEnrolled The percentage of those admitted who enroll.
+     * @param academicsScale Scale 1-10 gauging academic life.
+     * @param socialScale Scale 1-10 gauging social life.
+     * @param qualityOfLifeScale Scale 1-10 gauging qualify of life.
+     */
+    public static void editUniversity(String school, String state, String location, String control,
+            int numberOfStudents, double percentFemales, double SATVerbal, double SATMath,
+            double expenses, double percentFinancialAid, int numberOfApplicants,
+            double percentAdmitted, double percentEnrolled, int academicsScale,
+            int socialScale, int qualityOfLifeScale) {
+        DatabaseController.editUniversity(school, state, location, control,
+                numberOfStudents, percentFemales, SATVerbal, SATMath,
+                expenses, percentFinancialAid, numberOfApplicants,
+                percentAdmitted, percentEnrolled, academicsScale,
+                socialScale, qualityOfLifeScale);
+    }
+
+    /**
+     * Will edit the emphases of a university.
+     *
+     * @param school Name of the school.
+     * @param emphases Emphases to be changed.
+     */
+    public static void editUniversityEmphases(String school, ArrayList<String> emphases) {
+        //DatabaseController.editUniversityEmphases(school, emphases);
+    }
+
+    /**
+     * Will edit a user within the CMC system.
+     *
+     * @param Id ID number of the user.
+     * @param firstName First name of the user.
+     * @param lastName Last name of the user.
+     * @param password Password of the user.
+     */
+    public static void editUser(String username, String firstName, String lastName, String password) {
+        DatabaseController.editUser(username, firstName, lastName, password);
+    }
+
+    /**
+     * Will edit a user with administrator level access.
+     *
+     * @param Id Identification number of the user.
+     * @param firstName First name of the user.
+     * @param lastName Last name of the user.
+     * @param password Password of the user.
+     * @param type Whether the User is a Person or Admin
+     * @param status If the status is active, it should be 'a'
+     */
+    public static void editUserByAdmin(String username, String firstName, String lastName, String password, char type, char status) {
+        DatabaseController.editUserByAdmin(username, firstName, lastName, password, type, status);
+    }
+
+    /**
+     * Will return a list of all possible emphases.
+     *
+     * @return the list of emphases.
+     */
+    public static ArrayList<String> getAllPossibleEmphases() {
+        ArrayList<String> emphasesMap = DatabaseController.getAllPossibleEmphases();
+        return emphasesMap;
+    }
+
+    /**
+     * Will return a map of all the users and their associated schools within
+     * the CMC system.
+     *
+     * @return the map of saved schools.
+     */
+    public static TreeMap<Integer, ArrayList<String>> getAllSavedSchools() {
+        TreeMap<Integer, ArrayList<String>> savedSchoolMap = DatabaseController.getAllSavedSchools();
+        return savedSchoolMap;
+    }
+
+    /**
+     * Will return a map of all the universities within the CMC system.
+     *
+     * @return the map of all universities.
+     */
+    public static ArrayList<University> getAllUniversities() {
+        ArrayList<University> universitiesList = DatabaseController.getAllUniversities();
+        return universitiesList;
+    }
+
+    /**
+     * Will return all the universities with a list of all the emphases.
+     *
+     * @return
+     */
+    public static TreeMap<String, ArrayList<String>> getAllUniversityNamesWithEmphases() {
+        TreeMap<String, ArrayList<String>> universitiesEmphasesMap =
+                DatabaseController.getAllUniversityNamesWithEmphases();
+        return universitiesEmphasesMap;
+    }
+//    I think this method is the same as the above one. I cannot find a difference between the outputs from the database.
+//    /**
+//     * Will return a complete record of all universities with their emphases.
+//     * @return 
+//     */
+//    public static TreeMap getAllUniversityRecordsWithEmphases(){
+//        //TreeMap universityRecordEmphasesMap = DatabaseController.getAllUniversityRecordsWithEmphases();
+//        return null/*universityRecordEmphasesMap*/;
+//    }
+
+    /**
+     * Will return an ArrayList of all users within the CMC system.
+     *
+     * @return list of all users.ssed to this class from stdin.
+     */
+    public static ArrayList<User> getAllUsers() {
+        ArrayList<User> userList = DatabaseController.getAllUsers();
+        return userList;
+    }
+
+    /**
+     * Will return a specific user within the CMC system.
+     *
+     * @param Id ID number of the user.
+     * @return the user.
+     */
+    public static User getSpecificUser(Integer Id) {
+        User user = DatabaseController.getSpecificUser(Id);
+        return user;
+    }
+
+    /**
+     * Will return a specific user within the CMC system.
+     *
+     * @param username
+     * @return the user.
+     */
+    public static User getSpecificUser(String username) {
+        User user = DatabaseController.getSpecificUser(username);
+        return user;
+    }
+
+    /**
+     * Logs on Admin if username and password are correct
+     *
+     * @param username
+     * @param givenPassword
+     * @return
+     */
+    public static boolean login(String username, String givenPassword) {
+        boolean status = false;
+        try {
+            User user = getSpecificUser(username);
+            String correctPass = user.getPassword();
+            if (correctPass.equals(givenPassword)) {
+                System.out.println("Login Successful");
+                status = true;
+            } else {
+                System.out.println("Login Unsuccessful");
+                status = false;
+            }
+        } catch (NullPointerException ne) {
+            System.out.println("This user was not found within our database.");
+        }
+        return status;
+    }
+
+    /**
+     * Used to run the class from the command line.
+     *
+     * @param args The parameters passed to the class from stdin.
+     */
+    public static void main(String args[]) {
+
+        System.out.println("\n\naddUniversity function");
+         System.out.println("***Here is Use Case #15: Add School***");
+        ArrayList<University> universityList = DatabaseController.getAllUniversities();
+//       for(University uni: universityList){
+//            System.out.println(uni.getSchool());
+//        }
+//        AdminController.addUniversity("Zurn University", "Zurn State", "URBAN", "PRIVATE",
+//                5000, 65.5, 1100, 1100, 25000, 85.9, 2000, 50.0, 25.0, 5, 5, 5);
+//        universityList = DatabaseController.getAllUniversities();
+        for (University uni : universityList) {
+            System.out.println(uni.getSchool());
+        }
+
+        System.out.println("\n\naddEmphasis function");
+//        AdminController.addUniversityEmphasis("Zurn University", "Computer Science");
+        universityList = DatabaseController.getAllUniversities();
+        for (University uni : universityList) {
+            if (uni.getSchool().equals("Zurn University")) {
+                System.out.println(uni);
+            }
+        }
+
+        System.out.println("\n\naddUser function");
+         System.out.println("***Here is Use Case #12: Add User***");
+//        AdminController.addUser("Andrew", "Zurn", "Zurn91", "password", 'u');
+        ArrayList<User> userList = DatabaseController.getAllUsers();
+        for (User user : userList) {
+            System.out.println(user);
+        }
+
+        System.out.println("\n\ndeactivateUser function");
+         System.out.println("***Here is Use Case #14: Deactivate User***");
+        AdminController.deactivateUser("Zurn91");
+        userList = DatabaseController.getAllUsers();
+        for (User user : userList) {
+            if (user.getUserName().equals("Zurn91")) {
+                System.out.println(user);
+            }
+        }
+
+        System.out.println("\n\neditUniversity function");
+         System.out.println("***Here is Use Case #16: Edit Universities***");
+        AdminController.editUniversity("ZURN UNIVERSITY", "STATE OF ZURN", "URBAN", "PRIVATE",
+                5000, 65.5, 1100, 1100, 25000, 85.9, 2000, 50.0, 25.0, 5, 5, 5);
+        universityList = DatabaseController.getAllUniversities();
+        for (University uni : universityList) {
+            if (uni.getSchool().equals("Zurn University")) {
+                System.out.println(uni);
+            }
+        }
+
+        System.out.println("\n\neditUniversityEmphases function");
+        ArrayList<String> empList = new ArrayList<String>();
+        empList.add("Science");
+        empList.add("Math");
+        AdminController.editUniversityEmphases("Zurn University", empList);
+        universityList = DatabaseController.getAllUniversities();
+        for (University uni : universityList) {
+            if (uni.getSchool().equals("Zurn University")) {
+                System.out.println(uni);
+                for(String emp: uni.getEmphases())
+                System.out.println(emp);
+            }
+        }
+
+        System.out.println("\n\neditUser function");
+         System.out.println("***Here is Use Case #13: Edit User***");
+        AdminController.editUser("Zurn91", "Andy", "Zurn", "Password");
+        userList = DatabaseController.getAllUsers();
+        for (User user : userList) {
+            System.out.println(user);
+        }
+
+        System.out.println("\n\neditUserByAdmin function");
+        AdminController.editUserByAdmin("Zurn91", "Andy", "Zurn", "PASSWORD", 'u', 'N');
+        userList = DatabaseController.getAllUsers();
+        for (User user : userList) {
+            System.out.println(user);
+        }
+
+        System.out.println("\n\ngetAllPossibleEmphases function");
+        System.out.println(AdminController.getAllPossibleEmphases());
+
+        System.out.println("\n\ngetSavedSchools function");
+        System.out.println(AdminController.getAllSavedSchools());
+
+        System.out.println("\n\ngetAllUniversities function");
+        System.out.println("***Here is Use Case #5: Manage Universities***");
+        universityList = DatabaseController.getAllUniversities();
+        for (University uni : universityList) {
+            System.out.println(uni.getSchool());
+        }
+
+        System.out.println("\n\ngetUniversityNamesWithEmphases function");
+        System.out.println(AdminController.getAllUniversityNamesWithEmphases());
+
+        System.out.println("\n\ngetAllUsers function");
+        System.out.println("***Here is Use Case #6: Manage Users***");
+        System.out.println(AdminController.getAllUsers());
+
+        System.out.println("\n\ngetSpecificUser function");
+        System.out.println(AdminController.getSpecificUser("Zurn91"));
+
+        System.out.println("\n\nlogin function");
+        System.out.println(AdminController.login("Zurn91", "PASSWORD"));
+
+
+    }
+}

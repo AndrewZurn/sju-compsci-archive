@@ -1,0 +1,1208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns="http://www.w3.org/TR/REC-html40"><head>
+
+
+
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+  
+  <meta name="ProgId" content="Word.Document">
+
+  
+  <meta name="Generator" content="Microsoft Word 12">
+
+  
+  <meta name="Originator" content="Microsoft Word 12">
+
+  
+  <link rel="File-List" href="Lab14_files/filelist.xml"><title>Lab 16: Jedit, the command line, applets</title><!--[if gte mso 9]><xml>
+
+ <o:DocumentProperties>
+
+  <o:Author>Imad Rahal</o:Author>
+
+  <o:LastAuthor>Imad Rahal</o:LastAuthor>
+
+  <o:Revision>25</o:Revision>
+
+  <o:TotalTime>33</o:TotalTime>
+
+  <o:Created>2008-10-24T17:41:00Z</o:Created>
+
+  <o:LastSaved>2009-10-30T19:19:00Z</o:LastSaved>
+
+  <o:Pages>1</o:Pages>
+
+  <o:Words>1220</o:Words>
+
+  <o:Characters>5902</o:Characters>
+
+  <o:Company>CSB/SJU</o:Company>
+
+  <o:Lines>49</o:Lines>
+
+  <o:Paragraphs>14</o:Paragraphs>
+
+  <o:CharactersWithSpaces>7108</o:CharactersWithSpaces>
+
+  <o:Version>12.00</o:Version>
+
+ </o:DocumentProperties>
+
+
+ <w:WordDocument>
+
+  <w:Zoom>120</w:Zoom>
+
+  <w:SpellingState>Clean</w:SpellingState>
+
+  <w:GrammarState>Clean</w:GrammarState>
+
+  <w:TrackMoves/>
+
+  <w:TrackFormatting/>
+
+  <w:ValidateAgainstSchemas/>
+
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+
+  <w:DoNotPromoteQF/>
+
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+
+  <w:Compatibility>
+
+   <w:BreakWrappedTables/>
+
+   <w:SnapToGridInCell/>
+
+   <w:WrapTextWithPunct/>
+
+   <w:UseAsianBreakRules/>
+
+   <w:DontGrowAutofit/>
+
+   <w:SplitPgBreakAndParaMark/>
+
+   <w:DontVertAlignCellWithSp/>
+
+   <w:DontBreakConstrainedForcedTables/>
+
+   <w:DontVertAlignInTxbx/>
+
+   <w:Word11KerningPairs/>
+
+   <w:CachedColBalance/>
+
+  </w:Compatibility>
+
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+
+  <m:mathPr>
+
+   <m:mathFont m:val="Cambria Math"/>
+
+   <m:brkBin m:val="before"/>
+
+   <m:brkBinSub m:val="&#45;-"/>
+
+   <m:smallFrac m:val="off"/>
+
+   <m:dispDef/>
+
+   <m:lMargin m:val="0"/>
+
+   <m:rMargin m:val="0"/>
+
+   <m:defJc m:val="centerGroup"/>
+
+   <m:wrapIndent m:val="1440"/>
+
+   <m:intLim m:val="subSup"/>
+
+   <m:naryLim m:val="undOvr"/>
+
+  </m:mathPr></w:WordDocument>
+
+</xml><![endif]--><!--[if gte mso 9]><xml>
+
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+
+  LatentStyleCount="267">
+
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="heading 2"/>
+
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Table Grid"/>
+
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light Shading"/>
+
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light List"/>
+
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light Grid"/>
+
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Dark List"/>
+
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful List"/>
+
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+
+ </w:LatentStyles>
+
+</xml><![endif]-->
+  
+
+  
+
+  
+  <style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611985 1107304683 0 0 159 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+h1
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 1 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:24.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+h2
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 2 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:18.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+p
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 1";
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#365F91;
+	mso-themecolor:accent1;
+	mso-themeshade:191;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 2";
+	mso-ansi-font-size:13.0pt;
+	mso-bidi-font-size:13.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+  </style><!--[if gte mso 10]>
+
+<style>
+
+ /* Style Definitions */
+
+ table.MsoNormalTable
+
+	{mso-style-name:"Table Normal";
+
+	mso-tstyle-rowband-size:0;
+
+	mso-tstyle-colband-size:0;
+
+	mso-style-noshow:yes;
+
+	mso-style-priority:99;
+
+	mso-style-qformat:yes;
+
+	mso-style-parent:"";
+
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+
+	mso-para-margin:0in;
+
+	mso-para-margin-bottom:.0001pt;
+
+	mso-pagination:widow-orphan;
+
+	font-size:10.0pt;
+
+	font-family:"Times New Roman","serif";}
+
+</style>
+
+<![endif]--><!--[if gte mso 9]><xml>
+
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+
+</xml><![endif]--><!--[if gte mso 9]><xml>
+
+ <o:shapelayout v:ext="edit">
+
+  <o:idmap v:ext="edit" data="1"/>
+
+ </o:shapelayout></xml><![endif]--></head><body style="background-color: rgb(255, 255, 204);" lang="EN-US">
+<div class="Section1">
+<h1><span style="">Lab 16: </span><span class="SpellE"><span style="font-family: &quot;Courier New&quot;;">gedit</span></span><span>, the
+command line, and applets<span class="SpellE"><span class="GramE"></span></span>
+(<span style="background: yellow none repeat scroll 0% 50%; color: red; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">Work
+in pairs</span>)</span></h1>
+<h2><span style="">Part I: Using </span><span class="SpellE"><span style="font-family: &quot;Courier New&quot;;">gedit</span></span><span style=""><o:p></o:p></span></h2>
+<p style="margin-bottom: 12pt;">In this lab we are going to switch from
+<span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">DrJava</span></b></span> to&nbsp; <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">gedit</span></b></span> to edit
+our programs and the command line
+to do everything else. To start with, I have given you two sample
+files: <b><span style="font-family: &quot;Courier New&quot;;">SortInputs.java</span></b>
+and <b><span style="font-family: &quot;Courier New&quot;;">StartSortInputs.java</span></b>.
+On the
+command line, use <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">cd</span></b></span><span style="font-family: &quot;Courier New&quot;;"> </span>to change into <b><span style="font-family: &quot;Courier New&quot;;">CS161/Lab16</span></b>.&nbsp; Open
+<b><span style="font-family: &quot;Courier New&quot;;">SortInputs.java</span></b><span style="font-family: &quot;Courier New&quot;;"> </span>by typing <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">gedit</span></b></span><b><span style="font-family: &quot;Courier New&quot;;"> SortInputs.java &amp;</span></b><span class="GramE">&nbsp; (</span>The <b><span style="font-family: &quot;Courier New&quot;;">&amp;</span>
+</b>symbol is necessary to allow you to use your shell terminal window
+while <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">gedit</span></b></span>
+is open). If you forgot the <b><span style="font-family: &quot;Courier New&quot;;">&amp;</span></b>,
+however, you can achieve the same result by going to the shell, holding
+down
+the control key while you hit <b><span style="font-family: &quot;Courier New&quot;;">z</span></b>
+(<span style="font-family: &quot;Courier New&quot;;">&lt;<b>ctrl-z</b>&gt;</span>)
+and,
+then, typing <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">bg</span></b></span><b><span style="font-family: &quot;Courier New&quot;;"> </span></b>at the command line
+followed by a
+return. The <b><span style="font-family: &quot;Courier New&quot;;">&amp; </span></b>and
+the
+<b><span style="font-family: &quot;Courier New&quot;;">&lt;ctrl-z&gt; <span class="SpellE"><span class="GramE">bg</span></span> </span></b>have
+the same effect - they make the
+program (<span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">gedit</span></b></span><b><span style="font-family: &quot;Courier New&quot;;"> </span></b>in this case) run as
+a concurrent
+process independent of the shell.).&nbsp; <span class="GramE">Use the
+same shell
+window to open the file</span> <b><span style="font-family: &quot;Courier New&quot;;">StartSortInputs.java</span></b>
+(giving you both files at the same time).&nbsp;&nbsp; Notice that the <b><span style="font-family: &quot;Courier New&quot;;">StartSortInputs.java</span></b>
+class simply
+contains the <b style=""><span style="font-family: &quot;Courier New&quot;;">main</span></b>
+method which creates an object of type <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">SortInputs</span></b></span><b><span style="font-family: &quot;Courier New&quot;;"> </span></b>and, then, runs its <span class="GramE"><b><span style="font-family: &quot;Courier New&quot;;">run(</span></b></span><b><span style="font-family: &quot;Courier New&quot;;">)</span></b> method.&nbsp; <b><span style="font-family: &quot;Courier New&quot;;">StartSortInputs.java </span></b>is used simply to lauch an instance of the SortInputs class.<span style="font-family: &quot;Courier New&quot;;"></span></p>
+<p style="margin-bottom: 12pt;"><big>When we write a program for use
+from the command line, we need a "launching" class that has a main
+method in it. In general, the "launching" class looks as follows:</big></p>
+
+<big>public class RunSomeOtherClass {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public static void main(String [] args) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SomeOtherClass someObject=new
+SomeOtherClass(....);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; someObject.run(); //or, perhaps,
+some other methods in the&nbsp;&nbsp; class<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+//SomeOtherClass might also be called.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>}<br>
+We will explore the main method further in Part VI of this lab, but for
+now, note that it will help us "run" a program from the command line.</big>
+<p style="margin-bottom: 12pt;"> </p>
+
+<h2><span style="">Part II: Compiling
+and running from the command line<o:p></o:p></span></h2>
+
+<p style="margin-bottom: 12pt;">On the command line, use <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">cd</span></b></span>
+to change into <b><span style="font-family: &quot;Courier New&quot;;">CS161/Lab16&nbsp;
+</span></b><span style=""></span>(<span style="background: yellow none repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">if
+you’re not there already</span>).&nbsp; Type <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">javac</span></b></span><b><span style="font-family: &quot;Courier New&quot;;"> *.java </span></b>to compile
+both of those
+java files (using <b><span style="font-family: &quot;Courier New&quot;;">* </span></b>instead
+of a file name compiles all files that end in <b><span style="font-family: &quot;Courier New&quot;;">.java</span></b>).
+This is equivalent to clicking on the compile button in <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">DrJava</span></b></span>
+for all of the files
+in the directory.&nbsp; Type<b><span style="font-family: &quot;Courier New&quot;;">
+java <span class="SpellE">StartSortInputs</span></span></b> to run the
+program: type in a
+series of eight to ten numbers (you can put them all on the same line
+with
+spaces in between and then hit return or hit return after each entry.)&nbsp;
+Then,
+hold down the control key and hit <b><span style="font-family: &quot;Courier New&quot;;">d</span></b>.
+(This key stroke combination - written &lt;<b><span style="font-family: &quot;Courier New&quot;;">ctrl-d</span></b>&gt;
+- generates a keyboard end of file and, therefore, stops scanner input
+from the
+keyboard.) You should now see your numbers typed out, one per line, in
+sorted order
+in the Terminal Window.</p>
+<h2><span style="">Part III: Filters
+and redirection<o:p></o:p></span></h2>
+<p style="margin-bottom: 12pt;">The program you created in part II is
+called a
+filter because it reads from standard input (which defaults to the
+keyboard)
+and writes to standard output (which defaults to the
+terminal&nbsp;where you
+launched the program).&nbsp; The name filter is used because it
+"filters
+the data into a new form." The neat thing about filters in <span class="SpellE"><span class="GramE"><b><span style="font-family: &quot;Courier New&quot;;">unix</span></b></span></span>
+is that filters can be faked into reading from places other than the
+keyboard
+and writing to places other than the screen in a very simple way. To
+start, go back
+into <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">gedit</span></b></span>
+and create a new file called <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">someNumbers</span></b></span><b><span style="font-family: &quot;Courier New&quot;;">
+</span></b>(i.e. type<b><span style="font-family: &quot;Courier New&quot;;"> <span class="SpellE">gedit</span> <span class="SpellE">someNumbers</span>
+&amp; </span></b>while
+in the same <b><span style="font-family: &quot;Courier New&quot;;">Lab16 </span></b>folder).
+In file <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">someNumbers</span></b></span>
+type in a set of numbers not in sorted order and, then, save the file
+into your
+<b><span style="font-family: &quot;Courier New&quot;;">Lab16 </span></b>directory.
+Then
+type<b><span style="font-family: &quot;Courier New&quot;;"> java <span class="SpellE">StartSortInputs</span>
+&lt; <span class="SpellE">someNumbers</span></span></b> on the command
+line and
+you should see as output the numbers from <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">someNumbers</span></b></span> in
+sorted
+order. The <b><span style="font-family: &quot;Courier New&quot;;">&lt;</span></b>
+sign is
+the standard input redirection symbol and it says to the java program
+that the
+input is going to come from the file <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">someNumbers</span></b></span>
+instead of the
+keyboard.<br>
+<br>
+Now type<b><span style="font-family: &quot;Courier New&quot;;"> java <span class="SpellE">StartSortInputs</span>
+&gt; <span class="SpellE">someSortedNumbers</span></span></b> and type
+in a
+series of numbers not in sorted order followed by the &lt;<b><span style="font-family: &quot;Courier New&quot;;">ctrl-d</span></b>&gt;. You won't
+see <span class="GramE">any</span> output at all this time. Instead,
+the <b><span style="font-family: &quot;Courier New&quot;;">&gt;</span></b> sign
+has redirected the
+output into the file <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">someSortedNumbers</span></b></span>
+(which it created on the fly). <span class="GramE">Type <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">ls</span></b></span>
+to see that the file <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">someSortedNumbers</span></b></span>
+has been created.</span>&nbsp;&nbsp;Type <b><span style="font-family: &quot;Courier New&quot;;">cat</span>
+</b><span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">someSortedNumbers</span></b></span>
+to display the contents of the file and see your input printed one per
+line in
+sorted order.&nbsp; <br>
+<br>
+You can actually create data files in <span class="SpellE"><span class="GramE"><b><span style="font-family: &quot;Courier New&quot;;">unix</span></b></span></span>
+more easily
+than this. <span class="GramE">Type <b><span style="font-family: &quot;Courier New&quot;;">cat
+&gt; <span class="SpellE">evenMoreNumbers</span></span></b> at the
+command line.</span>
+Then type a series of numbers followed by the same old return followed
+by &lt;<b><span style="font-family: &quot;Courier New&quot;;">ctrl-d</span></b>&gt;.
+This will create a
+file <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">evenMoreNumbers</span></b></span>
+because the <b><span style="font-family: &quot;Courier New&quot;;">cat </span></b>command
+is a filter - i.e., if you don't tell it anything else, it uses
+standard input
+and output. Since we redirected standard output to <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">evenMoreNumbers</span></b></span>
+the numbers
+you typed in got copied into <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">evenMoreNumbers</span></b></span>.
+<span class="GramE">Type <b><span style="font-family: &quot;Courier New&quot;;">cat
+<span class="SpellE">evenMoreNumbers</span></span></b>
+to see the result.</span><br>
+<br>
+Type<b> </b><b><span style="font-family: &quot;Courier New&quot;;">java <span class="SpellE">StartSortInputs</span>
+&lt; <span class="SpellE">evenMoreNumbers</span> &gt; <span class="SpellE">evenMoreSortedNumbers</span></span></b>
+to sort the numbers in <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">evenMoreNumbers</span></b></span>
+and put them into the file <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">evenMoreSortedNumbers</span></b></span>.
+<span class="GramE">Type <b><span style="font-family: &quot;Courier New&quot;;">cat
+<span class="SpellE">evenMoreSortedNumbers</span> </span></b>to verify
+the result.</span><br>
+<br>
+There is one more "redirection" available. If, instead, of using <b><span style="font-family: &quot;Courier New&quot;;">&gt;</span></b> for redirecting
+output, you
+use <b><span style="font-family: &quot;Courier New&quot;;">&gt;&gt; </span></b>then
+the
+output will be appended onto the end of an existing file (instead of
+rewriting
+the file from scratch). To try this, type <b><span style="font-family: &quot;Courier New&quot;;">java
+<span class="SpellE">StartSortInputs</span> &lt; <span class="SpellE">evenMoreNumbers</span>
+&gt; <span class="SpellE">evenMoreSortedNumbers</span></span></b> to
+see that you
+get an error trying to use ordinary redirected output to an existing
+file. Now
+type <b><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">java
+<span class="SpellE">StartSortInputs</span> &lt; <span class="SpellE">evenMoreNumbers</span>
+&gt;&gt; <span class="SpellE">evenMoreSortedNumbers</span></span></b><b style=""><span style="font-size: 10pt;"> </span></b>and
+then type <b><span style="font-family: &quot;Courier New&quot;;">cat</span></b> <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">evenMoreSortedNumbers</span></b></span>
+to see that <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">evenMoreSortedNumbers</span></b></span>
+now contains the output from the first experiment followed by the
+output from
+the second experiment.</p>
+<h2><span style="">Part IV: Your very
+own filter<o:p></o:p></span></h2>
+<p>You should use <b><span style="font-family: &quot;Courier New&quot;;">SortInputs.java</span></b>
+and <b><span style="font-family: &quot;Courier New&quot;;">StartInputs.java </span></b>as
+models for your own filter comprised of <b><span style="font-family: &quot;Courier New&quot;;">SumInputs.java
+</span></b>and <b><span style="font-family: &quot;Courier New&quot;;">StartSumInputs.java</span></b>.&nbsp;
+To get the value of <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">i</span></b><sup>th</sup></span>
+item in <span class="SpellE"><b style=""><span style="font-family: &quot;Courier New&quot;;">ArrayList</span></b></span>&nbsp; <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">inList</span></b></span>,
+we use a command <span class="GramE">like<span style="font-size: 10pt;">
+</span>&nbsp;<span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">inList.get</span></b></span></span><b><span style="font-family: &quot;Courier New&quot;;">(<span class="SpellE">i</span>);</span></b></p>
+<p>Your <b><span style="font-family: &quot;Courier New&quot;;">SumInputs.java </span></b>should
+read in a series of numbers (same as before) and add them up and,
+finally,
+output only the sum (change method <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">insertionSort</span></b></span><b><span style="font-family: &quot;Courier New&quot;;"> </span></b>to <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">sumThem</span></b></span>
+which uses a <b><span style="font-family: &quot;Courier New&quot;;">for</span></b>
+loop&nbsp;
+to add the numbers in the <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">ArrayList</span></b></span>
+and return the sum and method <b><span style="font-family: &quot;Courier New&quot;;">run</span></b>
+to call your new method <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">sumThem</span></b></span>
+to display the sum). <b><span style="font-family: &quot;Courier New&quot;;">StartSumInputs.java
+</span></b>simply runs<b><span style="font-family: &quot;Courier New&quot;;"> <span class="SpellE">SumInputs</span> </span></b></p>
+<p style="margin-bottom: 12pt;">Try your program out on the keyboard
+and a
+couple of files for input and output to show that you can do
+redirection on the
+program <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">StartSumInputs</span></b></span>
+like you did with <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">StartSortInputs</span></b></span>
+in <b>Part III</b>.</p>
+<h2><span style="">Part V: Pipes<o:p></o:p></span></h2>
+<p style="margin-bottom: 12pt;">Pipes are another redirection device
+that can
+be used to pipe the standard output of one program to the standard
+input of
+another. Its general form is <b><span style="font-family: &quot;Courier New&quot;;">command1
+| command2</span></b> where the<b><span style="font-family: &quot;Courier New&quot;;"> | </span></b>is
+the key above the Enter on your keyboard. The way this works is that <b><span style="font-family: &quot;Courier New&quot;;">command1</span></b> and <b><span style="font-family: &quot;Courier New&quot;;">command2</span></b> run
+concurrently and as <b><span style="font-family: &quot;Courier New&quot;;">command1</span></b>
+outputs to standard
+output that output becomes input for <b><span style="font-family: &quot;Courier New&quot;;">command2</span></b>.
+When <b><span style="font-family: &quot;Courier New&quot;;">command1</span></b>
+exits, that
+generates an end of file for <b><span style="font-family: &quot;Courier New&quot;;">command2</span></b>
+so it knows there is no more input. You can try this out on your own
+two
+filters - <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">StartSortInputs</span></b></span><b><span style="font-family: &quot;Courier New&quot;;"> </span></b>and <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">StartSumInputs</span></b></span><b><span style="font-family: &quot;Courier New&quot;;"> </span></b>- by typing<b><span style="font-family: &quot;Courier New&quot;;"> java <span class="SpellE">StartSortInputs</span>
+| java <span class="SpellE">StartSumInputs</span></span></b> at the
+keyboard and,
+then, enter the series of numbers you wish to use. After you do the
+return
+followed by &lt;<b><span style="font-family: &quot;Courier New&quot;;">ctrl-d&gt;</span></b>
+you should see the sum of the numbers printed out. Add file redirection
+to this
+piped sequence to see that you can still use redirected standard input
+for data
+(into <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">StartSortInputs</span></b></span>)
+and redirected standard output for the sum from <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">StartSumInputs</span></b></span>.
+Since they
+are standard input, you can use one of your input files into <span class="SpellE"><b><span style="font-family: &quot;Courier New&quot;;">StartSortInputs</span></b></span>
+and output from <b><span style="font-family: &quot;Courier New&quot;;"><span class="SpellE">StartSumInputs</span></span></b> to some other file.<br style="">
+</p>
+<p style="margin-bottom: 12pt;"><big><big><span style="font-weight: bold;">Part VI: Command Line Parameters</span></big></big><br>
+</p>
+<p style="margin-bottom: 12pt;"><big>As mentioned earlier in the lab, when we write a program for use
+from the command line, we need a "launching" class that has a main
+method in it. In general, the "launching" class looks as follows:</big></p>
+<p style="margin-bottom: 12pt;"><big>public class RunSomeOtherClass {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public static void main(String [] args) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SomeOtherClass someObject=new
+SomeOtherClass(....);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; someObject.run(); //or, perhaps,
+some other methods in the&nbsp;&nbsp; class<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+//SomeOtherClass might also be called.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+}<br>
+Here, we are going to discuss the use of the String [] args inside the
+parentheses - the parameters for the main method. It turns out that the
+parameter args is what it says it is! That is, it is an array of
+Strings. More importantly, it is an array of Strings, each of which is
+something you typed on the command line after launching the program. For example, you would normally expect to type:</big></p>
+<p style="margin-bottom: 12pt;"><big>&gt; java RunSomeOtherClass</big></p>
+<p style="margin-bottom: 12pt;"><big>to cause this program to run. If
+you did, the args array would be an array with 0 elements in it. On the
+other hand, if you typed</big></p>
+<p style="margin-bottom: 12pt;"><big>&gt; java RunSomeOtherClass
+firstthing secondthing<br>
+</big></p>
+<p style="margin-bottom: 12pt;"><big>the args array would be of length
+2 and args[0] would be the string "firstthing" and args[1] would be the
+string "secondthing". What this means is that you can design your
+programs so that when you launch them from the command line you can
+specify things you want them to do. <br>
+</big></p>
+<p style="margin-bottom: 12pt;"><big>We will do an example.&nbsp;
+Suppose we wanted to specify a file for our program
+to read data from.&nbsp; Then we could specify the file name at the
+command line. The user would, then, be able to run the program
+from the command line and specify the file when starting the program.<br>
+I have supplied you with a partially completed class called
+SumFile.java which has a constructor that expects a file name as a
+parameter and which then creates a Scanner designed to read from that
+file. I have also supplied two data files firstNumbers and
+secondNumbers. What you need to do is complete the run() method so that it reads and adds up the numbers read by the
+Scanner sc and, then, outputs the sum to standard output. Then complete
+the program RunSumFile so that it creates an object of type SumFile and passes
+args[0] as the parameter to the constructor and, then, calls the run()
+method on the class. <br>
+</big></p>
+<p style="margin-bottom: 12pt;"><big>Run the program twice:</big></p>
+<p style="margin-bottom: 12pt;"><big>&gt;java RunSumFile firstNumbers<br>
+</big></p>
+<p style="margin-bottom: 12pt;"><big>and<br>
+</big></p>
+<p style="margin-bottom: 12pt;"><big>&gt;java RunSumFile secondNumbers<br>
+</big></p>
+<p style="margin-bottom: 12pt;"><big>to verify that it is working
+properly. The output from the two runs should say something like<br>
+</big></p>
+<p style="margin-bottom: 12pt;"><big><span style="font-style: italic;">The
+sum of the numbers in file firstNumbers is 30.</span><br style="font-style: italic;">
+<span style="font-style: italic;">The sum of the numbers in file
+secondNumbers is 45</span>.<br>
+</big></p>
+<p style="margin-bottom: 12pt;"><big><br>
+<big><big><span style="font-weight: bold;">Part VII: JApplets</span></big></big></big></p>
+<p style="margin-bottom: 12pt;"><big><big><big><span style="font-weight: bold;"></span></big><br>
+</big>We have seen two ways to run programs: from inside DrJava and
+from the command line. There is a third way.&nbsp; Java was designed to
+be used by Web browsers so that you could add "active" programs to the
+Web. In order to do this, you must do two things. First, you must
+create your program by extending something called JApplet and include a
+public void init() method to initialize the applet.. Second, you must
+launch it with an html file - a special file understood by Web
+browsers. This html file typically contains at least one line like the
+following:</big></p>
+<p style="margin-bottom: 12pt;"><big>&lt;applet code="AJApplet.class"
+width="300" height="100"&gt; &lt;/applet&gt;<br>
+</big></p>
+<p style="margin-bottom: 12pt;"><big>The code portion of this applet
+tag must point to the compiled version (i.e. .class) of your JApplet
+Java class. The width and height specify the size of your Java program
+on the Web page. Finally you must put it somewhere where the Web server
+can access it. On our Linux machines this last place is a directory in
+your home directory called www-docs. If you have such a directory, you
+are all set. If not, you can create one by simply typing cd ~ (i.e. go
+to your home folder) at the command line and, then, typing mkdir
+www-docs to create it. I have included a sample JApplet called
+AJApplet.java and an html file called AJApplet.html to launch it. At
+the command line type javac AJApplet.java and, then, copy all three
+files - AJApplet.java, AJApplet.html, and AJApplet.class - to the
+directory www-docs. Make sure that all these things are accessible by
+the browser by typing:</big></p>
+<p style="margin-bottom: 12pt;"><big>&gt;chmod o+rx www-docs <br>
+</big></p>
+<p style="margin-bottom: 12pt;"><big>and, then, changing into www-docs
+(i.e., cd www-docs) and typing:</big></p>
+
+<p style="margin-bottom: 12pt;"><big>&gt;chmod o+rx *<br>
+</big></p>
+<p style="margin-bottom: 12pt;"><big>to give necessary permissions to
+all files. Finally, cd out of your home
+folder:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+</big></p>
+<p style="margin-bottom: 12pt;"><big>&gt;cd ~/.. <br>
+</big></p>
+<p style="margin-bottom: 12pt;"><big>and type this on the terminal:<br>
+</big></p>
+<p style="margin-bottom: 12pt;"><big>&gt;chmod o+x <span style="font-style: italic;">your_user_id</span> <br>
+</big></p>
+<p style="margin-bottom: 12pt;"><big>(where your_user_id is your user
+id for Linux) This will enable the browser to access your www-docs.</big></p>
+<p style="margin-bottom: 12pt;"><big>Now, open firefox or mozilla and
+type into the white box at the top http://www.users.csbsju.edu/~
+your_user_id/AJApplet.html (where your_user_id<br>
+is your userid for Linux) to see it run. Click on the buttons to see it
+work.<br>
+</big></p>
+<h2><big>Project: A Calculator JApplet <span style="font-size: 18pt; font-family: &quot;Times&quot;,&quot;serif&quot;;">(</span><b style=""><span style="font-size: 18pt; font-family: &quot;Times&quot;,&quot;serif&quot;; color: red;">INDIVIDUAL
+WORK. Due at the beginning of next lab</span></b><span style="font-size: 18pt; font-family: &quot;Times&quot;,&quot;serif&quot;;">)<u1:p></u1:p></span></big></h2>
+<big>Create a calculator JApplet using Part VII and lab 12 as an
+example.&nbsp; </big><big>Modify the work you have done in lab 12 to create a
+calculator so that your calculator will work as an applet in a browser
+instead of from the command line. </big><big>This&nbsp; project part of the lab will
+be due at the <b>beginning </b>of
+our next lab. <big><span style="font-weight: bold;"></span></big><big><span style="font-weight: bold;">You
+are to do your project independently,
+not in pairs.</span></big><span style="font-family: &quot;Times&quot;,&quot;serif&quot;;">
+Complete this project by the beginning of the next lab and
+show it
+to your instructor or TA.&nbsp; </span>When you have completed the
+project, also place a copy of your project folder, named similar to <big><span style="font-weight: bold;">MillerJohnLab16Project</span></big>&nbsp;
+into&nbsp; the&nbsp;&nbsp; <big><span style="font-weight: bold;">/usr/people/handins/CS161/ProjectHandin</span></big>&nbsp;&nbsp;
+folder before the start of the next lab.<br>
+</big><br>
+</div>
+
+</body></html>

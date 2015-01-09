@@ -1,0 +1,7 @@
+#/bin/tcsh
+if ($# != 1) then #conditional statement if there is more than one 				parameter
+echo "you gave too few or too many parameters, please only enter one!" #prints this statement 							on the screen
+else 			  #conditional statement if there is only 					one parameter
+grep $1 book2.addr | sort # searches through book2.addr with the 					given parameter, then sorts it 					before printing it on the screen
+endif #ends the conditional structure
+

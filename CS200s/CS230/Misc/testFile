@@ -1,0 +1,11 @@
+#/bin/tcsh
+#this file checks if two command line parameters have been passed
+#and warns the user if not; otherwise, it displays back the #parameters.
+	if ($# != 2) then
+		echo "you must give exactly two parameters"
+	else
+		set name1 = $1
+		set name2 = $2
+		echo $name1
+		echo $name2
+	endif

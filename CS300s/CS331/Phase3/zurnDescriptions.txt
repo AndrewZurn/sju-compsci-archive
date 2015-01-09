@@ -1,0 +1,180 @@
+Functionality: Insert Bid into Auction
+
+Code:
+
+DROP FUNCTION IF EXISTS insertAuctionBid;
+delimiter &&
+CREATE FUNCTION insertAuctionBid(itemId INTEGER, userId INTEGER, maxBid decimal(9,2)) RETURNS int
+	BEGIN
+	
+	declare itemStatus varchar(16);
+	declare currentBid decimal(9,2);
+	
+	SELECT STATUS into itemStatus
+	FROM ITEM
+	WHERE ITEM_ID = itemId;
+	
+	SELECT CURRENT_BID into currentBid
+	FROM ITEM
+	WHERE ITEM_ID = itemId;
+	
+	IF ( itemStatus = 'Open' ) THEN
+		IF ( maxBid > currentBid ) THEN
+			INSERT INTO AUCTIONS VALUES (itemId, userId, maxBid, NOW());
+			return 0; -- good bid, bid was inserted into AUCTIONS
+		ELSE
+			return -1; -- the max bid was less than the current bid
+		END IF;
+	ELSE
+		return -2; -- the auction for this item was not open
+	END IF;
+	
+	END &&
+delimiter ;
+
+Description: This function is used to check to make sure a bid can go into a valid auction.  It asks as input for the itemId for the item wished to be bid on, the userId making the bid, and the maximum bid as a decimal(9,2) for the item.  It will then get the status of the item that the user wants to bid on, and also the current bid.  If the auction for that item is 'Open', and if the maximum bid for the item is greater than the current bid, it will put the bid into the AUCTIONS table and return 0.  If the bid is open, but the maximum bid is not greater than the current bid, then -1 will be returned.  Finally, if the auction is not open, then -2 will be returned.
+
+
+Functionality: Retrieve the Current or Winning Bid on an Item
+
+Code:
+
+DROP PROCEDURE IF EXISTS itemCurrentOrWinningBid;
+delimiter &&
+CREATE PROCEDURE itemCurrentOrWinningBid(IN itemId int, OUT itemStatus varchar(16),
+					OUT userId int, OUT price decimal(9,2))
+	BEGIN
+		
+		SELECT STATUS into itemStatus
+		FROM ITEM
+		WHERE ITEM_ID = itemId;
+		
+		SELECT WINNER_ID into userId
+		FROM ITEM
+		WHERE ITEM_ID = itemId;
+		
+		SELECT CURRENT_BID into price
+		FROM ITEM
+		WHERE ITEM_ID = itemId;
+		
+	END &&
+delimiter ;
+
+Description: This procedure will take as in input a given item, and then return three outputs for an item.  The first output will be the status of the item, the second output will be the usedId of the person who is the current winner or the winner of the item, and finally, it will return the current or winning bid of that item.
+
+Functionality: Update Current Bid
+
+Code:
+
+DROP TRIGGER IF EXISTS UPDATE_ITEM_CURRENT_BID;
+delimiter &&
+CREATE TRIGGER UPDATE_ITEM_CURRENT_BID
+BEFORE INSERT ON AUCTIONS
+	FOR EACH ROW
+	BEGIN
+	
+		declare oldMaxBid int;
+		declare currentBid int;
+		declare itemStatus varchar(16);
+	
+		SELECT MAX(MAXIMUM_BID) into oldMaxBid
+		FROM AUCTIONS
+		WHERE ITEM_ID = NEW.ITEM_ID;
+		
+		SELECT CURRENT_BID into currentBid
+		FROM ITEM
+		WHERE ITEM_ID = NEW.ITEM_ID;
+	
+		SELECT STATUS into itemStatus
+		FROM ITEM
+		WHERE ITEM_ID = NEW.ITEM_ID;
+	
+		IF( itemStatus = 'Open' AND NEW.MAXIMUM_BID > oldMaxBid ) THEN
+			UPDATE ITEM SET CURRENT_BID = oldMaxBid + 1 WHERE ITEM_ID = NEW.ITEM_ID;
+		ELSEIF( itemStatus = 'Open' AND (NEW.MAXIMUM_BID < oldMaxBid AND NEW.MAXIMUM_BID > currentBid) ) THEN
+			UPDATE ITEM SET CURRENT_BID = NEW.MAXIMUM_BID + 1 WHERE ITEM_ID = NEW.ITEM_ID;
+		END IF;	
+	
+	END &&
+delimiter ;
+
+Description: This trigger will be activated before an entry into the auction table.  It will get the previous maximum bid on and item as oldMaxBid, the current bid value on an item as currentBid, and the status of the item.  It will then check to see if the auction is open on the item, and if the new maximum bid is higher than the old maximum bid.  If it is, that means that the current bid should be replaced by the oldMaxBid + 1.  If the bid wasn't greater than the oldMaxBid, but was greater than the currentBid, then currentBid is set to the new maximum bid + 1.
+
+Functionality: Update Item Status for a given Item
+
+Code:
+
+DROP PROCEDURE IF EXISTS updateItemStatus;
+delimiter &&
+CREATE PROCEDURE updateItemStatus(IN itemId int)
+	BEGIN
+		declare startTime TIMESTAMP;
+		declare endTime TIMESTAMP;
+		declare auctionItemId INTEGER;
+		
+		set auctionItemId = 0;
+		
+		SELECT AUCTION_START into startTime
+		FROM ITEM
+		WHERE ITEM_ID = itemId;
+		
+		SELECT AUCTION_END into endTime
+		FROM ITEM
+		WHERE ITEM_ID = itemId;
+		
+		SELECT DISTINCT ITEM_ID into auctionItemId
+		FROM AUCTIONS
+		WHERE ITEM_ID = itemId;
+		
+		IF ( startTime > NOW() ) THEN
+			UPDATE ITEM SET STATUS = 'Starting Soon'
+			WHERE ITEM_ID = itemId;
+		ELSEIF ( startTime <= NOW() AND endTime >= NOW() ) THEN
+			UPDATE ITEM SET STATUS = 'Open'
+			WHERE ITEM_ID = itemId;
+		ELSEIF ( endTime < NOW() AND NOT(auctionItemId = 0) ) THEN
+			UPDATE ITEM SET STATUS = 'Sold'
+			WHERE ITEM_ID = itemId;
+		ELSEIF ( endTime < NOW() AND auctionItemId = 0 ) THEN
+			UPDATE ITEM SET STATUS = 'Closed'
+			WHERE ITEM_ID = itemId;
+		ELSE
+			UPDATE ITEM SET STATUS = 'UNKNOWN'
+			WHERE ITEM_ID = itemId;
+		End IF;
+		
+	END &&
+delimiter ;
+
+Description: This procedure will update the STATUS attribute of ITEM for the given itemId.  It will get the start time as startTime for that item, the end time as endTime for that item, and then set a variable auctionItemId.  auctionItemId will be used to find if the item was bid on in the auction table.  Then, a series of checks are performed to set the STATUS of that item.  if the startTime has not yet been reached, then the STATUS is set to 'Starting Soon'.  Else if the items start time has been reached, and the end time has not yet expired, then STATUS will be set to 'Open'.  Else if the end time has been reached, and the item had a bid on it (auctionItemId is not the previously set value of 0), then the STATUS will be set to 'Sold'.  Else if it had no bids on it, and the end time was reached, the STATUS is set to 'Closed'.  Finally, a catch all is applied to set the item's STATUS to 'UNKNOWN' in the case of an error.
+
+Functionality: Update the current bid price of an Item
+
+Code:
+
+DROP TRIGGER IF EXISTS UPDATE_ITEM_CURRENT_WINNER;
+delimiter &&
+CREATE TRIGGER UPDATE_ITEM_CURRENT_WINNER
+BEFORE INSERT ON AUCTIONS
+	FOR EACH ROW
+	BEGIN
+	
+		declare oldMaxBid int;
+		declare itemStatus varchar(16);
+	
+		SELECT MAX(MAXIMUM_BID) into oldMaxBid
+		FROM AUCTIONS
+		WHERE ITEM_ID = NEW.ITEM_ID;
+	
+		SELECT STATUS into itemStatus
+		FROM ITEM
+		WHERE ITEM_ID = NEW.ITEM_ID;
+	
+		IF( itemStatus = 'Open' AND NEW.MAXIMUM_BID > oldMaxBid ) THEN
+			UPDATE ITEM SET WINNER_ID = NEW.USER_ID WHERE ITEM_ID = NEW.ITEM_ID;
+		END IF;	
+	
+	END &&
+delimiter ;
+
+Description: This trigger is activated before the insertion of a bid into auction.  Values for the old maximum bid, and the item status are retrieved for that item.  Then, if the item status is 'Open', and the new maximum bid is greater than the old maximum bid, a WINNER_ID is updated in ITEM to reflect that the new user has successfully out-bidded the previous winner of the item.

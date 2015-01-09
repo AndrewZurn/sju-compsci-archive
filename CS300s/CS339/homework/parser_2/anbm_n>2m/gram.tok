@@ -1,0 +1,13 @@
+%{
+int intvalue;
+extern char yytext[];
+extern int values[];
+char variablename[200];
+%}
+
+%token A
+%token B
+%token END
+%token BADCC
+
+%%

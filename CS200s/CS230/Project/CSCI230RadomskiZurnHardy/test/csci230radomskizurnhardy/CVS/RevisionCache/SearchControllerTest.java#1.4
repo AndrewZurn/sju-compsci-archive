@@ -1,0 +1,202 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package csci230radomskizurnhardy;
+
+import java.util.ArrayList;
+import org.junit.*;
+import static org.junit.Assert.*;
+
+/**
+ *
+ * @author pghardy
+ */
+public class SearchControllerTest {
+    
+    public SearchControllerTest() {
+    }
+
+    @BeforeClass
+    public static void setUpClass() throws Exception {
+        //USE THESE 10 SCHOOLS TO SEARCH AGAINST TO MAKE SURE
+        //THE CORRECT ONES SHOW UP AND THE WRONG ONES DO NOT
+        //DO NOT EDIT THESE UNIVERSITIES, THEY ARE ALREADY 
+        //IN THE DATABASE AND ARE USED ELSEWHERE, Preston
+        //These 10 schools are already in the Database
+        //since they are used in FiveRecSchoolsControllerTest
+//        DatabaseController.addUniversity("ClickClickBoomSchoolA","CCBState1", "-1",    "Private", 1000,  30, 400, 400, 40000, 55, 2000,  60, 75, 5, 3, 5);
+//        DatabaseController.addUniversity("ClickClickBoomSchoolB","CCBState1", "-1",    "Public",  2000,  35, 400, 400, 40000, 65, 4000,  60, 75, 4, 3, 2);
+//        DatabaseController.addUniversity("ClickClickBoomSchoolC","CCBState1", "-1",    "Private", 3000,  40, 450, 400, 40000, 75, 6000,  60, 75, 5, 3, 1);
+//        DatabaseController.addUniversity("ClickClickBoomSchoolD","CCBState1", "Urban", "Public",  4000,  45, 450, 400, 40000, 85, 8000,  60, 75, 4, 3, 3);
+//        DatabaseController.addUniversity("ClickClickBoomSchoolE","CCBState1", "Urban", "Private", 5000,  50, 500, 400, 50000, 95, 10000, 60, 75, 3, 3, 5);
+//        DatabaseController.addUniversity("ClickClickBoomSchoolF","CCBState2", "Rural", "Public",  6000,  55, 500, 400, 50000, 95, 12000, 60, 75, 1, 2, 4);
+//        DatabaseController.addUniversity("ClickClickBoomSchoolG","CCBState2", "Rural", "Public",  7000,  60, 550, 400, 50000, 85, 14000, 60, 75, 2, 5, 3);
+//        DatabaseController.addUniversity("ClickClickBoomSchoolH","CCBState2", "-1",    "Public",  8000,  65, 250, 400, 50000, 75, 16000, 60, 75, 3, 1, 1);
+//        DatabaseController.addUniversity("ClickClickBoomSchoolI","CCBState2", "-1",    "Public",  9000,  70, 250, 400, 50000, 65, 18000, 60, 75, 4, 2, 2);
+//        DatabaseController.addUniversity("ClickClickBoomSchoolJ","CCBState2", "-1",    "Public",  10000, 75, 250, 400, 50000, 55, 20000, 60, 75, 5, 3, 5);
+    }
+
+    @AfterClass
+    public static void tearDownClass() throws Exception {
+    }
+    
+    @Before
+    public void setUp() {
+    }
+    
+    @After
+    public void tearDown() {
+    }
+
+    /**
+     * Test of search method, of class SearchController.
+     */
+    @Test
+    public void testSearch_School() {
+       System.out.println("testSearch_School");
+    }
+    
+    /**
+     * Test of search method, of class SearchController.
+     */
+    @Test
+    public void testSearch_State() {
+       System.out.println("testSearch_State");
+    }
+    
+    /**
+     * Test of search method, of class SearchController.
+     */
+    @Test
+    public void testSearch_Location() {
+       System.out.println("testSearch_Location");
+    }
+    
+     /**
+     * Test of search method, of class SearchController.
+     */
+    @Test
+    public void testSearch_Control() {
+       System.out.println("testSearch_Control");
+    }
+    
+    /**
+     * Test of search method, of class SearchController.
+     */
+    @Test
+    public void testSearch_NumberOfStudents() {
+       System.out.println("testSearch_NumberOfStudents");
+    }
+    
+    /**
+     * Test of search method, of class SearchController.
+     */
+    @Test
+    public void testSearch_PercentFemale() {
+       System.out.println("testSearch_PercentFemale");
+    }
+    
+    /**
+     * Test of search method, of class SearchController.
+     */
+    @Test
+    public void testSearch_SATVerbal() {
+       System.out.println("testSearch_SATVerbal");
+    }
+    
+    /**
+     * Test of search method, of class SearchController.
+     */
+    @Test
+    public void testSearch_SATMath() {
+       System.out.println("testSearch_SATMath");
+    }
+    
+    /**
+     * Test of search method, of class SearchController.
+     */
+    @Test
+    public void testSearch_Expenses() {
+       System.out.println("testSearch_Expenses");
+    }
+    
+    /**
+     * Test of search method, of class SearchController.
+     */
+    @Test
+    public void testSearch_PercentFinancialAid() {
+       System.out.println("testSearch_PercentFinancialAid");
+    }
+    
+    /**
+     * Test of search method, of class SearchController.
+     */
+    @Test
+    public void testSearch_NumberOfApplicatns() {
+       System.out.println("testSearch_NumberOfApplicatns");
+    }
+    
+    /**
+     * Test of search method, of class SearchController.
+     */
+    @Test
+    public void testSearch_PercentAdmitted() {
+       System.out.println("testSearch_PercentAdmitted");
+    }
+    
+    /**
+     * Test of search method, of class SearchController.
+     */
+    
+    @Test
+    public void testSearch_PercentEnrolled() {
+       System.out.println("testSearch_PercentEnrolled");
+    }
+
+     /**
+     * Test of search method, of class SearchController.
+     */
+    @Test
+    public void testSearch_AcademicScale() {
+       System.out.println("testSearch_AcademicScale");
+    }
+    
+    /**
+     * Test of search method, of class SearchController.
+     */
+    @Test
+    public void testSearch_SocialScale() {
+       System.out.println("testSearch_SocialScale");
+    }
+    
+     /**
+     * Test of search method, of class SearchController.
+     */
+    @Test
+    public void testSearch_QualityOfLifeScale() {
+       System.out.println("testSearch_QualityOfLifeScale");
+    }
+    
+     /**
+     * Test of search method, of class SearchController.
+     */
+    @Test
+    public void testSearch_Emphases() {
+       System.out.println("testSearch_Emphases");
+    }
+    
+    
+    /**
+     * Test of main method, of class SearchController.
+     */
+    //    This method was used for the driver class from Phase II    
+//    @Test
+//    public void testMain() {
+//        System.out.println("main");
+//        String[] args = null;
+//        SearchController.main(args);
+//        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+//    }
+}

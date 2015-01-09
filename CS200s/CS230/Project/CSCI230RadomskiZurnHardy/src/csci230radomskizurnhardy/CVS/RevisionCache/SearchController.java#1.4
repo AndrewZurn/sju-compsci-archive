@@ -1,0 +1,285 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package csci230radomskizurnhardy;
+import java.util.*;
+/**
+ * This class will be used to perform the searching that a user will need to find schools that they
+ * are interested in, and also schools that should be recommended for them to consider.
+ * @author awzurn
+ * @version 1.0
+ * @since March 18, 2012
+ */
+public class SearchController {
+    /**
+     * Set of all found schools matching user's criteria.
+     */
+    private static TreeSet<University> foundSchools = new TreeSet<University>();
+    /**
+     * Set of recommended schools the user should also consider.
+     */
+    private static TreeSet<University> recommendedSchools = new TreeSet<University>();;
+    /**
+     * List of all the universities user to match against.
+     */
+    private static ArrayList<University> universitiesList = DatabaseController.getAllUniversities();
+    
+    /**
+     * This method will call upon other private methods within this class to compile a map of all relevant
+     * schools to the user's query and also recommended schools that the user should consider.
+     * @param wantedSchool The school name the user wants to find.
+     * @param wantedState The state in which the user wants the school to be located.
+     * @param wantedLocation The location in which the user wants the school to be located.
+     * @param wantedControl The control of the school, being a public or private school.
+     * @param wantedNumberOfStudents The wanted number of students at the university.
+     * @param wantedPercentFemales The wanted percentage of students that are female at the university.
+     * @param wantedSATVerbal The wanted SAT Verbal range for the school.
+     * @param wantedSATMath The wanted SAT Math range for the school.
+     * @param wantedExpenses The wanted expense in attending this school.
+     * @param wantedPercentFinancialAid The wanted percent of financial aid given by the school.
+     * @param wantedNumberOfApplicants The wanted number of applicants applying to the school.
+     * @param wantedPercentAdmitted The wanted percentage of applicants admitted to the school.
+     * @param wantedPercentEnrolled The wanted percentage of admitted students that enroll.
+     * @param wantedAcademicsScale The wanted score of the academics on a scale 1-5 at the school.
+     * @param wantedSocialScale The wanted score of the social life on a scale of 1-5 at the school.
+     * @param wantedQualityOfLifeScale The wanted score for the quality of life on a scale of 1-5 at the school.
+     * @return Will return both the list of school relevant to the user's query, and a list of recommended schools for the student to view.
+     */
+    public static ArrayList<TreeSet<University>> search(String wantedSchool,
+            String wantedState, String wantedLocation,String wantedControl, int lowWantedNumber, int highWantedNumber,
+            double lowPercentFemales, double highPercentFemales, double lowSATVerbal, double highSATVerbal, double lowSATMath,
+            double highSATMath, double lowExpenses, double highExpenses, double lowFinAid, double highFinAid,
+            int lowNumApplicants, int highNumApplicants, double lowAdmitted, double highAdmitted,
+            double lowEnrolled, double highEnrolled,int lowAcademicScale, int highAcademicScale,
+            int lowSocialScale, int highSocialScale, int lowQualityScale,
+            int highQualityScale, ArrayList<String> emphasesList){
+        ArrayList<TreeSet<University>> returnList = new ArrayList<TreeSet<University>>();
+        searchWantedSchools(wantedSchool);
+        searchWantedState(wantedState);
+        searchWantedLocation(wantedLocation);
+        searchWantedControl(wantedControl);
+        searchWantedNumberOfStudents(lowWantedNumber, highWantedNumber);
+        searchWantedPercentFemales(lowPercentFemales, highPercentFemales);
+        searchWantedSATVerbal(lowSATVerbal, highSATVerbal);
+        searchWantedSATMath(lowSATMath, highSATMath);
+        searchWantedExpenses(lowExpenses, highExpenses);
+        searchWantedPercentFinancialAid(lowFinAid, highFinAid);
+        searchWantedNumberOfApplicants(lowNumApplicants, highNumApplicants);
+        searchWantedPercentAdmitted(lowAdmitted, highAdmitted);
+        searchWantedPercentEnrolled(lowEnrolled, highEnrolled);
+        searchWantedAcademicsScale(lowAcademicScale, highAcademicScale);
+        searchWantedSocialScale(lowSocialScale, highSocialScale);
+        searchWantedQualityOfLifeScale(lowQualityScale, highQualityScale);
+        searchWantedEmpheses(emphasesList);
+        returnList.add(foundSchools);
+        returnList.add(recommendedSchools);
+        return returnList;
+    }
+    
+    /**
+     * Will search the name of the given school against the list of schools in the database.
+     * @param wantedSchool 
+     */
+    private static void searchWantedSchools(String wantedSchool){
+        if(!wantedSchool.equals("")){
+            for(University uni: universitiesList){
+                if(wantedSchool.equals(uni.getSchool())){
+                    foundSchools.add(uni);
+                }
+            }
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given state against the list of schools in the database.
+     * @param wantedState 
+     */
+    private static void searchWantedState(String wantedState){
+        if(!wantedState.equals("")){
+            for(University uni: universitiesList){
+                if(wantedState.equals(uni.getState())){
+                    foundSchools.add(uni);
+                }
+            }
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given location against the list of schools in the database.
+     * @param wantedLocation 
+     */
+    private static void searchWantedLocation(String wantedLocation){
+        if(!wantedLocation.equals("")){
+            for(University uni: universitiesList){
+                if(wantedLocation.equals(uni.getState())){
+                    foundSchools.add(uni);
+                }
+            }
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given control against the list of schools in the database.
+     * @param wantedControl 
+     */
+    private static void searchWantedControl(String wantedControl){
+        if(!wantedControl.equals("")){
+            for(University uni: universitiesList){
+                if(wantedControl.equals(uni.getState())){
+                    foundSchools.add(uni);
+                }
+            }
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given number of students against the list of schools in the database.
+     * @param wantedNumberOfStudents 
+     */
+    private static void searchWantedNumberOfStudents(Integer lowNumberWanted, Integer highNumberWanted){
+        if(lowNumberWanted != null && highNumberWanted != null){
+            
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given percent of females against the list of schools in the database.
+     * @param wantedPercentFemales 
+     */
+    private static void searchWantedPercentFemales(Double lowPercentFemales, Double highPercentFemales){
+        if(lowPercentFemales != null && highPercentFemales != null){
+            
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given SAT verbal score against the list of schools in the database.
+     * @param wantedSATVerbal 
+     */
+    private static void searchWantedSATVerbal(Double lowSATVerbal, Double highSATVerbal){
+        if(lowSATVerbal != null && highSATVerbal != null){
+            
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given SAT math score against the list of schools in the database.
+     * @param wantedSATMath 
+     */
+    private static void searchWantedSATMath(Double lowSATMath, Double highSATMath){
+        if(lowSATMath != null && highSATMath != null){
+            
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given expense against the list of schools in the database.
+     * @param wantedExpenses 
+     */
+    private static void searchWantedExpenses(Double lowExpenses, Double highExpenses){
+        if(lowExpenses != null && highExpenses != null){
+            
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given percent of financial aid against the list of schools in the database.
+     * @param wantedPercentFinancialAid 
+     */
+    private static void searchWantedPercentFinancialAid(Double lowFinAid, Double highFinAid){
+        if(lowFinAid != null && highFinAid != null){
+            
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given number of applicants against the list of schools in the database.
+     * @param wantedNumberOfApplicants 
+     */
+    private static void searchWantedNumberOfApplicants(Integer lowNumApplicants, Integer highNumApplicants){
+        if(lowNumApplicants != null && highNumApplicants != null){
+            
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given percent admitted against the list of schools in the database.
+     * @param wantedPercentAdmitted 
+     */
+    private static void searchWantedPercentAdmitted(Double lowAdmitted, Double highAdmitted){
+        if(lowAdmitted != null && highAdmitted != null){
+            
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given percent enrolled against the list of schools in the database.
+     * @param wantedPercentEnrolled 
+     */
+    private static void searchWantedPercentEnrolled(Double lowEnrolled, Double highEnrolled){
+        if(lowEnrolled != null && highEnrolled != null){
+            
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given academics score against the list of schools in the database.
+     * @param wantedAcademicsScale 
+     */
+    private static void searchWantedAcademicsScale(Integer lowAcademicScale, Integer highAcademicScale){
+        if(lowAcademicScale != null && highAcademicScale != null){
+            
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given social score against the list of schools in the database.
+     * @param wantedSocialScale 
+     */
+    private static void searchWantedSocialScale(Integer lowSocialScale, Integer highAcademicScale){
+        if(lowSocialScale != null && highAcademicScale != null){
+            
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given quality of life score against the list of schools in the database.
+     * @param wantedQualityOfLifeScale 
+     */
+    private static void searchWantedQualityOfLifeScale(Integer lowQualityScale, Integer highQualityScale){
+        if(lowQualityScale != null && highQualityScale != null){
+            
+        }
+        else{}//do nothing
+    }
+    
+    private static void searchWantedEmpheses(ArrayList<String> emphases){
+        if(!emphases.isEmpty()){
+            
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Used to run this class from the command line.
+     * @param args Arguments given to the class from stdin.
+     */
+    public static void main(String args[]){
+    }
+}

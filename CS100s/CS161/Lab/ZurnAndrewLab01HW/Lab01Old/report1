@@ -1,0 +1,15 @@
+Andrew Zurn
+
+Got here (cd ~/CS161/Lab01)
+
+[awzurn@lin8 21 ~/CS161/Lab01]$ pwd
+/net/home/f10/awzurn/CS161/Lab01
+[awzurn@lin8 22 ~/CS161/Lab01]$ ls
+Lab01Writeup.html  Mammals  TouchyWindow.java
+[awzurn@lin8 23 ~/CS161/Lab01]$ 
+
+[awzurn@lin8 25 ~/CS161/Lab01]$ cp -R /net/people/classes/CS161/labs/Lab01/TouchyWindow.java ~/CS161/Lab01
+
+Got new file
+
+Compilation completed.

@@ -1,0 +1,8 @@
+Andrew Zurn
+Assignment 4 - Holey
+CS350
+10/02/12
+
+I was able to produce two good working programs that were described in the assignment writeups found in the book.  The first, as described on page 87, is an implementation of the tee command that is found in the linux terminal.  It has two features that I was able to implement with it, one being with the option '-a', which will append to the end of the file specified by the pathname in argv[2] if that file already exists, else it will create the file, and write the text to it, while also writing the text to stdout.  The second feature is without the option '-a', which will just print the text out stdout.
+
+The second program produced for this assignment, the description being able to found on page 110 (5-2), is a rather simple program that will try to open a file using the 'O_APPEND' flag, seek to the beginning of the file, and try to write there.  When the program runs, however, one will see that even though we set the seek value to start at the beginning of the file, the text we try to input is placed at the end of the file.  The book asks us why this is so, and it is a rather simple answer.  That answer, being, that in this instance we used the 'O_APPEND' flag when we opened the file, which only lets us add text to the end of the file.  If we were to remove this flag, however, we would see the text appear at the beginning of the file, where we had our lseek() command set to.

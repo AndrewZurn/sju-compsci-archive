@@ -1,0 +1,19 @@
+%{
+int intvalue;
+extern char yytext[];
+char variablename[200];
+%}
+
+%token VARIABLE
+%token INTEGER
+%token SC
+%token LP
+%token RP
+%token PLUS
+%token MINUS
+%token TIMES
+%token DIVIDE
+%token EXP
+%token BADCC
+
+%%

@@ -1,0 +1,7 @@
+drop view IF EXISTS WORKS_ON_TOTALS;
+CREATE VIEW 		WORKS_ON_TOTALS AS
+	SELECT		SSN,FNAME,LNAME,Sum(Hours) as TotalHours
+	FROM 		employee,works_on
+	WHERE 		SSN=ESSN 
+	Group by	SSN, FNAME,LNAME
+	ORDER BY 	LNAME;

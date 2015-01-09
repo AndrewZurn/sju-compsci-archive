@@ -1,0 +1,8 @@
+Andrew Zurn
+CS350 - Holey
+Assignment 6 - zurnCShell
+11/1/12
+
+This program, dubbed the zurnCShell, is meant to simulate the shell that is within the terminal found on the linux desktop.  It is a rather elementary simulate, but most of the general features are functional within the shell.  One is able to open new programs with different arguments given through stdin, and use other programs one might be familiar with in the normal linux terminal (ls, pwd, mkdir, rmdir, rm, etc.)  One will also find that the implementation of the "cd" command is also included within this shell.  It is not a part of the normal fork and execvp structure that is within the shell, as it is not a normal command, but rather, built into the linux shell, and thus was not able to be run like a regular program.
+
+No implementation was the foreground and background program structures was implemented, as was decided upon in the class on 11/1.

@@ -1,0 +1,92 @@
+% This file was created with JabRef 2.9.2.
+% Encoding: Cp1252
+
+@ARTICLE{Appcelerator.com2012,
+  author = {Appcelerator.com},
+  title = {Native vs. HTML5: Mobile App Development, Which option is best?},
+  journal = {Appcelerator White Paper},
+  year = {2012},
+  volume = {na},
+  pages = {na},
+  owner = {AndyZurn},
+  timestamp = {2013.12.08}
+}
+
+@ARTICLE{Corral2011,
+  author = {Luis Corral and Alberto Sillitti and Giancarlo Succi and Alessandro
+	Garibbo and Paolo Ramella},
+  title = {Evolution of Mobile Software Development from Platform-Specific to
+	Web-Based Multiplatform Paradigm},
+  journal = {Onward!},
+  year = {2011},
+  volume = {Oct 2011},
+  pages = {na},
+  owner = {Andrew},
+  timestamp = {2013.10.27}
+}
+
+@ARTICLE{Goaer2013,
+  author = {Olivier Le Goaer and Sacha Waltham},
+  title = {Yet Another DSL for Cross-Platforms Mobile Development},
+  journal = {GlobalDSL},
+  year = {2013},
+  volume = {2013},
+  pages = {na},
+  owner = {Andrew},
+  timestamp = {2013.11.18}
+}
+
+@ARTICLE{Heitkoetter2013,
+  author = {Henning Heitkoetter and Tim A. Majchrzak and Herbert Kuchen},
+  title = {Cross-platform Model-Driven Development of Mobile Applications with
+	MD2},
+  journal = {Symposium of Applied Computing},
+  year = {2013},
+  volume = {March},
+  pages = {na},
+  owner = {Andrew},
+  timestamp = {2013.10.28}
+}
+
+@ARTICLE{Huy2012,
+  author = {Ngu Phuc Huy and Do vanThanh},
+  title = {Evaluation of mobile app paradigms},
+  journal = {MoMM},
+  year = {2012},
+  volume = {Dec 2012},
+  pages = {3-5},
+  owner = {Admin},
+  timestamp = {2013.11.19}
+}
+
+@CONFERENCE{Kaminitz2012,
+  author = {Shahar Kaminitz},
+  title = {Online Mobile Dev Conference},
+  booktitle = {Native Web or Hybrid Mobile App Development},
+  year = {2012},
+  owner = {AndyZurn},
+  timestamp = {2013.12.09}
+}
+
+@ARTICLE{Leroux2011,
+  author = {Brian Leroux and Andre Charland},
+  title = {Mobile Application Development: Web vs. Native},
+  journal = {Communications of the ACM},
+  year = {2011},
+  volume = {54 No. 5},
+  pages = {49-53},
+  owner = {Andrew},
+  timestamp = {2013.10.27}
+}
+
+@ARTICLE{Nebeling2013,
+  author = {Michale  Nebeling and Christoph Zimmerli and Moira C. Norrie},
+  title = {Informing the Design of New Mobile Development Methods and Tools},
+  journal = {CHI 2013},
+  year = {2013},
+  volume = {na},
+  pages = {na},
+  owner = {AndyZurn},
+  timestamp = {2013.12.05}
+}
+

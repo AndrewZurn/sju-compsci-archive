@@ -1,0 +1,59 @@
+\begin{thebibliography}{10}
+
+\bibitem{Corral2011}
+Luis Corral, Alberto Sillitti, Giancarlo Succi, Alessandro Garibbo, and Paolo
+  Ramella.
+\newblock Evolution of mobile software development from platform-specific to
+  web-based multiplatform paradigm.
+\newblock {\em Onward!}, Oct 2011:na, 2011.
+
+\bibitem{Dediu2011}
+Horace Dediu.
+\newblock The proliferation of mobile platforms.
+\newblock {\em Asymco}, na:na, 2011.
+
+\bibitem{Dickson2012}
+Paul~E. Dickson.
+\newblock Cabana: A cross-platform mobile development system.
+\newblock {\em SIGCSE}, Feb.:na, 2012.
+
+\bibitem{Heitkoetter2013}
+Henning Heitkoetter, Tim~A. Majchrzak, and Herbert Kuchen.
+\newblock Cross-platform model-driven development of mobile applications with
+  md2.
+\newblock {\em Symposium of Applied Computing}, March:na, 2013.
+
+\bibitem{Kaminitz2011}
+Shahar Kaminitz.
+\newblock Native web or hybrid mobile app development.
+\newblock In {\em na}, 2011.
+
+\bibitem{Kolokolov2013}
+Viktor Kolokolov, Paul Baumann, Silvia Santini, Stefan~T. Ruehl, and Stephan
+  A.~W. Verclas.
+\newblock Flexible development of variable software features for mobile
+  business applications.
+\newblock {\em Software Product Line Conference}, na:na, 2013.
+
+\bibitem{Leroux2011}
+Brian Leroux and Andre Charland.
+\newblock Mobile application development: Web vs. native.
+\newblock {\em Communications of the ACM}, 54 No. 5:49--53, 2011.
+
+\bibitem{Mikkonen2009}
+Tommi Mikkonen, Antero Taivalsaari, and Mikko Terho.
+\newblock Lively for qt: A platform for mobile web applications.
+\newblock {\em Mobility 2009}, Sept.:na, 2009.
+
+\bibitem{Mims2013}
+Christopher Mims.
+\newblock Why mobile apps will soon be dead.
+\newblock {\em MIT Technology Review}, 1:na, 2013.
+
+\bibitem{Xanthopoulos2013}
+Spyros Xanthopoulos and Stelios Xinogalos.
+\newblock A comparative analysis of cross-platform development approaches for
+  mobile applications.
+\newblock {\em Balkan Conference in Informatics '13}, Sept:na, 2013.
+
+\end{thebibliography}

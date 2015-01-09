@@ -1,0 +1,269 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package csci230radomskizurnhardy;
+import java.util.*;
+/**
+ * This class will be used to perform the searching that a user will need to find schools that they
+ * are interested in, an also schools that should be recommended for them to consider.
+ * @author awzurn
+ * @version 1.0
+ * @since March 18, 2012
+ */
+public class SearchController {
+    
+    //private DatabaseController databaseController;
+    //private SOMECONTAINER schoolContainer;
+    private TreeMap<String, University> foundSchools;
+    private TreeMap<String, University> recommendedSchools;
+    
+    /**
+     * Will construct a new SearchController that will be used by the UserController.
+     * @param databaseController Will be used to gather the necessary school information from the database.
+     */
+    public SearchController(/*DatabaseController databaseController*/){
+        //this.databaseController = databaseController;
+        //schoolContainer = databaseController.getAllSavedSchools();
+    }
+    
+    /**
+     * This method will call upon other private methods within this class to compile a map of all relevant
+     * schools to the user's query and also recommended schools that the user should consider.
+     * @param wantedSchool The school name the user wants to find.
+     * @param wantedState The state in which the user wants the school to be located.
+     * @param wantedLocation The location in which the user wants the school to be located.
+     * @param wantedControl The control of the school, being a public or private schoool.
+     * @param wantedNumberOfStudents The wanted number of students at the university.
+     * @param wantedPercentFemales The wanted percentage of students that are female at the university.
+     * @param wantedSATVerbal The wanted SAT Verbal range for the school.
+     * @param wantedSATMath The wanted SAT Math range for the school.
+     * @param wantedExpenses The wanted expense in attending this school.
+     * @param wantedPercentFinancialAid The wanted percent of financial aid given by the school.
+     * @param wantedNumberOfApplicants The wanted number of applicants applying to the school.
+     * @param wantedPercentAdmitted The wanted percentage of applicants admitted to the school.
+     * @param wantedPercentEnrolled The wanted percentage of admitted students that enroll.
+     * @param wantedAcademicsScale The wanted score of the academics on a scale 1-10 at the school.
+     * @param wantedSocialScale The wanted score of the social life on a scale of 1-10 at the school.
+     * @param wantedQualityOfLifeScale The wanted score for the quality of life on a scale of 1-10 at the school.
+     * @return Will return both the list of school relevant to the user's query, and a list of recommended schools for the student to view.
+     */
+    public ArrayList<TreeMap<String, University>> search(String wantedSchool,
+            String wantedState, String wantedLocation,
+            String wantedControl, int wantedNumberOfStudents, double wantedPercentFemales,
+            double wantedSATVerbal, double wantedSATMath, double wantedExpenses,
+            double wantedPercentFinancialAid, int wantedNumberOfApplicants, double wantedPercentAdmitted,
+            double wantedPercentEnrolled,int wantedAcademicsScale,
+            int wantedSocialScale, int wantedQualityOfLifeScale){
+        foundSchools = new TreeMap<String, University>();
+        recommendedSchools = new TreeMap<String, University>();
+        ArrayList<TreeMap<String, University>> returnList = new ArrayList<TreeMap<String, University>>();
+        searchWantedSchools(wantedSchool);
+        searchWantedState(wantedState);
+        searchWantedLocation(wantedLocation);
+        searchWantedControl(wantedControl);
+        searchWantedNumberOfStudents(wantedNumberOfStudents);
+        searchWantedPercentFemales(wantedPercentFemales);
+        searchWantedSATVerbal(wantedSATVerbal);
+        searchWantedSATMath(wantedSATMath);
+        searchWantedExpenses(wantedExpenses);
+        searchWantedPercentFinancialAid(wantedPercentFinancialAid);
+        searchWantedNumberOfApplicants(wantedNumberOfApplicants);
+        searchWantedPercentAdmitted(wantedPercentAdmitted);
+        searchWantedPercentEnrolled(wantedPercentEnrolled);
+        searchWantedAcademicsScale(wantedAcademicsScale);
+        searchWantedSocialScale(wantedSocialScale);
+        searchWantedQualityOfLifeScale(wantedQualityOfLIfeScale);
+        returnList.add(foundSchools);
+        returnList.add(recommendedSchools);
+        return returnList;
+    }
+    
+    /**
+     * Will search the name of the given school against the list of schools in the database.
+     * @param wantedSchool 
+     */
+    private void searchWantedSchools(String wantedSchool){
+        if(!wantedSchool.equals("")){
+            for(University uni: schoolContainer){
+                if(wantedSchool.equals(uni.getSchool())){
+                    foundSchools.put(uni.getSchool(), uni);
+                }
+            }
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given state against the list of schools in the database.
+     * @param wantedState 
+     */
+    private void searchWantedState(String wantedState){
+        if(!wantedState.equals("")){
+            
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given location against the list of schools in the database.
+     * @param wantedLocation 
+     */
+    private void searchWantedLocation(String wantedLocation){
+        if(!wantedLocation.equals("")){
+            
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given control against the list of schools in the database.
+     * @param wantedControl 
+     */
+    private void searchWantedControl(String wantedControl){
+        if(!wantedControl.equals("")){
+            
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given number of students against the list of schools in the database.
+     * @param wantedNumberOfStudents 
+     */
+    private void searchWantedNuumberOfStudents(Integer wantedNumberOfStudents){
+        if(wantedNumberOfStudents != null){
+            
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given percent of females against the list of schools in the database.
+     * @param wantedPercentFemales 
+     */
+    private void searchWantedPercentFemales(Double wantedPercentFemales){
+        if(wantedPercentFemales != null){
+            
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given SAT verbal score against the list of schools in the database.
+     * @param wantedSATVerbal 
+     */
+    private void searchWantedSATVerbal(Double wantedSATVerbal){
+        if(wantedSATVerbal != null){
+            
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given SAT math score against the list of schools in the database.
+     * @param wantedSATMath 
+     */
+    private void searchWantedSATMath(Double wantedSATMath){
+        if(wantedSATMath != null){
+            
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given expense against the list of schools in the database.
+     * @param wantedExpenses 
+     */
+    private void searchWantedExpenses(Double wantedExpenses){
+        if(wantedExpenses != null){
+            
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given percent of financial aid against the list of schools in the database.
+     * @param wantedPercentFinancialAid 
+     */
+    private void searchWantedPercentFinancialAid(Double wantedPercentFinancialAid){
+        if(wantedPercentFinancialAid != null){
+            
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given number of applicants against the list of schools in the database.
+     * @param wantedNumberOfApplicants 
+     */
+    private void searchWantedNumberOfApplicants(Integer wantedNumberOfApplicants){
+        if(wantedNumberOfApplicants != null){
+            
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given percent admitted against the list of schools in the database.
+     * @param wantedPercentAdmitted 
+     */
+    private void searchWantedPercentAdmitted(Double wantedPercentAdmitted){
+        if(wantedPercentAdmitted != null){
+            
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given percent enrolled against the list of schools in the database.
+     * @param wantedPercentEnrolled 
+     */
+    private void searchWantedPercentEnrolled(Double wantedPercentEnrolled){
+        if(wantedPercentEnrolled != null){
+            
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given academics score against the list of schools in the database.
+     * @param wantedAcademicsScale 
+     */
+    private void searchWantedAcademicsScale(Integer wantedAcademicsScale){
+        if(wantedAcademicsScale != null){
+            
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given social score against the list of schools in the database.
+     * @param wantedSocialScale 
+     */
+    private void searchWantedSocialScale(Integer wantedSocialScale){
+        if(wantedSocialScale != null){
+            
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given quality of life score against the list of schools in the database.
+     * @param wantedQualityOfLifeScale 
+     */
+    private void searchWantedQualityOfLifeScale(Integer wantedQualityOfLifeScale){
+        if(wantedQualityOfLifeScale != null){
+            
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Used to run this class from the command line.
+     * @param args Arguments given to the class from stdin.
+     */
+    public static void main(String args[]){
+        
+    }
+}

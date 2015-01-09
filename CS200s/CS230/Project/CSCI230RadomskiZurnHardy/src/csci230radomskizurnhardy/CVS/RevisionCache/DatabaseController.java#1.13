@@ -1,0 +1,178 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package csci230radomskizurnhardy;
+
+import csci230radomskizurnhardy.universities.UniversityDBLibrary;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.TreeMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+
+/**
+ *
+ * @author pghardy
+ */
+public class DatabaseController {
+    
+    DatabaseController DB;
+    
+    public void DatabaseController(){
+       
+    }
+    public static void addUniversity (String school, String state, String location, String control,
+            int numberOfStudents, double percentFemales, double SATVerbal, double SATMath,
+            double expenses, double percentFinancialAid, int numberOfApplicants,
+            double percentAdmitted, double percentEnrolled, int academicsScale,
+            int socialScale, int qualityOfLifeScale){
+        try {
+            UniversityDBLibrary.addUniversity(school, state, location, control, numberOfStudents, percentFemales, SATVerbal, SATMath, expenses, percentFinancialAid, numberOfApplicants, percentAdmitted, percentEnrolled, academicsScale, socialScale, qualityOfLifeScale);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+    }
+    
+    public static void addUniversityEmphasis(String school, String emphasis){
+        try {
+            UniversityDBLibrary.addUniversityEmphasis(school, emphasis);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public static void addUser(String firstName, String lastName, String username, String password, char type){
+        try {
+            UniversityDBLibrary.addUser(firstName, lastName, username, password, type);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+     public static boolean addUserSchool(int Id, String school){
+        try {
+            return UniversityDBLibrary.addUserSchool(Id, school);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         return false;
+     }
+     
+     public static void deactivateUser(int Id){
+        try {
+            UniversityDBLibrary.deactivateUser(Id);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+     }
+     
+     public static void deactivateUser(String username){
+        try {
+            UniversityDBLibrary.deactivateUser(username);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+     }
+    
+     public static void editUniversity(String school, String state, String location, String control,
+            int numberOfStudents, double percentFemales, double SATVerbal, double SATMath,
+            double expenses, double percentFinancialAid, int numberOfApplicants,
+            double percentAdmitted, double percentEnrolled, int academicsScale,
+            int socialScale, int qualityOfLifeScale){
+        try {
+            UniversityDBLibrary.editUniversity(school, state, location, control, numberOfStudents, percentFemales, SATVerbal, SATMath, expenses, percentFinancialAid, numberOfApplicants, percentAdmitted, percentEnrolled, academicsScale, socialScale, qualityOfLifeScale);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+     }
+     public static void editUniversityEmphases(String school, ArrayList<String> emphases){
+        try {
+            UniversityDBLibrary.editUniversityEmphases(school, emphases);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+     }
+     
+     public static void editUser(int Id, String firstName, String lastName, String password){
+        try {
+            UniversityDBLibrary.editUser(Id, firstName, lastName, password);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+     }
+//     public void editUserByAdmin(int Id, String firstName, String lastName, String password){
+//         UniversityDBLibrary.editUserByAdmin(Id, firstName, lastName, password, type, status);
+//     }
+     
+     public static ArrayList<String> getAllPossibleEmphases(){
+        ArrayList<String> emphasesArray = new ArrayList<String>();
+        String[][]temp = null;
+        try {
+            temp = UniversityDBLibrary.getAllPossibleEmphases();
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        for(int k = 0; k < temp.length; k++){
+            emphasesArray.add(temp[k][0]);
+           
+        }
+        return emphasesArray;     
+     }
+     
+     public static TreeMap<Integer, ArrayList<String>> getAllSavedSchools(){
+        TreeMap<Integer, ArrayList<String>> savedSchoolMap = new TreeMap(); 
+        ArrayList<String> valueMap = new ArrayList<String>();
+        String[][]temp = null;
+        try {
+            temp = UniversityDBLibrary.getAllSavedSchools();
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        int temp2 = new Integer(temp[0][0]); //gets the ID of the first entry
+        for(int i = 0; i < temp.length; i++){
+            
+            if(temp2 != new Integer(temp[i][0])){ //compares the next ID with the previous one
+               valueMap = new ArrayList<String>(); //clears the ArrayList if we have begun a new person
+            }
+            
+            temp2 = new Integer(temp[i][0]);
+            for(int j = 0; j < temp[i].length; j=j+2){
+                valueMap.add(temp[i][j+1]);
+                savedSchoolMap.put(new Integer(temp[i][j]), valueMap);
+           }
+        }         
+        return savedSchoolMap;    
+     }
+     
+     public static TreeMap getAllUniversities(){
+         //Database Stuff
+         return null; 
+     }
+     public static TreeMap getAllUniversityNamesWithEmphases(){
+         //Database Stuff
+         return null; 
+     }
+     public static TreeMap getAllUniversityRecordsWithEmphases(){
+         //Database Stuff
+         return null; 
+     }
+     public static TreeMap getAllUsers(){
+         //Database Stuff
+         return null; 
+     }
+     public static TreeMap getSpecificUser(int Id){
+         //Database Stuff
+         return null;
+     }
+     public static TreeMap getSpecificUser(String username){
+         //Database Stuff
+         return null;
+     }
+     
+    public static void main(String args[]){
+       new DatabaseController();
+    }
+}

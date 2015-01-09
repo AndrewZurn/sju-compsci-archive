@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Regular Expressions Lab</title></head><body>
+<h2>CS239 Fall 2011&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Lab3 &nbsp;&nbsp;&nbsp; Regular Expressions</h2>
+<br>
+Regular expressions are a shorthand way of representing patterns that
+could occur in a string of characters. For example, suppose you had a
+set of strings and you wanted to know which strings had double a's in
+them. You could do this with the pattern:<br>
+<br>
+.*aa.*<br>
+<br>
+In this regular expression, . is used to represent any single character
+and * represents 0 or more repetitions of the previous expression.
+Thus, in both cases, .* represents 0 or more repetitions of any letter.
+Thus, .*aa.* represents 0 or more of any character followed by two a's
+followed by two or more repetitions of any character. Note that * can
+operate on any character. Thus, a* means a string with 0 or more a's.<br>
+<br>
+Let's try this using the program egrep (which stands for Extended Get
+Regular ExPression) . Type <br>
+<br>
+egrep '.*aa.*'&nbsp; /usr/share/dict/linux.words<br>
+<br>
+and see what happens. (/usr/share/dict/linux.words is a file containing
+words used by spell checkers in linux.) (Note the .* at the beginning
+and end are actually unnecessary. If we simply typed <span style="font-weight: bold;">egrep 'aa' /usr/share/dict/linux.words</span>
+we would get the same result.) You should see a list of all words in
+the dictionary containing 2 consecutive a's.<br>
+<br>
+Try the following set of problems on /usr/share/dict/linux.words using
+egrep:<br>
+<br>
+<ol>
+  <li>Find all words in /usr/share/dict/linux.words that have two a's
+somewhere in them, not necessarily next to each other.</li>
+  <li>Find all words that have two or more double a's in them. There
+must be at least one letter separating the two double a's.<br>
+  </li>
+  <li>Find all words that have a b with a double a somewhere after the
+b.</li>
+  <li>Find all words that have an a, later a b, later a c, later a d,
+later an e.</li>
+</ol>
+One can do more general things as well. For example, [abcxq] represents
+a single letter that must be an a, a b, a c, an x, or a q. Thus,
+'.*[abcxq].*' would mean each string having 0 or more characters of any
+kind followed by an a, b, c, x, or q followed by 0 or more characters
+of any kind. Also, one can exclude characters. For example, [^abc]
+represents any character which is not a or b or c so '[^abc]abc' would
+represent words with an abc preceded by something not an abc. If one
+wants to make sure that the entire string matches a
+pattern, you can do it by putting a ^ at the beginning (in this
+context, ^ means start at the beginning of the string) and a $ at the
+end (which means the pattern must end at the last letter). Thus, if we
+had the pattern '^a[^a]*a$' we would require that the string begins
+with a followed by 0 or more characters that are not a except the last
+letter
+which is an a.<br>
+<br>
+<ol>
+  <li>Find all words in /usr/share/dict/linux.words that have the
+letters q or z at least three times. (For example, quizzes has one q
+and two z's so it works.)</li>
+  <li>Find all words that have at least 5 vowels. (The vowels are
+a,e,i,o,u, and y.)</li>
+  <li>Find all words that have exactly 4 vowels. (This is a lot harder.)<br>
+  </li>
+</ol>
+One can also use the [] to represent lots of things. For example,
+[a..e] means a, b, c, d, and e. Thus '.*[a..e][a..e].*' represents all
+string having two of the letters from a to e next to each other. \<br>
+<ol>
+  <li>Find all words in /usr/share/dict/linux.words that have a b
+immediately followed by a letter from a to q immediately followed by a
+letter from r to z.</li>
+  <li>Find all words in /usr/share/dict/linux.words that have a c
+immediately followed by a non-c immediately followed by an r.</li>
+  <li>Find all words in /usr/share/dict/linux.words that have a t
+immediately followed by a letter that is not a vowel.<br>
+  </li>
+</ol>
+One can also do "alternatives". That is, one pattern or the other, by
+separating them with a | (that is the character above the \). For
+example, suppose you wanted all words with either a zz or a bb. You
+could do '.*((zz)|(bb)).*'.<br>
+<ol>
+  <li>Find all words that have either a th followed by a non-vowel or
+an sh followed by an a or both.</li>
+  <li>Find all words that have one of the properties of 1-3 in the
+section of this exercise directly above.</li>
+</ol>
+<br>
+<br>
+<br>
+
+</body></html>

@@ -1,0 +1,308 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package csci230radomskizurnhardy;
+
+import java.util.ArrayList;
+import java.util.TreeMap;
+import org.junit.*;
+import static org.junit.Assert.*;
+
+/**
+ *
+ * @author awzurn
+ */
+public class AdminControllerTest {
+    
+    public AdminControllerTest() {
+    }
+
+    @BeforeClass
+    public static void setUpClass() throws Exception {
+    }
+
+    @AfterClass
+    public static void tearDownClass() throws Exception {
+    }
+    
+    @Before
+    public void setUp() {
+    }
+    
+    @After
+    public void tearDown() {
+    }
+
+    /**
+     * Test of addUniversity method, of class AdminController.
+     */
+    @Test
+    public void testAddUniversity() {
+        System.out.println("addUniversity");
+        String school = "";
+        String state = "";
+        String location = "";
+        String control = "";
+        int numberOfStudents = 0;
+        double percentFemales = 0.0;
+        double SATVerbal = 0.0;
+        double SATMath = 0.0;
+        double expenses = 0.0;
+        double percentFinancialAid = 0.0;
+        int numberOfApplicants = 0;
+        double percentAdmitted = 0.0;
+        double percentEnrolled = 0.0;
+        int academicsScale = 0;
+        int socialScale = 0;
+        int qualityOfLifeScale = 0;
+        AdminController.addUniversity(school, state, location, control, numberOfStudents, percentFemales, SATVerbal, SATMath, expenses, percentFinancialAid, numberOfApplicants, percentAdmitted, percentEnrolled, academicsScale, socialScale, qualityOfLifeScale);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of addUniversityEmphasis method, of class AdminController.
+     */
+    @Test
+    public void testAddUniversityEmphasis() {
+        System.out.println("addUniversityEmphasis");
+        String school = "";
+        String emphasis = "";
+        AdminController.addUniversityEmphasis(school, emphasis);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of addUser method, of class AdminController.
+     */
+    @Test
+    public void testAddUser() {
+        System.out.println("addUser");
+        String firstName = "";
+        String lastName = "";
+        String username = "";
+        String password = "";
+        char type = ' ';
+        AdminController.addUser(firstName, lastName, username, password, type);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of deactivateUser method, of class AdminController.
+     */
+    @Test
+    public void testDeactivateUser_int() {
+        System.out.println("deactivateUser");
+        int Id = 0;
+        AdminController.deactivateUser(Id);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of deactivateUser method, of class AdminController.
+     */
+    @Test
+    public void testDeactivateUser_String() {
+        System.out.println("deactivateUser");
+        String username = "";
+        AdminController.deactivateUser(username);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of editUniversity method, of class AdminController.
+     */
+    @Test
+    public void testEditUniversity() {
+        System.out.println("editUniversity");
+        String school = "";
+        String state = "";
+        String location = "";
+        String control = "";
+        int numberOfStudents = 0;
+        double percentFemales = 0.0;
+        double SATVerbal = 0.0;
+        double SATMath = 0.0;
+        double expenses = 0.0;
+        double percentFinancialAid = 0.0;
+        int numberOfApplicants = 0;
+        double percentAdmitted = 0.0;
+        double percentEnrolled = 0.0;
+        int academicsScale = 0;
+        int socialScale = 0;
+        int qualityOfLifeScale = 0;
+        AdminController.editUniversity(school, state, location, control, numberOfStudents, percentFemales, SATVerbal, SATMath, expenses, percentFinancialAid, numberOfApplicants, percentAdmitted, percentEnrolled, academicsScale, socialScale, qualityOfLifeScale);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of editUniversityEmphases method, of class AdminController.
+     */
+    @Test
+    public void testEditUniversityEmphases() {
+        System.out.println("editUniversityEmphases");
+        String school = "";
+        ArrayList<String> emphases = null;
+        AdminController.editUniversityEmphases(school, emphases);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of editUser method, of class AdminController.
+     */
+    @Test
+    public void testEditUser() {
+        System.out.println("editUser");
+        String username = "";
+        String firstName = "";
+        String lastName = "";
+        String password = "";
+        AdminController.editUser(username, firstName, lastName, password);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of editUserByAdmin method, of class AdminController.
+     */
+    @Test
+    public void testEditUserByAdmin() {
+        System.out.println("editUserByAdmin");
+        String username = "";
+        String firstName = "";
+        String lastName = "";
+        String password = "";
+        char type = ' ';
+        char status = ' ';
+        AdminController.editUserByAdmin(username, firstName, lastName, password, type, status);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getAllPossibleEmphases method, of class AdminController.
+     */
+    @Test
+    public void testGetAllPossibleEmphases() {
+        System.out.println("getAllPossibleEmphases");
+        ArrayList expResult = null;
+        ArrayList result = AdminController.getAllPossibleEmphases();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getAllSavedSchools method, of class AdminController.
+     */
+    @Test
+    public void testGetAllSavedSchools() {
+        System.out.println("getAllSavedSchools");
+        TreeMap expResult = null;
+        TreeMap result = AdminController.getAllSavedSchools();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getAllUniversities method, of class AdminController.
+     */
+    @Test
+    public void testGetAllUniversities() {
+        System.out.println("getAllUniversities");
+        ArrayList expResult = null;
+        ArrayList result = AdminController.getAllUniversities();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getAllUniversityNamesWithEmphases method, of class AdminController.
+     */
+    @Test
+    public void testGetAllUniversityNamesWithEmphases() {
+        System.out.println("getAllUniversityNamesWithEmphases");
+        TreeMap expResult = null;
+        TreeMap result = AdminController.getAllUniversityNamesWithEmphases();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getAllUsers method, of class AdminController.
+     */
+    @Test
+    public void testGetAllUsers() {
+        System.out.println("getAllUsers");
+        ArrayList expResult = null;
+        ArrayList result = AdminController.getAllUsers();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getSpecificUser method, of class AdminController.
+     */
+    @Test
+    public void testGetSpecificUser_Integer() {
+        System.out.println("getSpecificUser");
+        Integer Id = null;
+        User expResult = null;
+        User result = AdminController.getSpecificUser(Id);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getSpecificUser method, of class AdminController.
+     */
+    @Test
+    public void testGetSpecificUser_String() {
+        System.out.println("getSpecificUser");
+        String username = "";
+        User expResult = null;
+        User result = AdminController.getSpecificUser(username);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of login method, of class AdminController.
+     */
+    @Test
+    public void testLogin() {
+        System.out.println("login");
+        String username = "";
+        String givenPassword = "";
+        boolean expResult = false;
+        boolean result = AdminController.login(username, givenPassword);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of main method, of class AdminController.
+     */
+    @Test
+    public void testMain() {
+        System.out.println("main");
+        String[] args = null;
+        AdminController.main(args);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+}

@@ -1,0 +1,78 @@
+This is a simple exercise in using Haskell.
+
+First, open a terminal window and type hugs in the window.
+
+You should end up with something like:
+
+||   || ||  || ||  || ||__      Hugs 98: Based on the Haskell 98 standard
+||___|| ||__|| ||__||  __||     Copyright (c) 1994-2005
+||---||         ___||           World Wide Web: http://haskell.org/hugs
+||   ||                         Bugs: http://hackage.haskell.org/trac/hugs
+||   || Version: September 2006 _________________________________________
+
+Haskell 98 mode: Restart with command line option -98 to enable extensions
+
+Type :? for help
+Hugs>
+
+At the Hugs, type 5*5 and enter. You should see
+
+Hugs>5*5
+25
+Hugs>
+
+Type <Ctrl>-d to exit from Hugs.
+
+Nobody wants to develop software this way.
+
+At the command line, change to CS239/Lab01.
+
+type gedit FirstLiterate.lhs to load the first Haskell file. Note that this file is
+full of "functions" defined in the Haskell style. For example, you will see
+
+>	square n = n * n
+
+Which defines the square of a number n as n*n.
+
+At the command line, type hugs FirstLiterate.lhs
+This time you will see:
+||   || ||  || ||  || ||__      Hugs 98: Based on the Haskell 98 standard
+||___|| ||__|| ||__||  __||     Copyright (c) 1994-2005
+||---||         ___||           World Wide Web: http://haskell.org/hugs
+||   ||                         Bugs: http://hackage.haskell.org/trac/hugs
+||   || Version: September 2006 _________________________________________
+
+Haskell 98 mode: Restart with command line option -98 to enable extensions
+
+Type :? for help
+Main>
+
+The Main tells you you have loaded the file correctly. Type square 5 at the command line.
+Then type square 4.32 at the command line.
+Then type square -4.6 at the command line. What happened? 
+Try square (-4.6) at the command line. Haskell treats - as another function so you need to
+parenthesize it.
+
+lcd m n calculates the largest commond divisor of m and n.
+
+Try lcd 36 24
+
+Then try lcd 1244 328
+
+Try each of the max functions a couple of times.
+
+The function applyThem allows you to apply a series of functions to a single value. Try
+applyThem [square,double,max 3,max 7] 5.2
+What happens with max 3 and max 7?
+
+The function applyIt f l  allows you to apply the single function f to the list of values l.
+Try
+applyIt square [5,4,3,2,1]
+
+
+Write a fourth power function called fourth by calling the square function twice. Then exit 
+from Haskell and type hugs FirstLiterate.lhs and try fourth 5, fourth 4.32, and fourth (-4.6).
+
+Finally write an eighth power function by applying square three times. Apply eigth to
+each of those numbers.
+

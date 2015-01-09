@@ -1,0 +1,243 @@
+No.     Time        Source                Destination           Protocol Length Info
+      1 0.000000    Cisco_02:1e:a0        Cisco_02:1e:a0        LOOP     60     Reply
+
+Frame 1: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Cisco_02:1e:a0 (00:04:dd:02:1e:a0), Dst: Cisco_02:1e:a0 (00:04:dd:02:1e:a0)
+Configuration Test Protocol (loopback)
+Data (40 bytes)
+
+0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 00 00 00 00 00 00 00                           ........
+
+No.     Time        Source                Destination           Protocol Length Info
+      2 0.240625    Cisco_87:29:20        Cisco_87:29:20        LOOP     60     Reply
+
+Frame 2: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Cisco_87:29:20 (00:04:dd:87:29:20), Dst: Cisco_87:29:20 (00:04:dd:87:29:20)
+Configuration Test Protocol (loopback)
+Data (40 bytes)
+
+0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 00 00 00 00 00 00 00                           ........
+
+No.     Time        Source                Destination           Protocol Length Info
+      3 5.775982    Cisco_18:82:60        Cisco_18:82:60        LOOP     60     Reply
+
+Frame 3: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Cisco_18:82:60 (00:07:85:18:82:60), Dst: Cisco_18:82:60 (00:07:85:18:82:60)
+Configuration Test Protocol (loopback)
+Data (40 bytes)
+
+0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 00 00 00 00 00 00 00                           ........
+
+No.     Time        Source                Destination           Protocol Length Info
+      4 7.401201    Cisco_02:1e:a0        CDP/VTP/DTP/PAgP/UDLD CDP      371    Device ID: Router  Port ID: FastEthernet0/0  
+
+Frame 4: 371 bytes on wire (2968 bits), 371 bytes captured (2968 bits)
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Cisco Discovery Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+      5 10.000559   Cisco_02:1e:a0        Cisco_02:1e:a0        LOOP     60     Reply
+
+Frame 5: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Cisco_02:1e:a0 (00:04:dd:02:1e:a0), Dst: Cisco_02:1e:a0 (00:04:dd:02:1e:a0)
+Configuration Test Protocol (loopback)
+Data (40 bytes)
+
+0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 00 00 00 00 00 00 00                           ........
+
+No.     Time        Source                Destination           Protocol Length Info
+      6 10.241269   Cisco_87:29:20        Cisco_87:29:20        LOOP     60     Reply
+
+Frame 6: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Cisco_87:29:20 (00:04:dd:87:29:20), Dst: Cisco_87:29:20 (00:04:dd:87:29:20)
+Configuration Test Protocol (loopback)
+Data (40 bytes)
+
+0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 00 00 00 00 00 00 00                           ........
+
+No.     Time        Source                Destination           Protocol Length Info
+      7 15.776679   Cisco_18:82:60        Cisco_18:82:60        LOOP     60     Reply
+
+Frame 7: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Cisco_18:82:60 (00:07:85:18:82:60), Dst: Cisco_18:82:60 (00:07:85:18:82:60)
+Configuration Test Protocol (loopback)
+Data (40 bytes)
+
+0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 00 00 00 00 00 00 00                           ........
+
+No.     Time        Source                Destination           Protocol Length Info
+      8 20.001183   Cisco_02:1e:a0        Cisco_02:1e:a0        LOOP     60     Reply
+
+Frame 8: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Cisco_02:1e:a0 (00:04:dd:02:1e:a0), Dst: Cisco_02:1e:a0 (00:04:dd:02:1e:a0)
+Configuration Test Protocol (loopback)
+Data (40 bytes)
+
+0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 00 00 00 00 00 00 00                           ........
+
+No.     Time        Source                Destination           Protocol Length Info
+      9 20.241850   Cisco_87:29:20        Cisco_87:29:20        LOOP     60     Reply
+
+Frame 9: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Cisco_87:29:20 (00:04:dd:87:29:20), Dst: Cisco_87:29:20 (00:04:dd:87:29:20)
+Configuration Test Protocol (loopback)
+Data (40 bytes)
+
+0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 00 00 00 00 00 00 00                           ........
+
+No.     Time        Source                Destination           Protocol Length Info
+     10 25.777424   Cisco_18:82:60        Cisco_18:82:60        LOOP     60     Reply
+
+Frame 10: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Cisco_18:82:60 (00:07:85:18:82:60), Dst: Cisco_18:82:60 (00:07:85:18:82:60)
+Configuration Test Protocol (loopback)
+Data (40 bytes)
+
+0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 00 00 00 00 00 00 00                           ........
+
+No.     Time        Source                Destination           Protocol Length Info
+     11 30.001815   Cisco_02:1e:a0        Cisco_02:1e:a0        LOOP     60     Reply
+
+Frame 11: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Cisco_02:1e:a0 (00:04:dd:02:1e:a0), Dst: Cisco_02:1e:a0 (00:04:dd:02:1e:a0)
+Configuration Test Protocol (loopback)
+Data (40 bytes)
+
+0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 00 00 00 00 00 00 00                           ........
+
+No.     Time        Source                Destination           Protocol Length Info
+     12 30.242498   Cisco_87:29:20        Cisco_87:29:20        LOOP     60     Reply
+
+Frame 12: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Cisco_87:29:20 (00:04:dd:87:29:20), Dst: Cisco_87:29:20 (00:04:dd:87:29:20)
+Configuration Test Protocol (loopback)
+Data (40 bytes)
+
+0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 00 00 00 00 00 00 00                           ........
+
+No.     Time        Source                Destination           Protocol Length Info
+     13 32.646143   10.2.101.1            10.2.139.1            ICMP     98     Echo (ping) request  id=0x064e, seq=1/256, ttl=63
+
+Frame 13: 98 bytes on wire (784 bits), 98 bytes captured (784 bits)
+Ethernet II, Src: Cisco_87:29:20 (00:04:dd:87:29:20), Dst: Cisco_18:82:60 (00:07:85:18:82:60)
+Internet Protocol Version 4, Src: 10.2.101.1 (10.2.101.1), Dst: 10.2.139.1 (10.2.139.1)
+Internet Control Message Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     14 32.647586   10.2.139.1            10.2.101.1            ICMP     98     Echo (ping) reply    id=0x064e, seq=1/256, ttl=63
+
+Frame 14: 98 bytes on wire (784 bits), 98 bytes captured (784 bits)
+Ethernet II, Src: Cisco_18:82:60 (00:07:85:18:82:60), Dst: Cisco_87:29:20 (00:04:dd:87:29:20)
+Internet Protocol Version 4, Src: 10.2.139.1 (10.2.139.1), Dst: 10.2.101.1 (10.2.101.1)
+Internet Control Message Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     15 33.646438   10.2.101.1            10.2.139.1            ICMP     98     Echo (ping) request  id=0x064e, seq=2/512, ttl=63
+
+Frame 15: 98 bytes on wire (784 bits), 98 bytes captured (784 bits)
+Ethernet II, Src: Cisco_87:29:20 (00:04:dd:87:29:20), Dst: Cisco_18:82:60 (00:07:85:18:82:60)
+Internet Protocol Version 4, Src: 10.2.101.1 (10.2.101.1), Dst: 10.2.139.1 (10.2.139.1)
+Internet Control Message Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     16 33.647032   10.2.139.1            10.2.101.1            ICMP     98     Echo (ping) reply    id=0x064e, seq=2/512, ttl=63
+
+Frame 16: 98 bytes on wire (784 bits), 98 bytes captured (784 bits)
+Ethernet II, Src: Cisco_18:82:60 (00:07:85:18:82:60), Dst: Cisco_87:29:20 (00:04:dd:87:29:20)
+Internet Protocol Version 4, Src: 10.2.139.1 (10.2.139.1), Dst: 10.2.101.1 (10.2.101.1)
+Internet Control Message Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     17 35.778072   Cisco_18:82:60        Cisco_18:82:60        LOOP     60     Reply
+
+Frame 17: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Cisco_18:82:60 (00:07:85:18:82:60), Dst: Cisco_18:82:60 (00:07:85:18:82:60)
+Configuration Test Protocol (loopback)
+Data (40 bytes)
+
+0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 00 00 00 00 00 00 00                           ........
+
+No.     Time        Source                Destination           Protocol Length Info
+     18 40.002333   Cisco_02:1e:a0        Cisco_02:1e:a0        LOOP     60     Reply
+
+Frame 18: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Cisco_02:1e:a0 (00:04:dd:02:1e:a0), Dst: Cisco_02:1e:a0 (00:04:dd:02:1e:a0)
+Configuration Test Protocol (loopback)
+Data (40 bytes)
+
+0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 00 00 00 00 00 00 00                           ........
+
+No.     Time        Source                Destination           Protocol Length Info
+     19 40.243215   Cisco_87:29:20        Cisco_87:29:20        LOOP     60     Reply
+
+Frame 19: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Cisco_87:29:20 (00:04:dd:87:29:20), Dst: Cisco_87:29:20 (00:04:dd:87:29:20)
+Configuration Test Protocol (loopback)
+Data (40 bytes)
+
+0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 00 00 00 00 00 00 00                           ........
+
+No.     Time        Source                Destination           Protocol Length Info
+     20 45.778790   Cisco_18:82:60        Cisco_18:82:60        LOOP     60     Reply
+
+Frame 20: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Cisco_18:82:60 (00:07:85:18:82:60), Dst: Cisco_18:82:60 (00:07:85:18:82:60)
+Configuration Test Protocol (loopback)
+Data (40 bytes)
+
+0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 00 00 00 00 00 00 00                           ........
+
+No.     Time        Source                Destination           Protocol Length Info
+     21 50.002906   Cisco_02:1e:a0        Cisco_02:1e:a0        LOOP     60     Reply
+
+Frame 21: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Cisco_02:1e:a0 (00:04:dd:02:1e:a0), Dst: Cisco_02:1e:a0 (00:04:dd:02:1e:a0)
+Configuration Test Protocol (loopback)
+Data (40 bytes)
+
+0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 00 00 00 00 00 00 00                           ........
+
+No.     Time        Source                Destination           Protocol Length Info
+     22 50.243812   Cisco_87:29:20        Cisco_87:29:20        LOOP     60     Reply
+
+Frame 22: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Cisco_87:29:20 (00:04:dd:87:29:20), Dst: Cisco_87:29:20 (00:04:dd:87:29:20)
+Configuration Test Protocol (loopback)
+Data (40 bytes)
+
+0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 00 00 00 00 00 00 00                           ........

@@ -1,0 +1,125 @@
+No.     Time        Source                Destination           Protocol Length Info
+      1 0.000000    10.0.1.2              224.0.0.9             RIPv2    106    Response
+
+Frame 1: 106 bytes on wire (848 bits), 106 bytes captured (848 bits)
+Ethernet II, Src: Cisco_18:82:60 (00:07:85:18:82:60), Dst: IPv4mcast_00:00:09 (01:00:5e:00:00:09)
+Internet Protocol Version 4, Src: 10.0.1.2 (10.0.1.2), Dst: 224.0.0.9 (224.0.0.9)
+User Datagram Protocol, Src Port: router (520), Dst Port: router (520)
+Routing Information Protocol
+    Command: Response (2)
+    Version: RIPv2 (2)
+    IP Address: 10.0.2.0, Metric: 1
+    IP Address: 10.0.3.0, Metric: 2
+    IP Address: 10.0.4.0, Metric: 3
+
+No.     Time        Source                Destination           Protocol Length Info
+      2 28.881786   10.0.1.2              224.0.0.9             RIPv2    106    Response
+
+Frame 2: 106 bytes on wire (848 bits), 106 bytes captured (848 bits)
+Ethernet II, Src: Cisco_18:82:60 (00:07:85:18:82:60), Dst: IPv4mcast_00:00:09 (01:00:5e:00:00:09)
+Internet Protocol Version 4, Src: 10.0.1.2 (10.0.1.2), Dst: 224.0.0.9 (224.0.0.9)
+User Datagram Protocol, Src Port: router (520), Dst Port: router (520)
+Routing Information Protocol
+    Command: Response (2)
+    Version: RIPv2 (2)
+    IP Address: 10.0.2.0, Metric: 1
+    IP Address: 10.0.3.0, Metric: 2
+    IP Address: 10.0.4.0, Metric: 3
+
+No.     Time        Source                Destination           Protocol Length Info
+      3 55.943284   10.0.1.2              224.0.0.9             RIPv2    106    Response
+
+Frame 3: 106 bytes on wire (848 bits), 106 bytes captured (848 bits)
+Ethernet II, Src: Cisco_18:82:60 (00:07:85:18:82:60), Dst: IPv4mcast_00:00:09 (01:00:5e:00:00:09)
+Internet Protocol Version 4, Src: 10.0.1.2 (10.0.1.2), Dst: 224.0.0.9 (224.0.0.9)
+User Datagram Protocol, Src Port: router (520), Dst Port: router (520)
+Routing Information Protocol
+    Command: Response (2)
+    Version: RIPv2 (2)
+    IP Address: 10.0.2.0, Metric: 1
+    IP Address: 10.0.3.0, Metric: 2
+    IP Address: 10.0.4.0, Metric: 3
+
+No.     Time        Source                Destination           Protocol Length Info
+      4 83.520940   10.0.1.2              224.0.0.9             RIPv2    106    Response
+
+Frame 4: 106 bytes on wire (848 bits), 106 bytes captured (848 bits)
+Ethernet II, Src: Cisco_18:82:60 (00:07:85:18:82:60), Dst: IPv4mcast_00:00:09 (01:00:5e:00:00:09)
+Internet Protocol Version 4, Src: 10.0.1.2 (10.0.1.2), Dst: 224.0.0.9 (224.0.0.9)
+User Datagram Protocol, Src Port: router (520), Dst Port: router (520)
+Routing Information Protocol
+    Command: Response (2)
+    Version: RIPv2 (2)
+    IP Address: 10.0.2.0, Metric: 1
+    IP Address: 10.0.3.0, Metric: 2
+    IP Address: 10.0.4.0, Metric: 3
+
+No.     Time        Source                Destination           Protocol Length Info
+      5 110.578379  10.0.1.2              224.0.0.9             RIPv2    106    Response
+
+Frame 5: 106 bytes on wire (848 bits), 106 bytes captured (848 bits)
+Ethernet II, Src: Cisco_18:82:60 (00:07:85:18:82:60), Dst: IPv4mcast_00:00:09 (01:00:5e:00:00:09)
+Internet Protocol Version 4, Src: 10.0.1.2 (10.0.1.2), Dst: 224.0.0.9 (224.0.0.9)
+User Datagram Protocol, Src Port: router (520), Dst Port: router (520)
+Routing Information Protocol
+    Command: Response (2)
+    Version: RIPv2 (2)
+    IP Address: 10.0.2.0, Metric: 1
+    IP Address: 10.0.3.0, Metric: 2
+    IP Address: 10.0.4.0, Metric: 3
+
+No.     Time        Source                Destination           Protocol Length Info
+      6 139.720243  10.0.1.2              224.0.0.9             RIPv2    106    Response
+
+Frame 6: 106 bytes on wire (848 bits), 106 bytes captured (848 bits)
+Ethernet II, Src: Cisco_18:82:60 (00:07:85:18:82:60), Dst: IPv4mcast_00:00:09 (01:00:5e:00:00:09)
+Internet Protocol Version 4, Src: 10.0.1.2 (10.0.1.2), Dst: 224.0.0.9 (224.0.0.9)
+User Datagram Protocol, Src Port: router (520), Dst Port: router (520)
+Routing Information Protocol
+    Command: Response (2)
+    Version: RIPv2 (2)
+    IP Address: 10.0.2.0, Metric: 1
+    IP Address: 10.0.3.0, Metric: 2
+    IP Address: 10.0.4.0, Metric: 3
+
+No.     Time        Source                Destination           Protocol Length Info
+      7 167.189858  10.0.1.2              224.0.0.9             RIPv2    106    Response
+
+Frame 7: 106 bytes on wire (848 bits), 106 bytes captured (848 bits)
+Ethernet II, Src: Cisco_18:82:60 (00:07:85:18:82:60), Dst: IPv4mcast_00:00:09 (01:00:5e:00:00:09)
+Internet Protocol Version 4, Src: 10.0.1.2 (10.0.1.2), Dst: 224.0.0.9 (224.0.0.9)
+User Datagram Protocol, Src Port: router (520), Dst Port: router (520)
+Routing Information Protocol
+    Command: Response (2)
+    Version: RIPv2 (2)
+    IP Address: 10.0.2.0, Metric: 1
+    IP Address: 10.0.3.0, Metric: 2
+    IP Address: 10.0.4.0, Metric: 3
+
+No.     Time        Source                Destination           Protocol Length Info
+      8 196.019382  10.0.1.2              224.0.0.9             RIPv2    106    Response
+
+Frame 8: 106 bytes on wire (848 bits), 106 bytes captured (848 bits)
+Ethernet II, Src: Cisco_18:82:60 (00:07:85:18:82:60), Dst: IPv4mcast_00:00:09 (01:00:5e:00:00:09)
+Internet Protocol Version 4, Src: 10.0.1.2 (10.0.1.2), Dst: 224.0.0.9 (224.0.0.9)
+User Datagram Protocol, Src Port: router (520), Dst Port: router (520)
+Routing Information Protocol
+    Command: Response (2)
+    Version: RIPv2 (2)
+    IP Address: 10.0.2.0, Metric: 1
+    IP Address: 10.0.3.0, Metric: 2
+    IP Address: 10.0.4.0, Metric: 3
+
+No.     Time        Source                Destination           Protocol Length Info
+      9 226.001201  10.0.1.2              224.0.0.9             RIPv2    106    Response
+
+Frame 9: 106 bytes on wire (848 bits), 106 bytes captured (848 bits)
+Ethernet II, Src: Cisco_18:82:60 (00:07:85:18:82:60), Dst: IPv4mcast_00:00:09 (01:00:5e:00:00:09)
+Internet Protocol Version 4, Src: 10.0.1.2 (10.0.1.2), Dst: 224.0.0.9 (224.0.0.9)
+User Datagram Protocol, Src Port: router (520), Dst Port: router (520)
+Routing Information Protocol
+    Command: Response (2)
+    Version: RIPv2 (2)
+    IP Address: 10.0.2.0, Metric: 1
+    IP Address: 10.0.3.0, Metric: 2
+    IP Address: 10.0.4.0, Metric: 3

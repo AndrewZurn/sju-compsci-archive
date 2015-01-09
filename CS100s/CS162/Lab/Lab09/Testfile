@@ -1,0 +1,199 @@
+This shopper arrived at a time of: 0 with 2 items.
+0
+queue 0
+This shopper arrived at a time of: 1 with 14 items.
+0
+queue 1
+This shopper arrived at a time of 0 with 2 items. The shopper will depart from line 0 at a time of 2
+1
+on queue 0
+false
+true
+This shopper arrived at a time of: 2 with 7 items.
+0
+queue 0
+This shopper arrived at a time of: 5 with 12 items.
+0
+queue 2
+This shopper arrived at a time of: 7 with 8 items.
+0
+queue 3
+This shopper arrived at a time of: 7 with 6 items.
+0
+queue 4
+This shopper arrived at a time of: 8 with 14 items.
+0
+queue 5
+This shopper arrived at a time of: 8 with 14 items.
+0
+queue 0
+This shopper arrived at a time of: 10 with 4 items.
+0
+queue 1
+This shopper arrived at a time of: 13 with 3 items.
+0
+queue 2
+This shopper arrived at a time of: 13 with 12 items.
+0
+queue 3
+This shopper arrived at a time of 1 with 14 items. The shopper will depart from line 1 at a time of 15
+1
+on queue 1
+false
+false
+This shopper arrived at a time of 2 with 7 items. The shopper will depart from line 0 at a time of 9
+1
+on queue 0
+false
+false
+This shopper arrived at a time of: 15 with 5 items.
+0
+queue 0
+This shopper arrived at a time of: 16 with 8 items.
+0
+queue 1
+This shopper arrived at a time of: 16 with 1 items.
+0
+queue 4
+This shopper arrived at a time of: 16 with 11 items.
+0
+queue 5
+This shopper arrived at a time of 5 with 12 items. The shopper will depart from line 2 at a time of 17
+1
+on queue 2
+false
+false
+This shopper arrived at a time of 7 with 8 items. The shopper will depart from line 3 at a time of 15
+1
+on queue 3
+false
+false
+This shopper arrived at a time of 7 with 6 items. The shopper will depart from line 4 at a time of 13
+1
+on queue 4
+false
+false
+This shopper arrived at a time of: 18 with 11 items.
+0
+queue 2
+This shopper arrived at a time of: 18 with 10 items.
+0
+queue 3
+This shopper arrived at a time of: 20 with 14 items.
+0
+queue 4
+This shopper arrived at a time of: 20 with 12 items.
+0
+queue 0
+This shopper arrived at a time of: 20 with 15 items.
+0
+queue 1
+This shopper arrived at a time of 8 with 14 items. The shopper will depart from line 5 at a time of 22
+1
+on queue 5
+false
+false
+This shopper arrived at a time of 10 with 4 items. The shopper will depart from line 1 at a time of 14
+1
+on queue 1
+false
+false
+This shopper arrived at a time of 8 with 14 items. The shopper will depart from line 0 at a time of 22
+1
+on queue 0
+false
+false
+This shopper arrived at a time of 13 with 3 items. The shopper will depart from line 2 at a time of 16
+1
+on queue 2
+false
+false
+This shopper arrived at a time of: 23 with 1 items.
+0
+queue 2
+This shopper arrived at a time of 13 with 12 items. The shopper will depart from line 3 at a time of 25
+1
+on queue 3
+false
+false
+This shopper arrived at a time of 16 with 1 items. The shopper will depart from line 4 at a time of 17
+1
+on queue 4
+false
+false
+This shopper arrived at a time of: 26 with 13 items.
+0
+queue 3
+This shopper arrived at a time of 16 with 11 items. The shopper will depart from line 5 at a time of 27
+1
+on queue 5
+false
+true
+This shopper arrived at a time of 16 with 8 items. The shopper will depart from line 1 at a time of 24
+1
+on queue 1
+false
+false
+This shopper arrived at a time of 15 with 5 items. The shopper will depart from line 0 at a time of 20
+1
+on queue 0
+false
+false
+This shopper arrived at a time of: 27 with 14 items.
+0
+queue 5
+This shopper arrived at a time of: 28 with 14 items.
+0
+queue 0
+This shopper arrived at a time of 18 with 11 items. The shopper will depart from line 2 at a time of 29
+1
+on queue 2
+false
+false
+This shopper arrived at a time of 18 with 10 items. The shopper will depart from line 3 at a time of 28
+1
+on queue 3
+false
+false
+This shopper arrived at a time of: 31 with 7 items.
+0
+queue 1
+This shopper arrived at a time of: 32 with 3 items.
+0
+queue 2
+This shopper arrived at a time of: 33 with 1 items.
+0
+queue 3
+This shopper arrived at a time of 20 with 14 items. The shopper will depart from line 4 at a time of 34
+1
+on queue 4
+false
+true
+This shopper arrived at a time of 20 with 15 items. The shopper will depart from line 1 at a time of 35
+1
+on queue 1
+false
+false
+This shopper arrived at a time of 20 with 12 items. The shopper will depart from line 0 at a time of 32
+1
+on queue 0
+false
+false
+This shopper arrived at a time of 23 with 1 items. The shopper will depart from line 2 at a time of 24
+1
+on queue 2
+false
+false
+This shopper arrived at a time of: 36 with 6 items.
+0
+queue 4
+This shopper arrived at a time of: 36 with 15 items.
+0
+queue 0
+This shopper arrived at a time of: 39 with 13 items.
+0
+queue 1
+This shopper arrived at a time of 27 with 14 items. The shopper will depart from line 5 at a time of 41
+1
+on queue 5
+true

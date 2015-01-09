@@ -1,0 +1,28 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package csci230radomskizurnhardy;
+
+import java.util.ArrayList;
+import java.util.TreeMap;
+
+/**
+ *
+ * @author pghardy
+ */
+public class CSCI230RadomskiZurnHardy {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        //Just some tests:
+        DatabaseController DB = new DatabaseController();
+        //ArrayList<University> test = DB.getAllUniversities();
+        //TreeMap test2 = DB.getAllUniversityNamesWithEmphases();
+        //ArrayList<User> test3 = DB.getAllUsers();
+        User user = DB.getSpecificUser("nadmin");
+        System.out.println(user);
+    }
+}

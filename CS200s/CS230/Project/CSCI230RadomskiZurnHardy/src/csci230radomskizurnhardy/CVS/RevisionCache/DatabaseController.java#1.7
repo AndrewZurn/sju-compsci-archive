@@ -1,0 +1,124 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package csci230radomskizurnhardy;
+
+import csci230radomskizurnhardy.universities.UniversityDBLibrary;
+import java.sql.SQLException;
+import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+
+/**
+ *
+ * @author pghardy
+ */
+public class DatabaseController {
+    public void addUniversity (String school, String state, String location, String control,
+            int numberOfStudents, double percentFemales, double SATVerbal, double SATMath,
+            double expenses, double percentFinancialAid, int numberOfApplicants,
+            double percentAdmitted, double percentEnrolled, int academicsScale,
+            int socialScale, int qualityOfLifeScale){
+        try {
+            UniversityDBLibrary.addUniversity(school, state, location, control, numberOfStudents, percentFemales, SATVerbal, SATMath, expenses, percentFinancialAid, numberOfApplicants, percentAdmitted, percentEnrolled, academicsScale, socialScale, qualityOfLifeScale);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+    }
+    
+    public void addUniversityEmphasis(String school, String emphasis){
+        try {
+            UniversityDBLibrary.addUniversityEmphasis(school, emphasis);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void addUser(String firstName, String lastName, String username, String password, char type){
+        try {
+            UniversityDBLibrary.addUser(firstName, lastName, username, password, type);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+     public boolean addUserSchool(int Id, String school){
+        try {
+            return UniversityDBLibrary.addUserSchool(Id, school);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         return false;
+     }
+     
+     public void deactivateUser(int Id){
+        try {
+            UniversityDBLibrary.deactivateUser(Id);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+     }
+     
+     public void deactivateUser(String username){
+        try {
+            UniversityDBLibrary.deactivateUser(username);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+     }
+    
+     public void editUniversity(String school, String state, String location, String control,
+            int numberOfStudents, double percentFemales, double SATVerbal, double SATMath,
+            double expenses, double percentFinancialAid, int numberOfApplicants,
+            double percentAdmitted, double percentEnrolled, int academicsScale,
+            int socialScale, int qualityOfLifeScale){
+         //Database Stuf
+     }
+     public void editUniversityEmphases(String school, ArrayList<String> emphases){
+         //Database Stuf
+     }
+     
+     public void editUser(int Id, String firstName, String lastName, String password){
+         //Database Stuff
+     }
+     public void editUserByAdmin(int Id, String firstName, String lastName, String password){
+         //Database Stuff
+     }
+     
+     public TreeMap getAllPossibleEmphases(){
+         //Database Stuff
+         return null;     
+     }
+     
+     public TreeMap getAllSavedSchools(){
+         //Database Stuff
+         return null;    
+     }
+     public TreeMap getAllUniversities(){
+         //Database Stuff
+         return null; 
+     }
+     public TreeMap getAllUniversityNamesWithEmphases(){
+         //Database Stuff
+         return null; 
+     }
+     public TreeMap getAllUniversityRecordsWithEmphases(){
+         //Database Stuff
+         return null; 
+     }
+     public TreeMap getAllUsers(){
+         //Database Stuff
+         return null; 
+     }
+     public TreeMap getSpecificUser(int Id){
+         //Database Stuff
+         return null;
+     }
+     public TreeMap getSpecificUser(String username){
+         //Database Stuff
+         return null;
+     }
+}

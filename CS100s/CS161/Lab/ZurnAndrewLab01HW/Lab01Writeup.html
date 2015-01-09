@@ -1,0 +1,1748 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml"><head>
+
+
+
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <meta name="ProgId" content="Word.Document">
+  <meta name="Generator" content="Microsoft Word 12">
+  <meta name="Originator" content="Microsoft Word 12">
+  <link rel="File-List" href="Lab1Writeup_files/filelist.xml">
+  <link rel="Edit-Time-Data" href="Lab1Writeup_files/editdata.mso"><!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]--><title>Lab 1: Using Unix</title><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>jmiller</o:Author>
+  <o:LastAuthor>Imad Rahal</o:LastAuthor>
+  <o:Revision>40</o:Revision>
+  <o:TotalTime>52</o:TotalTime>
+  <o:LastPrinted>2006-08-30T13:50:00Z</o:LastPrinted>
+  <o:Created>2007-08-29T20:49:00Z</o:Created>
+  <o:LastSaved>2009-08-26T16:22:00Z</o:LastSaved>
+  <o:Pages>4</o:Pages>
+  <o:Words>2538</o:Words>
+  <o:Characters>14472</o:Characters>
+  <o:Company>CSB/SJU</o:Company>
+  <o:Lines>120</o:Lines>
+  <o:Paragraphs>33</o:Paragraphs>
+  <o:CharactersWithSpaces>16977</o:CharactersWithSpaces>
+  <o:Version>12.00</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+
+  
+
+  <link rel="themeData" href="Lab1Writeup_files/themedata.thmx">
+  <link rel="colorSchemeMapping" href="Lab1Writeup_files/colorschememapping.xml"><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>BestFit</w:Zoom>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:DrawingGridHorizontalSpacing>0 pt</w:DrawingGridHorizontalSpacing>
+  <w:DrawingGridVerticalSpacing>0 pt</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:DrawingGridHorizontalOrigin>0 pt</w:DrawingGridHorizontalOrigin>
+  <w:DrawingGridVerticalOrigin>0 pt</w:DrawingGridVerticalOrigin>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" LatentStyleCount="267">
+  <w:LsdException Locked="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="99" Name="footer"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="99" Name="page number"/>
+  <w:LsdException Locked="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="99" Name="No List"/>
+  <w:LsdException Locked="false" Priority="99" SemiHidden="true"
+   Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="99" SemiHidden="true" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+
+  <style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Courier;
+	panose-1:2 7 4 9 2 2 5 2 4 4;
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-format:other;
+	mso-font-pitch:fixed;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611985 1107304683 0 0 159 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611985 1073750139 0 0 159 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:1627400839 -2147483648 8 0 66047 0;}
+@font-face
+	{font-family:Courier-Bold;
+	mso-font-alt:Arial;
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-pitch:auto;
+	mso-font-signature:0 0 0 0 0 0;}
+@font-face
+	{font-family:Lucidasans;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:auto;
+	mso-font-signature:0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-hyphenate:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-language:AR-SA;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-unhide:no;
+	mso-style-link:"Header Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-hyphenate:none;
+	tab-stops:center 3.0in right 6.0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-language:AR-SA;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-link:"Footer Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-hyphenate:none;
+	tab-stops:center 3.0in right 6.0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-language:AR-SA;}
+p.MsoList, li.MsoList, div.MsoList
+	{mso-style-unhide:no;
+	mso-style-parent:"Body Text";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-hyphenate:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Tahoma;
+	mso-fareast-language:AR-SA;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{mso-style-unhide:no;
+	mso-style-link:"Body Text Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-hyphenate:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-language:AR-SA;}
+a:link, span.MsoHyperlink
+	{mso-style-unhide:no;
+	mso-style-parent:"WW-Default Paragraph Font";
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-unhide:no;
+	color:purple;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-unhide:no;
+	mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-hyphenate:none;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-language:AR-SA;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Header;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	mso-fareast-language:AR-SA;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Footer;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	mso-fareast-language:AR-SA;}
+span.BodyTextChar
+	{mso-style-name:"Body Text Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Body Text";
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	mso-fareast-language:AR-SA;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Balloon Text";
+	mso-ansi-font-size:8.0pt;
+	mso-bidi-font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-ascii-font-family:Tahoma;
+	mso-hansi-font-family:Tahoma;
+	mso-bidi-font-family:Tahoma;
+	mso-fareast-language:AR-SA;}
+p.Caption1, li.Caption1, div.Caption1
+	{mso-style-name:Caption1;
+	mso-style-unhide:no;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan no-line-numbers;
+	mso-hyphenate:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Lucidasans;
+	mso-fareast-language:AR-SA;
+	font-style:italic;}
+p.Index, li.Index, div.Index
+	{mso-style-name:Index;
+	mso-style-unhide:no;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan no-line-numbers;
+	mso-hyphenate:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Lucidasans;
+	mso-fareast-language:AR-SA;}
+p.WW-Caption, li.WW-Caption, div.WW-Caption
+	{mso-style-name:WW-Caption;
+	mso-style-unhide:no;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan no-line-numbers;
+	mso-hyphenate:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Tahoma;
+	mso-fareast-language:AR-SA;
+	font-style:italic;}
+p.WW-Index, li.WW-Index, div.WW-Index
+	{mso-style-name:WW-Index;
+	mso-style-unhide:no;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan no-line-numbers;
+	mso-hyphenate:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Tahoma;
+	mso-fareast-language:AR-SA;}
+p.WW-Caption1, li.WW-Caption1, div.WW-Caption1
+	{mso-style-name:WW-Caption1;
+	mso-style-unhide:no;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan no-line-numbers;
+	mso-hyphenate:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Tahoma;
+	mso-fareast-language:AR-SA;
+	font-style:italic;}
+p.WW-Index1, li.WW-Index1, div.WW-Index1
+	{mso-style-name:WW-Index1;
+	mso-style-unhide:no;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan no-line-numbers;
+	mso-hyphenate:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Tahoma;
+	mso-fareast-language:AR-SA;}
+p.Framecontents, li.Framecontents, div.Framecontents
+	{mso-style-name:"Frame contents";
+	mso-style-unhide:no;
+	mso-style-parent:"Body Text";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-hyphenate:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-language:AR-SA;}
+p.WW-Framecontents, li.WW-Framecontents, div.WW-Framecontents
+	{mso-style-name:"WW-Frame contents";
+	mso-style-unhide:no;
+	mso-style-parent:"Body Text";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-hyphenate:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-language:AR-SA;}
+p.WW-Framecontents1, li.WW-Framecontents1, div.WW-Framecontents1
+	{mso-style-name:"WW-Frame contents1";
+	mso-style-unhide:no;
+	mso-style-parent:"Body Text";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-hyphenate:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-language:AR-SA;}
+span.WW8Num1z0
+	{mso-style-name:WW8Num1z0;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	font-family:Symbol;
+	mso-ascii-font-family:Symbol;
+	mso-hansi-font-family:Symbol;}
+span.WW8Num2z0
+	{mso-style-name:WW8Num2z0;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	font-family:Symbol;
+	mso-ascii-font-family:Symbol;
+	mso-hansi-font-family:Symbol;}
+span.WW-Absatz-Standardschriftart
+	{mso-style-name:WW-Absatz-Standardschriftart;
+	mso-style-unhide:no;
+	mso-style-parent:"";}
+span.WW-WW8Num1z0
+	{mso-style-name:WW-WW8Num1z0;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	font-family:Symbol;
+	mso-ascii-font-family:Symbol;
+	mso-hansi-font-family:Symbol;}
+span.WW-WW8Num2z0
+	{mso-style-name:WW-WW8Num2z0;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	font-family:Symbol;
+	mso-ascii-font-family:Symbol;
+	mso-hansi-font-family:Symbol;}
+span.WW-Absatz-Standardschriftart1
+	{mso-style-name:WW-Absatz-Standardschriftart1;
+	mso-style-unhide:no;
+	mso-style-parent:"";}
+span.WW8Num1z1
+	{mso-style-name:WW8Num1z1;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+span.WW8Num1z2
+	{mso-style-name:WW8Num1z2;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;
+	mso-ascii-font-family:Wingdings;
+	mso-hansi-font-family:Wingdings;}
+span.WW-WW8Num2z01
+	{mso-style-name:WW-WW8Num2z01;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	font-family:Symbol;
+	mso-ascii-font-family:Symbol;
+	mso-hansi-font-family:Symbol;}
+span.WW8Num2z1
+	{mso-style-name:WW8Num2z1;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+span.WW8Num2z2
+	{mso-style-name:WW8Num2z2;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	font-family:Wingdings;
+	mso-ascii-font-family:Wingdings;
+	mso-hansi-font-family:Wingdings;}
+span.WW8Num3z0
+	{mso-style-name:WW8Num3z0;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	font-family:Symbol;
+	mso-ascii-font-family:Symbol;
+	mso-hansi-font-family:Symbol;}
+span.WW8Num3z1
+	{mso-style-name:WW8Num3z1;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+span.WW8Num3z2
+	{mso-style-name:WW8Num3z2;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	font-family:Wingdings;
+	mso-ascii-font-family:Wingdings;
+	mso-hansi-font-family:Wingdings;}
+span.WW8Num4z0
+	{mso-style-name:WW8Num4z0;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	font-family:Symbol;
+	mso-ascii-font-family:Symbol;
+	mso-hansi-font-family:Symbol;}
+span.WW8Num4z1
+	{mso-style-name:WW8Num4z1;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+span.WW8Num4z2
+	{mso-style-name:WW8Num4z2;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	font-family:Wingdings;
+	mso-ascii-font-family:Wingdings;
+	mso-hansi-font-family:Wingdings;}
+span.WW8Num5z0
+	{mso-style-name:WW8Num5z0;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	font-family:Symbol;
+	mso-ascii-font-family:Symbol;
+	mso-hansi-font-family:Symbol;}
+span.WW8Num5z1
+	{mso-style-name:WW8Num5z1;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+span.WW8Num5z2
+	{mso-style-name:WW8Num5z2;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	font-family:Wingdings;
+	mso-ascii-font-family:Wingdings;
+	mso-hansi-font-family:Wingdings;}
+span.WW-DefaultParagraphFont
+	{mso-style-name:"WW-Default Paragraph Font";
+	mso-style-unhide:no;
+	mso-style-parent:"";}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("Lab1Writeup_files/header.htm") fs;
+	mso-footnote-continuation-separator:url("Lab1Writeup_files/header.htm") fcs;
+	mso-endnote-separator:url("Lab1Writeup_files/header.htm") es;
+	mso-endnote-continuation-separator:url("Lab1Writeup_files/header.htm") ecs;
+	mso-footnote-position:beneath-text;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:.8in 1.0in .7in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-footer:url("Lab1Writeup_files/header.htm") f1;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;
+	mso-footnote-position:beneath-text;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:1;
+	mso-list-type:simple;
+	mso-list-template-ids:1;
+	mso-list-name:WW8Num1;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\00B7;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	mso-ascii-font-family:Symbol;
+	mso-hansi-font-family:Symbol;}
+@list l1
+	{mso-list-id:2;
+	mso-list-type:simple;
+	mso-list-template-ids:2;
+	mso-list-name:WW8Num2;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\00B7;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	mso-ascii-font-family:Symbol;
+	mso-hansi-font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+  </style><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="12290"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="2"/>
+ </o:shapelayout></xml><![endif]--></head><body bgcolor="#ffffcc" lang="EN-US" link="blue" vlink="purple">
+<div class="Section1">
+<h1 class="MsoNormal" style="text-align: justify;"><b><span style="font-size: 14.5pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">Lab 1:
+Using the Linux Desktop and Dr Java<o:p></o:p></span></b></h1>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">The
+screen setup you have on the
+Linux workstation is called <i>Gnome</i>. <i>Gnome</i> is similar to
+other
+Graphical User Interfaces (GUIs) like Windows. The main <i>Gnome</i>
+menu can
+be accessed by clicking the left-most icon on the task bar at the top
+(or
+bottom) of the screen, (a blue <i style="">f</i>.)<span style="">&nbsp;
+</span>This is like the start button in Windows
+and it has many submenus allowing the user to configure the system as
+well as
+run various applications.</span><span style="font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;"><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">&nbsp;<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">There
+are several other
+buttons/icons on the task bar, multiple Desktop indicators, (dark gray
+boxes
+with numbers), a window list icon, a clock and others. On the desktop
+(large
+window), you can see several other icons, including a trash can (like
+the Macintosh&#8217;s
+garbage can or Windows&#8217; recycling bin), a link to your home directory,
+and a few others.&nbsp; <o:p></o:p></span></p>
+<h4 class="MsoNormal" style="text-align: justify;"><b><span style="font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">The terminal window</span></b><span style="font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;"><o:p></o:p></span></h4>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">Much of
+your work will be done
+using a terminal window. This is a window from which you can issue
+commands to
+the Linux system. The window may have automatically appeared when you
+logged
+in. If it didn&#8217;t, you can always create a new terminal window by
+pressing
+the icon on the main panel that has a monitor on it, or by clicking on
+the <i style="">f</i>-menu, then the <i style="">Systems Tools</i>
+submenu and then choosing <i style="">Terminal</i>.<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify;">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">The
+terminal window has a prompt,
+which generally ends in a percent sign (and a<span style="">&nbsp; </span><b style="">[]
+</b><span style="">&nbsp;</span>will appear after the prompt.
+However, the command you type will not work until you press the Enter
+key, at
+which time the computer will execute your command. When you type a
+command
+after the prompt you are said to be entering a command on the command
+line.<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify;">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">Go to
+the terminal window and
+type</span><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;"> <b>ls</b></span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">,
+followed by the Enter key. This
+is how you tell Linux to show a list of files. For example, you will
+probably
+see something like the following:<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify;"><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">...</span></b><b><span style="font-size: 11pt; font-family: Courier-Bold;">%
+</span></b><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">ls</span></b></p>
+<p class="MsoNormal" style="text-align: justify;"><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Desktop Documents
+Downloads Music Pictures Public Templates Videos</span></b><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;"><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="text-align: justify;"><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">...</span></b><b><span style="font-size: 11pt; font-family: Courier-Bold;"> %</span></b><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;"><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">In this
+example, the user (that
+is, you) typed</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">ls</span></b><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">followed
+by Enter, and Linux came back saying that you have several
+items</span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;"></span></b> <span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">in the
+current directory. (You may see a different list.). <o:p></o:p></span></p>
+<h4 class="MsoNormal" style="text-align: justify;"><b><span style="font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">Directories<o:p></o:p></span></b></h4>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">Like
+most modern operating
+systems, Linux systems arrange files hierarchically using directories.
+A
+directory is a special type of file that contains files. Of course a
+directory
+can contain directory files too. Directories are often called <i>folders
+</i>after
+the common icon used to represent them.</span><span style="font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;"><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify;"><br>
+</p>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">Linux
+uses slashes to indicate
+directory structure. For example, consider the directory<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 0.5in;"><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="text-align: justify;"><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp;
+/net/people/faculty/cs/jmiller/CS161</span></b></p>
+<p class="MsoNormal" style="text-align: justify;"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">This
+refers to the</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">CS161</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">directory
+in the directory called</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">jmiller</span></b><span style="font-size: 11pt;">. </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">The
+slashes separate directories in higher and higher levels.
+Thus,</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">CS161</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">is a
+directory inside directory</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">jmiller </span></b><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">which is
+a directory inside directory</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">cs</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">which is
+a directory inside directory</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">faculty</span></b><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">, which
+is a directory in directory</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">people</span></b><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">, which
+is a directory in director</span><span style="font-size: 11pt;">y </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">net</span></b><span style="font-size: 11pt;">. </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">The</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">net</span></b><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">directory
+lies inside the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">root</span></b><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">
+directory, which in Linux is represented by a single slash (</span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">/</span></b><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">).</span></p>
+<p class="MsoNormal" style="text-align: justify;">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">Every
+directory automatically
+contains two special directories. You generally won&#8217;t see these, but
+they
+are frequently useful. (You can see them if you type</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">ls -a</span></b><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">)</span><span style="font-size: 11pt;"><o:p></o:p></span></p>
+<ul>
+  <li><span style="font-size: 11pt; font-family: Symbol;"><span style=""><span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span></span></span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">The
+directory named</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">. </span></b><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">(that
+is, a single dot) refers to
+the directory where the system is currently working.<o:p></o:p></span></li>
+  <li><span style="font-size: 11pt; font-family: Symbol;"><span style=""><span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span></span></span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">The
+directory named</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">..</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">(that
+is, two periods together)
+refers to the directory above the current directory.<o:p></o:p></span></li>
+</ul>
+<p class="MsoNormal" style="text-align: justify;">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">For
+example, if</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">cs</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">were the
+current directory in the example above, then</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">.. </span></b><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">is
+another
+name for the</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">faculty</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">directory
+tha</span><span style="font-size: 11pt;">t </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">cs </span></b><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">is in.
+Another useful directory to know about is the</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 13.5pt; font-family: &quot;Courier New&quot;;">~</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">directory,
+which is shorthand for
+your home directory.<span style="">&nbsp; </span>(For the user
+named</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">jmiller</span></b><span style="font-size: 11pt;">,
+</span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">the home
+directory is the directory called</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">jmiller
+</span></b><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">above.)</span><span style="font-size: 11pt;"><o:p></o:p></span></p>
+<h4 class="MsoNormal" style="text-align: justify;"><b><span style="font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">Desktop file access<o:p></o:p></span></b></h4>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">Your
+home directory is
+represented by an icon on your desktop, (a folder and image of a house
+with
+your name and</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">home</span></b><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">under
+it) clicking that icon will open your</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">home</span></b><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">directory.</span><span style="font-size: 11pt;"><span style="">&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify;">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">For the
+sake of organization, let
+us create a folder called</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">CS161</span></b><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">to store
+all work related to this course. On the command line,
+type the following<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify;"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal" style="text-align: justify;"><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">...%
+mkdir</span></b><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">&nbsp;CS161
+<o:p></o:p></span></b></p>
+<p class="MsoNormal" style="text-align: justify;"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal" style="text-align: justify;"><b style=""><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">LINUX IS
+CASE SENSITIVE SO MAKE SURE YOU FOLLOW THE SHOWN CASE</span></b><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">. After
+pressing Enter, type</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">ls</span></b><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">again
+(followed by Enter) to see
+what this command does (</span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">mkdir </span></b><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">stands
+for make directory so it
+should have added a</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">CS161</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">directory).</span><span style="font-size: 11pt;"><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify;">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">You
+should now see the icons for
+the files in your directory. Among these icons should be an empty</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">CS161</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">folder.
+To see the contents of this</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">CS161</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">directory,
+double-click on its folder
+icon on your desktop. This will change the window to show the contents
+of the
+directory. </span></p>
+<p class="MsoNormal" style="text-align: justify;">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">Now, let
+us create a new
+directory for this lab called</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Lab01</span></b><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">: Click
+on</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">File &gt; Create
+Folder</span></b><span style="font-size: 11pt;">
+</span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">and type
+the
+name </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Lab01 </span></b><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">in the
+box that appears (Note
+that there are NO spaces in</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Lab01</span></b><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">. Linux
+can have a great deal of
+trouble with spaces in file or directory names.)<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify;">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">Now we
+need to copy the contents
+of</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Lab01 </span></b><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">from
+another folder stored elsewhere. To do this, go back to the
+command line and type the following:<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify;"><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp;
+</span></b></p>
+<p class="MsoNormal" style=""><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp;
+...%
+</span></b><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">cp&nbsp;
+-R&nbsp;<span style="">&nbsp;&nbsp;&nbsp;
+</span>/net/people/classes/CS161/labs/Lab01 <span style="">&nbsp;&nbsp;&nbsp;
+</span>CS161</span></b></p>
+<p class="MsoNormal" style=""><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp;  <br>
+</span></span></b></p>
+<p class="MsoNormal" style=""><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;"><span style="">&nbsp;</span></span></b><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">[<b style="">PS:</b><span style="">&nbsp; </span></span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">cp</span></b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;"> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">stands
+for copy which will copy folder</span><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;"> <b>Lab01 </b></span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">stored in</span><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">&nbsp;<b>/net/people/classes/CS161/labs</b>
+</span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">into
+folder</span><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">
+<b>CS161</b> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">that you
+created above.&nbsp;&nbsp; The</span><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;"> <b>-R</b> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">option
+tells Linux to copy all
+subfolders as well (</span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">-R</span></b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;"> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">stands
+for recursive)] <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align: justify;"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">&nbsp;<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">If you look
+within the</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Lab01</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">directory,
+you would find within it yet another directory called</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Mammals</span></b><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">. You
+will probably want to keep all your computer files for this
+course in your</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">CS161</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">directory,
+just to be organized.
+As you use computers more and more you will find that this organization
+is
+extremely useful. It helps you find files if you put them in
+directories with
+appropriate names. <b style=""><u>For each of the
+coming labs</u></b>, you will start by opening a terminal window and
+typing in
+a command like:</span></p>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;"><br>
+</span></p>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;"></span><span style="font-size: 11pt;"> &nbsp; </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">cp -R
+/net/people/classes/CS161/labs/Lab01<span style=""> &nbsp;
+</span>CS161&nbsp; </span></b><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;"><br>
+</span></p>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;"><br>
+</span></p>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">The
+only thing that needs to change every time is incrementing the lab
+number by 1
+(i.e.</span><span style="font-size: 11pt;">&nbsp; </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Lab01</span></b><span style="font-size: 11pt;">,</span><b><span style="font-size: 11pt; font-family: Courier-Bold;"> </span></b><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">then</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Lab02</span></b><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">, then</span><b><span style="font-size: 11pt; font-family: Courier-Bold;">
+</span></b><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Lab03</span></b><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">, etc
+...).</span></p>
+
+<p class="MsoNormal" style="text-align: justify;">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">If you
+wanted to create a new
+subdirectory called</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Lab0</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">in the</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">CS161</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">directory,
+you would make certain you were in the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">CS161</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">window,
+then you would click on
+the</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">File</span></b><span style="font-size: 11pt;">
+</span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">menu,
+then
+you would click on the</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Create Folder</span></b><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">submenu.
+This will prompt you for the name of the new directory,
+with default name</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">untitled folder</span></b><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">. Type in</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Lab0</span></b><span style="font-size: 11pt;">, </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">then
+click OK to create the
+directory</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Lab0</span></b><span style="font-size: 11pt;">.<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify;">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">You
+should now see the two
+directories</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Lab0</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">and</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Lab01</span></b><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">. Now
+delete</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Lab0</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">by
+clicking the right mouse button on the folder labeled</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Lab0</span></b><span style="font-size: 11pt;">. </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">You
+should see a new menu that
+has an entry called</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Move to Trash </span></b><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">(or</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Delete</span></b><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">). Click
+on</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Move to Trash </span></b><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">to
+remove the icon and the directory.<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify;">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">**At
+this point, open the</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Lab01</span></b><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">folder
+and click the document
+called</span><span style="font-size: 11pt;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Lab01Writeup.htm</span></b><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">and
+continue reading that document and doing the exercises.<o:p></o:p></span></p>
+<p class="MsoNormal" style="">***********************************************************************************************************************************************************</p>
+<p class="MsoNormal" style="">***********************************************************************************************************************************************************</p>
+<h1 class="MsoNormal" style=""><b><span style="font-size: 16pt;">Lab1
+Continued from the handout&#8230;.</span></b> <br>
+</h1>
+<p class="MsoNormal" style=""><span style="font-size: 11pt;">You may
+want to close all the directory windows opened
+in this lab before going on. You can close a window by clicking the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">X</span></b><span style="font-size: 11pt;"> button on the far right side of the title
+bar on the
+top of the window or by choosing close from the file menu.<o:p></o:p></span></p>
+<h4 class="MsoNormal"><b>Creating a file<o:p></o:p></b></h4>
+<p class="MsoNormal"><span style="font-size: 11pt;">For some labs, you
+will want
+to create and edit files. To do this, you can use the text editor
+called </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">gedit</span></b><span style="font-size: 11pt;">. (A text editor is a program that allows you
+to edit
+text, sensibly enough. It&#8217;s a lot like a word processor, but with text
+editors you work directly with the exact letter-for-letter file,
+whereas word
+processors always include additional formatting information.)&nbsp; <br>
+</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span style="font-size: 11pt;">Before starting <span style="font-weight: bold;"></span></span><span style="font-size: 11pt;"></span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">gedit</span></b><span style="font-size: 11pt;"><span style="font-weight: bold;"></span>, open a terminal window and navigate to your Lab01 directory using the cd command. </span><span style="font-size: 11pt;">Now to start </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">gedit</span></b><span style="font-size: 11pt;">, type </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">gedit &amp; </span></b><span style="font-size: 11pt;">after
+the prompt in the terminal window<i>.&nbsp; </i>This editor works a
+lot like
+what you may have experienced using editors or word processors in
+Windows or
+Macintosh systems. </span><span style="font-size: 11pt;">Type your name as the first line of this file and then </span><span style="font-size: 11pt;">you can type whatever you want here, and it will go
+into the
+file after you save by clicking on the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">File</span></b><span style="font-size: 11pt;"> menu
+and the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Save</span></b><span style="font-size: 11pt;"> entry. (Alternatively, you can hold the
+Control key
+while you type </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">s</span></b><span style="font-size: 11pt;">
+and this will also save.)&nbsp; Add any notes to this file that you may
+want to keep for future reference.&nbsp; You will also be asked to save
+certain information to this report file to be reviewed later by the lab
+instructor or TA.<br>
+</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span style="font-size: 11pt;">One thing that is
+different
+in Linux is the method you can use to copy text from one window to
+another. To
+do this copying, first highlight the text you wish to copy. (You can
+highlight
+some text in a window by moving the cursor to the beginning of the
+text,
+pressing and holding the left mouse button, and, then, moving the mouse
+to the
+end of the text you wish to copy and releasing the button.) The text
+you wish
+to copy should now be highlighted. To copy it, move the cursor to the
+place where
+you want the copy of the text to go and click the middle mouse button.
+This
+should cause the text to be copied.</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal" style="text-indent: 0.5in;"><span style="font-size: 11pt;">To try this, we will copy the
+contents of your Lab01 directory into your lab notes. First be sure you have
+started </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">gedit</span></b><i><span style="font-size: 11pt;"> </span></i><span style="font-size: 11pt;">and
+that
+you have a terminal on the screen at the same time. Go to the terminal
+window
+and type <span style="font-weight: bold;">pwd</span> to display the working directory and then type </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">ls</span></b><span style="font-size: 11pt;"> to display the contents. Copy the block of text, including the
+<span style="font-weight: bold;">pwd</span> and </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">ls</span></b><i><span style="font-size: 11pt;"> </span></i><span style="font-size: 11pt;">commands,
+the
+system response, and the prompt, to the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">gedit</span></b><i><span style="font-size: 11pt;"> </span></i><span style="font-size: 11pt;">window
+by following the
+steps described in the previous paragraph.<o:p> <br>
+</o:p></span></p>
+<h4 class="MsoNormal"><b>Saving files<o:p></o:p></b></h4>
+<p class="MsoNormal"><span style="font-size: 11pt;">To save your work
+so far,
+click on the File menu at the top of the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">gedit</span></b><span style="font-size: 11pt;">
+window and select </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Save
+As</span></b><span style="font-size: 11pt;">. Type in the filename you
+would
+like to use for this report in the box labeled </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Name</span></b><span style="font-size: 11pt;">. (I recommend using </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">report1</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">for the name
+of the file.)</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span style="font-size: 11pt;">The folders listed
+below the
+Name box show you the complete directory path which shows where the
+operating
+system will put your file. You will want to save your files fairly
+often to
+make sure that a power outage or machine failure does not destroy your
+work.
+You can use the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Save</span></b><span style="font-size: 11pt;"> option to save your work again under the
+same name.
+(You can also use </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Save
+As </span></b><span style="font-size: 11pt;">in the File menu if you
+wish to
+save a backup of a file under a different name.)</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span style="font-size: 11pt;">File and directory
+names in
+Linux generally consist of letters, digits, underline characters, and
+periods.
+Unlike some other operating systems, Linux distinguishes between
+uppercase and
+lowercase letters. (Linux filenames usually use all lowercase letters,
+but this
+isn&#8217;t required.) If you want a name consisting of several words, you
+can
+separate the words with periods or underline characters. <b>DO NOT PUT
+SPACES
+IN YOUR FILE NAMES!</b></span></p>
+<p class="MsoNormal">&nbsp;</p>
+<span style="font-size: 11pt;">At this point, save your work
+in </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">report1</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">again.</span>
+<p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p></o:p></span></p><br>
+<h3 class="MsoNormal" style=""><b>DrJava</b></h3>
+<p class="MsoNormal"><span class="SpellE"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">DrJava</span></span>
+is an easy to use software development
+environment for writing Java programs. It was created by the Computer
+Science
+Department at Rice University, and is currently under active
+development by the
+<span class="SpellE">JavaPLT</span> group at Rice. <span class="SpellE"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">DrJava</span></span>
+is
+designed primarily for students, and provides an interactive facility
+for
+developing Java code. It includes an editor and debugger, and
+incorporates the <span class="SpellE"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">JUnit</span></span>
+testing framework and <span class="SpellE"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">javadoc</span></span>
+documentation generating tool.</p>
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+You can download <span class="SpellE"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">DrJava</span></span>
+for use on your home or dorm room system from <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><a href="http://drjava.sourceforge.net/">http://drjava.sourceforge.net/</a></span>
+<p class="MsoNormal" style=""><br>
+<span style="font-size: 11pt;"><span style="font-weight: bold;"></span></span></p>
+<p class="MsoNormal" style=""><span style="font-size: 11pt;">Start
+DrJava (Click on the shield, then Computer Science, then DrJava.&nbsp; </span><span style="font-size: 11pt;">DrJava's</span><span class="SpellE"><span style="font-size: 10pt;"></span></span>
+main window is divided into three panels.
+The largest area to the right is the definitions pane. You write and
+edit class
+definitions in the definitions pane. The narrower panel on the left is
+the open
+document list; it displays a list of open documents. You can view and
+edit a
+particular document by selecting it from the list. When you click on a
+document
+in the list, it will be displayed in the definitions pane. The bottom
+panel
+contains several tabbed panes. Clicking the tab displays the pane. For
+the
+present, we will be concerned with the interactions pane and the
+compiler
+output pane. You can enter and evaluate java statements and expressions
+in the
+interactions pane. Compilation results are displayed in the compiler
+output
+pane.</p>
+<h4>Configuring <span class="SpellE">DrJava</span></h4>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal">Choose the <b><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Preferences</span></b>
+option from the <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Edit</span>
+pull-down menu. </li>
+  <li class="MsoNormal" style="">Click each of the <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Categories</span>
+to get an idea of the options that can be set.</li>
+  <li class="MsoNormal" style="">Click on the <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Resource Locations</span>
+Category on the left.&nbsp; This allows us to identify resources that <span class="SpellE"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">DrJava</span></span>
+needs to compile and run our programs.&nbsp; </li>
+  <li class="MsoNormal">If it is not there enter (or select)
+the <small><span style="font-size: 10pt; font-weight: bold;">Tools.jar </span><span style="font-weight: bold;">Location</span></small> to let <span class="SpellE"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">DrJava</span></span>
+know where to find the Java program. enter<span style="font-weight: bold; font-family: Computer Modern;">: <small>/opt/jdk-1.6-i586/lib/tools.jar</small></span><b><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"></span></b></li>
+  <li class="MsoNormal">Since we will be using the <span class="SpellE"><b><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">objectdraw</span></b></span>&nbsp; library associated with our book, we will need to let <span class="SpellE"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">DrJava</span></span>
+know where to find the library. If the path for the objectdraw library is not listed in the Extra Classpath area, click on the <span style="font-weight: bold;">Add</span> button just below
+the area next to <b><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Extra</span></b><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"> <span class="SpellE"><b>Classpath </b>and add the path listed in the next line</span></span>. &nbsp;</li>
+  <li class="MsoNormal"><big><small>Enter or select</small><big style="font-weight: bold;"><small> </small><big><big><big><big style="font-family: Computer Modern;"><big><big><big><big><big><big><big><span style="font-size: 10pt;">/<span class="SpellE">usr</span>/people/classes/Java/<span class="SpellE">objectdraw</span>/objectdraw.jar <br>
+</span></big></big></big></big></big></big></big></big></big></big></big></big></big></li>
+  <li class="MsoNormal"><big><small>We will also be using the acm library, so also add the following extra classpath if it is not there.</small><big><big><big><big><big style="font-family: Computer Modern;"><big><big><big><big><big><big><big><span style="font-size: 10pt;"></span></big></big></big></big></big></big></big></big></big></big></big></big></big></li>
+  <li class="MsoNormal"><big><small>Enter or select</small> /usr/people/classes/Java/</big><big><big><big><big><big><big style="font-family: Computer Modern;"><big><big><big><big><big><big><big><span style="font-size: 10pt;"><br>
+    </span></big></big></big></big></big></big></big></big></big></big></big></big></big></li>
+
+  <li class="MsoNormal" style="">Click on the <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Apply</span>
+button.</li>
+  <li class="MsoNormal" style="">Click the category <b><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Miscellaneous</span></b>.
+
+Verify that the item <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Automatically
+Close Block Comments </span>is checked. If it is not, click the check
+box and click Apply.</li>
+  <li class="MsoNormal" style="">Click the category <b><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Display</span></b><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"> Options</span>.
+Note that there is a check box labeled <b><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Show All Line
+Numbers</span></b>. If this box is checked, any document displayed in
+the definitions pane will be shown with numbered lines. Though some
+programmers like this option, we suggest that you leave this box
+unchecked for now.</li>
+  <li class="MsoNormal" style="">Dismiss the <b><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Preferences</span></b>
+window by pressing <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">OK</span>.</li>
+</ul>
+<p class="MsoNormal">Options do not need to be set every time you run <span class="SpellE"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">DrJava</span></span>.
+Once
+they are set <span class="SpellE"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">DrJava</span></span>
+will remember them the next time you run
+the application.</p>
+<h4>The Definitions Pane</h4>
+<p>Click <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Open</span>
+on the <span class="SpellE"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">DrJava</span></span>
+tool bar, and navigate to your <b><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Lab01</span></b>
+subdirectory. The file <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">TouchyWindow.java</span>
+should be located in
+this directory. Select this file and open it. The contents of the file
+will be
+displayed in the definitions pane.</p>
+<p class="MsoNormal">There are several things you should notice. First,
+the text
+is displayed in several different colors. Each color denotes a
+different kind
+of "<i>lexical component</i>." For instance, words like <b><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">public</span></b>
+and <b><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">class</span></b>
+are
+keywords. Keywords are displayed in a unique color. Text in quotes is
+shown in
+a different color and numeric values in yet another color. The color
+coding
+will help you recognize keying mistakes when you key a program.<br>
+<br>
+Second, the text is indented in a uniform way. This indention reflects
+the
+structure of the program and makes it easier to read. When you key in a
+program, <span class="SpellE"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">DrJava</span></span>
+automatically indents for you. If the indention is not what you expect,
+it is
+often a sign that you have made a syntactic mistake.</p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style="">Click at the beginning of the line
+that reads: <b><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">public void begin</span></b>
+and enter a few spaces by pressing on the space bar on your keyboard.
+Do the same with the next line (which starts with <b><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">new Text...</span></b>)</li>
+  <li class="MsoNormal" style="">Select these lines by clicking and
+dragging the mouse (i.e., lines should be highlighted.)</li>
+  <li class="MsoNormal" style="">Press the Tab key. Notice that the
+original indenting is restored. In <span class="SpellE"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">DrJava</span></span>,
+
+you can use the Tab key to properly indent the current line or a
+selected group of lines.</li>
+</ul>
+<p class="MsoNormal">Finally, <span class="SpellE"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">DrJava</span></span>
+will show matching parentheses,
+braces, and brackets by highlighting. Again, this will help you find
+and avoid
+mistakes when you key a program.</p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style="">Click in the definitions pane
+immediately after the last closing brace "<b><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">}</span></b>" in
+the file, (after line <span class="SpellE"><span class="GramE"><b><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">canvas.clear</span></b></span></span><span class="GramE"><b><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">(</span></b></span><b><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">);</span></b>).
+Note that the code up to and including the matching open brace is
+highlighted. Do the same with the last closing parenthesis "<b><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">)</span></b>" in
+the file (the one at end of line <b><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">public void <span class="SpellE">onMouseRelease</span> (Location point )</span></b> )</li>
+</ul>
+<h4>Navigating</h4>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style="">Open the <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Preferences</span>
+window again. (Choose <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Preferences</span>
+from the <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Edit</span>
+pull-down menu.)</li>
+  <li class="MsoNormal" style="">Click the D<span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">i</span>splay <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Options</span>
+category, and activate the <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Show All Line
+Numbers </span>check box in the <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Display</span> <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Options</span>
+pane. Click <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Apply</span>
+and <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">OK</span>.</li>
+</ul>
+<p class="MsoNormal">You will notice that each line in the display pane
+is now
+numbered. Error messages often mention a line number. You can also
+navigate to
+line by number by choosing the <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Go</span>
+<span class="GramE"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">To</span></span>
+<span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Line</span>...
+option
+from the <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Edit</span>
+pull-down menu, or by keying <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Control-G</span>.
+(The line numbers do not need to be displayed to do this.)</p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style="">Type <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Control-G</span>,
+enter 10 in the field labeled "<span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">What line would
+you like to go to?</span>" and click <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">OK</span>.</li>
+</ul>
+<p class="MsoNormal">You can also navigate the display pane by choosing
+<span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Find/Replace</span>
+from the
+<span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Edit</span>
+pull-down,
+or by keying <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Control-F</span>.</p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style="">Go to the <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Preferences</span>
+window once more, and deactivate <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Show</span> <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">All</span> <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Line</span> <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Numbers</span>.</li>
+</ul>
+<h4>Compiling</h4>
+<p class="MsoNormal">You will notice that the document name <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">TouchyWindow.java</span>
+is
+followed by an asterisk <b><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">*</span></b>
+in the open document list. This means that the document has been
+modified in
+the definitions pane but the changes have not been saved to disk. (You
+modified
+the document when you added and removed the spaces.)</p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style="">Click the <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Save</span>
+button on the tool bar to write the changes to disk.</li>
+</ul>
+<p class="MsoNormal">Next, you will compile the class definition: that
+is, invoke
+a program called a compiler that will translate the source into machine
+level
+code that can be interpreted by the Java interpreter. (The interpreter
+is
+called the Java virtual machine (or JVM)) The compilation process will
+produce
+a new file named <span class="SpellE"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">TouchyWindow.class</span></span>
+in your <b><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Lab01</span></b>
+directory.</p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style="">Click the <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Compile</span>
+button on the tool bar.</li>
+</ul>
+<p class="MsoNormal">Something is wrong. Notice that the Compiler
+Output tabbed
+pane at the bottom of the window is selected, and it indicates that 8
+errors
+were found (note that a single syntax problem can cause multiple
+errors). The
+first error is highlighted as well as the line in the definitions pane
+that
+caused the error.</p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style="">Click on the next error in the
+compiler output pane. Notice that it is now highlighted along with a
+different line.</li>
+</ul>
+<p class="MsoNormal">One by one we need to correct the errors in the
+file. It is
+usually best to do them in order as sometimes early error corrections
+will fix
+later errors.&nbsp; The first error message is cryptic in that it
+states that
+class or interface expected. By inspecting the line of code we might
+spot that
+the word import was misspelled. Since the compiler didn't recognize
+this as a
+keyword, it told you what key words it expected at this point.</p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style="">Find
+and correct each of the errors in
+the file. You might want to click on the compile button after
+correcting an error to see if it eliminates other errors that were
+listed as well. Once you have all of the errors corrected, you should
+be able to click on the compile all button and get a message in the
+Compiler Output pane at the bottom of the screen something like: &#8220;Last
+compilation completed successfully&#8221;.&nbsp; Copy and paste that message
+into your Lab1Report and save your report again.<br>
+</li>
+</ul>
+<h4>Running a program from <span class="SpellE">DrJava</span></h4>
+<p class="MsoNormal">The Interactions pane allows us to create and
+interact with
+objects that we have defined in our files.&nbsp; For any class that we
+create,
+we can declare objects of that class and then use the methods of that
+class.</p>
+<p>In the Interactions pane of DrJava we wish to create an object of
+type <span class="SpellE"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">TouchyWindow</span></span>.&nbsp;
+Type
+the following:&nbsp;&nbsp;&nbsp; <span style="font-size: 10pt; font-family: Computer Modern; font-weight: bold;">new</span><span style="font-weight: bold; font-family: Computer Modern;">
+</span><span style="font-weight: bold; font-family: Computer Modern;" class="SpellE"><span class="GramE"><span style="font-size: 10pt;">TouchyWindow</span></span></span><span style="font-weight: bold; font-family: Computer Modern;" class="GramE">(</span><span style="font-weight: bold; font-family: Computer Modern;">);</span></p>
+<p class="MsoNormal">A window should appear that runs the <span class="SpellE"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">TouchyWindow</span></span>
+program.&nbsp;Click inside the window to confirm that it works like you
+expect.</p><br>
+<p class="MsoNormal"><br>
+</p>
+<h4 class="MsoNormal" style=""><big><b>E-mail</b></big></h4>
+
+<span style="font-size: 11pt;">You can access your Outlook email account by going to the web address </span><span style="font-size: 11pt; font-family: &quot;Courier New&quot;; font-weight: bold;">https://exchange.csbsju.edu/</span><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">using Firefox Web Browser, which is available
+in the
+Internet submenu of the <i style="">f</i>-menu
+button, under <b style="">Internet</b>.
+You can use
+this to send and receive email and access directories in a manner
+similar to
+using Outlook on a Windows or Macintosh machine.&nbsp; Open up your
+email account now and send your lab instructor a copy of your report
+for this lab as an attachment to the email message.&nbsp; Your lab
+instructor's email is&nbsp;&nbsp;&nbsp;<span style="font-weight: bold;"> jmiller@csbsju.edu</span><br>
+<br>
+*****************************************************************************************************&nbsp; </span>
+<h2 style="font-weight: bold;" class="MsoNormal"><big><big><big><big><big><big><big><big><big><big><big><span style="font-size: 11pt;"><span class="MsoHeader"><span class="MsoHeader"><span class="MsoNormal">First Assignment ... Lab01HW<br>
+</span></span></span></span></big></big></big></big></big></big></big></big></big></big></big></h2>
+<p class="MsoNormal" style=""><span style="font-size: 11pt;">(If you have time in lab today, start this assignment now.&nbsp; It is to be
+completed and handed in electronically prior to the next lab sesssion.)<br>
+</span></p>
+You will almost certainly need help in completing this
+assignment.&nbsp; <span style="font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">There
+are TAs available every evening except Friday and Saturday in Peter
+Engel Room 212 (our lab) and in the Clemen's library at St Ben's.&nbsp;
+<br>
+Check the TA website&nbsp; <span style="font-weight: bold;">www1.csbsju.edu/tas/docs/main.htm</span>&nbsp; for hours.<br>
+<br>
+</span>
+<p class="MsoNormal"><b><span style="font-size: 14.5pt;">The
+Linux command line<o:p></o:p></span></b></p>
+<p class="MsoNormal" style=""><span style="font-size: 11pt;">To become
+a proficient Linux user, it is useful to have
+a good understanding of the Linux command line &#8212; that is, you need to
+become proficient at manipulating files via the terminal window. In
+this
+section we&#8217;ll look at several of the most important Linux commands.</span></p>
+<p class="MsoNormal" style="">&nbsp;</p>
+<p class="MsoNormal" style=""><span style="font-size: 11pt;">To start,
+make sure that you have a terminal window
+open. Everything you do in this section will be done from that window.
+Here is
+a drawing of the directory hierarchy you will be using in this section.</span></p>
+<p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span style="font-size: 11pt;"><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="Picture_x0020_1" o:spid="_x0000_i1027" type="#_x0000_t75"
+ style='width:6in;height:198.75pt;visibility:visible;mso-wrap-style:square'
+ filled="t">
+ <v:fill recolor="t" type="frame"/>
+ <v:imagedata src="Lab1Writeup_files/image001.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span></p><br>
+<p class="MsoNormal"><img style="width: 576px; height: 265px;" alt="original directory structure" src="Lab1Writeup_files/image007.jpg"><br>
+<span style="font-size: 11pt;"><!--[endif]--></span><span style="font-size: 11pt;"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p><br>
+</o:p></span></p>
+<p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style=""><span style="font-size: 11pt;">As we have
+already seen, Linux files are arranged
+hierarchically. Your directory should already be set up as in the
+picture
+above. This indicates that </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Mammals</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">is
+a directory inside the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Lab1</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">directory,
+while the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Mammals</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">directory contains a </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Cats</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">directory, a </span><span style="font-size: 11pt; font-family: Courier;">Dogs </span><span style="font-size: 11pt;">directory, and an </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Other</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">directory</span></b><span style="font-size: 11pt;">. Each of these has its own contents.<o:p></o:p></span></p>
+<p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style=""><b>Navigating
+directories<o:p></o:p></b></p>
+<p class="MsoNormal" style=""><b><o:p>&nbsp;</o:p></b></p>
+<p class="MsoNormal" style=""><span style="font-size: 11pt;">As you use
+the command line you have a working
+directory, which is where you are currently located in the directory
+structure.
+To see your working directory, you can type </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">pwd</span></b><span style="font-size: 11pt;">
+at any time at the command prompt (and, of course, then pressing
+Enter). The </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">pwd </span></b><span style="font-size: 11pt;">command will display where you are. (It
+stands for
+Print Working Directory.) If you type </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">pwd</span></b><span style="font-size: 11pt;">, you
+should see something like:<o:p></o:p></span></p>
+<p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="text-indent: 0.5in;"><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">...% pwd</span></b></p>
+<p class="MsoNormal" style="text-indent: 0.5in;"><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">/net/people/faculty/cs/jmiller</span></b></p>
+<p class="MsoNormal" style="text-indent: 0.5in;"><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">...%</span></b></p>
+<p class="MsoNormal" style=""><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal" style=""><span style="font-size: 11pt;">You can
+move between directories using the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">cd </span></b><span style="font-size: 11pt;">command (</span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">cd</span></b><span style="font-size: 11pt;"> stands
+for Change Directory.) For example, the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">CS161</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">directory should be in your current working
+directory
+(which should be your home directory at this point). So you can type </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">cd CS161</span></b><span style="font-size: 11pt;"> to move into it. This changes your working
+directory
+to be your </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">CS161</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">directory. If it&#8217;s successful, it won&#8217;t
+look like it does anything, but if you type </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">pwd</span></b><span style="font-size: 11pt;">
+again, it should show your new working directory. You will see
+something like
+the following.</span></p>
+<p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="text-indent: 0.5in;"><span style="font-size: 11pt; font-family: Courier;">..</span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">.% cd CS161</span></b></p>
+<p class="MsoNormal" style="text-indent: 0.5in;"><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">...% pwd</span></b></p>
+<p class="MsoNormal" style="text-indent: 0.5in;"><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">/net/people/faculty/cs/jmiller/CS161</span></b></p>
+<p class="MsoNormal" style="text-indent: 0.5in;"><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">...%</span></b></p>
+<p class="MsoNormal" style="text-indent: 0.5in;">&nbsp;</p>
+<p class="MsoNormal" style=""><span style="font-size: 11pt;">If you
+were to type </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">cd CS161</span></b><span style="font-size: 11pt;"> again, it would fail, because our current
+directory (</span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">CS161</span></b><span style="font-size: 11pt;">) doesn&#8217;t contain a directory called </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">CS161</span></b><span style="font-size: 11pt;">.<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent: 0.5in;"><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="text-indent: 0.5in;"><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">...% cd CS161</span></b></p>
+<p class="MsoNormal" style="text-indent: 0.5in;"><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">CS161: No such
+file or
+directory</span></b></p>
+<p class="MsoNormal" style="text-indent: 0.5in;"><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">...%</span></b></p>
+<p class="MsoNormal" style="text-indent: 0.5in;"><span style="font-size: 11pt; font-family: Courier;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style=""><span style="font-size: 11pt;">However,
+the following would work.<o:p></o:p></span></p>
+<p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="text-indent: 0.5in;"><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">...% cd
+Lab1/Mammals/Dogs</span></b></p>
+<p class="MsoNormal" style="text-indent: 0.5in;"><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">...% pwd</span></b></p>
+<p class="MsoNormal" style="text-indent: 0.5in;"><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">/net/people/faculty/cs/jmiller/CS161/Lab1/Mammals/Dogs</span></b></p>
+<p class="MsoNormal" style="text-indent: 0.5in;"><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">...%</span></b></p>
+<p class="MsoNormal" style="text-indent: 0.5in;"><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">&nbsp;</span></b></p>
+<p class="MsoNormal" style=""><span style="font-size: 11pt;">In this
+example, we told the computer to change into
+the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Dogs</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">directory, which is located in the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Mammals</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">directory, which is located in the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Lab1</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">directory in the current working directory.
+To go to </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Lab1</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">from here, type </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">cd&nbsp; ../..</span></b><span style="font-size: 11pt;"> to move up two levels. Notice how we use the
+special hidden directory </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">.. </span></b><span style="font-size: 11pt;">(i.e. two dots), which always refer to the
+parent
+directory of the current directory.<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent: 0.5in;"><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="text-indent: 0.5in;"><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style=""><b>Practice<o:p></o:p></b></p>
+<p class="MsoNormal" style=""><b><o:p>&nbsp;</o:p></b></p>
+<p class="MsoNormal" style=""><span style="font-size: 11pt;">For your
+reference, the table below summarizes all the
+Linux commands we will use in this lab assignment. <b>DO NOT </b>execute
+the
+example instructions in the figure &#8212; some are irreversible. Just look
+through them quickly before continuing.<o:p></o:p></span></p>
+<p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style=""><span style="font-size: 11pt;"><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_2" o:spid="_x0000_i1026" type="#_x0000_t75" style='width:468pt;
+ height:204pt;visibility:visible;mso-wrap-style:square' filled="t">
+ <v:fill recolor="t" type="frame"/>
+ <v:imagedata src="Lab1Writeup_files/image003.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span style="font-size: 11pt;"><o:p></o:p></span></p>
+<p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p><br>
+</o:p></span></p>
+<p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p><img style="width: 863px; height: 376px;" alt="linux commands" src="Lab1Writeup_files/image003.png">&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style=""><span style="font-size: 11pt;">To get a
+feel for Linux, try doing each of the
+following. You won&#8217;t need to include any of these steps in your lab
+report. As you go along, you might use the directory windows if you
+want to see
+how these commands work. In order to see the changes, however, you may
+need to
+hit the refresh button after doing the command. You should be using the
+command
+line for all actions. Use the GUI only if you wish to see the results
+in the
+file manager.<o:p></o:p></span></p>
+<p class="MsoNormal" style="">&nbsp;</p>
+<p class="MsoNormal" style=""><span style="font-size: 11pt;">If at any
+time you do not see the files and
+directories you expected to see, stop and figure out where you have
+gone wrong.
+As you complete each command, you need to understand what it does. If
+you need
+help, ask a TA or professor.<o:p></o:p></span></p>
+<p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+<blockquote style="margin-top: 5pt; margin-bottom: 5pt;">
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;">1. Start
+by making sure you are in the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Lab1 </span></b><span style="font-size: 11pt;">directory. (If you are not in the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Lab1</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">directory, get there by typing </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">cd </span></b><b><span style="font-size: 13.5pt; font-family: &quot;Courier New&quot;;">~</span></b><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">/CS161/Lab1 </span></b><span style="font-size: 11pt;">(NB: </span><b><span style="font-size: 13.5pt; font-family: &quot;Courier New&quot;;">~</span></b><span style="font-size: 11pt;"> refers
+to your home directory)).<o:p></o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;">2. Check
+to see what files and directories are in the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Lab1</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">directory (Use </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">ls</span></b><span style="font-size: 11pt;">).<o:p></o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;">3.
+Create a subdirectory of </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Lab1</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">called </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Hal </span></b><span style="font-size: 11pt;">(</span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">mkdir</span></b><b><span style="font-size: 11pt; font-family: Courier-Bold;">
+  </span></b><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">&nbsp;Hal</span></b><span style="font-size: 11pt;">).<o:p></o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;">4. Check
+if </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Hal</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">was created by displaying the files and
+directories in
+the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Lab1</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">directory again (Use </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">ls</span></b><span style="font-size: 11pt;">).<o:p></o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;">5.
+Change to the directory </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Mammals</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">(Use </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">cd Mammals</span></b><span style="font-size: 11pt;">).<o:p></o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;">6. Check
+to see if you are in the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Mammals</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">directory (Use </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">pwd</span></b><span style="font-size: 11pt;">).<o:p></o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;">7. List
+the files and directories in </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Mammals</span></b><span style="font-size: 11pt;"> (Use </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">ls</span></b><span style="font-size: 11pt;">). One
+of the subdirectories should be </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Cats</span></b><span style="font-size: 11pt;">. Look
+at the files in the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Cats</span></b><span style="font-size: 11pt;"> directory (Use </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">ls</span></b><b><span style="font-size: 11pt; font-family: Courier-Bold;"> </span></b><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">&nbsp;Cats</span></b><span style="font-size: 11pt;">). Open the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Cats</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">window through the file manager and compare
+the
+results.<o:p></o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;">8.
+Change to the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Cats</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">directory (Use </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">cd Cats</span></b><span style="font-size: 11pt;">)
+and display the contents of the file </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">kittyCat</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">(Use </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">cat</span> </b><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">&nbsp;kittyCat</span></b><span style="font-size: 11pt;">).<o:p></o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;">9. Also
+try the alternative, </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">more kittyCat</span></b><span style="font-size: 11pt;">. The </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">more</span></b><i><span style="font-size: 11pt;"> </span></i><span style="font-size: 11pt;">command
+displays a file a page at a time, which is
+helpful when files are longer.<o:p></o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;">10.
+Change to the directory above your current
+location (Use </span><b><span style="font-size: 11pt; font-family: Courier-Bold;">cd ..</span></b><span style="font-size: 11pt;">).<o:p></o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;">11. List
+only the files whose names have the word </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">cat</span></b><i><span style="font-size: 11pt;"> </span></i><span style="font-size: 11pt;">in
+them in
+the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Cats</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">directory (Use </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">ls</span></b><b><span style="font-size: 11pt; font-family: Courier-Bold;"> </span></b><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">&nbsp;Cats</span></b><b><span style="font-size: 11pt; font-family: Courier-Bold;">/</span></b><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">*cat*</span></b><span style="font-size: 11pt;">).<span style="">&nbsp; </span>The
+&#8216;</span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">*</span></b><span style="font-size: 11pt;">&#8217; character is a wildcard character which can
+stand for any sequence of 0 or more characters so </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">*cat*</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">represents a sequence of (0 or more)
+characters,
+followed by </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">cat</span></b><span style="font-size: 11pt;">, followed by another sequence of characters
+(including the possibility of 0 characters).<o:p></o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;">12. Copy
+the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">2cats</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">file to the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Hal</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">directory. (The command </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">cp</span></b><b><span style="font-size: 11pt;">&nbsp; </span></b><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Cats/2cats&nbsp;
+../Hal</span></b><span style="font-size: 11pt;"> copies </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">2cats </span></b><span style="font-size: 11pt;">in
+the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Cats</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">subdirectory into the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Hal</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">directory that is in the parent directory of
+the
+working directory.)<o:p></o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;">13.
+Check if the copy was done by listing the
+filenames in </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Hal</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">(Use </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">ls ../Hal</span></b><span style="font-size: 11pt;">)
+or by examining your home directory window.<o:p></o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;">14.
+Change the working directory back to </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Lab1</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">(Use </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">cd ..</span></b><span style="font-size: 11pt;">).
+Type </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">pwd</span></b><span style="font-size: 11pt;"> to make sure you are in the correct
+directory.<o:p></o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;">15.
+Create a new </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Puppy</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">directory as a subdirectory of </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Hal</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">(Use </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">mkdir&nbsp;
+Hal/Puppy</span></b><span style="font-size: 11pt;">).</span></p>
+  <p class="MsoNormal" style="">&nbsp;</p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;">16. Copy
+all of the files from </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Dogs</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">into the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Puppy</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">directory (Use </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">cp
+Mammals/Dogs/*&nbsp; Hal/Puppy</span></b><span style="font-size: 11pt;">).<span style="">&nbsp; </span>(Note
+that </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">*</span></b><span style="font-size: 11pt;"> by itself matches with everything in the
+directory!)<o:p></o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal" style=""><span style="font-size: 11pt;">17. Move
+the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Puppy</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">directory from </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Hal</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">to the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Mammals/Dogs </span></b><span style="font-size: 11pt;">directory
+(Use </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">mv
+Hal/Puppy&nbsp; Mammals/Dogs</span></b><span style="font-size: 11pt;">).<o:p></o:p></span></p>
+</blockquote>
+<p class="MsoNormal" style=""><b><span style="font-size: 11pt;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></b></p>
+<p class="MsoNormal" style=""><b><span style="font-size: 14.5pt;">Creating
+a directory structure<o:p></o:p></span></b></p>
+<p class="MsoNormal" style=""><b><span style="font-size: 14.5pt;"><o:p>&nbsp;</o:p></span></b></p>
+<p class="MsoNormal" style=""><span style="font-size: 11pt;">Now that
+you have had a chance to see some Linux
+commands in action, write your own commands to build the following
+directory
+structure.<o:p></o:p></span></p>
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal"><span><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_3" o:spid="_x0000_i1025" type="#_x0000_t75" style='width:6in;
+ height:218.25pt;visibility:visible;mso-wrap-style:square' filled="t">
+ <v:fill recolor="t" type="frame"/>
+ <v:imagedata src="Lab1Writeup_files/image005.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span></p>
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal"><o:p><img style="width: 576px; height: 291px;" alt="desired directory structure" src="Lab1Writeup_files/image009.jpg"><br>
+</o:p></p>
+<p class="MsoNormal"><o:p><br>
+</o:p></p>
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="margin-left: 0.75in; text-indent: -0.25in;"><!--[if !supportLists]--><span style="font-size: 11pt; font-family: Symbol;"><span style="">&#183;<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Lab1</span></b><span style="font-size: 11pt;">, </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Hal</span></b><span style="font-size: 11pt;">, and </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Mammals</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">are pre-existing directories. The final
+contents of
+the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Hal</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">and </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Mammals</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">directories are not important.<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-left: 0.5in;"><span style="font-size: 11pt;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="margin-left: 0.75in; text-indent: -0.25in;"><!--[if !supportLists]--><span style="font-size: 11pt; font-family: Symbol;"><span style="">&#183;<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Critters</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">and
+</span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">People</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">are new directories to be created as shown in
+the
+figure above.<o:p></o:p></span></p>
+<p class="MsoNormal" style=""><span style="font-size: 11pt; font-family: Courier;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="margin-left: 0.75in; text-indent: -0.25in;"><!--[if !supportLists]--><span style="font-size: 11pt; font-family: Symbol;"><span style="">&#183;<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">you</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">and </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">me</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">should be copies of the files in the </span><b><span style="font-size: 11pt; font-family: &quot;Courier New&quot;;">Mammals/Other/People</span></b><span style="font-size: 11pt; font-family: Courier;"> </span><span style="font-size: 11pt;">directories.</span></p><br>
+<p class="MsoNormal" style="margin-left: 0.75in; text-indent: -0.25in;"><br>
+</p>
+When you are done you can easily check to see if you have created the
+correct structure by using the tree command.&nbsp; While you are in the
+Lab1 folder, at the command prompt type:&nbsp; <big><span style="font-weight: bold;">tree</span>&nbsp;&nbsp;  </big><br>
+<span style="font-size: 11pt;"><o:p></o:p></span>
+<p class="MsoNormal" style=""><span style="font-size: 11pt;"><o:p><br>
+</o:p></span></p><span style="font-size: 11pt;"><o:p>You should see something similar to the tree above, but presented in a slightly different format.&nbsp; </o:p></span><span style="font-size: 11pt;">Have the
+TA or instructor check your work<br>
+<br>
+</span><span style="font-size: 11pt;"><o:p>Create a file with a name
+similar in format to MillerJohnLab01HW only using your name.&nbsp; Open
+a terminal window and navigate to your Lab01 folder and then issue the
+pwd and tree commands and copy the results into your HW file and save
+it.&nbsp; Copy and paste your HW file into the&nbsp;<span style="font-weight: bold;"></span> <span style="font-weight: bold;">/net/people/handins/</span></o:p></span><span style="font-size: 11pt;"><span style="font-weight: bold;">161HW&nbsp;</span></span><span style="font-size: 11pt;"><o:p> folder before the start of the next lab period.</o:p></span><span style="font-size: 11pt;"><o:p><br>
+<br>
+<br>
+ 
+</o:p></span>
+<p class="MsoNormal" style=""><span style="font-size: 11pt;"><br>
+</span></p>
+</div>
+
+</body></html>

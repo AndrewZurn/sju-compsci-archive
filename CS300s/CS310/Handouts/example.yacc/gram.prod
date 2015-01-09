@@ -1,0 +1,22 @@
+s		: e SC			{printf("S -> E ;\n");}
+		;
+e		: e addop f 		{printf("E -> E ADDOP F\n");}
+		| f			{printf("E -> F\n");}
+		;
+addop		: PLUS 			{printf("ADDOP -> +\n");}
+		| MINUS			{printf("ADDOP -> -\n");}
+		;
+f		: f multop g 		{printf("F -> F multop G\n");}
+		| g			{printf("F -> G\n");}
+		;
+multop		: DIVIDE		{printf("MULTOP -> /\n");}
+		| TIMES			{printf("MULTOP -> *\n");}
+		;
+g		: h EXP g		{printf("G -> H ^ G\n");}
+		| h			{printf("G -> H\n");}
+		;
+h		: LP e RP		{printf("H -> ( E )\n");}
+		| VARIABLE		{printf("H -> %s\n",variablename);}
+		| INTEGER		{printf("H -> %d\n",intvalue);}
+		;
+%%

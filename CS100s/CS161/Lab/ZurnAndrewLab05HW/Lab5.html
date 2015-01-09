@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Lab 5</title></head><body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 204);" alink="#000099" link="#000099" vlink="#990099">
+<h1><span style="">Lab 5: Pair
+programming, numeric data, and your first classes<o:p></o:p></span></h1>
+
+<h2><span style="">Part I:
+Introduction to pair programming<o:p></o:p></span></h2>
+
+<p class="MsoNormal" style="margin-bottom: 12pt;"><b><span style="background: yellow none repeat scroll 0% 50%; color: red; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">In
+this lab, you will be working
+in pairs</span></b><span style="">.
+The idea is that one person will sit at the keyboard and the other will
+sit at
+the desk next to the keyboard person. The person working at the desk
+will be
+responsible for doing things like drawing diagrams, suggesting ideas
+for
+solving the problem, and watching as the keyboard person enters the
+program.
+Both programmers should take part in designing the program and should
+continuously interact as the programming is done. The "two heads are
+better than one" idea is paramount here and there is growing evidence
+that
+pair programming is more efficient in producing working programs. (In
+our case,
+we are most interested in increasing learning and the idea is that each
+member
+of the pair will likely have ideas and understanding of concepts that
+the other
+lacks so that the net effect is more learning going on.)<br>
+<br>
+The keyboard person stays doing the keyboard for the entire lab and the
+desk
+person stays doing his or her "job" for the entire lab. In the next
+lab, the same partners will work together but they will change places.<o:p></o:p></span></p>
+
+<h2><span style="">Part II: Some
+simple numeric computations<o:p></o:p></span></h2>
+
+<p class="MsoNormal"><span style="">Suppose
+that a cannon ball is shot from a cannon at an angle </span><b><span style="font-family: &quot;Courier New&quot;;">A</span></b><span style=""> as
+pictured below. The ball
+will shoot out at that angle and will eventually crash to earth. If the
+ball
+shoots at an initial velocity of </span><b><span style="font-family: &quot;Courier New&quot;;">v<sub>0</sub></span></b><span style="">,<b>
+</b></span><span style="">and if the
+acceleration of gravity is 9.8 meters per second per second, then the
+vertical
+component of velocity </span><b><span style="font-family: &quot;Courier New&quot;;">v<sub>vert</sub></span></b><span style="">,</span><span style=""> will be, as shown in the
+diagram below, </span><b><span style="font-family: &quot;Courier New&quot;;">v<sub>0</sub>*sin(A)
+</span></b><span style="">and the horizontal component, </span><b><span style="font-family: &quot;Courier New&quot;;">v<sub>horiz</sub></span></b><span style="">,<b>
+</b></span><span style="">will be, as
+shown, </span><b><span style="font-family: &quot;Courier New&quot;;">v<sub>0</sub>*cos(A)</span></b><span style="">. Then the formula for the height of the cannon ball after </span><b><span style="font-family: &quot;Courier New&quot;;">t</span></b><span style="">
+seconds (i.e. </span><b><span style="font-family: &quot;Courier New&quot;;">height(v<sub>0</sub>,
+A, t</span></b><b><span style="">)</span></b><span style="">)<b>
+</b></span><span style="">will be:<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style=""><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b><span style="font-family: &quot;Courier New&quot;;">v<sub>0</sub>*sin(A)*t
+- G*t*t/2<o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><b><span style=""><br>
+</span></b><span style="">where </span><b><span style="font-family: &quot;Courier New&quot;;">height(v<sub>0</sub>,
+A, t)</span></b><span style=""> is the
+height in meters after </span><b><span style="font-family: &quot;Courier New&quot;;">t</span></b><span style="">
+seconds, </span><b><span style="font-family: &quot;Courier New&quot;;">t </span></b><span style="">is the time elapsed in seconds, </span><b><span style="font-family: &quot;Courier New&quot;;">A</span></b><span style=""> is the
+angle in radians, </span><b><span style="font-family: &quot;Courier New&quot;;">G</span></b><span style=""> is the acceleration of
+gravity is 9.8 meters/second/second, and </span><b><span style="font-family: &quot;Courier New&quot;;">v<sub>0</sub> </span></b><span style="">is the velocity in meters per
+second.<b><br>
+<br>
+</b>Similarly, the formula for the horizontal distance the cannon has
+moved
+after </span><b><span style="font-family: &quot;Courier New&quot;;">t</span></b><b><span style="">
+</span></b><span style="">seconds, </span><b><span style="font-family: &quot;Courier New&quot;;">horiz(v<sub>0</sub>,
+A, t),</span></b><span style=""> is<o:p></o:p></span></p>
+
+<p class="MsoNormal"><b><span style=""><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></b><b><span style="font-family: &quot;Courier New&quot;;">v<sub>0</sub>*cos(A)*t<o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><b><span style="font-family: &quot;Courier New&quot;;"><br>
+</span></b><span style="">as long as<b>
+</b></span><b><span style="font-family: &quot;Courier New&quot;;">t</span></b><b><span style="">
+</span></b><span style="">isn't
+greater than the time when the cannonball hits the ground<b>.<br>
+<br>
+</b></span><b style=""><span style=""><img style="width: 381px; height: 316px;" id="_x0000_i1025" src="cannon.jpg" alt="cannon"></span></b><b><span style=""><br style="">
+<!--[if !supportLineBreakNewLine]--><br style="">
+<!--[endif]--><o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><span style="">Complete
+the provided template class, </span><b style=""><span style="font-family: &quot;Courier New&quot;;">Cannon.java</span></b><span style="">, by adding methods </span><b><span style="font-family: &quot;Courier New&quot;;">height(v<sub>0</sub>,
+A, t)</span></b><b><span style=""> </span></b><span style="">and<b> </b></span><b><span style="font-family: &quot;Courier New&quot;;">horiz(v<sub>0</sub>,
+A, t)</span></b><span style="">. Then
+test those methods by calling those methods in </span><b><span style="font-family: &quot;Courier New&quot;;">onMouseClick
+</span></b><span style="">with some
+values for<b> </b></span><b><span style="font-family: &quot;Courier New&quot;;">v<sub>0</sub></span></b><b><span style=""> </span></b><span style="">and
+</span><b><span style="font-family: &quot;Courier New&quot;;">A
+</span></b><span style="">and print
+out the results using </span><b><span style="font-family: &quot;Courier New&quot;;">Text</span></b><span style="">
+objects. That is, assuming
+you have created the method:<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style=""><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><b><span style="font-family: &quot;Courier New&quot;;">public
+double height(double v<sub>0</sub>,&nbsp; double&nbsp; A,&nbsp; double
+t) {<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+&nbsp;&nbsp;........<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+</span></b><b><span style=""><br>
+</span></b><span style="">then you can
+test it by typing something like the following in the </span><b><span style="font-family: &quot;Courier New&quot;;">onMouseClick</span></b><span style=""> method:<br>
+<b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</b></span><b><span style="font-family: &quot;Courier New&quot;;">new
+Text("Height is " +
+height(15,1.0,4),40,40,canvas);</span></b><b><span style=""><br>
+</span></b><span style=""><br>
+It is advisable to use constants for your test values such as <o:p></o:p></span></p>
+
+<p class="MsoNormal" style=""><span style=""><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style=""><b style=""><span style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></b><b style=""><span style="font-family: &quot;Courier New&quot;;">private
+static final double VEL_0 = 15;<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style=""><b style=""><span style="font-family: &quot;Courier New&quot;;"><span style="">&nbsp;
+</span>private static final double ANGLE = 1;<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style=""><b style=""><span style="font-family: &quot;Courier New&quot;;"><span style="">&nbsp;
+</span>private static final double TIME = 4;<o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><b style=""><span style="font-family: &quot;Courier New&quot;;"><span style="">&nbsp; </span>private
+static final double GRAVITY = 9.8;<o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="">and
+test your cases as </span><b><span style="font-family: &quot;Courier New&quot;;">new
+Text("Height is " +
+height(VEL_0,ANGLE,TIME),40,40,canvas); </span></b><span style="">instead</span><b><span style="font-family: &quot;Courier New&quot;;"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><span style=""><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="">Do
+several tests of your two methods by doing several lines of </span><b><span style="font-family: &quot;Courier New&quot;;">new
+Text</span></b><span style=""> with
+different values for the parameters. Note that </span><b><span style="font-family: &quot;Courier New&quot;;">Math.sin</span></b><span style="">
+and </span><b><span style="font-family: &quot;Courier New&quot;;">Math.cos</span></b><span style=""> are methods you will need to
+use. Note also that the angles fed to </span><b><span style="font-family: &quot;Courier New&quot;;">Math.sin</span></b><span style="">
+and </span><b><span style="font-family: &quot;Courier New&quot;;">Math.cos</span></b><span style=""> are in radians so the angle
+runs from 0 to PI/2 or from 0 to 1.570796327. (Recall that 0 to PI/2 in
+radians
+corresponds to 0 to 90 degrees.)<br style="">
+<!--[if !supportLineBreakNewLine]--><br style="">
+<!--[endif]--><b><o:p></o:p></b></span></p>
+
+<p class="MsoNormal"><b><span style=""><br>
+</span></b><span style="">We are
+extremely interested, in general, in finding out when that cannon ball
+hits the
+ground. But, when the cannonball hits the ground, that means </span><b><span style="font-family: &quot;Courier New&quot;;">height(t)=0</span></b><span style="">. This means solving the
+equation for <b>t</b> where<br>
+<br>
+</span><b><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0=v<sub>0</sub>*sin(A)*t
+- G*t*t/2<o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><b><span style="font-family: &quot;Courier New&quot;;"><br>
+</span></b><span style="">Solve this
+equation for </span><b><span style="font-family: &quot;Courier New&quot;;">t</span></b><span style="">
+(actually, there are two solutions - one is </span><b><span style="font-family: &quot;Courier New&quot;;">t</span></b><span style="">=0 so
+get rid of that one by
+dividing both sides by</span><b><span style="font-family: &quot;Courier New&quot;;"> t</span></b><span style=""> and
+then solving for </span><b><span style="font-family: &quot;Courier New&quot;;">t</span></b><span style="">) and write a new method that
+will find the </span><b><span style="font-family: &quot;Courier New&quot;;">t</span></b><span style="">
+for hitting the ground. That is, a method:<br>
+<br>
+</span><b><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public
+double timeToHit(double v0, dougle A) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;....<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></b><span style=""><br>
+<br>
+Then, find how far this cannonball traveled by substituting that value
+of </span><b><span style="font-family: &quot;Courier New&quot;;">t </span></b><span style="">into the formula for </span><b><span style="font-family: &quot;Courier New&quot;;">horiz(v0,
+A, t)</span></b><span style=""> inside
+a method:<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style=""><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><b><span style="font-family: &quot;Courier New&quot;;">public
+</span></b><span style="">&nbsp;</span><b><span style="font-family: &quot;Courier New&quot;;">double
+distanceToHit(double v0,double A) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></b><span style=""><br>
+<br>
+For example, if you we know that<b> </b></span><b><span style="font-family: &quot;Courier New&quot;;">t </span></b><span style="">was
+1, you would then say
+that the cannonball hit the ground at<b> </b></span><b><span style="font-family: &quot;Courier New&quot;;">horiz(v<sub>0</sub>,
+A, 1)=v<sub>0</sub>*cos(A)*1=v<sub>0</sub>*cos(A</span></b><b><span style="">)</span></b><span style="">. Thus, this new method
+should take as input<b> </b></span><b><span style="font-family: &quot;Courier New&quot;;">v<sub>0</sub> </span></b><span style="">and<b> </b></span><b><span style="font-family: &quot;Courier New&quot;;">A</span></b><b><span style=""> </span></b><span style="">and should return the
+horizontal distance where the cannonball hits the ground. Of course,
+the time
+to hit has already been determined in the previous method </span><b><span style="font-family: &quot;Courier New&quot;;">timeToHit
+(...)</span></b><span style="">.
+Again, make your </span><b><span style="font-family: &quot;Courier New&quot;;">onMouseClick</span></b><span style=""> program compute the place where the ball hits the ground
+and print it using </span><b><span style="font-family: &quot;Courier New&quot;;">Text</span></b><span style="">.<br>
+<br>
+Here are some tests to try. </span></p>
+
+<p class="MsoNormal"><span style="">If </span><b><span style="font-family: &quot;Courier New&quot;;">v<sub>0</sub></span></b><span style="">=15,&nbsp; </span><b><span style="font-family: &quot;Courier New&quot;;">A</span></b><span style="">=1.0,
+and </span><b><span style="font-family: &quot;Courier New&quot;;">t</span></b><span style="">=2 we have </span><b><span style="font-family: &quot;Courier New&quot;;">height(v<sub>0</sub>,A,t)</span></b><span style="">=5.64... , </span><b><span style="font-family: &quot;Courier New&quot;;">horiz(v<sub>0</sub>,A,t)</span></b><span style="">=16.209..., </span><b><span style="font-family: &quot;Courier New&quot;;">timeToHit(v<sub>0</sub>,A)</span></b><span style="">=2.575..., and </span><b><span style="font-family: &quot;Courier New&quot;;">distanceToHit(v<sub>0</sub>,A)</span></b><span style="">=20.876....<br>
+If </span><b><span style="font-family: &quot;Courier New&quot;;">v<sub>0</sub></span></b><span style="">=15, </span><b><span style="font-family: &quot;Courier New&quot;;">A</span></b><span style="">=1.0, and </span><b><span style="font-family: &quot;Courier New&quot;;">t</span></b><span style="">=4 we get </span><b><span style="font-family: &quot;Courier New&quot;;">height(v<sub>0</sub>,A,t)</span></b><span style="">=-27.91... and </span><b><span style="font-family: &quot;Courier New&quot;;">horiz(v<sub>0</sub>,A,t)</span></b><span style="">=32.418...<br>
+If </span><b><span style="font-family: &quot;Courier New&quot;;">v<sub>0</sub></span></b><span style="">=15 and </span><b><span style="font-family: &quot;Courier New&quot;;">A</span></b><span style="">=1.570796326 then </span><b><span style="font-family: &quot;Courier New&quot;;">timeToHit(v<sub>0</sub>,A)</span></b><span style="">=3.06... and </span><b><span style="font-family: &quot;Courier New&quot;;">distanceToHit(v<sub>0</sub>,A)</span></b><span style="">=3.65... x 10<sup>-8</sup> or
+almost 0.<br>
+Try </span><b><span style="font-family: &quot;Courier New&quot;;">v<sub>0</sub></span></b><span style="">=10000 and </span><b><span style="font-family: &quot;Courier New&quot;;">A</span></b><span style="">=0.785
+and find </span><b><span style="font-family: &quot;Courier New&quot;;">TimeToHit
+</span></b><span style="">and </span><b><span style="font-family: &quot;Courier New&quot;;">distanceToHit</span></b><span style="">. You should get </span><b><span style="font-family: &quot;Courier New&quot;;">TimeToHit</span></b><span style="">=1442.5003</span><b><span style="font-family: &quot;Courier New&quot;;">
+distanceToHit</span></b><span style="">=1.0204<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span> <o:p></o:p></span></p>
+
+<p>As usual, when you are done with the in-lab exercises above, have
+your lab
+instructor or TA check over your work before you leave the lab. For
+this lab, I would like you to also turn in your work
+electronically.&nbsp;When you have the lab
+working
+correctly, create a new folder inside your Lab05 folder and give
+it a name similar in format to  <big><span style="font-weight: bold;">MillerJohn_and_SchnepfJim_Lab05</span></big> only using your
+name and your partners name. Copy all Java files from your
+Lab05 folder and put them in the
+newly created folder (but
+keep the old copies in their place as back up).<span style="color: red;"></span>&nbsp; If you are not finished during lab time, <span style="color: black;">finish the assignment
+prior to coming
+to the next lab and put a copy of your newly renamed folder into the&nbsp;
+<big><span style="font-weight: bold;">/usr/people/handins/161LabHandin</span></big>&nbsp; folder before the start of the next lab
+period.&nbsp; You can use the cp command or copy and paste to hand in
+your work. .</span> <b><span style="background: yellow none repeat scroll 0% 50%; color: red; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">Also,
+be kind enough and email a copy of
+your joint work to your teammate.</span></b></p>
+
+<h2><span style="">Project: Building a
+Hare <span style="color: red;">(DUE AT START OF NEXT LAB <span style="background: yellow none repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">BUT
+<span style="">DON'T</span></span><span style="background: yellow none repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+START ON IT UNTIL AFTER YOUR CLASS ON Thursday 09/16)&nbsp; <o:p></o:p></span></span></span></h2>
+
+<p class="MsoNormal" style="margin-bottom: 12pt;"><span style="">Included
+with this lab is a program to do the </span><b style=""><span style="font-family: &quot;Courier New&quot;;">Turtle/Rabbit</span></b><span style=""> race using the provided </span><b style=""><span style="font-family: &quot;Courier New&quot;;">Turtle</span></b><span style="">
+class. Your assignment is to
+design a </span><b style=""><span style="font-family: &quot;Courier New&quot;;">Rabbit</span></b><span style=""> class that will look
+somewhat vaguely rabbit-like but otherwise do what the </span><b style=""><span style="font-family: &quot;Courier New&quot;;">Turtle</span></b><span style=""> class does. Once done with
+your </span><b style=""><span style="font-family: &quot;Courier New&quot;;">Rabbit</span></b><span style=""> class, modify the </span><b style=""><span style="font-family: &quot;Courier New&quot;;">Race</span></b><span style="">
+class so that <b style=""><u>your new </u></b></span><b style=""><u><span style="font-family: &quot;Courier New&quot;;">Rabbit</span></u></b><b style=""><u><span style=""> class </span></u></b><span style="">participates in the
+race instead of the gray box. Then, add
+an audience of </span><b style=""><span style="font-family: &quot;Courier New&quot;;">Rabbit</span></b><span style="">s
+to cheer against the shown
+audience of </span><b style=""><span style="font-family: &quot;Courier New&quot;;">Turtle</span></b><span style="">s.
+Start by running the </span><b style=""><span style="font-family: &quot;Courier New&quot;;">Race</span></b><span style="">
+class in order to understand
+what your </span><b style=""><span style="font-family: &quot;Courier New&quot;;">Rabbit</span></b><span style=""> is supposed to do.</span></p>
+<p class="MsoNormal" style="margin-bottom: 12pt;">When you have completed the project, place a copy of your project folder, named similar to <big><span style="font-weight: bold;">MillerJohnLab5Project</span></big>&nbsp; into&nbsp; the&nbsp;&nbsp; <big><span style="font-weight: bold;">/usr/people/handins/161ProjectHandin</span></big>&nbsp;&nbsp; folder before the start of the next lab.<br>
+<span style=""><o:p></o:p></span></p>
+
+
+<h2><span style="">Bonus Project:
+Resizable Turtle and Hare <span style="color: red;">(DUE AT START OF
+NEXT LAB <span style="background: yellow none repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">BUT
+<span style="">DON'T</span></span><span style="background: yellow none repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+START ON IT UNTIL
+AFTER YOUR CLASS ON Thursday 09/16)<o:p></o:p></span></span></span></h2>
+
+<span style="">See if
+you can make a constructor for the Turtle and Hare that
+will have a header of the form:<br>
+<br>
+</span><b><span style="font-family: &quot;Courier New&quot;;">public
+Turtle(double x, double y, double width, double height, DrawingCanvas
+canvas) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+.....<br>
+}<br>
+</span></b><span style=""><br>
+(Of course for the hare it will be </span><b><span style="font-family: &quot;Courier New&quot;;">public Rabbit (....)</span></b><span style="">)<br>
+<br>
+and which will allow you to make </span><b style=""><span style="font-family: &quot;Courier New&quot;;">Turtle</span></b><span style="">s
+(or </span><b style=""><span style="font-family: &quot;Courier New&quot;;">Rabbit</span></b><span style="">s) that are bigger or smaller
+as width and height get bigger or smaller. (Note: you will probably
+discover
+that the </span><b style=""><span style="font-family: &quot;Courier New&quot;;">Turtle</span></b><span style=""> or </span><b style=""><span style="font-family: &quot;Courier New&quot;;">Rabbit</span></b><span style="">
+will look funny for width
+and height that are very different. This is ok.). You may work with
+your pair
+partner to do this bonus part.&nbsp; </span>When you have completed the bonus part of the project, place a copy of your bonus project folder, named similar to&nbsp;<big><span style="font-weight: bold;">MillerJohn_and_SchnepfJim_Lab05</span></big><big><span style="font-weight: bold;">ProjectBonus</span></big>&nbsp; into&nbsp; the&nbsp;&nbsp; <big><span style="font-weight: bold;">/usr/people/handins/161ProjectHandin</span></big>&nbsp;&nbsp; folder before the start of the next lab. Be sure you have included all files needed to run your programs.
+  
+
+</body></html>

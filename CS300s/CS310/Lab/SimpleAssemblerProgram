@@ -1,0 +1,13 @@
+DATA
+PROGRAM
+	read R2
+	read R3
+	read R4
+	mult r5 r2 r3
+	sub r6 r5 r4
+	add r7 r6 r1
+	write r7
+	HALT
+END
+
+#x*y-z+1 by Andrew Zurn

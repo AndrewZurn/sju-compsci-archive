@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>CSCI 239 Lab 12: Recursion and Induction</title></head><body>
+<h1>Lab 11: Recursion and Induction</h1>
+<br>
+1. Remember good old Fibonacci numbers and their recursive definition?<br>
+<br>
+f<sub>0 </sub>=
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; f<sub>1</sub> =
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; f<sub>n </sub>= f<sub>n-1</sub>
++ f<sub>n-2</sub>&nbsp;&nbsp; (if n&gt;1)<br>
+<br>
+&nbsp;&nbsp;&nbsp; The claim is that this can be computed by the
+following formula:<br>
+<br>
+f<sub>n</sub> = {[(1+sqrt(5))/2]<sup>n+1</sup>- [(1-sqrt(5))/2]<sup>n+1</sup>}/sqrt(5)<br>
+<br>
+&nbsp;&nbsp;&nbsp; You should create methods to compute each of these
+versions and verify that they seem to compute the same thing.<br>
+&nbsp;&nbsp;&nbsp; (You can do it in Haskell, Java, Perl, or any other
+language you like.)<br>
+&nbsp;&nbsp;&nbsp; Then prove, inductively, that the second formula is,
+in fact, a correct formula. <br>
+&nbsp;&nbsp;&nbsp;&nbsp; (The base case in this case is for both 0
+and 1.)<br>
+<br>
+Note this is, in fact, different than what I did in class. There we had
+that f0=0 and f1=1.<br>
+<br>
+2. Now try to show that:<br>
+1+x+x<sup>2</sup>+x<sup>3</sup>+...+x<sup>n</sup> = (x<sup>n+1</sup>-
+1)/(x-1)<br>
+<br>
+Do it first by simply writing methods to compute each side of the
+equation and comparing
+the results and, then,
+proving the result inductively.<br>
+<br>
+<br>
+
+</body></html>

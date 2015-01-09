@@ -1,0 +1,10 @@
+Lab 10 - Matrices, concluded
+
+Show your TA or instructor your RealMatrix and RealVector classes along
+with the test programs you wrote to show the classes working.
+
+Finish the inverse and gaussJordan methods to be shown at the beginning
+of the next lab.
+
+Test it by running the enclosed test program.
+

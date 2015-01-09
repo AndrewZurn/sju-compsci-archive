@@ -1,0 +1,12 @@
+import java.util*;
+
+public class testRealMatrix{
+  
+  private double[][] a = {{1,2,3}, {4,5,6}};
+  private RealMatrix matrix;
+  
+  public testRealMatrix(){
+    matrix = new RealMatrix(a);
+    System.out.println(matrix);
+  }
+}

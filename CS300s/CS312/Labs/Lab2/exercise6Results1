@@ -1,0 +1,131 @@
+No.     Time        Source                Destination           Protocol Length Info
+      1 0.000000    Hewlett-_ca:2b:e8     Broadcast             ARP      42     Who has 10.0.1.11?  Tell 10.0.1.13
+
+Frame 1: 42 bytes on wire (336 bits), 42 bytes captured (336 bits)
+Ethernet II, Src: Hewlett-_ca:2b:e8 (00:25:b3:ca:2b:e8), Dst: Broadcast (ff:ff:ff:ff:ff:ff)
+Address Resolution Protocol (request)
+
+No.     Time        Source                Destination           Protocol Length Info
+      2 0.000176    Hewlett-_0d:8d:55     Hewlett-_ca:2b:e8     ARP      60     10.0.1.11 is at 00:25:b3:0d:8d:55
+
+Frame 2: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Hewlett-_0d:8d:55 (00:25:b3:0d:8d:55), Dst: Hewlett-_ca:2b:e8 (00:25:b3:ca:2b:e8)
+Address Resolution Protocol (reply)
+
+No.     Time        Source                Destination           Protocol Length Info
+      3 0.000183    10.0.1.13             10.0.1.11             SSH      114    Encrypted request packet len=48
+
+Frame 3: 114 bytes on wire (912 bits), 114 bytes captured (912 bits)
+Ethernet II, Src: Hewlett-_ca:2b:e8 (00:25:b3:ca:2b:e8), Dst: Hewlett-_0d:8d:55 (00:25:b3:0d:8d:55)
+Internet Protocol Version 4, Src: 10.0.1.13 (10.0.1.13), Dst: 10.0.1.11 (10.0.1.11)
+Transmission Control Protocol, Src Port: 52042 (52042), Dst Port: ssh (22), Seq: 1, Ack: 1, Len: 48
+SSH Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+      4 0.000432    Hewlett-_11:30:e9     Hewlett-_ca:2b:e8     ARP      60     10.0.1.11 is at 00:24:81:11:30:e9
+
+Frame 4: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Hewlett-_11:30:e9 (00:24:81:11:30:e9), Dst: Hewlett-_ca:2b:e8 (00:25:b3:ca:2b:e8)
+[Duplicate IP address detected for 10.0.1.11 (00:24:81:11:30:e9) - also in use by 00:25:b3:0d:8d:55 (frame 2)]
+Address Resolution Protocol (reply)
+
+No.     Time        Source                Destination           Protocol Length Info
+      5 0.000751    10.0.1.11             10.0.1.13             SSH      114    Encrypted response packet len=48
+
+Frame 5: 114 bytes on wire (912 bits), 114 bytes captured (912 bits)
+Ethernet II, Src: Hewlett-_0d:8d:55 (00:25:b3:0d:8d:55), Dst: Hewlett-_ca:2b:e8 (00:25:b3:ca:2b:e8)
+Internet Protocol Version 4, Src: 10.0.1.11 (10.0.1.11), Dst: 10.0.1.13 (10.0.1.13)
+Transmission Control Protocol, Src Port: ssh (22), Dst Port: 52042 (52042), Seq: 1, Ack: 49, Len: 48
+SSH Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+      6 0.000764    10.0.1.13             10.0.1.11             TCP      66     52042 > ssh [ACK] Seq=49 Ack=49 Win=157 Len=0 TSval=4973772 TSecr=4997031
+
+Frame 6: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Hewlett-_ca:2b:e8 (00:25:b3:ca:2b:e8), Dst: Hewlett-_0d:8d:55 (00:25:b3:0d:8d:55)
+Internet Protocol Version 4, Src: 10.0.1.13 (10.0.1.13), Dst: 10.0.1.11 (10.0.1.11)
+Transmission Control Protocol, Src Port: 52042 (52042), Dst Port: ssh (22), Seq: 49, Ack: 49, Len: 0
+
+No.     Time        Source                Destination           Protocol Length Info
+      7 0.231949    10.0.1.13             10.0.1.11             SSH      114    Encrypted request packet len=48
+
+Frame 7: 114 bytes on wire (912 bits), 114 bytes captured (912 bits)
+Ethernet II, Src: Hewlett-_ca:2b:e8 (00:25:b3:ca:2b:e8), Dst: Hewlett-_0d:8d:55 (00:25:b3:0d:8d:55)
+Internet Protocol Version 4, Src: 10.0.1.13 (10.0.1.13), Dst: 10.0.1.11 (10.0.1.11)
+Transmission Control Protocol, Src Port: 52042 (52042), Dst Port: ssh (22), Seq: 49, Ack: 49, Len: 48
+SSH Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+      8 0.232401    10.0.1.11             10.0.1.13             SSH      114    Encrypted response packet len=48
+
+Frame 8: 114 bytes on wire (912 bits), 114 bytes captured (912 bits)
+Ethernet II, Src: Hewlett-_0d:8d:55 (00:25:b3:0d:8d:55), Dst: Hewlett-_ca:2b:e8 (00:25:b3:ca:2b:e8)
+Internet Protocol Version 4, Src: 10.0.1.11 (10.0.1.11), Dst: 10.0.1.13 (10.0.1.13)
+Transmission Control Protocol, Src Port: ssh (22), Dst Port: 52042 (52042), Seq: 49, Ack: 97, Len: 48
+SSH Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+      9 0.232413    10.0.1.13             10.0.1.11             TCP      66     52042 > ssh [ACK] Seq=97 Ack=97 Win=157 Len=0 TSval=4974004 TSecr=4997262
+
+Frame 9: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Hewlett-_ca:2b:e8 (00:25:b3:ca:2b:e8), Dst: Hewlett-_0d:8d:55 (00:25:b3:0d:8d:55)
+Internet Protocol Version 4, Src: 10.0.1.13 (10.0.1.13), Dst: 10.0.1.11 (10.0.1.11)
+Transmission Control Protocol, Src Port: 52042 (52042), Dst Port: ssh (22), Seq: 97, Ack: 97, Len: 0
+
+No.     Time        Source                Destination           Protocol Length Info
+     10 0.728100    10.0.1.13             10.0.1.11             SSH      114    Encrypted request packet len=48
+
+Frame 10: 114 bytes on wire (912 bits), 114 bytes captured (912 bits)
+Ethernet II, Src: Hewlett-_ca:2b:e8 (00:25:b3:ca:2b:e8), Dst: Hewlett-_0d:8d:55 (00:25:b3:0d:8d:55)
+Internet Protocol Version 4, Src: 10.0.1.13 (10.0.1.13), Dst: 10.0.1.11 (10.0.1.11)
+Transmission Control Protocol, Src Port: 52042 (52042), Dst Port: ssh (22), Seq: 97, Ack: 97, Len: 48
+SSH Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     11 0.728724    10.0.1.11             10.0.1.13             SSH      114    Encrypted response packet len=48
+
+Frame 11: 114 bytes on wire (912 bits), 114 bytes captured (912 bits)
+Ethernet II, Src: Hewlett-_0d:8d:55 (00:25:b3:0d:8d:55), Dst: Hewlett-_ca:2b:e8 (00:25:b3:ca:2b:e8)
+Internet Protocol Version 4, Src: 10.0.1.11 (10.0.1.11), Dst: 10.0.1.13 (10.0.1.13)
+Transmission Control Protocol, Src Port: ssh (22), Dst Port: 52042 (52042), Seq: 97, Ack: 145, Len: 48
+SSH Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     12 0.728740    10.0.1.13             10.0.1.11             TCP      66     52042 > ssh [ACK] Seq=145 Ack=145 Win=157 Len=0 TSval=4974500 TSecr=4997759
+
+Frame 12: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Hewlett-_ca:2b:e8 (00:25:b3:ca:2b:e8), Dst: Hewlett-_0d:8d:55 (00:25:b3:0d:8d:55)
+Internet Protocol Version 4, Src: 10.0.1.13 (10.0.1.13), Dst: 10.0.1.11 (10.0.1.11)
+Transmission Control Protocol, Src Port: 52042 (52042), Dst Port: ssh (22), Seq: 145, Ack: 145, Len: 0
+
+No.     Time        Source                Destination           Protocol Length Info
+     13 0.863993    10.0.1.13             10.0.1.11             SSH      114    Encrypted request packet len=48
+
+Frame 13: 114 bytes on wire (912 bits), 114 bytes captured (912 bits)
+Ethernet II, Src: Hewlett-_ca:2b:e8 (00:25:b3:ca:2b:e8), Dst: Hewlett-_0d:8d:55 (00:25:b3:0d:8d:55)
+Internet Protocol Version 4, Src: 10.0.1.13 (10.0.1.13), Dst: 10.0.1.11 (10.0.1.11)
+Transmission Control Protocol, Src Port: 52042 (52042), Dst Port: ssh (22), Seq: 145, Ack: 145, Len: 48
+SSH Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     14 0.864494    10.0.1.11             10.0.1.13             SSH      114    Encrypted response packet len=48
+
+Frame 14: 114 bytes on wire (912 bits), 114 bytes captured (912 bits)
+Ethernet II, Src: Hewlett-_0d:8d:55 (00:25:b3:0d:8d:55), Dst: Hewlett-_ca:2b:e8 (00:25:b3:ca:2b:e8)
+Internet Protocol Version 4, Src: 10.0.1.11 (10.0.1.11), Dst: 10.0.1.13 (10.0.1.13)
+Transmission Control Protocol, Src Port: ssh (22), Dst Port: 52042 (52042), Seq: 145, Ack: 193, Len: 48
+SSH Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     15 0.864504    10.0.1.13             10.0.1.11             TCP      66     52042 > ssh [ACK] Seq=193 Ack=193 Win=157 Len=0 TSval=4974636 TSecr=4997895
+
+Frame 15: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Hewlett-_ca:2b:e8 (00:25:b3:ca:2b:e8), Dst: Hewlett-_0d:8d:55 (00:25:b3:0d:8d:55)
+Internet Protocol Version 4, Src: 10.0.1.13 (10.0.1.13), Dst: 10.0.1.11 (10.0.1.11)
+Transmission Control Protocol, Src Port: 52042 (52042), Dst Port: ssh (22), Seq: 193, Ack: 193, Len: 0
+
+
+
+[root@PC3 ~]# arp -a
+? (10.0.1.11) at 00:25:b3:0d:8d:55 [ether] on em1
+

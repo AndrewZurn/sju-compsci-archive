@@ -1,0 +1,17 @@
+Lab 1: Getting used to Javadoc
+
+In this lab you are simply going to produce appropriate Javadoc for
+various program pieces, using the Whatever example as a guide.
+
+You will produce appropriate Javadoc comments for each of the
+interfaces Fraction.java and Tank.java as well as the exception
+class DivideByZeroRuntimeException.
+
+This means you will put in appropriate comments and, then, running
+Javadoc in order to produce the html files. Take the default spot
+(doc) that Dr Java produces to store the html and, then, open the
+file index.html in your favorite browser to look at the result.
+Keep messing until you (and the TA or instructor) like the resulting
+html display in your browser.
+
+

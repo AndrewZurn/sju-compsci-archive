@@ -1,0 +1,47 @@
+% This file was created with JabRef 2.9.2.
+% Encoding: Cp1252
+
+@MISC{Appcelerator,
+  author = {Appcelerator.com},
+  title = {Appcelerator Titanium},
+  owner = {Andrew},
+  timestamp = {2013.11.17},
+  url = {www.appcelerator.com}
+}
+
+@ARTICLE{Corral2011,
+  author = {Luis Corral and Alberto Sillitti and Giancarlo Succi and Alessandro
+	Garibbo and Paolo Ramella},
+  title = {Evolution of Mobile Software Development from Platform-Specific to
+	Web-Based Multiplatform Paradigm},
+  journal = {Onward!},
+  year = {2011},
+  volume = {Oct 2011},
+  pages = {na},
+  owner = {Andrew},
+  timestamp = {2013.10.27}
+}
+
+@ARTICLE{Leroux2011,
+  author = {Brian Leroux and Andre Charland},
+  title = {Mobile Application Development: Web vs. Native},
+  journal = {Communications of the ACM},
+  year = {2011},
+  volume = {54 No. 5},
+  pages = {49-53},
+  owner = {Andrew},
+  timestamp = {2013.10.27}
+}
+
+@ARTICLE{Xanthopoulos2013,
+  author = {Spyros Xanthopoulos and Stelios Xinogalos},
+  title = {A Comparative Analysis of Cross-platform Development Approaches for
+	Mobile Applications},
+  journal = {Balkan Conference in Informatics '13},
+  year = {2013},
+  volume = {Sept},
+  pages = {na},
+  owner = {Andrew},
+  timestamp = {2013.10.27}
+}
+

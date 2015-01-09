@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Regular Expressions II</title></head><body>
+<h1>CS239&nbsp;&nbsp;&nbsp;&nbsp; Lab3 ...Regular Expressions_2_
+(Continued)</h1>
+The regular expressions we have been studying (also called Extended
+Regular Expressions) exist in two other places in Unix - in the command
+line editor called sed and in the pattern matching languages awk and
+Perl. sed allows you to quickly make changes in a text file while awk
+and Perl allow you to write general programs (as in Java) with an
+emphasis on pattern recognition and I/O.<br>
+<br>
+We will spend our time on Perl. Perl was originally designed as a
+language to build shell scripts. A shell script is a way to build up
+new Unix command line commands by creating a file which does something.<br>
+<br>
+When you build shell scripts with Perl, what you do is open up your
+favorite editor and, then, create a file which looks like the following:<br>
+<br>
+#!/usr/bin/perl<br>
+...<br>
+<br>
+where the ... means a series of lines forming a Perl program. You then
+save the file and, using the chmod command, set the permission to
+executable by typing <span style="font-weight: bold;">chmod +x
+filename.pl</span> (perl files usually end in .pl). If you then put it
+in a directory in your home directory
+called bin you will be able to use the file like a new command.<br>
+<br>
+Let's try it out. First, type <span style="font-weight: bold;">cd</span>
+to change to your home directory and
+type ls -l. See if you have a directory called bin. If not, create it
+using the command <span style="font-weight: bold;">mkdir bin </span>and
+change into it with <span style="font-weight: bold;">cd bin</span>.<br>
+<br>
+Then open an appropriate editor and type the following two lines into
+the editor.&nbsp; You probably will use nedit
+or jedit or gedit or the editor in DrJava or emacs or vi or whatever.<br>
+<br>
+<span style="font-weight: bold;">#!/usr/bin/perl</span><br style="font-weight: bold;">
+<span style="font-weight: bold;">print "Hello, World\n"</span><br>
+<br>
+and, then, save the file as <span style="font-weight: bold;">Hello.pl</span> in your <span style="font-weight: bold;">bin </span>directory. In your
+Shell window, type <span style="font-weight: bold;">pwd </span>to
+make sure you are in the <span style="font-weight: bold;">bin </span>directory,
+and, then, type <span style="font-weight: bold;">chmod +x Hello.pl.</span>
+Then type <span style="font-weight: bold;">cd </span>to return to your home directory. Then you can execute the
+program from the command line by typing <span style="font-weight: bold;">Hello.pl</span> at the command line.<br>
+<br>
+Perl is, in fact, a complete programming language and has things like
+loops, conditionals, ... What we are interested in, however, is the
+regular expression handling that Perl can do.<br>
+<br>
+<h2>Reading data from the command line</h2>
+The first thing we normally wish to do is read in some information to
+be processed. That is fairly easy in Perl. Simply type:<br>
+<br>
+<span style="font-weight: bold;">$variablename=&lt;STDIN&gt;;</span><br>
+<br>
+Note two things. First, variable names in Perl are usual variable names
+like in Java only preceded by a $ sign. Second, when you read from
+standard input you will read everything up to and including a carriage
+return. Most of the time you will not want that carriage return so Perl
+has a function (Chomp) which will remove it. This means that you will
+usually do the following to read in a line of input:<br>
+<br>
+<span style="font-weight: bold;">$variablename=&lt;STDIN&gt;;</span><br style="font-weight: bold;">
+<span style="font-weight: bold;">chomp($variablename);</span><br>
+<br>
+(As always, Perl has a shortcut for this. You can actually write
+<span style="font-weight: bold;">chomp($variablename=&lt;STDIN&gt;);</span> to do both lines at once.)<br>
+<br>
+Let's try another example. Edit the file readwrite.pl and enter the
+following:<br>
+<br>
+<span style="font-weight: bold;">#!/usr/bin/perl<br>
+while(defined($line=&lt;STDIN&gt;)) {<br>
+&nbsp;&nbsp;&nbsp; print $line;<br>
+}<br>
+<br>
+</span>Save<span style="font-weight: bold;"> readwrite.pl </span>into your <span style="font-weight: bold;">bin</span> directory and, at the command line when in that <span style="font-weight: bold;">bin </span>directory, type <span style="font-weight: bold;">chmod +x readwrite.pl</span> and, then,
+after typing <span style="font-weight: bold;">cd</span> to return to your home directory type <span style="font-weight: bold;">readwrite.pl</span> - this will
+read in input from the command line until you type a line where you do
+&lt;CTRL&gt;-D. Note that it prints out each line you type in.<br>
+<br>
+A more satisfactory method of the above might be to use an array. In
+Perl, a whole array can be referred to using an @ symbol. Thus, for
+example, <span style="font-weight: bold;">@thing=(2,3,5);</span> would
+make thing an array containing 2,3, and 5 as its values. You could,
+then, type <span style="font-weight: bold;">print $thing[1];</span> to
+print out 3. An even more amazing thing you can do is type <span style="font-weight: bold;">@lines=&lt;STDIN&gt;;</span>. This will
+read in all the lines you type until you type &lt;CTRL-D&gt; for end of
+file
+and put each line into a position in the array @lines. If you then type
+<span style="font-weight: bold;">print</span> <span style="font-weight: bold;">$lines[1];</span> it will print out the
+second line you typed in! Let's try that by redoing the experiment
+above in a new way. Edit readwrite.pl and change it so it looks like
+the following.<br>
+<br>
+<span style="font-weight: bold;">#!/usr/bin/perl<br>
+@lines=&lt;STDIN&gt;;<br>
+foreach $line (@lines) {<br>
+&nbsp;&nbsp;&nbsp; print $line;<br>
+}<br>
+<br>
+</span>Now just type readwrite.pl and, then, type readwrite.pl at the
+command line. You should then type in a few lines of text followed by a
+carriage return. This should give you all your lines printed out after
+the input.<br>
+<br>
+The line <span style="font-weight: bold;">
+@lines=&lt;STDIN&gt;; </span>creates the array lines and, then, adds
+lines you type until you do a &lt;CTRL-D&gt;&nbsp; for end of file. The
+foreach loop is like the Java for(SomeType x:SomeCollection) which
+would run through every element in the collection SomeCollection. <br>
+<br>
+Note that the $line variable is a dummy variable that takes on the
+values <span style="font-weight: bold;">@lines[0], @lines[1], ...</span> in turn inside the<span style="font-weight: bold;"> foreach </span>loop.<br>
+<br>
+Note also, that each element of <span style="font-weight: bold;">@lines</span> still has that carriage return.
+Suppose we didn't want those carriage returns. We could fix that by
+using <span style="font-weight: bold;">chomp</span>. Thus:<br>
+<br>
+<span style="font-weight: bold;">#!/usr/bin/perl<br>
+@lines=&lt;STDIN&gt;;<br>
+foreach $line (@lines) {<br>
+&nbsp;&nbsp;&nbsp; chomp($line);<br>
+}<br>
+</span><span style="font-weight: bold;">foreach $line (@lines) {<br>
+&nbsp;&nbsp;&nbsp; print $line;<br>
+}<br>
+print "\n";<br>
+<br>
+</span>This will now print the lines together on the same line with the
+<span style="font-weight: bold;">print "\n"</span> printing a carriage
+return after that line.<br>
+<br>
+<h2>Regular expressions in Perl</h2>
+You can match regular expressions in Perl just like you can on the
+command line. (In fact, Perl was designed to use the same regular
+expression stuff as the Unix command line so Unix programmers would
+have an easy time learning Perl.) The syntax uses two / characters to
+surround the regular expression and the =~ operator to return true if
+the given string matches the regular expression. For example, suppose
+we wanted to match the regular expression ".*aa.*" that we used as our
+first example in the previous lab. A Perl program to read in a single
+line and match that expression would look like the following. (Note
+that the . operator acts like the + in Java for concatenating strings.)<br>
+<br>
+<span style="font-weight: bold;">#!/usr/bin/perl<br>
+$line=&lt;STDIN&gt;;<br>
+chomp($line);<br>
+if($line =~ /.*aa.*/) {<br>
+&nbsp;&nbsp;&nbsp; print $line . " has an aa\n";<br>
+}<br>
+else {<br>
+&nbsp;&nbsp;&nbsp; print $line . " has no aa\n";<br>
+}<br>
+<br>
+</span>Try this. Type this into regexp1.pl using your editor, save it,
+<span style="font-weight: bold;">chmod +x regexp1.pl,</span> and type <span style="font-weight: bold;">regexp1.pl</span>. Then enter the line<br>
+<span style="font-weight: bold;">aardvark</span><br>
+and see what happens. Then run it again and type the line<br>
+<span style="font-weight: bold;">hyena</span><br>
+and see what happens.<br>
+<br>
+Now try the following script for matching a pattern for an entire file:<br>
+<br>
+<span style="font-weight: bold;">#!/usr/bin/perl<br>
+@lines=&lt;STDIN&gt;;<br>
+foreach $line(@lines) {<br>
+&nbsp;&nbsp;&nbsp; if($line =~ /.*aa.*/) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print $line;<br>
+&nbsp;&nbsp;&nbsp; }<br>
+}<br>
+</span><span style="font-weight: bold;"><br>
+</span>After you have typed it into your editor, saved it as<span style="font-weight: bold;">
+regexp2.pl</span> in <span style="font-weight: bold;">bin</span>, and done chmod +x regexp2.pl, try it on the dictionary file
+from the last lab by typing:<br>
+<br>
+<span style="font-weight: bold;">regexp2.pl &lt;
+/usr/share/dict/linux.words</span><br>
+<br>
+from which you should see the same list you got last time.<br>
+<br>
+<h2>Exercise I:</h2>
+<br>
+Repeat all of the exercises from last lab by modifying the regular
+expression inside your regexp2.pl file to use the new regular
+expression.<br>
+<br>
+<h2>Some more regular expressions</h2>
+In addition to the regular expressions we did last time, there are some
+other special characters available to do special things. Suppose, for
+example, that we wanted to find only words that started with an aa.
+Just like last lab, the&nbsp;
+^ character handles that. Thus, the expression /^aa.*/ would match only
+strings that started with an aa. Also, as before, the $ character would
+mark the end of a line. Thus /^t.*t$/ would only match words beginning
+and ending with a t. In addition, the [] stuff from the previous lab
+works as well. As an example, the following would find words which
+start with b, have exactly one s, and end with e. (Note that this
+example demonstrates the two uses of ^.)<br>
+<br>
+<span style="font-weight: bold;">#!/usr/bin/perl<br>
+@lines=&lt;STDIN&gt;;<br>
+foreach $line(@lines) {<br>
+&nbsp;&nbsp;&nbsp; if($line =~ /^b[^s]*s[^s]*e$/) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print $line;<br>
+&nbsp;&nbsp;&nbsp; }<br>
+}<br>
+<br>
+</span>Now do the following exercises using Perl. Note in 4-9 we mean
+two s's and two t's - no more and no less.<br>
+<br>
+<ol>
+  <li>Find all words in /usr/shared/dict/linux.words with exactly two
+s's in them.</li>
+  <li>Repeat for exactly three s's.</li>
+  <li>Repeat for four or fewer s's.</li>
+  <li>Find all words with exactly two s's and exactly two t's with the
+t's coming after the s's.</li>
+  <li>Find all words with exactly two t's and exactly two s's with the
+s's coming after the t's.<br>
+  </li>
+  <li>Find all words with exactly two s's and exactly two t's with the
+property that the first s is followed eventually by two t's which are
+followed
+eventually by one s.</li>
+  <li>Find all words with exactly two s's and exactly two t's with the
+first s followed eventuallty by one t followed
+eventually by one s followed eventually by one t.</li>
+  <li>Find all words with exactly two s's and exactly two t's with the
+first t followed eventually by two s's followed
+eventually by one t.</li>
+  <li>Find all words with exactly two s's and exactly two t's with the
+first t followed eventually by one s followed
+eventually by one t followed eventually by one s.</li>
+  <li>Find all words with exactly two s's and exactly two t's. (Note
+this is a combination of 4-9).</li>
+</ol>
+<br>
+<span style="font-weight: bold;"></span><span style="font-weight: bold;"></span><span style="font-weight: bold;"></span><br>
+<br>
+<br>
+
+</body></html>

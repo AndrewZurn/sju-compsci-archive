@@ -1,0 +1,14 @@
+Andrew Zurn
+CS350 - Holey
+Project 1
+10/24/12
+
+There are 5 different files within the project folder.  One will find the zurnGame executable (is the game that measures response time and writes to a file), the zurnReport executable (the report generator that reads the zurnProj1.log file and prints a detailed report out on STDOUT), the zurnProj1.log file that contains user, time, and date data for every game played, and finally the two source code files, zurnProj1game.c and zurnProj1report.c.
+
+The layout of the source file zurnProj1game.c is rather simple.  There is a signal handler that will catch SIGINT and record the response time of the user, a method called process_times() that will process the array of response times from the user and set a best, worst and average time, and finally the main method, which starts the game, runs through 20 trials, looks for the option to save or not to, and then takes the appropriate actions and closes.
+
+The report opens the .log file, runs through its contents, and then prints out the data on the screen.
+
+The .log file is organized as follows.
+
+	username,best_time,worst_time,average_time,date (comma's not present in file)

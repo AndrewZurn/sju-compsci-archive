@@ -1,0 +1,608 @@
+package csci230radomskizurnhardy;
+
+import csci230radomskizurnhardy.universities.UniversityDBLibrary;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.TreeMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+
+/**
+ * This is the only class that deals directly with the database. Anything requesting or wanting
+ * information from the database must go through this class, the DatabaseController. It converts
+ * the output from the database into more usable formats such as ArrayLists and TreeMaps
+ * @author pghardy
+ * @version 1.1
+ */
+public class DatabaseController {
+    
+    DatabaseController DB;
+    
+    /**
+     * 
+     */
+    public void DatabaseController(){
+       
+    }
+    /**
+     * When called, this method tells the database to create a new university 
+     * record using the information provided in the parameters. Callers of this 
+     * method must ensure that the school name is unique among all universities,
+     * otherwise, an SQLException is thrown by the corresponding database method.
+     * 
+     * @param school a String containing the name for the new university which 
+     * must be unique among all universities
+     * @param state a String containing the state in which the new university is 
+     * located. Specify "-1" if the value of this field is unknown. Specify 
+     * "FOREIGN" if the university is located outside the US
+     * @param location a String specifying the type of area in which the new 
+     * university is located. Possible values are "SUBURBAN", "URBAN" and 
+     * "SMALL-CITY".  Specify "-1" if the value of this field is unknown
+     * @param control a String specifying who controls the new university. 
+     * Possible values are "PRIVATE", "STATE" and "CITY". Specify "-1" if the 
+     * value of this field is unknown
+     * @param numberOfStudents an integer representing the number of students 
+     * currently enrolled in the new university
+     * @param percentFemales a double out of 100 representing the percentage of 
+     * females in the student population
+     * @param SATVerbal a double out of 800 representing the average SAT Verbal 
+     * exam score for all students currently enrolled in the new university
+     * @param SATMath a double out of 800 representing the average SAT Math 
+     * exam score for all students currently enrolled in the new university
+     * @param expenses a double representing the annual tuition for the new 
+     * university
+     * @param percentFinancialAid a double out of 100 representing the 
+     * percentage of students receiving any form sort of financial assistance 
+     * from the new university
+     * @param percentAdmitted a double out of 100 representing the percentage 
+     * of applicants who are admitted annually to the new university
+     * @param percentEnrolled a double out of 100 representing the percentage 
+     * of admitted students who enroll in the new university
+     * @param academicsScale an int between 1 and 5 (with 5 being best) 
+     * indicating the quality of the academics at the new university 
+     * @param socialScale an int between 1 and 5 (with 5 being best) 
+     * indicating the quality of the social life at the new university 
+     * @param qualityOfLifeScale an int between 1 and 5 (with 5 being best) 
+     * indicating the overall quality of life at the new university 
+     */
+    public static void addUniversity (String school, String state, String location, String control,
+            int numberOfStudents, double percentFemales, double SATVerbal, double SATMath,
+            double expenses, double percentFinancialAid, int numberOfApplicants,
+            double percentAdmitted, double percentEnrolled, int academicsScale,
+            int socialScale, int qualityOfLifeScale){
+        try {
+            UniversityDBLibrary.addUniversity(school, state, location, control, numberOfStudents, percentFemales, SATVerbal, SATMath, expenses, percentFinancialAid, numberOfApplicants, percentAdmitted, percentEnrolled, academicsScale, socialScale, qualityOfLifeScale);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+    }
+    
+    /**
+     * When called, this method tells the database to add a new emphasis area 
+     * for the specified school. Nothing happens if an invalid school name is 
+     * specified or if the specified emphasis already exists for the specified school
+     * 
+     * @param school a String containing the name of the school for which the 
+     * new emphasis area is being added
+     * @param emphasis a String containing the new emphasis to be added to the 
+     * specified school
+     */
+    public static void addUniversityEmphasis(String school, String emphasis){
+        try {
+            UniversityDBLibrary.addUniversityEmphasis(school, emphasis);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    /**
+     * When called, this method tells the database to create a new user record 
+     * using the information provided in the parameters. The user will be active
+     * by default and will be assigned a unique Id equal to one plus the current 
+     * largest Id among all users in the database. Callers of this method must 
+     * ensure that the specified username is unique among all users, otherwise, 
+     * an SQLException is thrown by the database method.
+     * 
+     * @param firstName a String containing the first name for the new user
+     * @param lastName a String containing the last name for the new user
+     * @param username a String containing the username for the new user which 
+     * must be unique among all users
+     * @param password a String containing the password for the new user
+     * @param type should be either 'a' for administrators or 'u' for regular 
+     * users
+     */
+    public static void addUser(String firstName, String lastName, String username, String password, char type){
+        try {
+            UniversityDBLibrary.addUser(firstName, lastName, username, password, type);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    /**
+     * When called, this method has the database save the specified school to the  user's list 
+     * of saved schools. Nothing happens if an invalid user Id is specified or 
+     * if the specified school is already in user's list of saved schools
+     * 
+     * @param Id an int representing the user for whom the specified school is 
+     * being saved
+     * @param school a String containing the school to be saved to the user's 
+     * list of saved schools
+     * @return true if the specified shool was successfully added to the user's 
+     * list of saved schools or false otherwise
+     * @return true 
+     */
+    public static boolean addUserSchool(int id, String school){
+        try {
+            boolean chooser = true;
+            TreeMap<Integer, ArrayList<String>> list1 =  getAllSavedSchools();
+            ArrayList<String> savedSchools1 = list1.get(id);
+            for (int j = 0; j < savedSchools1.size(); j++){
+                if(savedSchools1.get(j).equals(school)){
+                    chooser = false;
+                }
+                else{}
+            }
+            if(chooser == true){
+                 UniversityDBLibrary.addUserSchool(id, school);
+            }
+            else{}
+            
+            
+            } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         return false;
+     }
+
+     
+    /**
+     * When called, this method has the database change the status of the user, whose Id is 
+     * specified as a parameter, to inactive. In other words, it sets user 
+     * status to 'N' instead of 'Y'. Nothing happens if an invalid Id is 
+     * specified.
+     * 
+     * @param Id an integer representing the Id of the user whose account is 
+     * being deactivated 
+     */
+     public static void deactivateUser(int Id){
+        try {
+            UniversityDBLibrary.deactivateUser(Id);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+     }
+     
+    /**
+     * When called, this method has the database change the status of the user, whose username 
+     * is specified as a parameter, to inactive. In other words, it sets user 
+     * status to 'N' instead of 'Y'. Nothing happens if an invalid username 
+     * is specified.
+     * 
+     * @param username a String containing the username of the user whose 
+     * account is being deactivated
+     */
+     public static void deactivateUser(String username){
+        try {
+            UniversityDBLibrary.deactivateUser(username);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+     }
+    
+     /**
+     * When called, this method has the database update the university record for the university 
+     * whose name is specified as a parameter, using the information provided in 
+     * the parameters. This method can update all university fields except for 
+     * the emphases which are processed separately. Nothing happens if an 
+     * invalid university name is specified.
+     * 
+     * @param school a String containing the name for the university being 
+     * updated
+     * @param state a String containing the updated state in which the 
+     * university being updated is located. Specify "-1" if the value of this 
+     * field is unknown.
+     * @param location a String specifying the updated type of area in which the 
+     * university being updated is located. Possible values are "SUBURBAN", 
+     * "URBAN" and "SMALL-CITY".  Specify "-1" if the value of this field is 
+     * unknown
+     * @param control a String specifying who controls the university  being 
+     * updated. Possible values are "PRIVATE", "STATE" and "CITY". Specify "-1" 
+     * if the value of this field is unknown
+     * @param numberOfStudents an integer representing the updated number of 
+     * students currently enrolled in the university being updated
+     * @param percentFemales a double out of 100 representing the updated 
+     * percentage of females in the student population
+     * @param SATVerbal a double out of 800 representing the updated average SAT
+     * Verbal exam score for all students currently enrolled in the university 
+     * being updated
+     * @param SATMath a double out of 800 representing the updated average SAT
+     * Math exam score for all students currently enrolled in the university 
+     * being updated
+     * @param expenses a double representing the updated annual tuition for the 
+     * university being updated
+     * @param percentFinancialAid a double out of 100 representing the updated
+     * percentage of students receiving any form sort of financial assistance 
+     * from the university being updated
+     * @param percentAdmitted a double out of 100 representing the updated 
+     * percentage of applicants who are admitted annually to the university 
+     * being updated
+     * @param percentEnrolled a double out of 100 representing the updated 
+     * percentage of admitted students who enroll in the university being 
+     * updated
+     * @param academicsScale an int between 1 and 5 (with 5 being best) 
+     * indicating the updated quality of the academics at the university being 
+     * updated
+     * @param socialScale an int between 1 and 5 (with 5 being best) 
+     * indicating the updated quality of the social life at the university being 
+     * updated
+     * @param qualityOfLifeScale an int between 1 and 5 (with 5 being best) 
+     * indicating the updated overall quality of life at the university being 
+     * updated
+      */
+     public static void editUniversity(String school, String state, String location, String control,
+            int numberOfStudents, double percentFemales, double SATVerbal, double SATMath,
+            double expenses, double percentFinancialAid, int numberOfApplicants,
+            double percentAdmitted, double percentEnrolled, int academicsScale,
+            int socialScale, int qualityOfLifeScale){
+        try {
+            UniversityDBLibrary.editUniversity(school, state, location, control, numberOfStudents, percentFemales, SATVerbal, SATMath, expenses, percentFinancialAid, numberOfApplicants, percentAdmitted, percentEnrolled, academicsScale, socialScale, qualityOfLifeScale);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+     }
+     
+    /**
+     * When called, this method has the database delete all the old emphasis areas for the 
+     * specified school from the database and replaces them with the ones 
+     * specified in the ArrayList parameter. Nothing happens if an invalid 
+     * school name is specified.
+     * 
+     * @param school a String containing the name of the school for which the 
+     * emphasis areas are being added
+     * @param emphases an ArrayList<String> containing the new emphases to be 
+     * added to the specified school in place of the old ones
+      */
+     public static void editUniversityEmphases(String school, ArrayList<String> emphases){
+        try {
+            UniversityDBLibrary.editUniversityEmphases(school, emphases);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+     }
+     
+    /**
+     * When called, this method has the database update the record of the user, whose username 
+     * is specified as a parameter, using the information provided in the 
+     * parameters. The user fields that can be modified are: first name, last 
+     * name and password. This method will not modify the rest of the fields in 
+     * the user's record. Nothing happens if an invalid username is specified.
+     * 
+     * @param username a String containing the username of the user whose 
+     * account is being modified 
+     * @param firstName a String containing the new first name for the user
+     * @param lastName a String containing the new last name for the  user
+     * @param password a String containing the new password for the user
+      */
+     public static void editUser(String username, String firstName, String lastName, String password){
+        try {
+            UniversityDBLibrary.editUser(username, firstName, lastName, password);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+     }
+    /**
+     * When called by an administrator, this method has the database update the record of the 
+     * user, whose username is specified as a parameter, using the information 
+     * provided in the parameters. The user fields that can be modified are: 
+     * first name, last name, password, type, and status. Nothing happens if an 
+     * invalid username is specified.
+     * 
+     * @param Id a Integer of the user
+     * account is being modified 
+     * @param firstName a String containing the new first name for the user
+     * @param lastName a String containing the new last name for the  user
+     * @param password a String containing the new password for the user
+     * @param type a char which should be either 'a' for administrators or 'u' 
+     * for regular users       
+     * @param status a char which should be either 'Y' for active accounts or 
+     * 'N' for inactive accounts
+      */
+     public static void editUserByAdmin(int ID, String firstName, String lastName, String password, char type, char status){
+        try {
+            UniversityDBLibrary.editUserByAdmin(ID, firstName, lastName, password, type, status);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+     }
+     
+     /**
+     * When called by an administrator, this method has the database update the record of the 
+     * user, whose username is specified as a parameter, using the information 
+     * provided in the parameters. The user fields that can be modified are: 
+     * first name, last name, password, type, and status. Nothing happens if an 
+     * invalid username is specified.
+     * 
+     * @param username a String containing the username of the user whose 
+     * account is being modified 
+     * @param firstName a String containing the new first name for the user
+     * @param lastName a String containing the new last name for the  user
+     * @param password a String containing the new password for the user
+     * @param type a char which should be either 'a' for administrators or 'u' 
+     * for regular users       
+     * @param status a char which should be either 'Y' for active accounts or 
+     * 'N' for inactive accounts
+      */
+     public static void editUserByAdmin(String username, String firstName, String lastName, String password, char type, char status){
+        try {
+            UniversityDBLibrary.editUserByAdmin(username, firstName, lastName, password, type, status);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+     }
+     
+//     public void editUserByAdmin(int Id, String firstName, String lastName, String password){
+//         UniversityDBLibrary.editUserByAdmin(Id, firstName, lastName, password, type, status);
+//     }
+     
+     /**
+      * When called, this method returns an ArrayLsit of Strings containing all 
+      * possible university emphases that occur in the database. Every array row 
+      * contains a single field storing an occurring emphasis. Duplicate emphases 
+      * are eliminated.
+      * @return Returns an ArrayList of Strings containing all the possible Emphases choices
+      */
+     public static ArrayList<String> getAllPossibleEmphases(){
+        ArrayList<String> emphasesArray = new ArrayList<String>();
+        String[][]temp = null;
+        try {
+            temp = UniversityDBLibrary.getAllPossibleEmphases();
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        for(int k = 0; k < temp.length; k++){
+            emphasesArray.add(temp[k][0]);
+           
+        }
+        return emphasesArray;     
+     }
+     
+    /**
+     * When called, this method returns a TreeMap of Integers and an ArrayList
+     * of Strings containing all user Ids along with their saved schools in the 
+     * database. Users with multiple saved schools will have their schools
+     * in an ArrayList corresponding to the Ids. Users with no saved schools 
+     * will not be included in the TreeMap.
+     * @return Returns a TreeMap with each person's ID number corresponding to an ArrayList of University Names
+     */
+     public static TreeMap<Integer, ArrayList<String>> getAllSavedSchools(){
+        TreeMap<Integer, ArrayList<String>> savedSchoolMap = new TreeMap(); 
+        ArrayList<String> valueMap = new ArrayList<String>();
+        String[][]temp = null;
+        try {
+            temp = UniversityDBLibrary.getAllSavedSchools();
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        int temp2 = new Integer(temp[0][0]); //gets the ID of the first entry
+        for(int i = 0; i < temp.length; i++){
+            
+            if(temp2 != new Integer(temp[i][0])){ //compares the next ID with the previous one
+               valueMap = new ArrayList<String>(); //clears the ArrayList if we have begun a new person
+            }
+            
+            temp2 = new Integer(temp[i][0]);
+            for(int j = 0; j < temp[i].length; j=j+2){
+                valueMap.add(temp[i][j+1]);
+                savedSchoolMap.put(new Integer(temp[i][j]), valueMap);
+           }
+        }         
+        return savedSchoolMap;    
+     }
+    
+    /**
+     * When called, this method returns an ArrayList of Universities containing all 
+     * universities in the database. Every University is made up of the 
+     * following fields: School String 
+     * (must be unique among universities), State String, Location String, 
+     * Control String, NumberOfStudents int, PercentFemales double (between 0 
+     * and 100), SATVerbal double (up to 800), SATMath double (up to 800), 
+     * Expenses double, PercentFinancialAid double (between 0 and 100), 
+     * NumberOfApplicants int, PercentAdmitted double (between 0 and 100), 
+     * PercentEnrolled double (between 0 and 100), AcademicsScale int (between 
+     * 1 and 5 where is best), SocialScale int (between 1 and 5 where is best), 
+     * QualityOfLifeScale int (between 1 and 5 where is best).
+     * * Please note that some universities have missing field information which 
+     * have been indicated by the String "-1" for String fields and the number 
+     * -1 for number fields.
+     * @return Returns an ArrayList of all possible Universities
+     */
+     public static ArrayList<University> getAllUniversities(){
+        ArrayList<University> allUniversities = new ArrayList<University>();
+        String[][]temp = null;
+        try {
+            temp = UniversityDBLibrary.getAllUniversities();
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        for(int i = 0; i < temp.length; i++){
+            String tempA = temp[i][0];
+            String tempB = temp[i][1];
+            String tempC = temp[i][2];
+            String tempD = temp[i][3];
+            int tempE = new Integer(temp[i][4]);
+            double tempF= new Double(temp[i][5]);
+            double tempG = new Double(temp[i][6]);
+            double tempH = new Double(temp[i][7]);
+            double tempI = new Double(temp[i][8]);
+            double tempJ = new Double(temp[i][9]);
+            int tempK = new Integer(temp[i][10]);
+            double tempL = new Double(temp[i][11]);
+            double tempM = new Double(temp[i][12]);
+            int tempN = new Integer(temp[i][13]);
+            int tempO = new Integer(temp[i][14]);
+            int tempP = new Integer(temp[i][15]);
+            University tempU = new University(tempA, tempB, tempC, tempD, tempE, tempF, tempG, tempH, tempI, tempJ, tempK, tempL, tempM, tempN, tempO, tempP);
+            allUniversities.add(tempU);
+            }
+        TreeMap<String, ArrayList<String>> emph = getAllUniversityNamesWithEmphases();
+        for(University addE: allUniversities){
+            addE.setEmphases(emph.get(addE.getSchool()));
+        }
+        
+         return allUniversities; 
+     }
+      /**
+     * When called, this method returns a TreeMap of Strings and an ArrayList
+     * of Strings containing all 
+     * university names along with their emphases in the database. 
+     * Universities with multiple emphases will have their names once in the
+     * TreeMap and their corresponding ArrayList will contain the  different emphasis. 
+     * Universities with no emphases will not be included in the output.
+      * @return Returns a TreeMap of University Names associated with an ArrayList of that school's emphases.
+      */
+     public static TreeMap<String, ArrayList<String>> getAllUniversityNamesWithEmphases(){
+        TreeMap<String, ArrayList<String>> universityEmphases = new TreeMap(); 
+        ArrayList<String> valueMap = new ArrayList<String>();
+        String[][]temp = null;
+        try {
+            temp = UniversityDBLibrary.getAllUniversityNamesWithEmphases();
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        String temp2 = temp[0][0]; //gets the name of the first entry
+        for(int i = 0; i < temp.length; i++){
+            
+            if(!temp2.equals(temp[i][0])){ //compares the next ID with the previous one
+               valueMap = new ArrayList<String>(); //clears the ArrayList if we have begun a new person
+            }
+            
+            temp2 = temp[i][0];
+            for(int j = 0; j < temp[i].length; j=j+2){
+                valueMap.add(temp[i][j+1]);
+                universityEmphases.put(temp[i][j], valueMap);
+           }
+        }
+        return universityEmphases; 
+     }
+//     public static TreeMap getAllUniversityRecordsWithEmphases(){
+//         return null; 
+//     }
+    /**
+     * When called, this method returns an ArrayList of Users containing all 
+     * users in the database. Every User 
+     * is made up of the following fields: Id int (a new unique number is 
+     * assigned for every user), FirstName String, LastName String, Username 
+     * String (must be unique among users), Password String, Type char (can be 
+     * either 'a' for administrators or 'u' for regular users), Status char (can 
+     * be either 'Y' for active accounts or 'N' inactive ones). 
+     * @return Returns an ArrayList of all of the Users
+     */
+     public static ArrayList<User> getAllUsers(){
+        ArrayList<User> allUsers = new ArrayList<User>();
+        String[][]temp = null;
+        try {
+            temp = UniversityDBLibrary.getAllUsers();
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        for(int i = 0; i < temp.length; i++){
+            //int tempA = new Integer(temp[i][0]); do not need the ID number
+            String tempB = temp[i][1];
+            String tempC = temp[i][2];
+            String tempD = temp[i][3];
+            String tempE = temp[i][4];
+            char tempF= temp[i][5].charAt(0);
+            //String tempG = temp[i][6]; do not need ACTIVE? for the constructor
+            User tempU = new User(tempB, tempC, tempD, tempE, tempF);
+            allUsers.add(tempU);
+        }
+        return allUsers; 
+     }
+     /**
+      * 
+      * @param Id
+      * @return Returns an instance of a User matching the corresponding ID number
+      */
+     public static User getSpecificUser(int Id){
+        String[][]temp = null;
+        try {
+            temp = UniversityDBLibrary.getSpecificUser(Id);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        //int tempA = new Integer(temp[0][0]); do not need the ID number
+        String tempB = temp[0][1];
+        String tempC = temp[0][2];
+        String tempD = temp[0][3];
+        String tempE = temp[0][4];
+        char tempF= temp[0][5].charAt(0);
+        //String tempG = temp[0][6]; do not need ACTIVE? for the constructor
+        User tempU = new User(tempB, tempC, tempD, tempE, tempF);
+        return tempU;
+     }
+    /**
+     * When called, this method returns a User containing the 
+     * User whose Username is specified as a parameter.
+     * 
+     * @param username a String containing the Username of the desired user
+     * @return Returns an instance of a User matching the corresponding username
+     */
+     public static User getSpecificUser(String username){
+         String[][]temp = null;
+        try {
+            temp = UniversityDBLibrary.getSpecificUser(username);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        //int tempA = new Integer(temp[0][0]); do not need the ID number
+        String tempB = temp[0][1];
+        String tempC = temp[0][2];
+        String tempD = temp[0][3];
+        String tempE = temp[0][4];
+        char tempF= temp[0][5].charAt(0);
+        //String tempG = temp[0][6]; do not need ACTIVE? for the constructor
+        User tempU = new User(tempB, tempC, tempD, tempE, tempF);
+        return tempU;
+     }
+     
+    /**
+     * When called, this method asks the Database to remove the specified school from the  user's 
+     * list of saved schools. Nothing happens if an invalid user Id is specified 
+     * or if the specified school is not already in user's list of saved schools
+     * 
+     * @param Id an int representing the user for whom the specified school is 
+     * being removed
+     * @param school a String containing the school to be removed from the 
+     * user's list of saved schools
+     */
+     public static void removeUserSchool(int Id, String school){
+        try {
+            UniversityDBLibrary.removeUserSchool(Id, school);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+     }
+     
+     /**
+      * This is the main method for the DatabaseController class
+      * @param args
+      */
+     public static void main(String args[]){
+       //new DatabaseController();
+    }
+    
+    //Database method unused so far: getSpecificUniversityRecordWithEmphases(String university)
+    //Database method unused so far: getSavedSchools(int Id)
+    
+//     for(int i = 0; i < temp.length; i++){
+//             for(int j = 0; j < temp[i].length; j++){
+//                 System.out.println(i + "," + j + "|" + temp[i][j]);
+//             }
+//         }
+    
+    
+    
+}

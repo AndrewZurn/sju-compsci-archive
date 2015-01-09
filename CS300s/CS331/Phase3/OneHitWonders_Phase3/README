@@ -1,0 +1,7 @@
+Imad, please for the sake of all that is good, please put extract me into your Desktop! Otherwise you risk everything that is good!
+
+You will want to run the setupDatabase.sql to load up all the proper tables, views, triggers, procedures, functions, events, and data into our schema.
+
+I should look like this when run from the source command of mysql.
+
+source ~/Desktop/OneHitWonders_Phase3/setupDatabase.sql

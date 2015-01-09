@@ -1,0 +1,105 @@
+EXERCISE 1C
+[netlab@PC1 ~]$ /sbin/ip addr show
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN 
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: p1p1: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN qlen 1000
+    link/ether 00:90:27:aa:ae:6f brd ff:ff:ff:ff:ff:ff
+3: em1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+    link/ether 00:24:81:11:30:e9 brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::224:81ff:fe11:30e9/64 scope link 
+       valid_lft forever preferred_lft forever
+
+
+EXERCISE 1D
+[root@PC1 ~]# ping -c 3 10.0.1.12
+PING 10.0.1.12 (10.0.1.12) 56(84) bytes of data.
+64 bytes from 10.0.1.12: icmp_req=1 ttl=64 time=0.599 ms
+64 bytes from 10.0.1.12: icmp_req=2 ttl=64 time=0.484 ms
+64 bytes from 10.0.1.12: icmp_req=3 ttl=64 time=0.518 ms
+
+--- 10.0.1.12 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 1999ms
+rtt min/avg/max/mdev = 0.484/0.533/0.599/0.055 ms
+[root@PC1 ~]# ping -c 3 10.0.1.13
+PING 10.0.1.13 (10.0.1.13) 56(84) bytes of data.
+64 bytes from 10.0.1.13: icmp_req=1 ttl=64 time=1.02 ms
+64 bytes from 10.0.1.13: icmp_req=2 ttl=64 time=0.379 ms
+64 bytes from 10.0.1.13: icmp_req=3 ttl=64 time=0.537 ms
+
+--- 10.0.1.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2000ms
+rtt min/avg/max/mdev = 0.379/0.646/1.024/0.276 ms
+[root@PC1 ~]# ping -c 3 10.0.1.14
+PING 10.0.1.14 (10.0.1.14) 56(84) bytes of data.
+64 bytes from 10.0.1.14: icmp_req=1 ttl=64 time=0.966 ms
+64 bytes from 10.0.1.14: icmp_req=2 ttl=64 time=0.516 ms
+64 bytes from 10.0.1.14: icmp_req=3 ttl=64 time=0.520 ms
+
+--- 10.0.1.14 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2000ms
+rtt min/avg/max/mdev = 0.516/0.667/0.966/0.212 ms
+
+
+EXERCISE 1E
+[root@PC1 ~]# ping -c 5 10.0.1.11
+PING 10.0.1.11 (10.0.1.11) 56(84) bytes of data.
+64 bytes from 10.0.1.11: icmp_req=1 ttl=64 time=0.030 ms
+64 bytes from 10.0.1.11: icmp_req=2 ttl=64 time=0.014 ms
+64 bytes from 10.0.1.11: icmp_req=3 ttl=64 time=0.022 ms
+64 bytes from 10.0.1.11: icmp_req=4 ttl=64 time=0.016 ms
+64 bytes from 10.0.1.11: icmp_req=5 ttl=64 time=0.017 ms
+
+--- 10.0.1.11 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 3999ms
+rtt min/avg/max/mdev = 0.014/0.019/0.030/0.008 ms
+[root@PC1 ~]# 
+[root@PC1 ~]# ping -c 5 127.0.0.1
+PING 127.0.0.1 (127.0.0.1) 56(84) bytes of data.
+64 bytes from 127.0.0.1: icmp_req=1 ttl=64 time=0.029 ms
+64 bytes from 127.0.0.1: icmp_req=2 ttl=64 time=0.023 ms
+64 bytes from 127.0.0.1: icmp_req=3 ttl=64 time=0.016 ms
+64 bytes from 127.0.0.1: icmp_req=4 ttl=64 time=0.014 ms
+64 bytes from 127.0.0.1: icmp_req=5 ttl=64 time=0.015 ms
+
+--- 127.0.0.1 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 3999ms
+rtt min/avg/max/mdev = 0.014/0.019/0.029/0.007 ms
+
+
+EXERCISE 2A
+[root@PC1 ~]# tcpdump -n host 10.0.1.12
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on em1, link-type EN10MB (Ethernet), capture size 65535 bytes
+03:37:32.487977 ARP, Request who-has 10.0.1.12 tell 10.0.1.11, length 28
+03:37:32.488530 ARP, Reply 10.0.1.12 is-at 00:24:81:c4:b4:32, length 46
+03:37:32.488536 IP 10.0.1.11 > 10.0.1.12: ICMP echo request, id 1801, seq 1, length 64
+03:37:32.489086 IP 10.0.1.12 > 10.0.1.11: ICMP echo reply, id 1801, seq 1, length 64
+03:37:37.491536 ARP, Request who-has 10.0.1.11 tell 10.0.1.12, length 46
+03:37:37.491549 ARP, Reply 10.0.1.11 is-at 00:24:81:11:30:e9, length 28
+^C
+6 packets captured
+6 packets received by filter
+0 packets dropped by kernel
+
+
+EXERCISE 2B
+[netlab@PC1 ~]$ ping -c 2 -b 10.0.1.255
+WARNING: pinging broadcast address
+PING 10.0.1.255 (10.0.1.255) 56(84) bytes of data.
+
+--- 10.0.1.255 ping statistics ---
+2 packets transmitted, 0 received, 100% packet loss, time 999ms
+
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on em1, link-type EN10MB (Ethernet), capture size 65535 bytes
+03:42:35.766122 IP 10.0.1.11 > 10.0.1.255: ICMP echo request, id 1813, seq 1, length 64
+03:42:36.765720 IP 10.0.1.11 > 10.0.1.255: ICMP echo request, id 1813, seq 2, length 64
+^C
+2 packets captured
+2 packets received by filter
+0 packets dropped by kernel
+
+

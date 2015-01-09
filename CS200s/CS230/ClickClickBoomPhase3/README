@@ -1,0 +1,16 @@
+The test suite is a class with all of the other tests named ProjectTestSuite.java and can be run like any other file.
+It will call upon:
+
+AdminTest.class
+DatabaseControllerTest.class
+FiveRecSchoolsControllerTest.class
+PersonTest.class
+SearchControllerTest.class
+UniversityTest.class
+UseCasesTest.class
+UserControllerTest.class
+UserTest.class
+
+and will run the test for each one.
+
+The functional testing class is also with all of the other tests and is named UseCasesTest.java can be run like any test class.

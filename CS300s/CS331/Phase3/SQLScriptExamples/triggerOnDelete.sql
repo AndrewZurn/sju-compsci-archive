@@ -1,0 +1,10 @@
+drop trigger IF EXISTS UPDATE_DEPTS_INFO_DELETE;
+delimiter &&
+CREATE TRIGGER UPDATE_DEPTS_INFO_DELETE 
+	AFTER DELETE ON employee
+	For Each Row
+		Begin 
+		UPDATE DEPTS_INFO SET NO_OF_EMPS=NO_OF_EMPS -1,TOTAL_SAL = TOTAL_SAL-OLD.salary 
+			where DEPT_NUM=OLD.dno;
+		End &&
+delimiter ;

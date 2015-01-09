@@ -1,0 +1,85 @@
+   0  $accept : s $end
+
+   1  s : A s B
+   2    | p
+
+   3  p : B p END
+   4    | B
+
+state 0
+	$accept : . s $end  (0)
+
+	A  shift 1
+	B  shift 2
+	.  error
+
+	s  goto 3
+	p  goto 4
+
+
+state 1
+	s : A . s B  (1)
+
+	A  shift 1
+	B  shift 2
+	.  error
+
+	s  goto 5
+	p  goto 4
+
+
+2: shift/reduce conflict (shift 2, reduce 4) on B
+state 2
+	p : B . p END  (3)
+	p : B .  (4)
+
+	B  shift 2
+	$end  reduce 4
+	END  reduce 4
+
+	p  goto 6
+
+
+state 3
+	$accept : s . $end  (0)
+
+	$end  accept
+
+
+state 4
+	s : p .  (2)
+
+	.  reduce 2
+
+
+state 5
+	s : A s . B  (1)
+
+	B  shift 7
+	.  error
+
+
+state 6
+	p : B p . END  (3)
+
+	END  shift 8
+	.  error
+
+
+state 7
+	s : A s B .  (1)
+
+	.  reduce 1
+
+
+state 8
+	p : B p END .  (3)
+
+	.  reduce 3
+
+
+State 2 contains 1 shift/reduce conflict.
+
+
+6 terminals, 3 nonterminals
+5 grammar rules, 9 states

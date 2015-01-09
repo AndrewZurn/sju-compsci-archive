@@ -1,0 +1,55 @@
+-- Query 1
+
+-- Query 2
+-- SELECT 'Query 2', c.CUSTOMER_NUMBER, c.LAST, c.First, c.BALANCE, c.SLSREP_NUMBER
+-- FROM CUSTOMER AS c
+-- WHERE c.SLSREP_NUMBER <> 12 AND
+--	c.BALANCE > ANY (SELECT c2.BALANCE
+--		         FROM CUSTOMER as c2
+--		         WHERE c2.SLSREP_NUMBER = 12); 
+
+-- Query 3
+
+-- Query 4
+
+-- Query 5
+-- SELECT 'Query 5', c.CUSTOMER_NUMBER, c.LAST, c.First
+-- FROM CUSTOMER as c
+-- WHERE SLSREP_NUMBER = 12
+-- UNION
+-- SELECT 'Query 5', c.CUSTOMER_NUMBER, c.LAST, c.First
+-- FROM CUSTOMER as c
+-- WHERE NOT EXISTS (SELECT *
+--		  FROM TRANS as t
+--		  WHERE c.CUSTOMER_NUMBER = t.CUSTOMER_NUMBER);
+
+-- Query 6
+
+-- Query 7
+
+-- Query 8
+-- SELECT 'Query 8', c.CUSTOMER_NUMBER, c.LAST, c.First
+-- FROM CUSTOMER as c, TRANS_PART as tp, TRANS as t, PART as p
+-- WHERE c.CUSTOMER_NUMBER = t.CUSTOMER_NUMBER AND tp.TRANS_NUMBER = t.TRANS_NUMBER
+--  AND tp.PART_NUMBER = p.PART_NUMBER AND p.UNIT_PRICE < 20;
+
+-- Query 9
+
+-- Query 10
+
+-- Query 11  (CHECK THIS TO MAKE SURE IT IS RIGHT!!!)
+-- SELECT 'Query 11', SUM(tp.NUMBER_ORDERED) as TOTAL_QUANTITY_SOLD
+-- FROM TRANS as t, TRANS_PART as tp
+-- WHERE t.TRANS_NUMBER = tp.TRANS_NUMBER AND
+--  t.TRANS_DATE >= '2002-09-01' AND t.TRANS_DATE <= '2002-09-30';
+
+-- Query 12
+
+-- Query 13
+
+-- Query 14
+-- SELECT 'Query 14', p.PART_NUMBER, p.PART_DESCRIPTION, t.TRANS_NUMBER
+-- FROM PART as p LEFT OUTER JOIN TRANS_PART as t
+-- ON (p.PART_NUMBER = t.PART_NUMBER);
+
+-- Query 15

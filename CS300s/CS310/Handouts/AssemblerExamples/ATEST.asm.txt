@@ -1,0 +1,17 @@
+DATA
+	#This program reads in a number and, then, prints out the numbers
+	# from 2 to that number that do not evenly divide that number. In
+	# other words, it prints out the non-factors.
+PROGRAM
+	READ R2
+	IMLO R3 2
+condition 	SUB SCR R2 R3
+		BRNG pastLoop
+		BRZR pastLoop
+		REM SCR R2 R3
+		BRZR pastIf
+			WRITE R3
+pastIf		ADD R3 R3 ONE
+	JUMP condition
+pastLoop HALT
+END

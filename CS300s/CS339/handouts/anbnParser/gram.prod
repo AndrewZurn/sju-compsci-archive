@@ -1,0 +1,7 @@
+s		: p END		{printf("S -> P END\n");}
+		| END
+		;
+p		: A p B		{printf("P -> a P b\n");}
+		| A B		{printf("P -> a b\n");}
+		;
+%%

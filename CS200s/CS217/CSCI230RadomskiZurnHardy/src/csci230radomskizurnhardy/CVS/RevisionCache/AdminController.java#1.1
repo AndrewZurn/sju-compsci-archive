@@ -1,0 +1,33 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package csci230radomskizurnhardy;
+
+/**
+ *
+ * @author awzurn
+ */
+public class AdminController {
+    private Admin admin;
+    //private DatabaseController databaseController;
+    
+    public AdminController(Admin admin/*, DatabaseController databaseController*/){
+        this.admin = admin;
+        //this.databaseController = databaseController;
+    }
+    
+    public boolean addUniversity(String school, String state, String location, String control,
+            int numberOfStudents, double percentFemales, double SATVerbal, double SATMath,
+            double expenses, double percentFinancialAid, int numberOfApplicants,
+            double percentAdmitted, double percentEnrolled, int academicsScale,
+            int socialScale, int qualityOfLifeScale){
+        
+        /*boolean reply = databaseController.addUniversity(String school, String state, String location, String control,
+            int numberOfStudents, double percentFemales, double SATVerbal, double SATMath,
+            double expenses, double percentFinancialAid, int numberOfApplicants,
+            double percentAdmitted, double percentEnrolled, int academicsScale,
+            int socialScale, int qualityOfLifeScale);*/
+        return true;
+    }
+}

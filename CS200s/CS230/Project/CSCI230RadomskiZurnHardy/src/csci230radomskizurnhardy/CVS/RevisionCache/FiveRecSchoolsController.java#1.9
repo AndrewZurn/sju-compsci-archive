@@ -1,0 +1,420 @@
+package csci230radomskizurnhardy;
+
+import java.util.ArrayList;
+import java.util.TreeSet;
+
+/**
+ * A class that will find the five closest school in similarity to a school
+ * provided by the user. These schools will be added to an ArrayList<University>
+ * and returned to the user.
+ *
+ * @author Andrew Zurn, Wiley Radomski, Preston Hardy
+ * @version 1.0
+ * @since March 24, 2012
+ */
+public class FiveRecSchoolsController {
+
+    /**
+     * The university to be compared against.
+     */
+    private University u;
+    /**
+     * A list of all universities given by the database.
+     */
+    private ArrayList<University> allU = DatabaseController.getAllUniversities();
+    /**
+     * Used to hold the scores of each university when compared against the one
+     * given by the user.
+     */
+    private ArrayList<Double> allScore = new ArrayList<Double>();
+    /**
+     * Used as an upper bound in the search.
+     */
+    private Double lowestNumStudents = 1000000.0;
+    /**
+     * Used as an lower bound in the search.
+     */
+    private Double highestNumStudents = 0.0;
+    /**
+     * Used as an upper bound in the search.
+     */
+    private Double lowestPercentFemale = 100.0;
+    /**
+     * Used as an lower bound in the search.
+     */
+    private Double highestPercentFemale = 0.0;
+    /**
+     * Used as an upper bound in the search.
+     */
+    private Double lowestSATVerbal = 2400.0;
+    /**
+     * Used as an lower bound in the search.
+     */
+    private Double highestSATVerbal = 0.0;
+    /**
+     * Used as an upper bound in the search.
+     */
+    private Double lowestSATMath = 2400.0;
+    /**
+     * Used as an lower bound in the search.
+     */
+    private Double highestSATMath = 0.0;
+    /**
+     * Used as an upper bound in the search.
+     */
+    private Double lowestExpenses = 1000000.0;
+    /**
+     * Used as an lower bound in the search.
+     */
+    private Double highestExpenses = 0.0;
+    /**
+     * Used as an upper bound in the search.
+     */
+    private Double lowestFinancialAid = 100.0;
+    /**
+     * Used as an lower bound in the search.
+     */
+    private Double highestFinancialAid = 0.0;
+    /**
+     * Used as an upper bound in the search.
+     */
+    private Double lowestlNumApplicants = 1000000.0;
+    /**
+     * Used as an lower bound in the search.
+     */
+    private Double highestNumApplicants = 0.0;
+    /**
+     * Used as an upper bound in the search.
+     */
+    private Double lowestPercentAdmitted = 100.0;
+    /**
+     * Used as an lower bound in the search.
+     */
+    private Double highestPercentAdmitted = 0.0;
+    /**
+     * Used as an upper bound in the search.
+     */
+    private Double lowestPercentEnrolled = 100.0;
+    /**
+     * Used as an lower bound in the search.
+     */
+    private Double highestPercentEnrolled = 0.0;
+    /**
+     * The closest university to the one compared against.
+     */
+    private University a;
+    /**
+     * The 2nd closest university to the one compared against.
+     */
+    private University b;
+    /**
+     * The 3rd closest university to the one compared against.
+     */
+    private University c;
+    /**
+     * The 4th closest university to the one compared against.
+     */
+    private University d;
+    /**
+     * The 5th closest university to the one compared against.
+     */
+    private University e;
+    /**
+     * The array list that will be returned to the user containing the five most
+     * similar schools to the one compared against.
+     */
+    private ArrayList<University> fiveMatches = new ArrayList<University>();
+
+    /**
+     * Creates a controller that finds the five closest schools in similarity to
+     * the schools u that is given by the user.
+     *
+     * @param u The university to be compared against and found similar schools
+     * to.
+     */
+    public FiveRecSchoolsController(University u) {
+        this.u = u;
+        setMinAndMax();
+        findDifference();
+        findFiveClosest();
+    }
+
+    /**
+     * Used to set comparative values in the case that the numbers received are
+     * null.
+     */
+    private void setMinAndMax() {
+
+        for (University school : allU) {
+            Double temp = new Double(school.getNumberOfStudents());
+            if (temp != -1 && temp < lowestNumStudents) {
+                lowestNumStudents = temp;
+            }
+            if (temp != -1 && temp > highestNumStudents) {
+                highestNumStudents = temp;
+            }
+
+            temp = new Double(school.getPercentFemales());
+            if (temp != -1 && temp < lowestPercentFemale) {
+                lowestPercentFemale = temp;
+            }
+            if (temp != -1 && temp > highestPercentFemale) {
+                highestPercentFemale = temp;
+            }
+
+            temp = new Double(school.getSATVerbal());
+            if (temp != -1 && temp < lowestSATVerbal) {
+                lowestSATVerbal = temp;
+            }
+            if (temp != -1 && temp > highestSATVerbal) {
+                highestSATVerbal = temp;
+            }
+
+            temp = new Double(school.getSATMath());
+            if (temp != -1 && temp < lowestSATMath) {
+                lowestSATMath = temp;
+            }
+            if (temp != -1 && temp > highestSATMath) {
+                highestSATMath = temp;
+            }
+
+            temp = new Double(school.getExpenses());
+            if (temp != -1 && temp < lowestExpenses) {
+                lowestExpenses = temp;
+            }
+            if (temp != -1 && temp > highestExpenses) {
+                highestExpenses = temp;
+            }
+
+            temp = new Double(school.getPercentFinancialAid());
+            if (temp != -1 && temp < lowestFinancialAid) {
+                lowestFinancialAid = temp;
+            }
+            if (temp != -1 && temp > highestFinancialAid) {
+                highestFinancialAid = temp;
+            }
+
+            temp = new Double(school.getNumberOfApplicants());
+            if (temp != -1 && temp < lowestlNumApplicants) {
+                lowestlNumApplicants = temp;
+            }
+            if (temp != -1 && temp > highestNumApplicants) {
+                highestNumApplicants = temp;
+            }
+
+            temp = new Double(school.getPercentAdmitted());
+            if (temp != -1 && temp < lowestPercentAdmitted) {
+                lowestPercentAdmitted = temp;
+            }
+            if (temp != -1 && temp > highestPercentAdmitted) {
+                highestPercentAdmitted = temp;
+            }
+
+            temp = new Double(school.getPercentEnrolled());
+            if (temp != -1 && temp < lowestPercentEnrolled) {
+                lowestPercentEnrolled = temp;
+            }
+            if (temp != -1 && temp > highestPercentEnrolled) {
+                highestPercentEnrolled = temp;
+            }
+
+            //System.out.println(school.getSchool() + "|" + highestNumStudents);
+        }
+    }
+
+    /**
+     * Computes the distance each school is from the wanted school, and assigns
+     * a value to each of those schools.
+     */
+    private void findDifference() {
+        for (University candidate : allU) {
+            Double distance = 0.0;
+            if (!u.getState().equals(candidate.getState())) {
+                distance++;
+            }
+
+            if (!u.getLocation().equals(candidate.getLocation())) {
+                distance++;
+            }
+
+            if (!u.getControl().equals(candidate.getControl())) {
+                distance++;
+            }
+
+            Double numStudentsU = new Double(u.getNumberOfStudents());
+            Double numStudentsC = new Double(candidate.getNumberOfStudents());
+            if (numStudentsU != -1 && numStudentsC != -1) {
+                distance = distance + Math.abs(numStudentsU - numStudentsC) / (highestNumStudents - lowestNumStudents);
+            } else {
+                distance = distance + 0.5;
+            }
+
+            Double percentFemaleU = new Double(u.getPercentFemales());
+            Double percentFemaleC = new Double(candidate.getPercentFemales());
+            if (percentFemaleU != -1 && percentFemaleC != -1) {
+                distance = distance + Math.abs(percentFemaleU - percentFemaleC) / (highestPercentFemale - lowestPercentFemale);
+            } else {
+                distance = distance + 0.5;
+            }
+
+            Double satVerbalU = new Double(u.getSATVerbal());
+            Double satVerbalC = new Double(candidate.getSATVerbal());
+            if (satVerbalU != -1 && satVerbalC != -1) {
+                distance = distance + Math.abs(satVerbalU - satVerbalC) / (highestSATVerbal - lowestSATVerbal);
+            } else {
+                distance = distance + 0.5;
+            }
+
+            Double satMathU = new Double(u.getSATMath());
+            Double satMathC = new Double(candidate.getSATMath());
+            if (satMathU != -1 && satMathC != -1) {
+                distance = distance + Math.abs(satMathU - satMathC) / (highestSATMath - lowestSATMath);
+            } else {
+                distance = distance + 0.5;
+            }
+
+            Double expensesU = new Double(u.getExpenses());
+            Double expensesC = new Double(candidate.getExpenses());
+            if (expensesU != -1 && expensesC != -1) {
+                distance = distance + Math.abs(expensesU - expensesC) / (highestExpenses - lowestExpenses);
+            } else {
+                distance = distance + 0.5;
+            }
+
+            Double finAidU = new Double(u.getPercentFinancialAid());
+            Double finAidC = new Double(candidate.getPercentFinancialAid());
+            if (finAidU != -1 && finAidC != -1) {
+                distance = distance + Math.abs(finAidU - finAidC) / (highestFinancialAid - lowestFinancialAid);
+            } else {
+                distance = distance + 0.5;
+            }
+
+            Double numAppsU = new Double(u.getNumberOfApplicants());
+            Double numAppsC = new Double(candidate.getNumberOfApplicants());
+            if (numAppsU != -1 && numAppsC != -1) {
+                distance = distance + Math.abs(numAppsU - numAppsC) / (highestNumApplicants - lowestlNumApplicants);
+            } else {
+                distance = distance + 0.5;
+            }
+
+            Double percentAdmittedU = new Double(u.getPercentAdmitted());
+            Double percentAdmittedC = new Double(candidate.getPercentAdmitted());
+            if (percentAdmittedU != -1 && percentAdmittedC != -1) {
+                distance = distance + Math.abs(percentAdmittedU - percentAdmittedC) / (highestPercentAdmitted - lowestPercentAdmitted);
+            } else {
+                distance = distance + 0.5;
+            }
+
+            Double percentEnrolledU = new Double(u.getPercentEnrolled());
+            Double percentEnrolledC = new Double(candidate.getPercentEnrolled());
+            if (percentEnrolledU != -1 && percentEnrolledC != -1) {
+                distance = distance + Math.abs(percentEnrolledU - percentEnrolledC) / (highestPercentEnrolled - lowestPercentEnrolled);
+            } else {
+                distance = distance + 0.5;
+            }
+
+            Double academicScaleU = new Double(u.getAcademicsScale());
+            Double academicScaleC = new Double(candidate.getAcademicsScale());
+            if (academicScaleU != -1 && academicScaleC != -1) {
+                distance = distance + Math.abs(academicScaleU - academicScaleC) / 4.0;
+            } else {
+                distance = distance + 0.5;
+            }
+
+            Double socialScaleU = new Double(u.getSocialScale());
+            Double socialScaleC = new Double(candidate.getSocialScale());
+            if (socialScaleU != -1 && socialScaleC != -1) {
+                distance = distance + Math.abs(socialScaleU - socialScaleC) / 4.0;
+            } else {
+                distance = distance + 0.5;
+            }
+
+            Double qualityLifeScaleU = new Double(u.getQualityOfLifeScale());
+            Double qualityLifeScaleC = new Double(candidate.getQualityOfLifeScale());
+            if (qualityLifeScaleU != -1 && qualityLifeScaleC != -1) {
+                distance = distance + Math.abs(qualityLifeScaleU - qualityLifeScaleC) / 4.0;
+            } else {
+                distance = distance + 0.5;
+            }
+
+            Double emphSizeU = new Double(0.0);
+            Double emphSizeC = new Double(0.0);
+            if (u.getEmphases() != null) {
+                emphSizeU = new Double(u.getEmphases().size());
+            }
+            if (candidate.getEmphases() != null) {
+                emphSizeC = new Double(candidate.getEmphases().size());
+            }
+            Double count = 1.0;
+            if (emphSizeU != 0 && emphSizeC != 0) {
+                for (String e1 : u.getEmphases()) {
+                    for (String e2 : candidate.getEmphases()) {
+                        if (e1.equals(e2)) {
+                            count = count - 1 / (emphSizeU);
+                        }
+                    }
+                }
+                distance = distance + count;
+            } else {
+                distance = distance + 0.5;
+            }
+
+            allScore.add(distance);
+        }
+
+
+
+
+    }
+
+    /**
+     * Finds the five closest values to the searched school, and adds their
+     * corresponding university to the array list that is to be returned to the
+     * user.
+     */
+    private void findFiveClosest() {
+        TreeSet<Double> ts = new TreeSet<Double>();
+        for (Double score : allScore) {
+            ts.add(score);
+        }
+        ts.pollFirst(); //to remove the actual school from the TreeSet
+        a = allU.get(allScore.indexOf(ts.pollFirst()));
+        b = allU.get(allScore.indexOf(ts.pollFirst()));
+        c = allU.get(allScore.indexOf(ts.pollFirst()));
+        d = allU.get(allScore.indexOf(ts.pollFirst()));
+        e = allU.get(allScore.indexOf(ts.pollFirst()));
+        fiveMatches.add(a);
+        fiveMatches.add(b);
+        fiveMatches.add(c);
+        fiveMatches.add(d);
+        fiveMatches.add(e);
+
+    }
+
+    /**
+     * Returns that five closest schools to the searched school in the form of
+     * an array list.
+     *
+     * @return Array list of the five closest matches.
+     */
+    public ArrayList<University> getFiveMatches() {
+        return fiveMatches;
+
+    }
+
+    /**
+     * User to run this class from the command line.
+     *
+     * @param args The parameters passed to this class from stdin.
+     */
+    public static void main(String[] args) {
+        University univ = DatabaseController.getAllUniversities().get(0);
+        FiveRecSchoolsController frsc = new FiveRecSchoolsController(univ);
+        System.out.println("\nThe school to compare to is: " + univ + "\n");
+        System.out.println("The five most similar schools are: ");
+        for (University u : frsc.getFiveMatches()) {
+            System.out.println(u);
+        }
+        
+    }
+}

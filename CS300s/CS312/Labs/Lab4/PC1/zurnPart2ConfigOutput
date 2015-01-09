@@ -1,0 +1,247 @@
+---Config Router1----
+Router1#show interfaces                                                        
+FastEthernet0/0 is up, line protocol is up                                     
+  Hardware is AmdFE, address is 0007.8518.8260 (bia 0007.8518.8260)            
+  Internet address is 10.0.1.2/24                                              
+  MTU 1500 bytes, BW 10000 Kbit, DLY 1000 usec,                                
+     reliability 255/255, txload 1/255, rxload 1/255                           
+  Encapsulation ARPA, loopback not set                                         
+  Keepalive set (10 sec)                                                       
+  Half-duplex, 10Mb/s, 100BaseTX/FX                                            
+  ARP type: ARPA, ARP Timeout 04:00:00                                         
+  Last input never, output 00:00:09, output hang never                         
+  Last clearing of "show interface" counters never                             
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0        
+  Queueing strategy: fifo                                                      
+  Output queue: 0/40 (size/max)                                                
+  5 minute input rate 0 bits/sec, 0 packets/sec                                
+  5 minute output rate 0 bits/sec, 0 packets/sec                               
+     0 packets input, 0 bytes                                                  
+     Received 0 broadcasts, 0 runts, 0 giants, 0 throttles                     
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored                      
+     0 watchdog                                                                
+     0 input packets with dribble condition detected                           
+     106 packets output, 11516 bytes, 0 underruns                              
+     0 output errors, 0 collisions, 1 interface resets                         
+     0 babbles, 0 late collision, 0 deferred                                   
+     0 lost carrier, 0 no carrier                                              
+     0 output buffer failures, 0 output buffers swapped out                    
+Serial0/0 is administratively down, line protocol is down                      
+  Hardware is PowerQUICC Serial                                                
+  MTU 1500 bytes, BW 1544 Kbit, DLY 20000 usec,                                
+     reliability 255/255, txload 1/255, rxload 1/255                           
+  Encapsulation HDLC, loopback not set                                         
+  Keepalive set (10 sec)                                                       
+  Last input never, output never, output hang never                            
+  Last clearing of "show interface" counters never                             
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0        
+  Queueing strategy: weighted fair                                             
+  Output queue: 0/1000/64/0 (size/max total/threshold/drops)                   
+     Conversations  0/0/256 (active/max active/max total)                      
+     Reserved Conversations 0/0 (allocated/max allocated)                      
+     Available Bandwidth 1158 kilobits/sec                                     
+  5 minute input rate 0 bits/sec, 0 packets/sec                                
+  5 minute output rate 0 bits/sec, 0 packets/sec                               
+     0 packets input, 0 bytes, 0 no buffer                                     
+     Received 0 broadcasts, 0 runts, 0 giants, 0 throttles                     
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort             
+     0 packets output, 0 bytes, 0 underruns                                    
+     0 output errors, 0 collisions, 0 interface resets                         
+     0 output buffer failures, 0 output buffers swapped out                    
+     0 carrier transitions                                                     
+     DCD=down  DSR=down  DTR=down  RTS=down  CTS=down                          
+                                                                               
+FastEthernet0/1 is up, line protocol is up                                     
+  Hardware is AmdFE, address is 0007.8518.8261 (bia 0007.8518.8261)            
+  Internet address is 10.0.2.2/24                                              
+  MTU 1500 bytes, BW 10000 Kbit, DLY 1000 usec,                                
+     reliability 255/255, txload 1/255, rxload 1/255                           
+  Encapsulation ARPA, loopback not set                                         
+  Keepalive set (10 sec)                                                       
+  Half-duplex, 10Mb/s, 100BaseTX/FX                                            
+  ARP type: ARPA, ARP Timeout 04:00:00                                         
+  Last input never, output 00:00:04, output hang never                         
+  Last clearing of "show interface" counters never                             
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0        
+  Queueing strategy: fifo                                                      
+  Output queue: 0/40 (size/max)                                                
+  5 minute input rate 0 bits/sec, 0 packets/sec                                
+  5 minute output rate 0 bits/sec, 0 packets/sec                               
+     0 packets input, 0 bytes                                                  
+     Received 0 broadcasts, 0 runts, 0 giants, 0 throttles                     
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored                      
+     0 watchdog                                                                
+     0 input packets with dribble condition detected                           
+     7 packets output, 1353 bytes, 0 underruns                                 
+     0 output errors, 0 collisions, 1 interface resets                         
+     0 babbles, 0 late collision, 0 deferred                                   
+     0 lost carrier, 0 no carrier                                              
+     0 output buffer failures, 0 output buffers swapped out    
+
+
+Router1#show running-config                                                    
+Building configuration...                                                      
+                                                                               
+Current configuration : 690 bytes                                              
+!                                                                              
+version 12.2                                                                   
+service timestamps debug uptime                                                
+service timestamps log uptime                                                  
+no service password-encryption                                                 
+!                                                                              
+hostname Router1                                                               
+!                                                                              
+enable secret 5 $1$zkX4$FLviLvtl2RKLW8nBoGkYH/                                 
+enable password netlab                                                         
+!                                                                              
+ip subnet-zero                                                                 
+no ip routing                                                                  
+!                                                                              
+!                                                                              
+!                                                                              
+!                                                                              
+!                                                                              
+!                                                                              
+interface FastEthernet0/0                                                      
+ ip address 10.0.1.2 255.255.255.0                                             
+ no ip route-cache                                                             
+ no ip mroute-cache                                                            
+ speed auto                                                                    
+ half-duplex                                                                   
+!                                                                              
+interface Serial0/0                                                            
+ no ip address                                                                 
+ no ip route-cache                                                             
+ no ip mroute-cache                                                            
+ shutdown                                                                      
+!                                                                              
+interface FastEthernet0/1                                                      
+ ip address 10.0.2.2 255.255.255.0                                             
+ no ip route-cache                                                             
+ no ip mroute-cache                                                            
+ shutdown                                                                      
+ duplex auto                                                                   
+ speed auto                                                                    
+!                                                                              
+ip classless                                                                   
+ip http server                                                                 
+!                                                                              
+!                                                                              
+line con 0                                                                     
+line aux 0                                                                     
+line vty 0 4                                                                   
+ password netlab                                                               
+ login                                                                         
+!                                                                              
+end 
+
+
+router2#show interfaces                                                        
+FastEthernet0/0 is up, line protocol is up                                     
+  Hardware is AmdFE, address is 0004.dd87.2920 (bia 0004.dd87.2920)            
+  Internet address is 10.0.2.3/24                                              
+  MTU 1500 bytes, BW 10000 Kbit, DLY 1000 usec,                                
+     reliability 255/255, txload 1/255, rxload 1/255                           
+  Encapsulation ARPA, loopback not set                                         
+  Keepalive set (10 sec)                                                       
+  Half-duplex, 10Mb/s, 100BaseTX/FX                                            
+  ARP type: ARPA, ARP Timeout 04:00:00                                         
+  Last input never, output 00:00:03, output hang never                         
+  Last clearing of "show interface" counters never                             
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0        
+  Queueing strategy: fifo                                                      
+  Output queue: 0/40 (size/max)                                                
+  5 minute input rate 0 bits/sec, 0 packets/sec                                
+  5 minute output rate 0 bits/sec, 0 packets/sec                               
+     0 packets input, 0 bytes                                                  
+     Received 0 broadcasts, 0 runts, 0 giants, 0 throttles                     
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored                      
+     0 watchdog                                                                
+     0 input packets with dribble condition detected                           
+     79 packets output, 4740 bytes, 0 underruns                                
+     0 output errors, 0 collisions, 1 interface resets                         
+     0 babbles, 0 late collision, 0 deferred                                   
+     0 lost carrier, 0 no carrier                                              
+     0 output buffer failures, 0 output buffers swapped out                    
+FastEthernet0/1 is up, line protocol is down                                   
+  Hardware is AmdFE, address is 0004.dd87.2921 (bia 0004.dd87.2921)            
+  Internet address is 10.0.3.3/24                                              
+  MTU 1500 bytes, BW 100000 Kbit, DLY 100 usec,                                
+     reliability 255/255, txload 1/255, rxload 1/255                           
+  Encapsulation ARPA, loopback not set                                         
+  Keepalive set (10 sec)                                                       
+  Half-duplex, Auto Speed, 100BaseTX/FX                                        
+  ARP type: ARPA, ARP Timeout 04:00:00                                         
+  Last input never, output 00:00:05, output hang never                         
+  Last clearing of "show interface" counters never                             
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0        
+  Queueing strategy: fifo                                                      
+  Output queue: 0/40 (size/max)                                                
+  5 minute input rate 0 bits/sec, 0 packets/sec                                
+  5 minute output rate 0 bits/sec, 0 packets/sec                               
+     0 packets input, 0 bytes                                                  
+     Received 0 broadcasts, 0 runts, 0 giants, 0 throttles                     
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored                      
+     0 watchdog                                                                
+     0 input packets with dribble condition detected                           
+     4 packets output, 240 bytes, 0 underruns                                  
+     0 output errors, 0 collisions, 1 interface resets                         
+     0 babbles, 0 late collision, 0 deferred                                   
+     0 lost carrier, 0 no carrier                                              
+     0 output buffer failures, 0 output buffers swapped out   	
+
+
+Router4#show interfaces                                                        
+FastEthernet0/0 is up, line protocol is down                                   
+  Hardware is AmdFE, address is 0009.e86c.5440 (bia 0009.e86c.5440)            
+  Internet address is 10.0.3.2/24                                              
+  MTU 1500 bytes, BW 100000 Kbit, DLY 100 usec,                                
+     reliability 255/255, txload 1/255, rxload 1/255                           
+  Encapsulation ARPA, loopback not set                                         
+  Keepalive set (10 sec)                                                       
+  Half-duplex, Auto Speed, 100BaseTX/FX                                        
+  ARP type: ARPA, ARP Timeout 04:00:00                                         
+  Last input never, output 00:00:02, output hang never                         
+  Last clearing of "show interface" counters never                             
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0        
+  Queueing strategy: fifo                                                      
+  Output queue: 0/40 (size/max)                                                
+  5 minute input rate 0 bits/sec, 0 packets/sec                                
+  5 minute output rate 0 bits/sec, 0 packets/sec                               
+     0 packets input, 0 bytes                                                  
+     Received 0 broadcasts, 0 runts, 0 giants, 0 throttles                     
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored                      
+     0 watchdog                                                                
+     0 input packets with dribble condition detected                           
+     8 packets output, 1401 bytes, 0 underruns                                 
+     0 output errors, 0 collisions, 1 interface resets                         
+     0 babbles, 0 late collision, 0 deferred                                   
+     0 lost carrier, 0 no carrier                                              
+     0 output buffer failures, 0 output buffers swapped out                    
+FastEthernet0/1 is up, line protocol is down                                   
+  Hardware is AmdFE, address is 0009.e86c.5441 (bia 0009.e86c.5441)            
+  Internet address is 10.0.4.2/24                                              
+  MTU 1500 bytes, BW 100000 Kbit, DLY 100 usec,                                
+     reliability 255/255, txload 1/255, rxload 1/255                           
+  Encapsulation ARPA, loopback not set                                         
+  Keepalive set (10 sec)                                                       
+  Half-duplex, Auto Speed, 100BaseTX/FX                                        
+  ARP type: ARPA, ARP Timeout 04:00:00                                         
+  Last input never, output 00:00:03, output hang never                         
+  Last clearing of "show interface" counters never                             
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0        
+  Queueing strategy: fifo                                                      
+  Output queue: 0/40 (size/max)                                                
+  5 minute input rate 0 bits/sec, 0 packets/sec                                
+  5 minute output rate 0 bits/sec, 0 packets/sec                               
+     0 packets input, 0 bytes                                                  
+     Received 0 broadcasts, 0 runts, 0 giants, 0 throttles                     
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored                      
+     0 watchdog                                                                
+     0 input packets with dribble condition detected                           
+     71 packets output, 4260 bytes, 0 underruns                                
+     0 output errors, 0 collisions, 1 interface resets                         
+     0 babbles, 0 late collision, 0 deferred                                   
+     0 lost carrier, 0 no carrier                                              
+     0 output buffer failures, 0 output buffers swapped out
+

@@ -1,0 +1,226 @@
+CSCI 239 -- Discrete Structures of Computer Science
+
+Lab 5 -- More Haskell
+
+
+Objectives
+
+-- to learn to use the Hugs interactive system
+-- to learn the basic components of Haskell expressions and functions
+-- to explore how Haskell programs model computations
+
+
+
+Haskell is a functional programming language that is very easy to use.
+Programs, that is functions, are prepared in text files called scripts, which
+are loaded into the Haskell system. The programs are then run interactively,
+so there is a very fast coding/compilation/execution cycle.
+
+The version of Haskell we are using is called Hugs and it is available free for
+Linux, Windows and Mac OS X as well as several other operating systems.  The
+official website for both Haskell and Hugs is at haskell.org, and downloads for
+Hugs are available there.
+
+
+I.  Using the Hugs System and Evaluating Expressions
+
+Hugs can be run from the Unix command line or it can be run by clicking on the
+"shield" menu, then on Computer Science, then on Hugs. However, it is often more
+convenient to change to the directory where your Haskell programs are and, then,
+typing "hugs" at the shell prompt. Using this latter idea, open a shell window
+and change to the directory for this lab. Type "hugs" at the shell prompt. After
+some introductory text, you will see the following prompt:
+
+Hugs>
+
+This indicates that you are in the Hugs system with only the standard Haskell
+prelude loaded.11/7
+
+Now try evaluating several Haskell arithmetic expressions, such as "2 + 2", 
+"7.3 * 8.1", etc. What happens when you use the division operator '/' to divide
+two Int values that don't divide evenly? What is the type of the result? You can
+do integer division by using `div` where ` is the single quote in the upper
+left corner of the keyboard. Try 11/7 and 11 `div` 7 to see this.
+
+Consider computing one of the roots of a quadratic equation of the form:
+
+	ax^2 + bx + c = 0	(not a Haskell expression)
+
+One of the roots has the value:
+
+	-b + sqrt(b^2 - 4ac)
+	--------------------	(not a Haskell expression)
+	         2a
+
+Form and evaluate a Haskell expression for the indicated root where a = 1,
+b = -5 and c = 6. You should get 3.0. Now try the same thing for some other
+values of a, b and c. What happens if b^2 - 4ac is negative?
+
+As you probably discovered, entering expressions by hand is not much fun,
+particularly when the expressions get complicated. But that's what functions
+(methods in Java) are for! In the next section of the lab, we'll explore how
+to use functions in Haskell.
+
+
+II.  Writing and Using Functions in Haskel
+
+Open and examine the text file FirstLiterate.lhs that's in your lab folder.
+(You will need to right-click on it and, then, click on Open With and, then,
+a text editor of your choice.) This file contains the definition of two very 
+simple Haskel functions, square and double. Ignore the other fuhow to sum a list of integers in haskellnctions in this
+file for now. (If you need guidance for a text editor, I would choose gedit.)
+
+The type specifications use the Num class to allow applying the functions to any
+numeric values; the definitions should be pretty self-explanatory. Note that
+all lines in this file are comments except those beginning with the '>'
+character, which are Haskell code. Files in this format must have the ".lhs"
+extension.
+
+Now load this file into Hugs by typing ":load FirstLiterate" at the Hugs prompt.
+(Assuming you are still in Hugs. If you are not, just type hugs FirstLiterate.lhs
+at the command line in the terminal window.) You should see the prompt:
+
+Main>
+
+indicating that there is now a script loaded into the system.
+
+Now try running the square and double functions using a few examples such as
+"square 2", "double 2", "square 3.7", "double -9.3", "square -66" and
+"square 1234567898765432123456789".  Note that you usually don't need 
+parentheses around the function arguments; in fact, it's better Haskell style 
+not to use them. However, if you do any sort of computation on an argument you 
+MUST use parentheses. That means that parentheses are needed for all negative numbers. For example to do square on -3 you must type square (-3)
+and to do square on 5+9 you must type square (5+9).
+
+For the following experiments, record any programs you are asked to write in
+your report document.  Copy the results of interpreting the program as well as
+the results of any required runs of the program from the terminal window into 
+your report. You can do this by marking the area in the terminal window and,
+then, middle-clicking at the place in the report window where you wanted the
+result to go.
+
+To exit from hugs type ":q" or else hold down the Ctrl key and type D.
+
+
+Function 1:  A simple function
+
+To start with you will enter your function and appropriate comments using the
+text editor which you started on FirstLiterate.lhs. When you are ready to try
+your function, save FirstLiterate.lhs from your editor and, then, type
+hugs FirstLiterate.lhs at the command line to load in the FirstLiterate file
+with your new function. If you get error messages you must fix the file and do
+hugs FirstLiterate.lhs again.
+
+Design function quadpoly, which computes the value of a quadratic polynomial for
+a particular value of x. It should take four parameters representing the values
+of a, b, c and x in the polynomial ax^2 + bx + c. Use the square function from
+the first part of the lab as part of your function. The type is given below:
+
+quadpoly :: Double -> Double -> Double -> Double -> Double
+
+Try your quadpoly. For example, use it to evaluate the function x^2+1 at -2, 0, 
+and 2 by typing "quadpoly 1.0 0.0 1.0 -2.0"; then "quadpoly 1.0 0.0 1.0 0.0" and 
+"quadpoly 1.0 0.0 1.0 2.0".
+
+Now define a function "poly1 x " that uses the quadpoly function to evaluate
+the polynomial 3x^2 - 25x + 7.  (Hint: define it with a call to quadpoly and
+the appropriate coefficients.) Evaluate this polynomial for all integer
+values from -5.0 to 5.0.  You should find that the values change sign in
+this region, indicating the presence of a root.  (A root of a polynomial is
+an x-value at which the polynomial evaluates to zero.)  Evaluate the polynomial
+at the half-way point between the two values where the sign change occurs,
+and repeat dividing the interval where the sign changes in half and eval-
+uating the polynomial at the half-way point until the value of x is
+computed to four digits of accuracy.  (Note:  you don't have to divide the
+interval exactly in half.  You can often make a closer estimate and get another
+digit in only two or three calls to poly1.)
+
+For the adventurous (and extra credit):  find the exact x for which poly1
+returns 0.0 to 16 digits using the method described above; show your work.  
+Good luck!  (Life shouldn't be this tedious, is there an easier way?)
+
+
+Function 2: A function to evaluate a cubic polynomial
+
+Implement a function "cubicpoly a b c d x" that evaluates the cubic
+polynomial ax^3 + bx^2 + cx + d.  Implement the function "cube x" as part of
+your strategy for cubicpoly.  Define a function "poly2 x" that uses the
+cubicpoly function to evaluate the polynomial x^3 - 5.359375.  Evaluate this
+polynomial for all integral values from -5.0 to 5.0.  Use the same method as
+Experiment 1 to find a root.  (In this case, you should be able to find an
+exact root in only a few steps.)
+
+
+Function 3: A function that uses a user defined data type
+
+Define a Haskell function "triangle a b c" that computes whether a triangle
+is equilateral (all three sides are equal), isoceles (two sides are equal), or 
+scalene (all three sides are different).  You will need to use if-then-else 
+expressions and compound conditions (linking conditions with andalso - && - or
+orelse - ||). You can create a new datatype that has three possible values with
+the following code:
+ 
+data TriangleTypes = Scalene | Isoceles | Equilateral
+	
+To display the code you will also need:
+
+	instance Show TriangleTypes where
+		show Scalene = "Scalene" 
+		show Isoceles = "Isoceles"
+		show Equilateral = "Equilateral"
+
+
+Test your function with several data sets.
+
+
+Function 4: A first function on lists
+
+Below is a function that computes the maximum of a list of integers.  Enter
+this function and then test it on several lists.  Note that [1, 3, 2, ~4] and
+1 :: 3 :: 2 :: ~4 :: nil are two ways of writing the same list.
+
+intmax :: [int] -> int
+intmax []  = 0
+intmax [n] = n
+intmax (n1 : n2 : ns) =
+      if n1 > n2 then (intmax (n1 : ns)) else (intmax (n2 : ns));
+
+The first line (intmax :: [int] -> int) says that the function intmax 
+has input a list of int's and outputs an int. In many cases this kind of
+statement is unnecessary since Haskell can infer what the correct
+input and output are. Nevertheless, sometimes you really want to do
+this to be safe since often Haskell will give error messages if it
+cannot infer input and output.
+
+Using intmax as a model, construct a function doublemin that computes the 
+minimum of a list of double numbers. Test your function thoroughly
+
+
+Function 5: Summing a list of ints
+
+Write an intsum function that computes the sum of a list of integers.
+
+
+Function 6: The average of a list of numbers
+
+Write a Haskel function that will find the average of a list of numbers.  Recall 
+that finding an average means finding the sum of the list and then dividing by
+the number of elements in the list. Define separate functions for each of these
+tasks. How should you handle the average of an empty list? Test your function on
+several lists including an empty list and a 1 element list.
+
+Extra Credit: Create a function that will return both roots of the quadratic
+a*x*x+b*x+c even when b*b-4*a*c<0. Your function should return a pair of
+pairs. If b*b-4*a*c>0 then you will return ((r1,0),(r2,0)) where the roots
+are those from the quadratic formula. If b*b-4*a*c<0 you will return 
+((r1_real,r1_imaginary),(r2_real,r2_imaginary)) where r_real=-b/(2*a) and
+r_imaginary=sqrt(4*a*c-b*b)/(2*a)int. (The notation (r_real,r_imaginary) corresponds
+to the root being r_real+r_imaginary*i where i is the imaginary number
+sqrt(-1)). Thus, real numbers are just number of the form (r,0) - i.e., with
+the imaginary part 0.
+
+
+LAB REPORT
+
+Show your instructor or TAs your completed programs. They will check you off for each one.
+

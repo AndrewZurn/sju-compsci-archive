@@ -1,0 +1,165 @@
+% This file was created with JabRef 2.9.2.
+% Encoding: Cp1252
+
+@ARTICLE{Appcelerator.com2012,
+  author = {Appcelerator.com},
+  title = {Native vs. HTML5: Mobile App Development, Which option is best?},
+  journal = {Appcelerator White Paper},
+  year = {2012},
+  volume = {na},
+  pages = {na},
+  owner = {AndyZurn},
+  timestamp = {2013.12.08}
+}
+
+@ARTICLE{Corral2011,
+  author = {Luis Corral and Alberto Sillitti and Giancarlo Succi and Alessandro
+	Garibbo and Paolo Ramella},
+  title = {Evolution of Mobile Software Development from Platform-Specific to
+	Web-Based Multiplatform Paradigm},
+  journal = {Onward!},
+  year = {2011},
+  volume = {Oct 2011},
+  pages = {na},
+  owner = {Andrew},
+  timestamp = {2013.10.27}
+}
+
+@ARTICLE{Dediu2011,
+  author = {Horace Dediu},
+  title = {The proliferation of mobile platforms},
+  journal = {Asymco},
+  year = {2011},
+  volume = {na},
+  pages = {na},
+  owner = {Andrew},
+  timestamp = {2013.10.27}
+}
+
+@ARTICLE{Goaer2013,
+  author = {Olivier Le Goaer and Sacha Waltham},
+  title = {Yet Another DSL for Cross-Platforms Mobile Development},
+  journal = {GlobalDSL},
+  year = {2013},
+  volume = {2013},
+  pages = {na},
+  owner = {Andrew},
+  timestamp = {2013.11.18}
+}
+
+@MISC{Grott2009,
+  author = {Fred Grott},
+  title = {Android Snippets},
+  howpublished = {online},
+  month = {October},
+  year = {2009},
+  note = {Image used from android snippets blog},
+  keywords = {Java Code, Android},
+  owner = {AndyZurn},
+  timestamp = {2013.12.16},
+  url = {http://mobilebytes.files.wordpress.com/2009/10/screenshot-java-andsnippets-src-com-gogolecode-andsnippets-providers-snippetfileprovider-java-eclipse.png}
+}
+
+@ARTICLE{Huy2012,
+  author = {Ngu Phuc Huy and Do vanThanh},
+  title = {Evaluation of mobile app paradigms},
+  journal = {MoMM},
+  year = {2012},
+  volume = {Dec 2012},
+  pages = {3-5},
+  owner = {Admin},
+  timestamp = {2013.11.19}
+}
+
+@ARTICLE{Leroux2011,
+  author = {Brian Leroux and Andre Charland},
+  title = {Mobile Application Development: Web vs. Native},
+  journal = {Communications of the ACM},
+  year = {2011},
+  volume = {54 No. 5},
+  pages = {49-53},
+  owner = {Andrew},
+  timestamp = {2013.10.27}
+}
+
+@ARTICLE{Llamas2013,
+  author = {Ramon Llamas And Ryan Reith and Michael Shirer},
+  title = {Android and iOS Combine for 91.1% of the Worldwide Smartphone OS
+	Market in 4Q12 and 87.6% for the Year, According to IDC},
+  journal = {IDC},
+  year = {2013},
+  volume = {Feb'13},
+  pages = {online},
+  owner = {AndyZurn},
+  timestamp = {2013.12.16}
+}
+
+@ARTICLE{Mims2013,
+  author = {Christopher Mims},
+  title = {Why Mobile Apps Will Soon be Dead},
+  journal = {MIT Technology Review},
+  year = {2013},
+  volume = {1},
+  pages = {na},
+  owner = {Andrew},
+  timestamp = {2013.10.27}
+}
+
+@ARTICLE{Nebeling2013,
+  author = {Michale Nebeling and Christoph Zimmerli and Moira C. Norrie},
+  title = {Informing the Design of New Mobile Development Methods and Tools},
+  journal = {CHI 2013},
+  year = {2013},
+  volume = {na},
+  pages = {na},
+  owner = {AndyZurn},
+  timestamp = {2013.12.05}
+}
+
+@ELECTRONIC{NetMarketShare2013,
+  author = {NetMarketShare},
+  month = {November},
+  year = {2013},
+  title = {Mobile/Tablet Operating System Market Share},
+  language = {English},
+  howpublished = {Online},
+  organization = {NetMarketShare},
+  url = {http://www.netmarketshare.com/operating-system-market-share.aspx?qprid=8&qpcustomd=1},
+  owner = {AndyZurn},
+  timestamp = {2013.12.16}
+}
+
+@ELECTRONIC{Poulsen2012,
+  author = {Tim Poulsen},
+  year = {2012},
+  title = {Building Native Mobile Apps With Titanium},
+  organization = {Appcelerator, In.c},
+  note = {Lead Trainer \& Curriculum Developer},
+  owner = {Admin},
+  timestamp = {2013.11.19}
+}
+
+@MISC{Treb,
+  author = {Brandon Treb},
+  title = {Objective-C Programming Tutorial},
+  howpublished = {Online},
+  note = {Image used from tutorial},
+  comment = {Objective C Code},
+  keywords = {Objective C Code, iOS},
+  owner = {AndyZurn},
+  timestamp = {2013.12.16},
+  url = {http://brandontreb.com/wp-content/uploads/2009/06/screenshot_03.png}
+}
+
+@ARTICLE{Xanthopoulos2013,
+  author = {Spyros Xanthopoulos and Stelios Xinogalos},
+  title = {A Comparative Analysis of Cross-platform Development Approaches for
+	Mobile Applications},
+  journal = {Balkan Conference in Informatics '13},
+  year = {2013},
+  volume = {Sept},
+  pages = {na},
+  owner = {Andrew},
+  timestamp = {2013.10.27}
+}
+

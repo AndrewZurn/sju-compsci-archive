@@ -1,0 +1,11 @@
+#/bin/tcsh
+ # searches all the addr files zips them into addr.zip
+find . -name '*.addr' -mtime -30 -print | zip addr.zip -@
+# moves addr into csci230bin
+mv addr.zip ~/csci230bin
+#removes all temp files ending in ~
+find cscibin230 -name '*.~' -exec rm '{}' \;
+# tars the csci230bin directory
+tar cvf csci230bin.tar ~/csci230bin
+# emails to irahl@csbsju.edu
+pine irahal@csbsju.edu  

@@ -1,0 +1,14 @@
+Background
+  How mobile development has been done
+    Languages used
+      Web
+      Android/iOS
+Major Points
+  The Flaws in Native Mobile Development
+  The Solution Hybrid Development poses
+    Common Resource Base + SDKs to build multiple apps
+    Performance
+    Perfect tool for developers
+      LIVE DEMO!!!!
+Future of the Field of Mobile Development
+Conclusion

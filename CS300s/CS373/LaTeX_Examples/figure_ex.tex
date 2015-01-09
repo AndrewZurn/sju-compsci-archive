@@ -1,0 +1,347 @@
+\documentclass[12pt]{amsart}
+ 
+\usepackage{graphicx}
+\usepackage{amsthm}
+ 
+ 
+ 
+\begin {document}
+ 
+\title{Find Your Path}
+\author {Shannon Lane}
+%\address{...}
+ 
+\begin{abstract}
+We will demonstrate how to find a polynomial that passes through a given set of data using polynomial interpolation. % %source
+In this paper we will look at a set of data given by the finite sequence $a_1, a_2,\hdots,a_n$. In order to find the polynomial we will use properties of the Vandermonde Matrix.
+%We will demonstrate how to use polynomial interpolation to create a polynomial function which hits every point in the sequence.
+ 
+\end{abstract}
+ 
+\maketitle
+ 
+\section{Introduction}
+Consider the sequence $a_1, a_2,\hdots, a_n$. The goal is to find a polynomial of degree $n-1$, such that $p(k)=a_k$, for all $k=1, 2,\hdots,n.$ In other words, the graph of $p(x)$ must go through every point $(x,y)=(k,a_k)$ for all $k=1, 2,\hdots,n$.
+ 
+\indent Since the general formula for a polynomial of degree $n-1$ can be written as
+\begin{equation}
+p(x)=\alpha_{n}x^{n-1}+\alpha_{n-1}x^{n-2}+\hdots+\alpha_2x+\alpha_1,
+\end{equation}
+our task is to determine the coefficients $\alpha_1, \alpha_2,\hdots, \alpha_k$ for all $k=1, 2,\hdots,n$.
+ 
+\indent For example, in the case $n=3$, we obtain
+ 
+ 
+\begin{equation*}
+\begin{array}{l}
+p(a_1)=\alpha_3(1)^2+\alpha_2(1)+\alpha_1 ,\\
+p(a_2)=\alpha_3(2)^2+\alpha_2(2)+\alpha_1 ,\\
+p(a_3)=\alpha_3(3)^2+\alpha_2(3)+\alpha_1.
+\end{array}
+\end{equation*}
+The system of equations above would be used to solve for $\alpha_3$, $\alpha_2$, and $\alpha_1$. Another way to solve for the $\alpha$'s is through matrices. To demonstrate this method, lets consider a simple example.
+ 
+%When given a sequence of
+ 
+%The purpose of this paper is the take a sequence of numbers and find a polynomial that hits every point. We are give a sequence $a1, a2,...,ak$. the function p(x) must represent each p(n) values from n=1, 2,...,k. To better understand this it is important to identify what each variable corresponds to one another.
+ 
+%n corresponds to the x values in the polynomial p(x) and the an correspond to the y values found by p(x).
+ 
+\subsection{Example}
+Find the line that passes through the points (1,1) and (2,4).
+First the slope is $\frac{4-1}{2-1}=3$. The corresponding $y$-intercept is $y=3x+\alpha_1$, by using $(x,y)=(1,1)$, we obtain $1=3(1)+\alpha_1$, and $\alpha_1=-2$. Thus, the equation is $y=3x-2$.
+ 
+Now lets look at this example using matrices.
+The system of equations is derived by using the points (1,1) and (2,4) in the general equation $x\alpha_2+\alpha_1=y$.
+The system of equations are
+\begin{equation*}
+\begin{array}{l}
+1=(1)\alpha_2+\alpha_1,\\
+4=(2)\alpha_2+\alpha_1.
+\end{array}
+\end{equation*}
+ 
+Let us write the latter system of equations in the matrix form. We get
+\begin{equation*}
+\left[ {\begin{array}{cc}
+1 & 1 \\
+1 & 2 \\
+\end{array} } \right]
+\left[ {\begin{array}{c}
+\alpha_1 \\
+\alpha_2 \\
+\end{array} } \right]=
+\left[ {\begin{array}{c}
+1 \\
+4 \\
+\end{array} } \right].
+\end{equation*}
+To find $\alpha_2$ and $\alpha_1$ the inverse of the matrix $\left[ {\begin{array}{cc}
+1 & 1 \\
+1 & 2 \\
+\end{array} } \right]$ needs to be applied to both sides.
+Thus, we obtain the coefficients as follows
+\begin{equation*}
+\left[ {\begin{array}{c}
+\alpha_1 \\
+\alpha_2 \\
+\end{array} } \right]=
+\left[ {\begin{array}{cc}
+1 & 1 \\
+1 & 2 \\
+\end{array} } \right]^{-1}
+\left[ {\begin{array}{c}
+1 \\
+4 \\
+\end{array} } \right]
+=\left[ {\begin{array}{c}
+-2 \\
+3 \\
+\end{array} } \right].
+\end{equation*}
+ 
+This result is the same result from deriving the system through known equations.
+Indeed, to find a straight line between two points ($x_1$,$y_1$) and ($x_2$,$y_2$). First the slope would be found by $\frac{y_2-y_1}{x_2-x_1}$. Then the corresponding $y$-intercept value would be calculated. These values would be inserted into the general formula $x\alpha_2+\alpha_1=y$.
+ 
+In this paper we will expand this example for $k=1, 2,\hdots, n$ in the sequence.
+\section{Examples}
+In this section we will look at more general examples, which will allow us to draw a conclusion on how to find a general method to find a polynomial that goes through the sequence $a_1, a_2,\hdots, a_k$ for $k=1, 2,\hdots,n$.
+\subsection{Example}
+Given the sequence 2, 5, 12 find the polynomial $p(x)$. Let
+\begin{equation*}
+a_1=2, a_2=5, \text{ and }a_3=12.
+\end{equation*}
+Thus, below is the system in matrix form \begin{equation*}
+\left[ {\begin{array}{ccc}
+1&(2)^1 & (2)^2 \\
+1&(5)^1 & (5)^2 \\
+1&(12)^1 & (12)^2
+\end{array} } \right]*
+\left[ {\begin{array}{c}
+\alpha_1 \\
+\alpha_2 \\
+\alpha_3
+\end{array} } \right]=
+\left[ {\begin{array}{c}
+2\\
+5\\
+12
+\end{array} } \right].
+\end{equation*}
+After solving for the $\alpha$'s, we get $p(x)=2x^2-3x+3$.
+ 
+Figure \ref{smile} below shows the points given by the sequence and $p(x)$.
+ 
+ 
+ 
+ 
+\subsection{Example}
+Consider the sequence $a_1, a_2, a_3, a_4, a_5$.
+The following values for $p(k)$ are
+\begin{equation*}
+p(1)=a_1, p(2)=a_2, p(3)=a_3, p(4)=a_4, p(5)=a_5.
+\end{equation*}
+We get the following system of equations
+\begin{equation*}
+\begin{array}{l}
+\alpha_5(1)^4+\alpha_4(1)^3+\alpha_3(1)^2+\alpha_2(1)+\alpha_1=a_1 ,\\
+\alpha_5(2)^4+\alpha_4(2)^3+\alpha_3(2)^2+\alpha_2(2)+\alpha_1=a_2 ,\\
+\alpha_5(3)^4+\alpha_4(3)^3+\alpha_3(3)^2+\alpha_2(3)+\alpha_1=a_3 , \\
+\alpha_5(4)^4+\alpha_4(4)^3+\alpha_3(4)^2+\alpha_2(4)+\alpha_1=a_4 ,\\
+\alpha_5(5)^4+\alpha_4(5)^3+\alpha_3(5)^2+\alpha_2(5)+\alpha_1=a_5.
+\end{array}
+\end{equation*}
+Notice the equations are to the $n-1$ degree, since a polynomial has $n$ coefficients and we are finding a polynomial of degree $n-1$ to go through all the points $(k,a_k)$ for $k=1, 2,\hdots,n$.
+The system of equations in matrix form
+\begin{equation*}
+\left[ {\begin{array}{ccccc}
+1 & (1)^1 & (1)^2 & (1)^3 & (1)^4 \\
+1 & (2)^1 & (2)^2 & (2)^3 & (2)^4 \\
+1 & (3)^1 & (3)^2 & (3)^3 & (3)^4 \\
+1 & (4)^1 & (4)^2 & (4)^3 & (4)^4 \\
+1 & (5)^1 & (5)^2 & (5)^3 & (5)^4
+\end{array} } \right]
+\left[ {\begin{array}{c}
+\alpha_1 \\
+\alpha_2 \\
+\alpha_3 \\
+\alpha_4 \\
+\alpha_5 \\
+\end{array} } \right]=
+\left[ {\begin{array}{c}
+a_1 \\
+a_2 \\
+a_3\\
+a_4\\
+a_5\\
+\end{array} } \right].
+\end{equation*}
+Note, the left column in the first matrix is all ones because $\alpha_1$ is a single coefficient and not multiplied by any value of $x$. Now like the previous example the inverse matrix is applied to both sides. To get the following system
+\begin{equation*}
+\left[ {\begin{array}{c}
+\alpha_1 \\
+\alpha_2 \\
+\alpha_3 \\
+\alpha_4 \\
+\alpha_5
+\end{array} } \right]=
+\left[ {\begin{array}{ccccc}
+1& (1)^1 & (1)^2 & (1)^3 & (1)^4 \\
+1& (2)^1 & (2)^2 & (2)^3 & (2)^4 \\
+1& (3)^1 & (3)^2 & (3)^3 & (3)^4 \\
+1& (4)^1 & (4)^2 & (4)^3 & (4)^4 \\
+1& (5)^1 & (5)^2 & (5)^3 & (5)^4
+\end{array} } \right]^{-1}
+\left[ {\begin{array}{c}
+a_1 \\
+a_2 \\
+a_3\\
+a_4\\
+a_5
+\end{array} } \right].
+\end{equation*}
+The system above will solve for $\alpha_5$, $\alpha_4$, $\alpha_3$, $\alpha_2 \text{ and } \alpha_1$. These coeffients are put into Formula (1) to get a polynomial that goes through all $a_k$ where $k=1, 2, 3, 4, 5$.
+ 
+\section{General Process and Connection with Vandermonde Matrix}
+Given the sequence $a_1, a_2,\hdots,a_n$, find the polynomial that goes through $p(k)=a_k$ for $k=1, 2,\hdots,n$.
+The system of equations are
+\begin{align*}
+%\begin{array}{l}
+\alpha_{n}(x_1)^{n-1}+\alpha_{n-1}(x_1)^{n-2}+\hdots+\alpha_2(x_1)+\alpha_1&=a_1\\
+\alpha_{n}(x_2)^{n-1}+\alpha_{n-1}(x_2)^{n-2}+\hdots+\alpha_2(x_2)+\alpha_1&=a_2\\
+\alpha_{n}(x_3)^{n-1}+\alpha_{n-1}(x_3)^{n-2}+\hdots+\alpha_2(x_3)+\alpha_1&=a_3\\
+&\,\,\,\vdots\\
+\alpha_{n}(x_{n-1})^{n-1}+\alpha_{n-1}(x_{n-1})^{n-2}+\hdots+\alpha_2(x_{n-1})+\alpha_1&=a_{n-1}\\
+\alpha_{n}(x_n)^{n-1}+\alpha_{n-1}(x_n)^{n-2}+\hdots+\alpha_2(x_n)+\alpha_1&=a_n.
+%\end{array}
+\end{align*}
+ 
+For simpler notation let,
+\begin{equation*}
+\begin{array}{c}
+V
+\end{array}=
+\left[ {\begin{array}{ccccc}
+1& (x_1)^1 &\hdots& (x_1)^{n-2} & (x_1)^{n-1} \\
+1& (x_2)^1 &\hdots& (x_2)^{n-2} & (x_2)^{n-1} \\
+1& (x_3)^1 &\hdots& (x_3)^{n-2} & (x_3)^{n-1} \\
+\vdots\\
+1&(x_{n-1})^1&\hdots& (x_{n-1})^{n-2} & (x_{n-1})^{n-1}\\
+1&(x_{n})^1&\hdots& (x_{n})^{n-2} & (x_{n})^{n-1}\\
+ 
+\end{array} } \right],
+\end{equation*}
+\begin{equation*}
+\begin{array}{c}
+a
+\end{array}=
+\left[ {\begin{array}{c}
+\alpha_1 \\
+\alpha_2 \\
+\alpha_3 \\
+\vdots\\
+\alpha_{n-1} \\
+\alpha_n \\
+ 
+ 
+\end{array} } \right],
+\begin{array}{c}
+Y
+\end{array}=
+\left[ {\begin{array}{c}
+a_1 \\
+a_2 \\
+a_3\\
+\vdots\\
+a_{n-1}\\
+a_n
+\end{array} } \right].
+\end{equation*}
+Therefore, the corresponding matrix for the above system of equations is $Va=Y$.
+Notice in matrix V in each column the $x$ value is raised to the power $n-1, n-2,\hdots,1, 0$. This matrix is more commonly known as a Vandermonde Matrix, after Alexander-Theophile Vandermonde who was a French musician and chemist in the late 1700's \cite{Klinger}.
+ 
+The same inverse application in the previous examples is applied to the Vandermonde matrix. Thus, resulting in the final matrix calculation is $a=V^{-1}Y$.
+After solving for the $\alpha$'s, we will be able to put the coeffencients in the equation
+\begin{equation*}
+p(x)=\alpha_{n}x^{n-1}+\hdots+\alpha_2x+\alpha_1
+\end{equation*}
+which will go through all the points in the sequence given. This process of finding the exact equation that passes through any set of data is called polynomial interpolation \cite{Walsh}.
+The following theorem has been proven by the work above.
+ 
+\begin{theorem}
+Given a sequence $a_1, a_2,\hdots,a_n$ for $k=1, 2,\hdots, n$. The formula to find the coefficients of a polynomial of degree $n-1$ satisfying $p(k)=a_k$ for all $k=1, 2,\hdots, n$ is given by $a=V^{-1}Y$.
+\end{theorem}
+The next section will show an explicit formula for $V^{-1}$.
+\section{Vandermonde Matrix Inverse}
+The Vandermonde Matrix has an explicit inverse, proven by Richard Turner \cite{Turner}. The inverse can be found by the following matrices below. Let
+\begin{equation*}
+U=
+\left[ {\begin{array}{ccccc}
+1& -x_1 &x_1x_2&-x_1x_2x_3&\hdots \\
+0&1&-(x_1+x_2)&(x_1x_2+x_2x_3+x_3x_1)&\hdots \\
+0&0&1&-(x_1+x_2+x_3)&\hdots \\
+0&0&0&1&\hdots\\
+\vdots&\vdots&\vdots&\vdots&\ddots\\
+\end{array} } \right],
+\end{equation*}
+\begin{equation*}
+L=
+\left[ {\begin{array}{cccc}
+1& 0 &0&\hdots \\
+\frac{1}{x_1-x_2} &\frac{1}{x_2-x_1}&0&\hdots \\
+\frac{1}{(x_1-x_2)(x_1-x_3)} & \frac{1}{(x_2-x_1)(x_2-x_3)}&\frac{1}{(x_3-x_1)(x_3-x_1)}&\hdots \\
+\vdots&\vdots&\vdots&\ddots\\
+\end{array} } \right].
+\end{equation*}
+Note, if the $x$-values of the points of interpolation are known, then $U$ and $L$ can be directly computed. Along with, $U$ is a upper triangular matrix and $L$ is a lower triangular matrix. The product of $UL$ will generate $V^{-1}$ for a polynomial of degree $n-1$.
+\subsection{Example} Consider the sequence 2, 5, 12 from Example 2.1 and find the polynomial $p(x)$. The composition of $U$ and $L$ are
+\begin{equation*}
+U=
+\left[ {\begin{array}{ccc}
+1&-1&2 \\
+0&1&-3\\
+0&0&1
+\end{array} } \right],
+L=
+\left[ {\begin{array}{ccc}
+1&0&0 \\
+-1&1&0 \\
+\frac{1}{2}&-1&\frac{1}{2}
+\end{array} } \right].
+\end{equation*}
+ 
+Thus, $V^{-1}$ is
+\begin{equation*}
+UL=
+\left[ {\begin{array}{ccc}
+3&-3&1\\
+-\frac{5}{2}&4&-\frac{3}{2}\\
+\frac{1}{2}&-1&\frac{1}{2}
+\end{array} } \right].
+\end{equation*}
+To compute $\alpha_3, \alpha_2, \text { and } \alpha_1$, the product $UL$ is multiplied with matrix $Y$, where Y
+$=\left[ {\begin{array}{c}
+2\\
+5\\
+12
+\end{array} } \right].$ The final calculation is
+\begin{equation*}(UL)*A = \left[ {\begin{array}{c}
+3\\
+-3\\
+2
+\end{array} } \right]
+\end{equation*}
+which is the same values for $\alpha$'s obtained in Example 2.1. This verifies that $UL=V^{-1}$.
+ 
+Due to the length of this paper, we will not prove the explicit inverse since it has previously been proven.
+\section{Conclusions and Outlook}
+ 
+We have shown through polynomial interpolation we can find a polynomial of degree $n-1$ that passes through any give sequence $a_1, a_2,\hdots,a_n$ for $k=1, 2,\hdots, n$ at integer points. We can solve for the coefficients in the polynomial by the matrix equation $a=V^{-1}Y$. Our approach arises several questions. Can a sequence produce a piecewise function? Can exponential equations be represented better with a different type of interpolation?
+ 
+ 
+\begin{thebibliography}{9}
+\bibitem{Klinger} Klinger, Allen. "The Vandermonde Matrix." American Mathematical Monthly. 74.5 (1967): 571-574. Print.
+\bibitem{Turner} Turner, L R. Inverse of the Vandermonde Matrix with Applications. Washington, D.C: National Aeronautics and Space Administration, 1966. Print.
+\bibitem{Walsh} Walsh, JL. "Note on Polynomial Interpolation to Analytic Functions." Proc Natl Acad Sci U S A.. 19.11 (1933): 959-63. Print.
+\end{thebibliography}
+\end {document}

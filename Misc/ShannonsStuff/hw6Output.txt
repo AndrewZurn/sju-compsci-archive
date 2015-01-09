@@ -1,0 +1,8 @@
+Name     Votes Recieved    % of Vote
+Andrew   6000              33.90   
+Alex     5000              28.25   
+Julie    2000              11.30   
+Juan     1500              8.47    
+Ernesto  3200              18.08   
+
+The winner of the election is Andrew.

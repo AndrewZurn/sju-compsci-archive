@@ -1,0 +1,57 @@
+package csci230radomskizurnhardy;
+
+/**
+ *
+ * @author wjradomski pghardy
+ */
+
+public class User extends Person {
+    private String firstName;
+    private String lastName;
+    private String userName;
+    private String password;
+    private char type;
+    //private UserController UserController;
+    
+    public User(String firstName, String lastName, String userName,
+            String password, char type /*, UserController userController*/){
+    super(firstName, lastName, userName, password, type);
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.userName = userName;
+    this.password = password;
+    this.type = type;
+    }
+
+
+    /**
+     * A method to return the current values of user in the form of a string.
+     * @return the values currently stored in user.
+     */
+    @Override
+    public String toString() {
+        return ("\n-User-\nFirst Name: " + firstName + "\nLast Name: " + lastName + "\nUsername: " + userName + "\nPassword: "
+                + password + "\nType: " + type);
+    }
+    
+    /**
+     * User to run this class from the command line.
+     * @param args The parameters passed to this class from stdin.
+     */
+    public static void main(String args[]){
+        User user = new User("UserFirstName", "UserLastName", "UserUserName","password",'u');
+        System.out.println(user.toString());
+        user.setFirstName("NewUserFirstName");
+        System.out.println("The new First Name for user is: " +user.getFirstName());
+        user.setLastName("NewUserLastName");
+        System.out.println("The new Last Name for user is: " +user.getLastName());
+        user.setUserName("NewUserUserName");
+        System.out.println("The new User Name for user is: " +user.getUserName());
+        user.setPassword("NewUserPassword");
+        System.out.println("The new Password for user is: " +user.getPassword());
+        user.setType('u');
+        System.out.println("The new type of user for user is: " +user.getType());
+    }
+  
+    
+}

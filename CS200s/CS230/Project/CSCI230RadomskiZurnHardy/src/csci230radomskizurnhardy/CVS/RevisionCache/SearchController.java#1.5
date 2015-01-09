@@ -1,0 +1,444 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package csci230radomskizurnhardy;
+import java.util.*;
+/**
+ * This class will be used to perform the searching that a user will need to find schools that they
+ * are interested in, and also schools that should be recommended for them to consider.
+ * @author awzurn
+ * @version 1.0
+ * @since March 18, 2012
+ */
+public class SearchController {
+    /**
+     * Set of all found schools matching user's criteria.
+     */
+    private static TreeSet<University> foundSchools = new TreeSet<University>();
+    /**
+     * Set of schools that match the exact parameters of the user's search criteria.
+     */
+    private static TreeSet<University> returnSchoolList = new TreeSet<University>();
+    /**
+     * List of all the universities user to match against.
+     */
+    private static ArrayList<University> universitiesList = DatabaseController.getAllUniversities();
+    
+    /**
+     * This method will call upon other private methods within this class to compile a map of all relevant
+     * schools to the user's query and also recommended schools that the user should consider.
+     * @param wantedSchool The school name the user wants to find.
+     * @param wantedState The state in which the user wants the school to be located.
+     * @param wantedLocation The location in which the user wants the school to be located.
+     * @param wantedControl The control of the school, being a public or private school.
+     * @param wantedNumberOfStudents The wanted number of students at the university.
+     * @param wantedPercentFemales The wanted percentage of students that are female at the university.
+     * @param wantedSATVerbal The wanted SAT Verbal range for the school.
+     * @param wantedSATMath The wanted SAT Math range for the school.
+     * @param wantedExpenses The wanted expense in attending this school.
+     * @param wantedPercentFinancialAid The wanted percent of financial aid given by the school.
+     * @param wantedNumberOfApplicants The wanted number of applicants applying to the school.
+     * @param wantedPercentAdmitted The wanted percentage of applicants admitted to the school.
+     * @param wantedPercentEnrolled The wanted percentage of admitted students that enroll.
+     * @param wantedAcademicsScale The wanted score of the academics on a scale 1-5 at the school.
+     * @param wantedSocialScale The wanted score of the social life on a scale of 1-5 at the school.
+     * @param wantedQualityOfLifeScale The wanted score for the quality of life on a scale of 1-5 at the school.
+     * @return Will return both the list of school relevant to the user's query, and a list of recommended schools for the student to view.
+     */
+    public static TreeSet<University> search(String wantedSchool,
+            String wantedState, String wantedLocation,String wantedControl, int lowWantedNumber, int highWantedNumber,
+            double lowPercentFemales, double highPercentFemales, double lowSATVerbal, double highSATVerbal, double lowSATMath,
+            double highSATMath, double lowExpenses, double highExpenses, double lowFinAid, double highFinAid,
+            int lowNumApplicants, int highNumApplicants, double lowAdmitted, double highAdmitted,
+            double lowEnrolled, double highEnrolled,int lowAcademicScale, int highAcademicScale,
+            int lowSocialScale, int highSocialScale, int lowQualityScale,
+            int highQualityScale, ArrayList<String> emphasesList){
+        
+        searchWantedSchools(wantedSchool);
+        searchWantedState(wantedState);
+        searchWantedLocation(wantedLocation);
+        searchWantedControl(wantedControl);
+        searchWantedNumberOfStudents(lowWantedNumber, highWantedNumber);
+        searchWantedPercentFemales(lowPercentFemales, highPercentFemales);
+        searchWantedSATVerbal(lowSATVerbal, highSATVerbal);
+        searchWantedSATMath(lowSATMath, highSATMath);
+        searchWantedExpenses(lowExpenses, highExpenses);
+        searchWantedPercentFinancialAid(lowFinAid, highFinAid);
+        searchWantedNumberOfApplicants(lowNumApplicants, highNumApplicants);
+        searchWantedPercentAdmitted(lowAdmitted, highAdmitted);
+        searchWantedPercentEnrolled(lowEnrolled, highEnrolled);
+        searchWantedAcademicsScale(lowAcademicScale, highAcademicScale);
+        searchWantedSocialScale(lowSocialScale, highSocialScale);
+        searchWantedQualityOfLifeScale(lowQualityScale, highQualityScale);
+        searchWantedEmpheses(emphasesList);
+        
+        /*refinedSearch(wantedSchool, wantedState, wantedLocation, wantedControl, lowWantedNumber,
+                highWantedNumber, lowPercentFemales, highPercentFemales, lowSATVerbal, highSATVerbal,
+                lowSATMath, highSATMath, lowExpenses, highExpenses, lowFinAid, highFinAid,
+                lowNumApplicants, highNumApplicants, lowAdmitted, highAdmitted, lowEnrolled, highEnrolled,
+                lowAcademicScale, highAcademicScale, lowSocialScale, highSocialScale, lowQualityScale,
+                highQualityScale, emphasesList);*/
+        
+        return returnSchoolList;
+    }
+    
+    /**
+     * Will search the name of the given school against the list of schools in the database.
+     * @param wantedSchool name of school.
+     */
+    private static void searchWantedSchools(String wantedSchool){
+        if(wantedSchool != null){
+            for(University uni: universitiesList){
+                if(wantedSchool.equalsIgnoreCase(uni.getSchool())){
+                    foundSchools.add(uni);
+                }
+            }
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given state against the list of schools in the database.
+     * @param wantedState name of state.
+     */
+    private static void searchWantedState(String wantedState){
+        if(wantedState != null){
+            for(University uni: universitiesList){
+                if(wantedState.equalsIgnoreCase(uni.getState())){
+                    foundSchools.add(uni);
+                }
+            }
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given location against the list of schools in the database.
+     * @param wantedLocation name of location.
+     */
+    private static void searchWantedLocation(String wantedLocation){
+        if(wantedLocation != null){
+            for(University uni: universitiesList){
+                if(wantedLocation.equalsIgnoreCase(uni.getState())){
+                    foundSchools.add(uni);
+                }
+            }
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given control against the list of schools in the database.
+     * @param wantedControl private or public education.
+     */
+    private static void searchWantedControl(String wantedControl){
+        if(wantedControl != null){
+            for(University uni: universitiesList){
+                if(wantedControl.equalsIgnoreCase(uni.getState())){
+                    foundSchools.add(uni);
+                }
+            }
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given number of students against the list of schools in the database.
+     * @param lowNumberWanted low number of range in wanted students.
+     * @param highNumberWanted high number of range in wanted students.
+     */
+    private static void searchWantedNumberOfStudents(Integer lowNumberWanted, Integer highNumberWanted){
+        if(lowNumberWanted != null && highNumberWanted != null){
+            for(University uni: universitiesList){
+                if(uni.getNumberOfStudents() <= highNumberWanted 
+                        && uni.getNumberOfStudents() >= lowNumberWanted){
+                    foundSchools.add(uni);
+                }
+            }
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given percent of females against the list of schools in the database.
+     * @param lowPercentFemales low number of range in wanted percentage of females.
+     * @param highPercentFemales high number of range in wanted percentage of females. 
+     */
+    private static void searchWantedPercentFemales(Double lowPercentFemales, Double highPercentFemales){
+        if(lowPercentFemales != null && highPercentFemales != null){
+            for(University uni: universitiesList){
+                if(uni.getPercentFemales() <= highPercentFemales 
+                        && uni.getPercentFemales() >= lowPercentFemales){
+                    foundSchools.add(uni);
+                }
+            }
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given SAT verbal score against the list of schools in the database.
+     * @param lowSATVerbal low number in range of SAT verbal scores.
+     * @param highSATVerbal high number in range of SAT verbal scores.
+     */
+    private static void searchWantedSATVerbal(Double lowSATVerbal, Double highSATVerbal){
+        if(lowSATVerbal != null && highSATVerbal != null){
+            for(University uni: universitiesList){
+                if(uni.getSATVerbal() <= highSATVerbal
+                        && uni.getSATVerbal() >= lowSATVerbal){
+                    foundSchools.add(uni);
+                }
+            }
+        }
+        else{}//do nothing
+        System.out.println(foundSchools);
+    }
+    
+    /**
+     * Will search the name of the given SAT math score against the list of schools in the database.
+     * @param lowSATMath low number in range of SAT math scores.
+     * @param highSATMath high number in range of SAT math scores.
+     */
+    private static void searchWantedSATMath(Double lowSATMath, Double highSATMath){
+        if(lowSATMath != null && highSATMath != null){
+            for(University uni: universitiesList){
+                if(uni.getSATMath() <= highSATMath
+                        && uni.getSATMath() >= lowSATMath){
+                    foundSchools.add(uni);
+                }
+            }
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given expense against the list of schools in the database.
+     * @param lowExpenses low number in range of expenses.
+     * @param highExpenses high number in range of expenses.
+     */
+    private static void searchWantedExpenses(Double lowExpenses, Double highExpenses){
+        if(lowExpenses != null && highExpenses != null){
+            for(University uni: universitiesList){
+                if(uni.getExpenses() <= highExpenses
+                        && uni.getExpenses() >= lowExpenses){
+                    foundSchools.add(uni);
+                }
+            }
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given percent of financial aid against the list of schools in the database.
+     * @param lowFinAid low number in range of financial aid.
+     * @param highFinAid high number in range of financial aid.
+     */
+    private static void searchWantedPercentFinancialAid(Double lowFinAid, Double highFinAid){
+        if(lowFinAid != null && highFinAid != null){
+            for(University uni: universitiesList){
+                if(uni.getPercentFinancialAid() <= highFinAid
+                        && uni.getPercentFinancialAid() >= lowFinAid){
+                    foundSchools.add(uni);
+                }
+            }
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given number of applicants against the list of schools in the database.
+     * @param lowNumApplicants low number in range of applicants.
+     * @param highNumApplicants high number in range of applicants.
+     */
+    private static void searchWantedNumberOfApplicants(Integer lowNumApplicants, Integer highNumApplicants){
+        if(lowNumApplicants != null && highNumApplicants != null){
+            for(University uni: universitiesList){
+                if(uni.getNumberOfApplicants() <= highNumApplicants
+                        && uni.getNumberOfApplicants() >= lowNumApplicants){
+                    foundSchools.add(uni);
+                }
+            }
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given percent admitted against the list of schools in the database.
+     * @param lowAdmitted low number in range of admitted students.
+     * @param highAdmitted high number in range of admitted students.
+     */
+    private static void searchWantedPercentAdmitted(Double lowAdmitted, Double highAdmitted){
+        if(lowAdmitted != null && highAdmitted != null){
+            for(University uni: universitiesList){
+                if(uni.getPercentAdmitted() <= highAdmitted
+                        && uni.getPercentAdmitted() >= lowAdmitted){
+                    foundSchools.add(uni);
+                }
+            }
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given percent enrolled against the list of schools in the database.
+     * @param lowEnrolled low number in range of enrolled students that were admitted.
+     * @param highEnrolled high number in range of enrolled students that were admitted.
+     */
+    private static void searchWantedPercentEnrolled(Double lowEnrolled, Double highEnrolled){
+        if(lowEnrolled != null && highEnrolled != null){
+            for(University uni: universitiesList){
+                if(uni.getPercentEnrolled() <= highEnrolled
+                        && uni.getPercentEnrolled() >= lowEnrolled){
+                    foundSchools.add(uni);
+                }
+            }
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given academics score against the list of schools in the database.
+     * @param lowAcademicScale low number in range of academics scale at this school.
+     * @param highAcademicScale high number in range of academics scale at this school. 
+     */
+    private static void searchWantedAcademicsScale(Integer lowAcademicScale, Integer highAcademicScale){
+        if(lowAcademicScale != null && highAcademicScale != null){
+            for(University uni: universitiesList){
+                if(uni.getAcademicsScale() <= highAcademicScale
+                        && uni.getAcademicsScale() >= lowAcademicScale){
+                    foundSchools.add(uni);
+                }
+            }
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given social score against the list of schools in the database.
+     * @param lowSocialScale low number in range of social scale at this school.
+     * @param highSocialScale high number in range of social scale at this school.
+     */
+    private static void searchWantedSocialScale(Integer lowSocialScale, Integer highSocialScale){
+        if(lowSocialScale != null && highSocialScale != null){
+            for(University uni: universitiesList){
+                if(uni.getSocialScale() <= highSocialScale
+                        && uni.getSocialScale() >= lowSocialScale){
+                    foundSchools.add(uni);
+                }
+            }
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search the name of the given quality of life score against the list of schools in the database.
+     * @param lowQualityScale low number in range of quality of life scale at this school.
+     * @param highQualityScale high number in range of quaity of life scale at this school.
+     */
+    private static void searchWantedQualityOfLifeScale(Integer lowQualityScale, Integer highQualityScale){
+        if(lowQualityScale != null && highQualityScale != null){
+            for(University uni: universitiesList){
+                if(uni.getQualityOfLifeScale() <= highQualityScale
+                        && uni.getQualityOfLifeScale() >= lowQualityScale){
+                    foundSchools.add(uni);
+                }
+            }
+        }
+        else{}//do nothing
+    }
+    
+    /**
+     * Will search through the given emphases, and compare them to all the schools to find the schools with
+     * like emphases.
+     * @param emphases list of emphases to be compared schools against.
+     */
+    private static void searchWantedEmpheses(ArrayList<String> emphases){
+        if(!emphases.isEmpty()){
+            for(University uni: universitiesList){
+                for(String uniEmphases: uni.getEmphases()){
+                    for(String emphasis: emphases){
+                        if(uniEmphases.equalsIgnoreCase(emphasis)){
+                            foundSchools.add(uni);
+                        }
+                    }
+                }
+            }
+        }
+        else{}//do nothing
+    }
+    
+    /*private static void refinedSearch(String wantedSchool,
+            String wantedState, String wantedLocation,String wantedControl, int lowWantedNumber, int highWantedNumber,
+            double lowPercentFemales, double highPercentFemales, double lowSATVerbal, double highSATVerbal, double lowSATMath,
+            double highSATMath, double lowExpenses, double highExpenses, double lowFinAid, double highFinAid,
+            int lowNumApplicants, int highNumApplicants, double lowAdmitted, double highAdmitted,
+            double lowEnrolled, double highEnrolled,int lowAcademicScale, int highAcademicScale,
+            int lowSocialScale, int highSocialScale, int lowQualityScale,
+            int highQualityScale, ArrayList<String> emphasesList){
+        for(University uni: foundSchools){
+            if((wantedSchool != null && )){
+                
+            }
+                
+        }
+        
+    }*/
+    
+    /**
+     * Used to run this class from the command line.
+     * @param args Arguments given to the class from stdin.
+     */
+    public static void main(String args[]){
+        /*for(University uni: universitiesList){
+        System.out.println(uni.getSchool());
+        }*/
+        
+        /*String wantedSchool = null;
+        String wantedState = null;
+        String wantedLocation = "URBAN";
+        String wantedControl = "PRIVATE";
+        int lowWantedNumber = 2000;
+        int highWantedNumber = 6000;
+        double lowPercentFemales = 0.5;
+        double highPercentFemales = 0.7;
+        double lowSATVerbal = 800;
+        double highSATVerbal = 1100;
+        double lowSATMath = 800;
+        double highSATMath = 1100;
+        double lowExpenses = 10000;
+        double highExpenses = 20000;
+        double lowFinAid = 0.5;
+        double highFinAid = 0.7;
+        int lowNumApplicants = 500;
+        int highNumApplicants = 1000;
+        double lowAdmitted = 0.2;
+        double highAdmitted = 0.5;
+        double lowEnrolled = 0.5;
+        double highEnrolled = 1.0;
+        int lowAcademicScale = 3;
+        int highAcademicScale = 5;
+        int lowSocialScale = 3;
+        int highSocialScale = 5;
+        int lowQualityScale = 3;
+        int highQualityScale = 5;
+        ArrayList<String> empList = new ArrayList<String>();
+        empList.add("science");
+        empList.add("math");*/
+        
+        /*TreeSet<University> testSet = search(wantedSchool, wantedState, wantedLocation, wantedControl, lowWantedNumber,
+                highWantedNumber, lowPercentFemales, highPercentFemales, lowSATVerbal, highSATVerbal,
+                lowSATMath, highSATMath, lowExpenses, highExpenses, lowFinAid, highFinAid,
+                lowNumApplicants, highNumApplicants, lowAdmitted, highAdmitted, lowEnrolled, highEnrolled,
+                lowAcademicScale, highAcademicScale, lowSocialScale, highSocialScale, lowQualityScale,
+                highQualityScale, empList);*/
+        
+        /*for(University uni: testSet){
+            System.out.println(uni.getSchool());
+        }*/
+        
+        for(University uni: universitiesList){
+            System.out.println( "\n" + uni);
+        }
+    }
+}

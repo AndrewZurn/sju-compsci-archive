@@ -1,0 +1,66 @@
+Pages:
+
+	Login
+		Admin Management (Main Page)
+			User Management
+			Reports
+				Sales Summary Report
+				Comission Report
+		User Management
+			Update Profile
+			Selling Management
+				List Items
+					Item Information
+					Bidder List
+					Rate Buyer
+				Add Item
+			Bidding Management
+				Search Item
+					Search Results
+						Item Information
+						Bid Item
+							Seller Info
+				Check Status
+					Item Information
+					Bid Item
+						Seller Info
+			My Seller Feedback
+			My Buyer Feedback
+			Leave Feedback
+				Rate As Seller
+					Item Information
+					Rate Buyer
+				Rate As Buyer
+					Item Information
+					Rate Seller
+Matt
+	Login
+	Admin_Management
+	Admin_User_Management
+	Reports
+	Sales_Summary_Report
+	Commission_Report
+	User_Management
+David
+	Update_Profile
+	Selling_Management
+	List_Items
+	Item_Info
+	Bidder_List
+	Rate_Buyer
+	Add_Item
+Michael
+	Bidding_Management
+	Search_Item
+	Search_Results
+	Bid_Item
+	Seller_Info
+	Check_Status
+	My_Seller_Feedback
+Andrew
+	My_Buyer_Feedback
+	Leave_Feedback
+	Rase_As_Seller
+	Rate_Buyer
+	Rate_As_Buyer
+	Rate_Seller

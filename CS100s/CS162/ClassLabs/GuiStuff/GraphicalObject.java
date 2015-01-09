@@ -1,0 +1,1 @@
+enum GraphicalObject {SQUARE,CIRCLE,LINE};

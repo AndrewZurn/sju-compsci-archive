@@ -1,0 +1,127 @@
+Lab 5 Report
+
+[awzurn@lin10 104 ~/CompSci/CS239/Lab/Lab05]$ hugs FirstLiterate.lhs
+
+Main> quadpoly 1.0 0.0 1.0 (-2.0)
+5.0
+
+
+Quadpoly results
+
+Main> poly1 (-5)
+207
+Main> poly1 (45)
+4957
+Main> poly1 (-4)
+155
+Main> poly1 (-3)
+109
+Main> poly1 (-2)
+69
+Main> poly1 (-1)
+35
+Main> poly1 (0)
+7
+Main> poly1 1
+-15
+Main> poly1 2
+-31
+Main> poly1 3
+-41
+Main> poly1 4
+-45
+Main> poly1 5
+-43
+
+Find the zero(or root) of x.
+
+Main> poly1 0.2919
+-0.0418831699999993
+Main> poly1 0.2911
+-0.0232823700000004
+Main> poly1 0.2905
+-0.00932924999999951
+Main> poly1 0.2901
+-2.59700000002638e-05
+Main>
+
+Extra Credit
+
+Main> poly1 0.2901
+-2.59700000002638e-05
+Main> poly1 0.29019
+-0.00211929170000058  < 0.0 to 17 digits
+
+Cubepoly results
+
+Main> poly2 (-5)
+-130.359375
+Main> poly2 (-4)
+-69.359375
+Main> poly2 (-3)
+-32.359375
+Main> poly2 (-2)
+-13.359375
+Main> poly2 (-1)
+-6.359375
+Main> poly2 0
+-5.359375
+Main> poly2 1
+-4.359375
+Main> poly2 2
+2.640625
+Main> poly2 3
+21.640625
+Main> poly2 4
+58.640625
+Main> poly2 5
+119.640625
+
+Testing Triangle function
+Main> triange 60 60 60
+ERROR - Undefined variable "triange"
+Main> triangle 60 60 60
+Equilateral
+Main> triangle 80 50 50
+Isoceles
+Main> triangle 160 11 9
+Scalene
+Main> triangle 75 75 30
+Isoceles
+Main> triangle 74 76 30
+Scalene
+
+Testing for doublemin
+Main> doublemin [1,2,3,5]
+1.0
+Main> doublemin [1,2,3,0]
+0.0
+Main> doublemin [76.54,2341.456,23432,75.143,2340.3435]
+75.143
+
+Testing for intsum
+Main> intsum [1,2,3,4]
+10
+Main> intsum [241,562,343,244]
+1390
+Main> intsum [241,562,343,244,234,23431,43234,234123]
+302412
+Main> intsum [241,562,343,244,234,23431,43234,234123]
+302412
+Main> intsum [1,-2,3,-1]
+1
+
+Testing for averageList and listLength
+Main> length [1,2,3,4,5,6,7,8]
+8
+Main> averageList [2,3,4]
+3.0
+Main> averageList [45,34,2453,2342,15623,23]
+3420.0
+Main> averageList [1]
+1.0
+Main> averageList [0]
+0.0
+Main> averageList []
+-1.0
+

@@ -1,0 +1,4 @@
+LOAD DATA LOCAL INFILE "~/CSBSJU/Courses/CSCI331/company/employee.dat" 
+INTO TABLE employee 
+FIELDS ENCLOSED BY """ TERMINATED BY ","
+;

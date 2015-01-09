@@ -1,0 +1,1416 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns="http://www.w3.org/TR/REC-html40"><head>
+
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+  
+  <meta name="ProgId" content="Word.Document">
+
+  
+  <meta name="Generator" content="Microsoft Word 12">
+
+  
+  <meta name="Originator" content="Microsoft Word 12">
+
+  
+  <link rel="File-List" href="CS161_Lab05_files/filelist.xml"><title>CSCI 161 Lab 4</title><!--[if gte mso 9]><xml>
+
+ <o:DocumentProperties>
+
+  <o:Author>Imad Rahal</o:Author>
+
+  <o:LastAuthor>Imad Rahal</o:LastAuthor>
+
+  <o:Revision>65</o:Revision>
+
+  <o:TotalTime>81</o:TotalTime>
+
+  <o:Created>2008-09-10T15:07:00Z</o:Created>
+
+  <o:LastSaved>2008-09-15T17:12:00Z</o:LastSaved>
+
+  <o:Pages>2</o:Pages>
+
+  <o:Words>1297</o:Words>
+
+  <o:Characters>7393</o:Characters>
+
+  <o:Company>CSB/SJU</o:Company>
+
+  <o:Lines>61</o:Lines>
+
+  <o:Paragraphs>17</o:Paragraphs>
+
+  <o:CharactersWithSpaces>8673</o:CharactersWithSpaces>
+
+  <o:Version>12.00</o:Version>
+
+ </o:DocumentProperties>
+
+</xml><![endif]-->
+  
+
+  
+
+  
+  <link rel="themeData" href="CS161_Lab05_files/themedata.thmx">
+
+  
+  <link rel="colorSchemeMapping" href="CS161_Lab05_files/colorschememapping.xml"><!--[if gte mso 9]><xml>
+
+ <w:WordDocument>
+
+  <w:Zoom>120</w:Zoom>
+
+  <w:TrackMoves/>
+
+  <w:TrackFormatting/>
+
+  <w:ValidateAgainstSchemas/>
+
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+
+  <w:DoNotPromoteQF/>
+
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+
+  <w:Compatibility>
+
+   <w:BreakWrappedTables/>
+
+   <w:SnapToGridInCell/>
+
+   <w:WrapTextWithPunct/>
+
+   <w:UseAsianBreakRules/>
+
+   <w:DontGrowAutofit/>
+
+   <w:SplitPgBreakAndParaMark/>
+
+   <w:DontVertAlignCellWithSp/>
+
+   <w:DontBreakConstrainedForcedTables/>
+
+   <w:DontVertAlignInTxbx/>
+
+   <w:Word11KerningPairs/>
+
+   <w:CachedColBalance/>
+
+  </w:Compatibility>
+
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+
+  <m:mathPr>
+
+   <m:mathFont m:val="Cambria Math"/>
+
+   <m:brkBin m:val="before"/>
+
+   <m:brkBinSub m:val="&#45;-"/>
+
+   <m:smallFrac m:val="off"/>
+
+   <m:dispDef/>
+
+   <m:lMargin m:val="0"/>
+
+   <m:rMargin m:val="0"/>
+
+   <m:defJc m:val="centerGroup"/>
+
+   <m:wrapIndent m:val="1440"/>
+
+   <m:intLim m:val="subSup"/>
+
+   <m:naryLim m:val="undOvr"/>
+
+  </m:mathPr></w:WordDocument>
+
+</xml><![endif]--><!--[if gte mso 9]><xml>
+
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+
+  LatentStyleCount="267">
+
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="heading 2"/>
+
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="heading 3"/>
+
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Table Grid"/>
+
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light Shading"/>
+
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light List"/>
+
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light Grid"/>
+
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Dark List"/>
+
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful List"/>
+
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+
+ </w:LatentStyles>
+
+</xml><![endif]-->
+
+
+  
+  <style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:1;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+h1
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 1 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:24.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+h2
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 2 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:18.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+h3
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 3 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+address
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"HTML Address Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-style:italic;}
+span.HTMLAddressChar
+	{mso-style-name:"HTML Address Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"HTML Address";
+	font-family:"Times New Roman","serif";
+	mso-ascii-font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-style:italic;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 1";
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#365F91;
+	mso-themecolor:accent1;
+	mso-themeshade:191;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 2";
+	mso-ansi-font-size:13.0pt;
+	mso-bidi-font-size:13.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 3";
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+  </style><!--[if gte mso 10]>
+
+<style>
+
+ /* Style Definitions */
+
+ table.MsoNormalTable
+
+	{mso-style-name:"Table Normal";
+
+	mso-tstyle-rowband-size:0;
+
+	mso-tstyle-colband-size:0;
+
+	mso-style-noshow:yes;
+
+	mso-style-priority:99;
+
+	mso-style-qformat:yes;
+
+	mso-style-parent:"";
+
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+
+	mso-para-margin:0in;
+
+	mso-para-margin-bottom:.0001pt;
+
+	mso-pagination:widow-orphan;
+
+	font-size:10.0pt;
+
+	font-family:"Times New Roman","serif";}
+
+</style>
+
+<![endif]--><!--[if gte mso 9]><xml>
+
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+
+</xml><![endif]--><!--[if gte mso 9]><xml>
+
+ <o:shapelayout v:ext="edit">
+
+  <o:idmap v:ext="edit" data="1"/>
+
+ </o:shapelayout></xml><![endif]--></head><body style="background-color: rgb(255, 255, 204);" lang="EN-US" link="blue" vlink="purple">
+<div class="Section1">
+<h1><span>Lab 4: Simple
+numeric and character datatypes<o:p></o:p></span></h1>
+<p class="MsoNormal"><span style="font-size: 12pt;">The
+program you will use for this lab shows the internal representation of
+data on
+a small computer.&nbsp;Launch the data rep software by going to </span><b style=""><i style=""><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">f</span></i></b><b style=""><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">-Applications
+--&gt;CSBSJU --&gt;Computer Science --&gt; Launch Page
+Apps --&gt; Data Representation</span></b><span style="font-size: 12pt;"><br>
+&nbsp; <br>
+This program is a tool to assist you in learning several different
+methods that
+are used to represent data inside of a computer. You change the values
+of the
+bit patterns by clicking on the individual bits. They toggle between
+zero and
+one when clicked and the corresponding value is displayed in the text
+boxes on
+the right side of the screen. You can also type numeric values directly
+into
+the white text boxes on the right of the screen and the value typed
+will be
+translated into the appropriate bit pattern <b>when you press the
+“Enter” key</b>.
+<br>
+&nbsp;<br>
+The type of data being displayed and the length of the bit patterns can
+both be
+changed to suit the user’s needs. There is a button on the bottom, just
+right
+of the quit button that says 8 bit words. To change the word length,
+you click
+on it. It will change to 16, then to 32, then to 64, and, finally, back
+to 8.
+Cycle through these categories using the button. There is also a button
+labeled
+</span><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">Hexadecimal</span><span style="font-size: 12pt;"> that can be used to select the type of data
+to be
+displayed. This is the type button. Click on it to see what happens. <o:p></o:p></span></p>
+<p>Open an OpenOffice word processor file (<b style=""><i style=""><span style="font-family: &quot;Courier New&quot;;">f</span></i></b><b style=""><span style="font-family: &quot;Courier New&quot;;">-Applications
+--&gt; Office --&gt; OpenOffice.org Writer</span></b>) to store your
+answers to
+the questions in the lab writeup. You can name your file Lab4Report.
+Copy and
+paste the questions from the lab write-up into your Lab4Report file and
+then
+answer the questions.&nbsp; Later on in the lab you will be asked to
+show your
+answers to your lab instructor or TA.&nbsp; </p>
+<h3><span style="font-size: 16pt;">Exercise
+1:&nbsp;Unsigned 8-bit Integers (Binary) <o:p></o:p></span></h3>
+<p class="MsoNormal" style="margin-bottom: 12pt;"><span style="font-size: 12pt;">Click the word size button until it
+says 8 bit words. Then click on the Displayed type button until it says
+</span><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">Unsigned</span><span style="font-size: 12pt;">. These are
+numbers in straight binary. <span style="background: yellow none repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">For
+each question, hypothesize an answer first then use the simulator to
+test your
+hypothesis</span>. <br>
+&nbsp;<br>
+1-a) What are the base 10 values displayed for each of the following
+bit
+patterns? <o:p></o:p></span></p>
+<table class="MsoNormalTable" style="border: 1pt solid windowtext; width: 97.18%;" border="1" cellpadding="0" width="97%">
+  <tbody>
+    <tr style="">
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 24.42%;" valign="top" width="24%">
+      <p class="MsoNormal" style="text-align: center;" align="center"><span style="font-size: 12pt;">Unsigned Binary<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.04%;" valign="top" width="26%">
+      <p class="MsoNormal" style="text-align: center;" align="center"><span style="font-size: 12pt;">Decimal<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.82%;" valign="top" width="26%">
+      <p class="MsoNormal" style="text-align: center;" align="center"><span style="font-size: 12pt;">Unsigned Binary<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 21.72%;" valign="top" width="21%">
+      <p class="MsoNormal" style="text-align: center;" align="center"><span style="font-size: 12pt;">Decimal<o:p></o:p></span></p>
+      </td>
+    </tr>
+    <tr style="">
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 24.42%;" valign="top" width="24%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">11111111<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.04%;" valign="top" width="26%"><br>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.82%;" valign="top" width="26%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">00000000<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 21.72%;" valign="top" width="21%"><br>
+      </td>
+    </tr>
+    <tr style="">
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 24.42%;" valign="top" width="24%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">11111110<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.04%;" valign="top" width="26%"><br>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.82%;" valign="top" width="26%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">00000001<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 21.72%;" valign="top" width="21%"><br>
+      </td>
+    </tr>
+    <tr style="">
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 24.42%;" valign="top" width="24%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">11111101<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.04%;" valign="top" width="26%"><br>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.82%;" valign="top" width="26%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">00000010<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 21.72%;" valign="top" width="21%"><br>
+      </td>
+    </tr>
+    <tr style="">
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 24.42%;" valign="top" width="24%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">11111011<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.04%;" valign="top" width="26%"><br>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.82%;" valign="top" width="26%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">00000100<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 21.72%;" valign="top" width="21%"><br>
+      </td>
+    </tr>
+    <tr style="">
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 24.42%;" valign="top" width="24%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">11110111<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.04%;" valign="top" width="26%"><br>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.82%;" valign="top" width="26%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">00001000<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 21.72%;" valign="top" width="21%"><br>
+      </td>
+    </tr>
+    <tr style="">
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 24.42%;" valign="top" width="24%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">11101111<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.04%;" valign="top" width="26%"><br>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.82%;" valign="top" width="26%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">00010000<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 21.72%;" valign="top" width="21%"><br>
+      </td>
+    </tr>
+    <tr style="">
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 24.42%;" valign="top" width="24%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">11011111<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.04%;" valign="top" width="26%"><br>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.82%;" valign="top" width="26%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">00100000<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 21.72%;" valign="top" width="21%"><br>
+      </td>
+    </tr>
+    <tr style="">
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 24.42%;" valign="top" width="24%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">10111111<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.04%;" valign="top" width="26%"><br>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.82%;" valign="top" width="26%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">01000000<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 21.72%;" valign="top" width="21%"><br>
+      </td>
+    </tr>
+    <tr style="">
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 24.42%;" valign="top" width="24%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">01111111<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.04%;" valign="top" width="26%"><br>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.82%;" valign="top" width="26%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">10000000<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 21.72%;" valign="top" width="21%"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="MsoNormal" style="margin-bottom: 12pt;"><span style="font-size: 12pt;"><br>
+1-b) What range of unsigned (positive) integers would you expect to be
+represented with eight bits? <br>
+&nbsp;<br>
+1-c) Set the bits to what you think is the largest value possible and
+click on </span><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">Increment</span><span style="font-size: 12pt;">. What
+happens? <br>
+&nbsp;<br>
+1-d) Set the bits to what you think is the smallest value and click on </span><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">Decrement</span><span style="font-size: 12pt;">.&nbsp; What
+happens? <br>
+&nbsp;<o:p></o:p></span></p>
+<h3><span style="font-size: 16pt;">Exercise
+2:&nbsp;Signed integers in 2's complement format<o:p></o:p></span></h3>
+<p class="MsoNormal" style="margin-bottom: 12pt;"><span style="font-size: 12pt;">Click on the type button until it
+says </span><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">Decimal</span><span style="font-size: 12pt;">. This is two’s complement integer
+representation. &nbsp;<br>
+<br>
+2-a) Now what are the decimal values, (base ten), for the two columns
+of bit
+patterns? <o:p></o:p></span></p>
+<table class="MsoNormalTable" style="border: 1pt solid windowtext; width: 97.18%;" border="1" cellpadding="0" width="97%">
+  <tbody>
+    <tr style="">
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 24.66%;" valign="top" width="24%">
+      <p class="MsoNormal" style="text-align: center;" align="center"><span style="font-size: 12pt;">Signed Binary<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 25.76%;" valign="top" width="25%">
+      <p class="MsoNormal" style="text-align: center;" align="center"><span style="font-size: 12pt;">Decimal<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.84%;" valign="top" width="26%">
+      <p class="MsoNormal" style="text-align: center;" align="center"><span style="font-size: 12pt;">Signed Binary<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 21.74%;" valign="top" width="21%">
+      <p class="MsoNormal" style="text-align: center;" align="center"><span style="font-size: 12pt;">Decimal<o:p></o:p></span></p>
+      </td>
+    </tr>
+    <tr style="">
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 24.66%;" valign="top" width="24%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">11111111<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 25.76%;" valign="top" width="25%"><br>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.84%;" valign="top" width="26%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">00000000<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 21.74%;" valign="top" width="21%"><br>
+      </td>
+    </tr>
+    <tr style="">
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 24.66%;" valign="top" width="24%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">11111110<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 25.76%;" valign="top" width="25%"><br>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.84%;" valign="top" width="26%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">00000001<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 21.74%;" valign="top" width="21%"><br>
+      </td>
+    </tr>
+    <tr style="">
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 24.66%;" valign="top" width="24%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">11111101<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 25.76%;" valign="top" width="25%"><br>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.84%;" valign="top" width="26%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">00000010<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 21.74%;" valign="top" width="21%"><br>
+      </td>
+    </tr>
+    <tr style="">
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 24.66%;" valign="top" width="24%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">11111011<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 25.76%;" valign="top" width="25%"><br>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.84%;" valign="top" width="26%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">00000100<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 21.74%;" valign="top" width="21%"><br>
+      </td>
+    </tr>
+    <tr style="">
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 24.66%;" valign="top" width="24%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">11110111<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 25.76%;" valign="top" width="25%"><br>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.84%;" valign="top" width="26%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">00001000<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 21.74%;" valign="top" width="21%"><br>
+      </td>
+    </tr>
+    <tr style="">
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 24.66%;" valign="top" width="24%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">11101111<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 25.76%;" valign="top" width="25%"><br>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.84%;" valign="top" width="26%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">00010000<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 21.74%;" valign="top" width="21%"><br>
+      </td>
+    </tr>
+    <tr style="">
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 24.66%;" valign="top" width="24%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">11011111<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 25.76%;" valign="top" width="25%"><br>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.84%;" valign="top" width="26%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">00100000<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 21.74%;" valign="top" width="21%"><br>
+      </td>
+    </tr>
+    <tr style="">
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 24.66%;" valign="top" width="24%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">10111111<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 25.76%;" valign="top" width="25%"><br>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.84%;" valign="top" width="26%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">01000000<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 21.74%;" valign="top" width="21%"><br>
+      </td>
+    </tr>
+    <tr style="">
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 24.66%;" valign="top" width="24%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">01111111<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 25.76%;" valign="top" width="25%"><br>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 26.84%;" valign="top" width="26%">
+      <p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">10000000<o:p></o:p></span></p>
+      </td>
+      <td style="border: 1pt solid windowtext; padding: 1.5pt; width: 21.74%;" valign="top" width="21%"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="MsoNormal"><span style="font-size: 12pt;"><br>
+2-b) What is the range of decimal numbers that you expect to be
+represented
+with eight bits using signed integers? <br>
+&nbsp;<br>
+2-c) Set the bits to what you think is the largest value possible and
+click on </span><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">Increment</span><span style="font-size: 12pt;">.&nbsp; What
+happens? <br>
+&nbsp;<br>
+2-d) Set the bits to what you think is the smallest value and click on </span><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">Decrement</span><span style="font-size: 12pt;">.&nbsp; What
+happens? <br>
+&nbsp;<br>
+2-e) Using 8-bit two’s compliment notation what would you expect the
+result of
+each of the following sums to be?&nbsp;Check your hypotheses on the
+simulator.
+To add those numbers, first make sure that the type buttons for all
+three
+textboxes say </span><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">Decimal</span><span style="font-size: 12pt;">; then enter
+the first number in the first textbox and press Enter; enter the second
+number
+in the second textbox and press Enter. Click on the Add button at the
+bottom of
+the program (3rd button from the left). The answer should appear in the
+3rd
+textbox. <br>
+&nbsp;<br>
+</span><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">96 +
+96&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;-7 +&nbsp;-3&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;-27
++ 75</span><span style="font-size: 12pt;">
+<br>
+&nbsp;<br>
+<span style="background: yellow none repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">Explain
+any unexpected
+results</span>.&nbsp;Under what conditions will addition give an
+incorrect
+answer?&nbsp;Use the Data Representation software to get the right
+results
+instead of the unexpected ones.<o:p></o:p></span></p>
+<h3><span style="font-size: 16pt;">Exercise
+3: Hexadecimal Numbers<o:p></o:p></span></h3>
+<p class="MsoNormal" style="margin-bottom: 12pt;"><span style="font-size: 12pt;">Hexadecimal numbers are base 16
+numbers. They have digits 0,1,2,3,4,5,6,7,8,9,a,b,c,d,e, and f
+representing 0
+to 15 (hence, 16 digits.) Change to </span><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">Hexadecimal</span><span style="font-size: 12pt;"> and 8 bits
+on the DataRep. Enter some bits - like </span><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">00111100</span><span style="font-size: 12pt;"> - and
+observe the hexadecimal representation. You should think of it as each
+4 bits
+being one hexadecimal digit.<span style="">&nbsp; </span>To see the
+corresponding decimal number, you only need click on Displayed type
+unsigned
+decimal to see the value. <br>
+<br>
+Enter </span><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">4c</span><span style="font-size: 12pt;">, </span><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">ff</span><span style="font-size: 12pt;">, </span><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">0d</span><span style="font-size: 12pt;">, and </span><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">e0</span><span style="font-size: 12pt;"> and write
+down their decimal equivalent.<o:p></o:p></span></p>
+<h3><span style="font-size: 16pt;">Exercise
+4: Floating Point numbers<o:p></o:p></span></h3>
+<p class="MsoNormal"><span style="font-size: 12pt;">In
+this part of the lab we will work with a "phony" 8-bit floating point
+scheme we developed for teaching purposes. To get to it, click on
+DataType/</span><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">Real</span><span style="font-size: 12pt;">. Those 8
+bits have been split into three parts: a <span style="background: yellow none repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">1-bit
+spot to hold the sign, <span style="color: red;">a
+4-bit spot to hold the exponent</span>, and a 3-bit spot to hold the
+"mantissa"</span>. <o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size: 12pt;"><br>
+For example, suppose we tried the number -1.75. In binary, this would
+be
+1|0111|110 or -1.11 (1+1/2+1/4) or -1.11 * 2<sup>0</sup>. This means
+that you
+should see a 1 in the sign position and 110 (or .75) in the mantissa
+position.
+(Remember the 1 before the binary point is not shown - it is hidden).
+Since we
+ended up with -1.11 * 2<sup>0 </sup>then the exponents is zero (b/c 2
+is raised
+to the power 0), however, our software shows a binary value of 0111 for
+the
+exponent! Given this, can you guess the shift value (or the offset) for
+this
+new design (which used to be 4 in the old design that we learned in
+class)?<br>
+&nbsp;<br>
+Enter </span><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">33</span><span style="font-size: 12pt;"> in the white box and hit
+Enter. What happened? Try </span><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">32</span><span style="font-size: 12pt;">. Try </span><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">34</span><span style="font-size: 12pt;">. What is
+going on? Think about the possible bit patterns. <br>
+<br>
+Make sure </span><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">32</span><span style="font-size: 12pt;"> is in the white area. Now
+click double. Hit double again. Hit it again. What do you see? Now
+click on one
+of the mantissa bits. You should see a symbol </span><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">NaN</span><span style="font-size: 12pt;"> which
+stands for Not a Number. This is because there are no legal bit
+patterns where
+the exponent bits are </span><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">1111</span><span style="font-size: 12pt;">. <o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size: 12pt;"><br>
+Enter the bit pattern </span><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">0 1000 111</span><span style="font-size: 12pt;">. It should
+have the value </span><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">3.75</span><span style="font-size: 12pt;">. Hit half. Hit it again.
+Keep hitting until the value doesn't change. This is the smallest value
+you can
+enter. Then enter </span><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">0 1110 111</span><span style="font-size: 12pt;">. This is
+the largest (finite) value you can enter. <o:p></o:p></span></p>
+<h3><span style="font-size: 16pt;">Exercise
+5: Characters<o:p></o:p></span></h3>
+<p><span style="">Click on the type
+button until it says </span><span style="font-family: &quot;Courier New&quot;;">Character</span><span style="">.&nbsp;We
+will start by entering characters in the bit pattern. Note that this
+only shows
+ASCII characters so it deals merely with the 8 last bits of the
+Unicode.&nbsp;Erase whatever is in the white area and type the letter </span><span style="font-family: &quot;Courier New&quot;;">a</span><span style="">. Then hit
+increment a few
+times to see what happens. Then enter the letter A. What is the
+difference in
+code between a and </span><span style="font-family: &quot;Courier New&quot;;">A</span><span style="">?<br>
+<br>
+3-a) Find the bit patterns for </span><span style="font-family: &quot;Courier New&quot;;">A&nbsp;&nbsp; B&nbsp;&nbsp;
+C&nbsp;&nbsp; a&nbsp;&nbsp; b&nbsp;&nbsp; c&nbsp;&nbsp; 0&nbsp;&nbsp;
+1&nbsp;&nbsp; 2</span><span style="">
+and an empty space.&nbsp; Using this information, predict the bit
+patterns for </span><span style="font-family: &quot;Courier New&quot;;">D,
+d</span><span style=""> and </span><span style="font-family: &quot;Courier New&quot;;">3</span><span style="">.&nbsp; You
+may want to
+consider the decimal value of the patterns in your
+considerations.&nbsp;Check
+your prediction.&nbsp; &nbsp;<br>
+&nbsp;<br>
+3-b) Based on what you learned in the previous question, how might the
+computer
+use the design of the ASCII code to sort words into alphabetical
+order?&nbsp;
+&nbsp;<br>
+&nbsp;<br>
+3-c) If your password were stored in ASCII, will it matter if you type
+it in
+upper case or lower case?&nbsp; Why?&nbsp; <br>
+<br>
+Now open DrJava and open the file </span><span style="font-family: &quot;Courier New&quot;;">GreekCharacters.java</span><span style=""> that we have supplied for
+you. Run the program and look at the code to see how you could add
+Greek
+characters to your program if you wanted. You can do similar things
+with all
+the Unicode languages.&nbsp;Note that the <i>char</i> type is another
+primitive
+type that is used to represent a single character.&nbsp;The </span><span style="font-family: &quot;Courier New&quot;;">\u</span><span style=""> indicates
+that this is a
+Unicode character represented by the hexadecimal number that follows
+char. So
+the declaration of:<br>
+</span><span style="font-family: &quot;Courier New&quot;;">char
+c='\u0391'</span><span style="">
+declares a variable of type char (character) with a Unicode value of </span><span style="font-family: &quot;Courier New&quot;;">0391</span><span style=""> (
+binary value: </span><span style="font-family: &quot;Courier New&quot;;">0000
+0011 1001 0001</span><span style="">).<br>
+<br>
+A later statement of </span><span style="font-family: &quot;Courier New&quot;;">c='\u03B1'
+</span><span style="">changes
+the value of the variable to be the Unicode value </span><span style="font-family: &quot;Courier New&quot;;">03B1</span><span style=""> (binary
+value (</span><span style="font-family: &quot;Courier New&quot;;">0000
+0011 1011 00001</span><span style="">).<br>
+<br>
+Search the Web (try </span><a href="http://www.unicode.org/charts/">http://www.unicode.org/charts/</a>)
+<span style="">for Unicode alphabets
+(e.g. Arabic, Hebrew, Chinese, Japanese, etc ...) and then change the
+values so
+that the characters printed are from another language.</span></p>
+<h3><span style="font-size: 16pt;">Finishing
+the Lab<o:p></o:p></span></h3>
+<p>Edit your answer file so it is clear and easy to read.&nbsp; Save
+your
+answer file so you will have it available to use for the lab exam. When
+you are
+finished with all the exercises, show your answer file to the lab
+instructor or
+the TA.&nbsp; He or she will check your work and you may then
+leave.&nbsp; </p>
+</div>
+
+</body></html>

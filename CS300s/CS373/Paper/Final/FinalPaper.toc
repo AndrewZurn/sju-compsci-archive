@@ -1,0 +1,15 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {section}{\numberline {2}Background}{2}
+\contentsline {subsection}{\numberline {2.1}Problems in Native Development}{4}
+\contentsline {section}{\numberline {3}Hybrid Development}{5}
+\contentsline {subsection}{\numberline {3.1}Technical Analysis}{5}
+\contentsline {subsubsection}{\numberline {3.1.1}Cross-Compilation Approach}{5}
+\contentsline {subsubsection}{\numberline {3.1.2}Interpretive Approach}{6}
+\contentsline {subsubsection}{\numberline {3.1.3}Performance}{7}
+\contentsline {subsubsection}{\numberline {3.1.4}Appcelerator}{8}
+\contentsline {subsubsection}{\numberline {3.1.5}HIPAA App Prototype}{9}
+\contentsline {subsection}{\numberline {3.2}Native - Hybrid Comparison}{11}
+\contentsline {section}{\numberline {4}Future Trends}{12}
+\contentsline {section}{\numberline {5}Conclusion}{13}
+\contentsline {section}{\numberline {6}Educational Considerations}{16}

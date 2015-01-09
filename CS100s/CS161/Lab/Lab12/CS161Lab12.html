@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Lab12: Gui without Objectdraw</title></head><body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 204);" alink="#000099" link="#000099" vlink="#990099">
+<h1><span style="">Lab 12: GUI Without Objectdraw<o:p></o:p></span></h1>
+<p>This lab is to be done individually. Feel free to talk to others in
+the lab but do your own work.&nbsp; In this lab you will finish
+constructing a simple calculator. For
+the first
+time, we are doing completely without <span style="font-family: &quot;Courier New&quot;;">objectdraw</span>
+classes. Instead of extending <span style="font-family: &quot;Courier New&quot;;">FrameWindowController</span>,
+we are extending <span style="font-family: &quot;Courier New&quot;;">JFrame</span>
+- the
+standard GUI building class for the Java Swing GUI-building classes.
+You will
+modify the included <span style="font-family: &quot;Courier New&quot;;">Calculator.java
+</span>file
+to create a simple sort of general purpose calculator which operates on
+two
+fields (First and Second) containing numeric values and putting the
+answer in
+the Answer field (all of which are<span style="font-family: &quot;Courier New&quot;;">
+JTextField</span>s)<br>
+
+
+<br>
+
+
+Start by testing it as it is. Load it into <span style="font-family: &quot;Courier New&quot;;">DrJava</span>,
+compile it, and run it. You will see how it works (generally) by
+putting
+numbers in the two white fields, clicking on the + button, and seeing
+the
+result. Follow the procedure suggested in the comments in file <span style="font-family: &quot;Courier New&quot;;">Calculator.java </span>to change <span style="font-family: &quot;Courier New&quot;;">Calculator.java </span>to add all
+the other
+functionality. If you are wise, you will create the button panel, add
+the <span style="font-family: &quot;Courier New&quot;;">+</span> button to it,
+and add that panel
+using <span style="font-family: &quot;Courier New&quot;;">contentPane</span> to
+make sure
+that works fine. To add another button, add it to the button panel, and
+try
+again to see if it works. Then go ahead and add the rest of the buttons
+to the
+button panel and check your work.<br>
+
+
+<br>
+
+
+For functions requiring two numbers like <span style="font-family: &quot;Courier New&quot;;">+,</span>
+<span style="font-family: &quot;Courier New&quot;;">-,</span> <span style="font-family: &quot;Courier New&quot;;">*,</span> and <span style="font-family: &quot;Courier New&quot;;">/</span>
+both <span style="font-family: &quot;Courier New&quot;;">First</span> and <span style="font-family: &quot;Courier New&quot;;">Second</span> are used. For
+example, &#8220;<span style="font-family: &quot;Courier New&quot;;">-</span>&#8220;<span style="font-family: &quot;Courier New&quot;;">
+</span>means subtract the value from <span style="font-family: &quot;Courier New&quot;;">Second</span>
+from the value from <span style="font-family: &quot;Courier New&quot;;">First</span>
+and
+put the answer in the answer field. For functions requiring one number
+like <span style="font-family: &quot;Courier New&quot;;">log</span>, <span style="font-family: &quot;Courier New&quot;;">exp</span>,
+<span style="font-family: &quot;Courier New&quot;;">sin</span>, <span style="font-family: &quot;Courier New&quot;;">cos,</span> and <span style="font-family: &quot;Courier New&quot;;">tan</span>
+the operator works on the value in the first field and displays result
+in the
+answer field. <span style="font-family: &quot;Courier New&quot;;">+/- First</span>
+changes
+the sign of the number in the first field, <span style="font-family: &quot;Courier New&quot;;">+/-
+Second </span>changes the sign of the number in the second field, <span style="font-family: &quot;Courier New&quot;;">Clear</span><i> </i><span style="font-family: &quot;Courier New&quot;;">First</span> and <span style="font-family: &quot;Courier New&quot;;">Clear</span><i>
+</i><span style="font-family: &quot;Courier New&quot;;">Second</span> set the
+values in the
+appropriate field to 0, and <span style="font-family: &quot;Courier New&quot;;">Clear</span><i>
+</i><span style="font-family: &quot;Courier New&quot;;">All </span>clears both
+fields. Functions
+like <span style="font-family: &quot;Courier New&quot;;">log</span>, <span style="font-family: &quot;Courier New&quot;;">exp</span>, <span style="font-family: &quot;Courier New&quot;;">sin</span>,
+<span style="font-family: &quot;Courier New&quot;;">cos</span>, and <span style="font-family: &quot;Courier New&quot;;">tan</span> are all in the package <span style="font-family: &quot;Courier New&quot;;">Math</span>
+(hence<span style="font-family: &quot;Courier New&quot;;"> Math.sin(x)</span>....).
+You
+might want to click <a href="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Math.html">here</a>
+to
+see what the methods in <span style="font-family: &quot;Courier New&quot;;">Math</span>
+are.<br>
+
+
+<span style="font-family: &quot;Courier New&quot;;"><br>
+</span>Also add a <span style="font-family: &quot;Courier New&quot;;">Quit</span>
+button
+which stops your program by executing the statement: <span style="font-family: &quot;Courier New&quot;;">System.exit(0);<br>
+<br>
+</span>Note: Method <span style="font-family: &quot;Courier New&quot;;">focusLost</span>
+actually sets the values of the numbers first and second to the values
+in the
+fields. You need not change this method.</p>
+
+
+<p><big>When you have the lab
+working
+correctly, create a new folder inside your Lab12 folder and give
+it a name similar in format to  <span style="font-weight: bold;">MillerJohnLab12 </span></big>only using your
+name. Copy all Java files from your
+Lab12 folder and put them in the
+newly created folder (but
+keep the old copies in their place as back up).<span style="color: red;"></span>&nbsp; If you are not finished during lab time, <small><span style="color: black;"><big><big>finish the assignment
+prior to coming
+to the next lab and put a copy of your newly renamed folder into the&nbsp;
+<span style="font-weight: bold;">/usr/people/handins/161LabHandin</span></big>&nbsp; folder before the start of the next lab
+period.&nbsp; You can use the cp command or copy and paste to hand in
+your work.</big> </span></small></p>
+
+
+  
+
+</body></html>

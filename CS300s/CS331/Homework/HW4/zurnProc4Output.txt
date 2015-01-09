@@ -1,0 +1,41 @@
+4) Stored Procedure  PROC_INCREASE_LIMIT
+
+Test 1
+
+mysql> SELECT CREDIT_LIMIT FROM CUSTOMER WHERE CUSTOMER_NUMBER = '124';
++--------------+
+| CREDIT_LIMIT |
++--------------+
+|      1210.00 |
++--------------+
+
+mysql> CALL PROC_INCREASE_LIMIT(124, 'AX12');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> SELECT CREDIT_LIMIT FROM CUSTOMER WHERE CUSTOMER_NUMBER = '124';
++--------------+
+| CREDIT_LIMIT |
++--------------+
+|      1331.00 |
++--------------+
+1 row in set (0.00 sec)
+
+Test 2
+mysql> SELECT CREDIT_LIMIT FROM CUSTOMER WHERE CUSTOMER_NUMBER = '124';
++--------------+
+| CREDIT_LIMIT |
++--------------+
+|      1331.00 |
++--------------+
+1 row in set (0.00 sec)
+
+mysql> CALL PROC_INCREASE_LIMIT(124, 'BZ66');
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+mysql> SELECT CREDIT_LIMIT FROM CUSTOMER WHERE CUSTOMER_NUMBER = '124';
++--------------+
+| CREDIT_LIMIT |
++--------------+
+|      1331.00 |
++--------------+
+1 row in set (0.00 sec)

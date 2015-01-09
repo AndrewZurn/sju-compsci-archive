@@ -1,0 +1,113 @@
+"gram.tok"
+%{
+int intvalue;
+extern char yytext[];
+char variablename[200];
+%}
+
+%token VARIABLE
+%token INTEGER
+%token SC
+%token LP
+%token RP
+%token PLUS
+%token MINUS
+%token TIMES
+%token DIVIDE
+%token EXP
+%token BADCC
+
+%%
+
+
+"gram.prod"
+s		: e SC			{printf("S -> E ;\n");}
+		;
+e		: e addop f 		{printf("E -> E ADDOP F\n");}
+		| f			{printf("E -> F\n");}
+		;
+addop		: PLUS 			{printf("ADDOP -> +\n");}
+		| MINUS			{printf("ADDOP -> -\n");}
+		;
+f		: f multop g 		{printf("F -> F multop G\n");}
+		| g			{printf("F -> G\n");}
+		;
+multop		: DIVIDE		{printf("MULTOP -> /\n");}
+		| TIMES			{printf("MULTOP -> *\n");}
+		;
+g		: h EXP g		{printf("G -> H ^ G\n");}
+		| h			{printf("G -> H\n");}
+		;
+h		: LP e RP		{printf("H -> ( E )\n");}
+		| VARIABLE		{printf("H -> %s\n",variablename);}
+		| INTEGER		{printf("H -> %d\n",intvalue);}
+		;
+
+
+"yacctest.c"
+%%#include <stdio.h>
+
+main() {
+  while(1) {
+    lexinit();
+    yyparse();
+  }
+  return(0);
+}
+
+void yyerror() {}
+
+
+
+
+
+"lex.l"
+%{
+#include "y.tab.h"
+extern int intvalue;
+extern char variablename[];
+%}
+%Start T C
+%%
+<T>" "|"\t"|"\n"           ;
+<T>[a-z]+                  {strcpy(variablename,yytext); return(VARIABLE);}
+<T>[0-9]{1,7}              {intvalue=atoi(yytext); return(INTEGER);}
+<T>";"                     {return(SC);}
+<T>"("                     {return(LP);}
+<T>")"                     {return(RP);}
+<T>"+"                     {return(PLUS);}
+<T>"-"                     {return(MINUS);}
+<T>"*"                     {return(TIMES);}
+<T>"/"                     {return(DIVIDE);}
+<T>"^"                     {return(EXP);}
+<T>"{"                     {BEGIN C;}
+<T>.                       {return(BADCC);}
+<C>"}"                     {BEGIN T;}
+<C>.                       ;
+%%
+void lexinit() {
+    BEGIN T;
+  }
+
+
+
+"Makefile"
+grammartest : gram.o lex.o yacctest.o
+		cc -o yacctest gram.o lex.o yacctest.o -ll
+yacctest.o  : yacctest.c
+		cc -c yacctest.c
+gram.o      : gram.c
+		cc -c gram.c
+gram.c      : gram.y
+		yacc -dv gram.y
+		mv y.tab.c gram.c
+gram.y      : gram.tok gram.prod
+		cat gram.tok gram.prod > gram.y
+lex.o       : y.tab.h lex.c
+		cc -c lex.c
+lex.c       : lex.l
+		lex lex.l
+		mv lex.yy.c lex.c
+clean       : 
+		rm  *.o *~ gram.y gram.c lex.c y.output y.tab.h yacctest
+

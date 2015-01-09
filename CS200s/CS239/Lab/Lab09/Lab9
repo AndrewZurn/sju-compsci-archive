@@ -1,0 +1,89 @@
+Complete your RealMatrix and RealVector programs and demonstrate to your instructor that all methods work properly. 
+
+Once you have completed this, you may start on the material for the next lab. You
+will create the following methods:
+
+public RealVector gaussJordan(RealVector b) {
+  ...
+}
+
+which will do a GaussJordan reduction of the matrix formed by taking
+this matrix  and adding an extra column with vector b as its 
+rightmost column. The resulting vector will be the solution to the
+system of equations. Note that there may well be no solution. In 
+that case you should throw an error. Also, you should throw an 
+error if the matrix is not square since square matrices mean that
+the number of equations is the  same as the number of variables.
+
+public RealMatrix inverse() {
+   ...
+}
+
+which will compute and return the inverse of this RealMatrix. Notice
+that inverse only works when the matrix is square and may not work
+even then since not all matrices are invertible. In either of these
+cases you should throw an error of some kind.
+
+For both of these tasks, you may wish to do "partial pivoting". What
+this means is that you first move the largest element to the position
+where you wish to put the 1. For example, suppose we had already done
+reduction to this:
+
+1 2 3 4 5
+0 1 3 2 4
+0 2 1 2 3
+0 1 1 1 6
+
+Partial pivoting would mean to swap the second and third rows first
+since the 2 in row 3 is bigger than the 1 in row 2. This would give
+
+1 2 3 4 5
+0 2 1 2 3
+0 1 3 2 4
+0 1 1 1 6
+
+The advantage to this is that sometimes a small number represents
+roundoff error so partial pivoting decreases the total roundoff error.
+
+Here is an example of a set of equations that have a matrix that has
+an inverse so there is a solution:
+
+x+y+z=6
+2x+3y-z=3
+x-y+z=2
+
+You could enter the matrix and vectorin your test program by creating
+a 2-d array a as below and a vector v as below and using appropriate
+constructors.
+
+double [][] a={{1,1,1},{2,3,-1},{1,-1,1}};
+double [] v={6,3,2};
+
+Note that to do Gauss-Jordan on this (or any matrix/vector pair) you
+will first need to create the new matrix:
+
+1  1  1  6
+2  3 -1  3
+1 -1  1  2
+
+from the original matrix and vector and, then, do Gauss-Jordan and
+return the resulting last column. The easiest way to do this is to
+add the function addToVector(double x) to your RealVector class which
+will return a new vector with x added to the end. You can use this to
+create the new "bigger" matrix.
+
+Similarly, to do an inverse you must first create the new matrix:
+
+1  1  1  1  0  0
+2  3 -1  0  1  0
+1 -1  1  0  0  1
+
+and run Gauss-Jordan on this and return the matrix formed by what
+was originally the identity matrix on the right
+
+1  0  0
+0  1  0  --> becomes the inverse
+0  0  1
+
+
+on which you will do the Gauss-Jordan 

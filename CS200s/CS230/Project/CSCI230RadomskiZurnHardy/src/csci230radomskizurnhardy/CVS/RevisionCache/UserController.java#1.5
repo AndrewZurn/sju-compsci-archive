@@ -1,0 +1,75 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package csci230radomskizurnhardy;
+
+import java.util.TreeMap;
+
+/**
+ *Class UserController serves the purpose of performing the necessary functionalities for Users on CMC
+ * @author wjradomski
+ * @version 1.0
+ * @since March 18, 2012
+ */
+
+
+
+public class UserController {
+    private User user;
+    private DatabaseController DatabaseController;
+    private University university;
+    /**
+     * Constructor for the class UserController. 
+     * @param user
+     * @param DatabaseController 
+     */
+ public UserController(User user, DatabaseController DatabaseController){
+        this.user = user;
+        this.DatabaseController = DatabaseController;
+    }
+    /**
+     * Adds a school to an individual User's Array of saved schools
+     * @param id
+     * @param school 
+     */
+    
+    public void addUserSchool(int id, String school){
+        DatabaseController.addUserSchool(id, school);
+    }
+    /**
+     * Removes a school from an individual User's Array of saved schools. 
+     * @param id
+     * @param school 
+     */
+    
+    public void removeUserSchool(int id, String school){
+        DatabaseController.removeUserSchool(id, school);
+    }
+   /**
+    * Takes the id of a user and returns a TreeMap of their saved schools.
+    * @param id 
+    */ 
+    
+    public TreeMap getAllSavedSchools(int id){
+       return DatabaseController.getAllSavedSchools(); 
+    }
+/**
+ * Allows the User to edit his profile. 
+ * 
+ * @param id
+ * @param firstName
+ * @param lastName
+ * @param password 
+ */
+   public void editUser(int id, String firstName, String lastName, String password){
+         DatabaseController.editUser(id, firstName, lastName, password);
+     }
+   
+   public static void main(String args[]){
+       DatabaseController DatabaseController = new DatabaseController();
+      
+       
+   }
+    
+}

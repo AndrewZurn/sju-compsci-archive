@@ -1,0 +1,36 @@
+Lab 15: Combinatorial functions
+
+Create the following functions in Haskell:
+
+1. fact n = n! (Example: 6!=720)
+2a. c n k = n!/(k!(n-k)!) 
+   Don't forget to divide integers x and y you do
+   	 div x y
+   in Haskell. (Example: c 8 3 = 56)
+ b. c2 n k = (c2 (n-1) (k-1)) + (c2 (n-1) k)
+       with c2 n n =1 and c2 n 0 =1 (This is Pascal's identity. You
+           need to implement this recursively.) 
+	(Same example: c2 8 3 = 56)
+
+	Of course, c2 and c should be the same. Which is faster? 
+	Try c 20 10 and c2 20 10.
+
+3. f l = n!/(n1!n2!n3!...nk!) where l=[n1,n2,...,nk] and n=n1+n2+...+nk. 
+   This is the number of ways to distribute n things into k pieces of 
+   sizes n1, n2, ..., nk. To do this you will need to compute the sum of
+   the things in list l. You will then need to compute the product of
+   those factorials in list l. You can then take the quotient using the
+   div function. Thus, you need three functions - one to compute the sum, 
+	one to compute the product of factorials, and one to compute the
+	quotient of the factorial of the sum and the result of the product
+	of factorials.
+   (Example: f [2,3,4] = 9!/(2!3!4!)=1260)
+
+4. box n r = c (n+r-1) r which is the number of ways to grab r things from 
+   n boxes with the possibility of choosing any number of things from any 
+   of the n boxes. (Think of my example with the 4 kinds of cookies.)
+   (Example: box 5 7 =c 11 7 = 330)
+
+Test all of the functions thoroughly.
+
+

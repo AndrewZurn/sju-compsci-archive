@@ -1,0 +1,3 @@
+#/bin/tcsh
+set name1 = $1
+grep name1 book.addr -print | sort

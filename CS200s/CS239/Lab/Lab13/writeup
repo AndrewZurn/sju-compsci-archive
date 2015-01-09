@@ -1,0 +1,28 @@
+CS239 ... Lab13  Recurrence relations and inductive proofs
+
+In this lab you are to run some methods which have an integer parameter n,
+determine what you think the program does by running the method on several
+values of n, and, then,prove your guess is correct using induction. I have
+included three Java classes containing the three programs for you to try.
+
+Notice that you will have to try to write down what the functions do as
+recurrence relationships.
+
+For example, if I had the function:
+
+int f(int n) {
+    if(n==1) return(1);
+    else return(n+f(n-1));
+}
+
+Then the recurrence would be:
+
+f(1)=1
+f(n)=f(n-1)+n
+
+and you would show that f(n)=n(n+1)/2 using induction after discovering
+that f(1)=1, f(2)=3, f(3)=6, f(4)=10, f(5)=15
+
+At the next lab, you will be expected to submit the results of your 
+test programs and your inductive proofs on a sheet of paper to your
+instructor or TA.

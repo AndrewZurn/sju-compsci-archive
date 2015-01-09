@@ -1,0 +1,81 @@
+-- Query 1
+
+-- Query 2
++---------+-----------------+---------+-------+---------+---------------+
+| Query 2 | CUSTOMER_NUMBER | LAST    | First | BALANCE | SLSREP_NUMBER |
++---------+-----------------+---------+-------+---------+---------------+
+| Query 2 | 124             | Adams   | Sally |  818.75 | 03            |
+| Query 2 | 315             | Daniels | Tom   |  770.75 | 06            |
+| Query 2 | 412             | Adams   | Sally | 1817.50 | 03            |
+| Query 2 | 567             | Dinh    | Tran  |  402.40 | 06            |
+| Query 2 | 587             | Galvez  | Mara  |  114.60 | 06            |
+| Query 2 | 622             | Martin  | Dan   | 1045.75 | 03            |
++---------+-----------------+---------+-------+---------+---------------+
+6 rows in set (0.00 sec)
+
+-- Query 3
+
+-- Query 4
+
+-- Query 5
++---------+-----------------+---------+-------+
+| Query 5 | CUSTOMER_NUMBER | LAST    | First |
++---------+-----------------+---------+-------+
+| Query 5 | 311             | Charles | Don   |
+| Query 5 | 405             | William | Al    |
+| Query 5 | 522             | Nelson  | Mary  |
+| Query 5 | 412             | Adams   | Sally |
+| Query 5 | 567             | Dinh    | Tran  |
+| Query 5 | 587             | Galvez  | Mara  |
+| Query 5 | 622             | Martin  | Dan   |
++---------+-----------------+---------+-------+
+7 rows in set (0.00 sec)
+
+-- Query 6
+
+-- Query 7
+
+-- Query 8
++---------+-----------------+--------+-------+
+| Query 8 | CUSTOMER_NUMBER | LAST   | First |
++---------+-----------------+--------+-------+
+| Query 8 | 522             | Nelson | Mary  |
++---------+-----------------+--------+-------+
+1 row in set (0.00 sec)
+
+-- Query 9
+
+-- Query 10
+
+-- Query 11
++----------+---------------------+
+| Query 11 | TOTAL_QUANTITY_SOLD |
++----------+---------------------+
+| Query 11 |                  28 |
++----------+---------------------+
+1 row in set (0.00 sec)
+
+-- Query 12
+
+-- Query 13
+
+-- Query 14
++----------+-------------+------------------+--------------+
+| Query 14 | PART_NUMBER | PART_DESCRIPTION | TRANS_NUMBER |
++----------+-------------+------------------+--------------+
+| Query 14 | AX12        | Iron             | 12489        |
+| Query 14 | AZ52        | Dartboard        | 12498        |
+| Query 14 | BA74        | Basketball       | 12498        |
+| Query 14 | BH22        | Cornpopper       | NULL         |
+| Query 14 | BT04        | Gas Grill        | 12491        |
+| Query 14 | BT04        | Gas Grill        | 12500        |
+| Query 14 | BZ66        | Washer           | 12491        |
+| Query 14 | CA14        | Griddle          | NULL         |
+| Query 14 | CB03        | Bike             | 12494        |
+| Query 14 | CX11        | Blender          | 12495        |
+| Query 14 | CZ81        | Treadmill        | 12504        |
++----------+-------------+------------------+--------------+
+11 rows in set (0.00 sec)
+
+-- Query 15
+

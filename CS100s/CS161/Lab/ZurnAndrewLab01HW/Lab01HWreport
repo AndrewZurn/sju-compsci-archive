@@ -1,0 +1,168 @@
+
+[awzurn@lin13 26 ~]$ nedit &
+[1] 18482
+[awzurn@lin13 27 ~]$ nedit: the current locale is utf8 (en_US.UTF-8)
+nedit: changed locale to non-utf8 (en_US)
+~
+/home/f10/awzurn: Permission denied.
+[awzurn@lin13 28 ~]$ ls
+CS161    Documents  Music     Public     Videos
+Desktop  Downloads  Pictures  Templates
+[awzurn@lin13 29 ~]$ cd ~/CS161
+[awzurn@lin13 30 ~/CS161]$ ls
+Examples  Lab01Old  Lab01Revised  Random-Homework
+[awzurn@lin13 31 ~/CS161]$ cd ~/CS161/Labo01Revised
+/home/f10/awzurn/CS161/Labo01Revised: No such file or directory.
+[awzurn@lin13 32 ~/CS161]$ cd ~/CS161/Lab01Revised
+[awzurn@lin13 33 ~/CS161/Lab01Revised]$ ls
+Lab01HWreport      Lab1Writeup_files  Mammals
+Lab01Writeup.html  Lab1Writeup.htm    TouchyWindow.java
+[awzurn@lin13 34 ~/CS161/Lab01Revised]$ pwd
+/net/home/f10/awzurn/CS161/Lab01Revised
+[awzurn@lin13 35 ~/CS161/Lab01Revised]$ cd Lab01Revised
+Lab01Revised: No such file or directory.
+[awzurn@lin13 36 ~/CS161/Lab01Revised]$ ls
+Lab01HWreport      Lab1Writeup_files  Mammals
+Lab01Writeup.html  Lab1Writeup.htm    TouchyWindow.java
+[awzurn@lin13 37 ~/CS161/Lab01Revised]$ cd Mammals/Dogs
+[awzurn@lin13 38 ~/CS161/Lab01Revised/Mammals/Dogs]$ cd../
+cd../: Command not found.
+[awzurn@lin13 39 ~/CS161/Lab01Revised/Mammals/Dogs]$ pwd
+/net/home/f10/awzurn/CS161/Lab01Revised/Mammals/Dogs
+[awzurn@lin13 40 ~/CS161/Lab01Revised/Mammals/Dogs]$ cd ../..
+[awzurn@lin13 41 ~/CS161/Lab01Revised]$ cd ~
+[awzurn@lin13 42 ~]$ ls
+CS161    Documents  Music     Public     Videos
+Desktop  Downloads  Pictures  Templates
+[awzurn@lin13 43 ~]$ cd CS161
+[awzurn@lin13 44 ~/CS161]$ ls
+Examples  Lab01Old  Lab01Revised  Random-Homework
+[awzurn@lin13 45 ~/CS161]$ cd Lab01Revised
+[awzurn@lin13 46 ~/CS161/Lab01Revised]$ mkdir Hal
+[awzurn@lin13 47 ~/CS161/Lab01Revised]$ ls
+Hal            Lab01Writeup.html  Lab1Writeup.htm  TouchyWindow.java
+Lab01HWreport  Lab1Writeup_files  Mammals
+[awzurn@lin13 48 ~/CS161/Lab01Revised]$ cd Mammals
+[awzurn@lin13 49 ~/CS161/Lab01Revised/Mammals]$ pwd
+/net/home/f10/awzurn/CS161/Lab01Revised/Mammals
+[awzurn@lin13 50 ~/CS161/Lab01Revised/Mammals]$ ls
+Cats  Dogs  Other
+[awzurn@lin13 51 ~/CS161/Lab01Revised/Mammals]$ ls Cats
+2cats  3cats  blackcat  fire  kittyCat
+[awzurn@lin13 52 ~/CS161/Lab01Revised/Mammals]$ cd Cats
+[awzurn@lin13 53 ~/CS161/Lab01Revised/Mammals/Cats]$ cat kittyCat
+Kitty is a mouser.
+[awzurn@lin13 54 ~/CS161/Lab01Revised/Mammals/Cats]$ more kittyCat
+Kitty is a mouser.
+[awzurn@lin13 55 ~/CS161/Lab01Revised/Mammals/Cats]$ cd ..
+[awzurn@lin13 56 ~/CS161/Lab01Revised/Mammals]$ ls Cats/*cat*
+Cats/2cats  Cats/3cats  Cats/blackcat
+[awzurn@lin13 57 ~/CS161/Lab01Revised/Mammals]$ cp Cats/2cats  ../Hal
+[awzurn@lin13 58 ~/CS161/Lab01Revised/Mammals]$ ls ../Hal
+2cats
+[awzurn@lin13 59 ~/CS161/Lab01Revised/Mammals]$ cd..
+cd..: Command not found.
+[awzurn@lin13 60 ~/CS161/Lab01Revised/Mammals]$ cd ..
+[awzurn@lin13 61 ~/CS161/Lab01Revised]$ pwd
+/net/home/f10/awzurn/CS161/Lab01Revised
+[awzurn@lin13 62 ~/CS161/Lab01Revised]$ mkdir Hal/Puppy
+[awzurn@lin13 63 ~/CS161/Lab01Revised]$ cp Mammals/Dogs/* Hal/Puppy
+[awzurn@lin13 64 ~/CS161/Lab01Revised]$ ls /Hal
+ls: cannot access /Hal: No such file or directory
+[awzurn@lin13 65 ~/CS161/Lab01Revised]$ ls Hal
+2cats  Puppy
+[awzurn@lin13 66 ~/CS161/Lab01Revised]$ ls Hal/Puppy
+collie  germanShepherd
+[awzurn@lin13 67 ~/CS161/Lab01Revised]$ mv Hal/Puppy Mammals/Dogs
+[awzurn@lin13 68 ~/CS161/Lab01Revised]$ ls Mammals/Dogs
+collie  germanShepherd  Puppy
+[awzurn@lin13 69 ~/CS161/Lab01Revised]$ ls Hal
+2cats
+[awzurn@lin13 70 ~/CS161/Lab01Revised]$ cd ..
+[awzurn@lin13 71 ~/CS161]$ cd Lab01Revised
+[awzurn@lin13 72 ~/CS161/Lab01Revised]$ ls
+Hal            ~Lab01HWreport     Lab1Writeup_files  Mammals
+Lab01HWreport  Lab01Writeup.html  Lab1Writeup.htm    TouchyWindow.java
+[awzurn@lin13 73 ~/CS161/Lab01Revised]$ mkdir Critters
+[awzurn@lin13 74 ~/CS161/Lab01Revised]$ ls
+Critters  Lab01HWreport   Lab01Writeup.html  Lab1Writeup.htm  TouchyWindow.java
+Hal       ~Lab01HWreport  Lab1Writeup_files  Mammals
+[awzurn@lin13 75 ~/CS161/Lab01Revised]$ cd Mammals
+[awzurn@lin13 76 ~/CS161/Lab01Revised/Mammals]$ ls
+Cats  Dogs  Other
+[awzurn@lin13 77 ~/CS161/Lab01Revised/Mammals]$ cd ../Critters
+[awzurn@lin13 78 ~/CS161/Lab01Revised/Critters]$ ls
+[awzurn@lin13 79 ~/CS161/Lab01Revised/Critters]$ pwd
+/net/home/f10/awzurn/CS161/Lab01Revised/Critters
+[awzurn@lin13 80 ~/CS161/Lab01Revised/Critters]$ mkdir People
+[awzurn@lin13 81 ~/CS161/Lab01Revised/Critters]$ cd ../Mammals/Other/People
+[awzurn@lin13 82 ~/CS161/Lab01Revised/Mammals/Other/People]$ ls
+me  you
+[awzurn@lin13 83 ~/CS161/Lab01Revised/Mammals/Other/People]$ cp People/* ~/CS161/Lab01Revised/Critters/People
+cp: No match.
+[awzurn@lin13 84 ~/CS161/Lab01Revised/Mammals/Other/People]$ cp
+cp: missing file operand
+Try `cp --help' for more information.
+[awzurn@lin13 85 ~/CS161/Lab01Revised/Mammals/Other/People]$ cp People/* 
+cp: No match.
+[awzurn@lin13 86 ~/CS161/Lab01Revised/Mammals/Other/People]$ cp -R
+cp: missing file operand
+Try `cp --help' for more information.
+[awzurn@lin13 87 ~/CS161/Lab01Revised/Mammals/Other/People]$ cp -R ~/CS161/Lab01Revised/Critters/People
+cp: missing destination file operand after `/home/f10/awzurn/CS161/Lab01Revised/Critters/People'
+Try `cp --help' for more information.
+[awzurn@lin13 88 ~/CS161/Lab01Revised/Mammals/Other/People]$ cd ../..
+[awzurn@lin13 89 ~/CS161/Lab01Revised/Mammals]$ cd ..
+[awzurn@lin13 90 ~/CS161/Lab01Revised]$ cp Mammals/Other/People/* Critters/People
+[awzurn@lin13 91 ~/CS161/Lab01Revised]$ cd Critters/People
+[awzurn@lin13 92 ~/CS161/Lab01Revised/Critters/People]$ ls
+me  you
+[awzurn@lin13 93 ~/CS161/Lab01Revised/Critters/People]$ 
+[awzurn@lin13 93 ~/CS161/Lab01Revised/Critters/People]$ 
+[awzurn@lin8 65 ~/CS161/Lab01Revised]$ tree
+.
+├── Critters
+│   └── People
+│       ├── me
+│       └── you
+├── Hal
+│   └── 2cats
+├── Lab01HWreport
+├── Lab01Writeup.html
+├── Lab1Writeup_files
+│   ├── colorschememapping.xml
+│   ├── filelist.xml
+│   ├── header.htm
+│   ├── image001.png
+│   ├── image003.png
+│   ├── image005.png
+│   ├── image007.jpg
+│   ├── image008.jpg
+│   ├── image009.jpg
+│   └── themedata.thmx
+├── Lab1Writeup.htm
+├── Mammals
+│   ├── Cats
+│   │   ├── 2cats
+│   │   ├── 3cats
+│   │   ├── blackcat
+│   │   ├── fire
+│   │   └── kittyCat
+│   ├── Dogs
+│   │   ├── collie
+│   │   ├── germanShepherd
+│   │   └── Puppy
+│   │       ├── collie
+│   │       └── germanShepherd
+│   └── Other
+│       ├── People
+│       │   ├── me
+│       │   └── you
+│       └── Whales
+│           ├── big
+│           ├── blue
+│           └── killer
+└── TouchyWindow.java
+
+11 directories, 31 files
+
